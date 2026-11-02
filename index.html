@@ -1,4 +1,4 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0C6A53"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Pustaka Referensi MTA</title>
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0C6A53"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><script src="config.js"></script><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Pustaka Referensi MTA</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -242,6 +242,11 @@ details.pv div { font-family: var(--f-read); font-size: 13.5px; max-height: 220p
 .pvwrap canvas { max-width: 100%; background: #FFFFFF; box-shadow: var(--shadow); border-radius: 4px; }
 .pvmsg { color: var(--muted); padding: 16px; font-size: 14px; }
 .pvnum { align-self: center; font-weight: 700; font-size: 13px; padding: 0 6px; font-variant-numeric: tabular-nums; }
+.spill { font-size: 11.5px; font-weight: 700; border-radius: 999px; padding: 2px 9px; letter-spacing: .02em; }
+.spill.ok { color: var(--ok); background: var(--accent-soft); } .spill.err { color: var(--danger); background: var(--danger-soft); }
+.spill.wait { color: var(--warn); background: var(--warn-soft); } .spill.run { color: var(--pdf); background: var(--pdf-soft); }
+.meter { margin: 4px 0; } .meter .mt { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; color: var(--muted); flex-wrap: wrap; }
+.meter .mt b { color: var(--ink); font-variant-numeric: tabular-nums; } .mbar { height: 8px; background: var(--sunk); border-radius: 99px; overflow: hidden; margin-top: 4px; } .mbar i { display: block; height: 100%; border-radius: 99px; }
 .toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 9px 16px; border-radius: 10px; font-weight: 600; font-size: 13.5px; z-index: 60; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
 .empty { text-align: center; color: var(--muted); padding: 34px 10px; }
 .skel { height: 14px; background: var(--sunk); border-radius: 6px; margin: 8px 0; }
@@ -334,12 +339,16 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   <div class="dhead"><div class="row"><h2>Kelola Brosur PDF</h2><button class="btn ghost" data-act="close" aria-label="Tutup">✕ Tutup</button></div>
     <div class="crumb">Setiap PDF yang disimpan langsung masuk ke indeks pencarian yang sama dengan arsip CHM. Arsip CHM tetap utuh.</div></div>
   <div class="dbody">
+    <div id="srvBox"></div>
+    <div id="upBox">
+    <label class="tog" id="autoRow" hidden style="margin:0 0 10px"><input type="checkbox" id="autoUp" checked> Langsung unggah jika tanggal dan judul terbaca lengkap</label>
     <div class="drop" id="drop">
       <input type="file" id="pdfin" accept="application/pdf,.pdf" multiple>
       <p>Tarik file PDF brosur ke sini, atau <label for="pdfin">pilih file</label></p>
       <small>Teks dibaca per halaman di perangkat ini. Tanggal, nomor, dan judul brosur terisi otomatis dan bisa dikoreksi sebelum disimpan.</small>
     </div>
     <div id="queue"></div>
+    </div>
     <div class="sec"><h2 id="pdfCountH">Brosur PDF di pustaka</h2><div class="plist" id="pdfList"></div></div>
   </div>
 </aside>
@@ -936,7 +945,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
 <script>
 (function () {
   'use strict';
-  const BUILD = '202611012324';
+  const BUILD = '202611021308';
   const CHM_FILE = 'Brosur_Ahad_Pagi_1995-2023_FIX.chm';
   const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
   const FILE_MODE = location.protocol === 'file:';
@@ -999,14 +1008,15 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   function pdfUrl(d, page) {
     const hash = page ? '#page=' + page : '';
     if (d.asset) return '/_blob/' + d.asset + hash;
+    if (d.storagePath && SB.conf) return sbPublicUrl(d.storagePath) + hash;
     if (d.localPath) return encodeURI(d.localPath) + hash;
     if (d.blob) { if (!d._url) d._url = URL.createObjectURL(d.blob); return d._url + hash; }
     return null;
   }
-  function hasPdf(d) { return !!(d.asset || d.localPath || d.blob); }
+  function hasPdf(d) { return !!(d.asset || d.localPath || d.blob || (d.storagePath && SB.conf)); }
   function pdfBtn(d, page, cls, label) {
     if (d.src !== 'PDF' || !hasPdf(d)) return '';
-    if (CAP.local && (d.blob || !FILE_MODE)) return `<button class="btn ${cls}" data-act="pdfview" data-id="${esc(d.id)}" data-page="${page || 1}">${label}</button>`;
+    if (CAP.local && (d.blob || d.storagePath || !FILE_MODE)) return `<button class="btn ${cls}" data-act="pdfview" data-id="${esc(d.id)}" data-page="${page || 1}">${label}</button>`;
     return `<a class="btn ${cls}" href="${esc(pdfUrl(d, page))}" target="_blank" rel="noopener">${label}</a>`;
   }
 
@@ -1098,8 +1108,9 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   function setStatus() {
     const chm = LIB.chmTotal ? fmtN(LIB.chmLoaded) + (LIB.chmReady ? '' : '/' + fmtN(LIB.chmTotal)) + ' brosur CHM' : 'arsip CHM';
     const pdfN = pdfDocs().length;
-    const nLocal = CAP.local ? pdfDocs().filter(d => !d.official).length : 0;
-    const pdf = LIB.pdfState === 'loading' ? 'PDF dimuat…' : LIB.pdfState === 'none' ? 'PDF tidak tersedia di tampilan ini' : fmtN(pdfN - nLocal) + ' brosur PDF' + (nLocal ? ' + ' + fmtN(nLocal) + ' tambahan di browser ini' : '');
+    const nLocal = CAP.local && !SB.conf ? pdfDocs().filter(d => !d.official).length : 0;
+    let pdf = LIB.pdfState === 'loading' ? 'PDF dimuat…' : LIB.pdfState === 'none' ? 'PDF tidak tersedia di tampilan ini' : fmtN(pdfN - nLocal) + ' brosur PDF' + (nLocal ? ' + ' + fmtN(nLocal) + ' tambahan di browser ini' : '');
+    if (SB.conf) pdf += SB.state === 'online' ? ' · server tersambung' : SB.state === 'connecting' ? ' · menghubungkan server…' : ' · server tidak terhubung';
     let s = (LIB.chmReady ? 'Indeks siap · ' : 'Memuat indeks · ') + chm + ' + ' + pdf;
     if (LIB.chmError) s = 'Arsip CHM gagal dimuat — muat ulang halaman';
     $('#status').textContent = s;
@@ -1141,8 +1152,8 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     async open() {
       try {
         this.db = await new Promise((res, rej) => {
-          const r = indexedDB.open('prm-local', 1);
-          r.onupgradeneeded = () => { r.result.createObjectStore('pdfs', { keyPath: 'id' }); r.result.createObjectStore('kv'); };
+          const r = indexedDB.open('prm-local', 2);
+          r.onupgradeneeded = () => { const db = r.result; ['pdfs', 'server'].forEach(n => { if (!db.objectStoreNames.contains(n)) db.createObjectStore(n, { keyPath: 'id' }); }); if (!db.objectStoreNames.contains('kv')) db.createObjectStore('kv'); };
           r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
           setTimeout(() => rej(new Error('timeout')), 4000);
         });
@@ -1153,6 +1164,9 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     all() { return this.req('pdfs', 'readonly', st => st.getAll()); },
     put(rec) { return this.req('pdfs', 'readwrite', st => st.put(rec)); },
     del(id) { return this.req('pdfs', 'readwrite', st => st.delete(id)); },
+    srvAll() { return this.req('server', 'readonly', st => st.getAll()); },
+    srvPut(rec) { return this.req('server', 'readwrite', st => st.put(rec)); },
+    srvDel(id) { return this.req('server', 'readwrite', st => st.delete(id)); },
     kvGet(k) { return this.req('kv', 'readonly', st => st.get(k)); },
     kvSet(k, v) { return this.req('kv', 'readwrite', st => st.put(v, k)); }
   };
@@ -1169,7 +1183,16 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     SEEDS = await loadSeeds();
     const official = new Set();
     for (const r of SEEDS) { const d = localDoc(r); d.official = true; addDoc(d); official.add(r.id); }
-    // Brosur tambahan = yang diunggah lewat aplikasi di browser ini.
+    const conf = sbConf();
+    if (conf) {
+      // Server online = sumber utama brosur PDF tambahan untuk semua perangkat.
+      await LS.open();
+      LIB.pdfState = 'ready'; $('#btnManage').hidden = false; setStatus(); scheduleRefresh();
+      await initServer(conf);
+      renderManage();
+      return;
+    }
+    // Belum ada server: brosur tambahan hanya tersimpan di browser ini.
     let recs = [];
     if (await LS.open()) { try { recs = await LS.all(); } catch (e) { LS.db = null; } }
     if (!LS.db) CAP.localMem = true;
@@ -1177,6 +1200,266 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     LIB.pdfState = 'ready';
     $('#btnManage').hidden = false;
     setStatus(); scheduleRefresh(); renderPdfList();
+  }
+
+  /* ---------------- server online (Supabase): sumber utama brosur PDF tambahan ---------------- */
+  const SB = { conf: null, c: null, state: 'off', user: null, admin: false, adminFor: null, lastSync: 0, syncing: false, preview: false, err: null, logs: null, stats: null, localOnly: [], timer: null };
+  const FREE = { pdf: 1024 * 1024 * 1024, db: 500 * 1024 * 1024 };
+  function sbConf() {
+    const C = window.PRM_CONFIG || {};
+    let url = String(C.supabaseUrl || '').trim(), key = String(C.supabaseKey || '').trim();
+    SB.preview = false;
+    if (!url || !key) { try { const o = JSON.parse(localStorage.getItem('prm-supabase') || 'null'); if (o && o.url && o.key) { url = o.url; key = o.key; SB.preview = true; } } catch (e) { } }
+    if (!url || !key) return null;
+    return { url: url.replace(/\/+$/, ''), key, bucket: C.bucket || 'brosur-pdf' };
+  }
+  function keyProblem(key) {
+    if (/^sb_secret_/i.test(key)) return 'Ini kunci RAHASIA (secret). Jangan dipakai di website. Gunakan kunci publik: "anon public" atau "publishable".';
+    const parts = key.split('.');
+    if (parts.length === 3) { try { const p = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/'))); if (p.role === 'service_role') return 'Ini kunci service_role (rahasia). Jangan dipakai di website. Gunakan kunci "anon public".'; } catch (e) { } }
+    else if (!/^sb_publishable_/i.test(key)) return 'Format kunci tidak dikenali. Salin kunci "anon public" atau "publishable" dari Supabase.';
+    return null;
+  }
+  async function sbLib() { if (!window.supabase || !window.supabase.createClient) await loadScript('data/lib/supabase.js'); return window.supabase; }
+  function sbPublicUrl(path, dl) { return SB.conf.url + '/storage/v1/object/public/' + SB.conf.bucket + '/' + path.split('/').map(encodeURIComponent).join('/') + (dl ? '?download=' + encodeURIComponent(dl) : ''); }
+  function sbDoc(row, pages) {
+    const blocks = [];
+    for (const p of pages.slice().sort((a, b) => a.halaman - b.halaman)) for (const b of (p.blocks || [])) blocks.push(b);
+    const d = { id: row.id, src: 'PDF', file: row.nama_file, title: row.judul || row.nama_file, date: row.tanggal || null, ahad: row.keterangan_tanggal || null, no: row.nomor || null, pages: row.jumlah_halaman || 0, size: row.ukuran || 0, uploadedAt: row.dibuat || null, diubah: row.diubah || null, storagePath: row.storage_path, sha256: row.sha256 || null, uploader: row.diunggah_oleh || null, remote: true, blocks };
+    d.idx = P.buildIndex(blocks); d.refs = P.extractRefs(blocks);
+    return d;
+  }
+  async function sbAll(build, size) {
+    const out = [];
+    for (let from = 0; ; from += size) { const { data, error } = await build().range(from, from + size - 1); if (error) throw error; out.push(...(data || [])); if (!data || data.length < size) break; }
+    return out;
+  }
+  function sbErrText(e) {
+    const m = String((e && (e.message || e.error_description || e.error)) || e || '');
+    if (/row-level security|permission denied|not authorized|unauthorized|403/i.test(m)) return 'Akun ini tidak punya izin admin, atau sesi login sudah habis. Masuk lagi sebagai admin.';
+    if (/jwt|token.*expired|invalid claim/i.test(m)) return 'Sesi login habis. Masuk lagi sebagai admin.';
+    if (/failed to fetch|networkerror|network request failed|load failed|timeout/i.test(m)) return 'Koneksi internet terputus atau server tidak bisa dihubungi. Periksa internet lalu coba lagi.';
+    if (/payload too large|maximum allowed size|exceeded the maximum/i.test(m)) return 'File terlalu besar. Batas satu file 20 MB.';
+    if (/mime|content type/i.test(m)) return 'Hanya file PDF yang diterima.';
+    if (/duplicate key|already exists|23505/i.test(m)) return 'Brosur ini sudah ada di server.';
+    if (/relation .* does not exist|schema cache|could not find the table/i.test(m)) return 'Tabel di Supabase belum dibuat. Jalankan file supabase/setup.sql di SQL Editor.';
+    if (/bucket not found/i.test(m)) return 'Tempat file (bucket brosur-pdf) belum dibuat. Jalankan file supabase/setup.sql di SQL Editor.';
+    if (/invalid login credentials/i.test(m)) return 'Email atau password salah.';
+    if (/email not confirmed/i.test(m)) return 'Email akun ini belum dikonfirmasi. Konfirmasi dulu di Supabase (Authentication → Users).';
+    if (/quota|storage limit|exceed/i.test(m)) return 'Kapasitas penyimpanan gratis penuh. Hapus brosur yang tidak dipakai.';
+    return 'Terjadi kesalahan: ' + m.slice(0, 160);
+  }
+  async function initServer(conf) {
+    SB.conf = conf; SB.state = 'connecting';
+    if (LS.db) {
+      try { for (const r of await LS.srvAll()) if (r && r.row) addDoc(sbDoc(r.row, r.pages || [])); } catch (e) { }
+      try { SB.localOnly = (await LS.all()).filter(r => r && r.blob); } catch (e) { SB.localOnly = []; }
+    }
+    try { const lib = await sbLib(); SB.c = lib.createClient(conf.url, conf.key, { auth: { persistSession: true, autoRefreshToken: true, storageKey: 'prm-auth' } }); }
+    catch (e) { SB.state = 'offline'; SB.err = e; return; }
+    try {
+      const { data } = await SB.c.auth.getSession();
+      await sbSetUser(data && data.session ? data.session.user : null);
+      SB.c.auth.onAuthStateChange((ev, session) => { setTimeout(() => sbSetUser(session ? session.user : null), 0); });
+    } catch (e) { }
+    await syncServer();
+    if (!SB.timer) {
+      SB.timer = setInterval(() => { if (document.visibilityState === 'visible') syncServer(); }, 120000);
+      document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && Date.now() - SB.lastSync > 20000) syncServer(); });
+      window.addEventListener('online', () => syncServer());
+    }
+  }
+  async function sbSetUser(u) {
+    SB.user = u || null;
+    if (!u) { SB.admin = false; SB.adminFor = null; }
+    else if (SB.adminFor !== u.id) {
+      try { const { data, error } = await SB.c.from('admins').select('user_id').eq('user_id', u.id).maybeSingle(); SB.admin = !error && !!data; } catch (e) { SB.admin = false; }
+      SB.adminFor = u.id;
+      if (SB.admin && !$('#manage').hidden) sbLoadAdminInfo();
+    }
+    renderManage();
+  }
+  async function syncServer() {
+    if (!SB.c || SB.syncing) return;
+    SB.syncing = true;
+    try {
+      const list = await sbAll(() => SB.c.from('brosur').select('id,diubah').order('id'), 1000);
+      const seen = new Map(list.map(r => [r.id, r.diubah]));
+      for (const d of LIB.docs.filter(x => x.remote)) if (!seen.has(d.id)) { removeDoc(d.id); if (LS.db) LS.srvDel(d.id).catch(() => { }); }
+      const need = list.filter(r => { const d = LIB.byId.get(r.id); return !d || !d.remote || d.diubah !== r.diubah; }).map(r => r.id);
+      for (let i = 0; i < need.length; i += 40) {
+        const ids = need.slice(i, i + 40);
+        const rows = await sbAll(() => SB.c.from('brosur').select('*').in('id', ids).order('id'), 1000);
+        const pages = await sbAll(() => SB.c.from('brosur_halaman').select('doc_id,halaman,blocks').in('doc_id', ids).order('doc_id').order('halaman'), 1000);
+        for (const row of rows) {
+          const pg = pages.filter(p => p.doc_id === row.id);
+          addDoc(sbDoc(row, pg));
+          if (LS.db) LS.srvPut({ id: row.id, row, pages: pg }).catch(() => { });
+        }
+      }
+      SB.state = 'online'; SB.err = null; SB.lastSync = Date.now();
+    } catch (e) { SB.state = 'offline'; SB.err = e; }
+    finally {
+      SB.syncing = false; LIB.pdfState = 'ready';
+      setStatus(); scheduleRefresh(); renderManage();
+      if (!S.q && S.tab === 'cari' && !S.browse) renderMain();
+    }
+  }
+  async function sbLoadAdminInfo() {
+    if (!SB.c || !SB.admin) return;
+    try { const { data } = await SB.c.from('upload_log').select('*').order('dibuat', { ascending: false }).limit(30); SB.logs = data || []; } catch (e) { SB.logs = null; }
+    try { const { data, error } = await SB.c.rpc('pustaka_stats'); SB.stats = error ? null : data; } catch (e) { SB.stats = null; }
+    renderManage();
+  }
+  async function sbLog(entry) { try { await SB.c.from('upload_log').insert(Object.assign({ oleh: SB.user && SB.user.email }, entry)); } catch (e) { } }
+  async function sha256(file) {
+    try { const h = await crypto.subtle.digest('SHA-256', await file.arrayBuffer()); return Array.from(new Uint8Array(h)).map(b => b.toString(16).padStart(2, '0')).join(''); } catch (e) { return null; }
+  }
+  function autoUpload() { try { return localStorage.getItem('prm-auto') !== '0'; } catch (e) { return true; } }
+  async function serverPrepare(q) {
+    // dipanggil setelah PDF selesai dibaca
+    q.hash = await sha256(q.file);
+    q.id = makeId(q.meta, q.file.name);
+    try {
+      if (q.hash) {
+        const { data } = await SB.c.from('brosur').select('id,judul,dibuat').eq('sha256', q.hash).maybeSingle();
+        if (data) { q.state = 'dup'; q.msg = 'File yang sama persis sudah ada di server: “' + data.judul + '”. Tidak diunggah lagi.'; renderQueue(); return; }
+      }
+    } catch (e) { }
+    const ex = LIB.byId.get(q.id);
+    if (ex && (ex.official || ex.remote)) { q.state = 'conflict'; q.msg = 'Sudah ada brosur dengan tanggal dan nomor yang sama: “' + ex.title + '” (' + (ex.official ? 'bawaan website' : 'online') + '). Brosur lama tidak akan dihapus.'; renderQueue(); return; }
+    q.state = 'ready'; renderQueue();
+    if (autoUpload() && SB.admin && q.meta.title && q.meta.date) serverUpload(q);
+  }
+  async function serverUpload(q) {
+    if (!SB.admin) { q.state = 'error'; q.msg = 'Masuk sebagai admin dulu.'; renderQueue(); return; }
+    if (q.state === 'ready' || q.state === 'conflict') readQueueForm(q);
+    if (!q.meta.title) { q.state = 'ready'; q.msg = 'Judul wajib diisi.'; renderQueue(); return; }
+    if (q.meta.date && !/^\d{4}-\d{2}-\d{2}$/.test(q.meta.date)) { q.state = 'ready'; q.msg = 'Format tanggal tidak valid.'; renderQueue(); return; }
+    if (q.file.size > 20 * 1024 * 1024) { q.state = 'error'; q.msg = 'File terlalu besar. Batas satu file 20 MB.'; renderQueue(); return; }
+    if (!q.idFixed) { q.id = makeId(q.meta, q.file.name) + (q.forceNew ? '-' + (q.hash || Date.now().toString(36)).slice(0, 6) : ''); q.idFixed = true; }
+    const id = q.id;
+    q.msg = '';
+    try {
+      if (!q.stored) {
+        q.state = 'uploading'; renderQueue();
+        const path = (q.meta.date ? q.meta.date.slice(0, 4) : 'tanpa-tanggal') + '/' + id + '-' + (q.hash ? q.hash.slice(0, 8) : Date.now().toString(36)) + '.pdf';
+        const body = q.file.type === 'application/pdf' ? q.file : new File([q.file], q.file.name, { type: 'application/pdf' });
+        const { error } = await SB.c.storage.from(SB.conf.bucket).upload(path, body, { contentType: 'application/pdf', upsert: false, cacheControl: '31536000' });
+        if (error && !/exists|duplicate/i.test(error.message || '')) throw error;
+        q.stored = path;
+      }
+      q.state = 'indexing'; renderQueue();
+      const row = { id, nama_file: q.file.name, judul: q.meta.title, tanggal: q.meta.date || null, keterangan_tanggal: q.meta.ahad || null, nomor: q.meta.no || null, jumlah_halaman: q.pages, ukuran: q.file.size, sha256: q.hash, storage_path: q.stored, status: 'aktif', diunggah_oleh: SB.user && SB.user.email };
+      if (!q.rowDone) { const { error } = await SB.c.from('brosur').insert(row); if (error) throw error; q.rowDone = true; }
+      const byPage = new Map(); for (const b of q.blocks) { const p = b[2] || 1; if (!byPage.has(p)) byPage.set(p, []); byPage.get(p).push(b); }
+      const pages = []; for (let p = 1; p <= q.pages; p++) { const bl = byPage.get(p) || []; pages.push({ doc_id: id, halaman: p, blocks: bl, teks: bl.map(b => b[1]).join('\n') }); }
+      const { error: e2 } = await SB.c.from('brosur_halaman').upsert(pages); if (e2) throw e2;
+      await sbLog({ doc_id: id, nama_file: q.file.name, aksi: 'unggah', status: 'berhasil' });
+      let fresh = null; try { const r = await SB.c.from('brosur').select('*').eq('id', id).maybeSingle(); fresh = r.data; } catch (e) { }
+      const full = fresh || Object.assign({ dibuat: new Date().toISOString(), diubah: null }, row);
+      addDoc(sbDoc(full, pages)); if (LS.db) LS.srvPut({ id, row: full, pages }).catch(() => { });
+      if (q.fromLocal && LS.db) { try { await LS.del(q.fromLocal); SB.localOnly = SB.localOnly.filter(r => r.id !== q.fromLocal); } catch (e) { } }
+      q.state = 'done'; renderQueue(); renderManage(); setStatus(); scheduleRefresh(); if (!S.q && S.tab === 'cari') renderMain();
+      if (SB.admin) sbLoadAdminInfo();
+    } catch (e) {
+      q.state = 'error'; q.msg = sbErrText(e); renderQueue();
+      sbLog({ doc_id: id, nama_file: q.file.name, aksi: 'unggah', status: 'gagal', pesan: String((e && e.message) || e).slice(0, 300) });
+    }
+  }
+  async function serverCancel(q) {
+    if (q.stored && !q.rowDone && SB.c) { try { await SB.c.storage.from(SB.conf.bucket).remove([q.stored]); } catch (e) { } }
+  }
+  async function serverEdit(d, patch) {
+    const upd = { judul: patch.title, tanggal: patch.date || null, nomor: patch.no || null, keterangan_tanggal: patch.ahad || null };
+    const { error } = await SB.c.from('brosur').update(upd).eq('id', d.id);
+    if (error) throw error;
+    await sbLog({ doc_id: d.id, nama_file: d.file, aksi: 'ubah', status: 'berhasil' });
+    await syncServer(); sbLoadAdminInfo();
+  }
+  async function serverDelete(d) {
+    const { error } = await SB.c.from('brosur').delete().eq('id', d.id);
+    if (error) throw error;
+    if (d.storagePath) { try { await SB.c.storage.from(SB.conf.bucket).remove([d.storagePath]); } catch (e) { } }
+    await sbLog({ doc_id: d.id, nama_file: d.file, aksi: 'hapus', status: 'berhasil' });
+    removeDoc(d.id); if (LS.db) LS.srvDel(d.id).catch(() => { });
+    sbLoadAdminInfo();
+  }
+  function migrateLocal() {
+    for (const r of SB.localOnly) {
+      if (QUEUE.some(q => q.fromLocal === r.id)) continue;
+      const file = new File([r.blob], r.file || (r.id + '.pdf'), { type: 'application/pdf' });
+      const q = { k: Math.random().toString(36).slice(2), file, fromLocal: r.id, pages: r.pages, blocks: r.blocks || [], meta: { title: r.title, date: r.date, no: r.no, ahad: r.ahad }, refs: P.extractRefs(r.blocks || []), chars: (r.blocks || []).reduce((s, b) => s + b[1].length, 0), state: 'reading', msg: '' };
+      QUEUE.push(q); serverPrepare(q);
+    }
+    renderQueue();
+  }
+  async function testConnect(url, key) {
+    url = String(url || '').trim().replace(/\/+$/, ''); key = String(key || '').trim();
+    if (!/^https:\/\/[a-z0-9-]+\.supabase\.(co|in)$/i.test(url)) return 'Alamat Project URL tidak sesuai. Contohnya: https://abcdxyz.supabase.co';
+    const kp = keyProblem(key); if (kp) return kp;
+    try {
+      const lib = await sbLib(); const c = lib.createClient(url, key, { auth: { persistSession: false } });
+      const { error } = await c.from('brosur').select('id', { count: 'exact', head: true });
+      if (error) return sbErrText(error);
+      const { error: e2 } = await c.storage.from('brosur-pdf').list('', { limit: 1 });
+      if (e2 && /not found/i.test(e2.message || '')) return sbErrText({ message: 'Bucket not found' });
+      return null;
+    } catch (e) { return sbErrText(e); }
+  }
+  function configJs(url, key) {
+    return '// Pustaka Referensi MTA — sambungan ke server online (Supabase)\n' +
+      '// Kunci di bawah adalah kunci PUBLIK (anon/publishable), memang aman dipasang di website.\n' +
+      '// JANGAN pernah mengisi kunci service_role / secret di file ini.\n' +
+      'window.PRM_CONFIG = {\n  supabaseUrl: ' + JSON.stringify(url) + ',\n  supabaseKey: ' + JSON.stringify(key) + ',\n  bucket: "brosur-pdf"\n};\n';
+  }
+  function fmtBytes(n) { n = +n || 0; if (n >= 1073741824) return (n / 1073741824).toFixed(2) + ' GB'; if (n >= 1048576) return (n / 1048576).toFixed(1) + ' MB'; if (n >= 1024) return Math.round(n / 1024) + ' KB'; return n + ' B'; }
+  function meter(label, used, max) {
+    const pct = Math.min(100, (used / max) * 100);
+    const col = pct >= 80 ? 'var(--danger)' : pct >= 60 ? 'var(--warn)' : 'var(--accent)';
+    return `<div class="meter"><div class="mt"><span>${label}</span><b>${fmtBytes(used)} dari ${fmtBytes(max)} (${pct < 1 ? '<1' : Math.round(pct)}%)</b></div><div class="mbar"><i style="width:${Math.max(1, pct)}%;background:${col}"></i></div>${pct >= 80 ? '<div class="qmsg warn" style="margin-top:6px">Hampir penuh. Hapus brosur yang tidak dipakai sebelum mengunggah lagi.</div>' : ''}</div>`;
+  }
+  function renderServerBox() {
+    const el = $('#srvBox'); if (!el) return;
+    if (!CAP.local) { el.innerHTML = ''; return; }
+    if (!SB.conf) {
+      el.innerHTML = `<div class="qitem"><div class="qh"><b>Server online belum tersambung</b><span class="spill wait">Mode browser</span></div>
+        <div style="font-size:13.5px;color:var(--muted)">Saat ini brosur PDF tambahan hanya tersimpan di browser perangkat ini. Sambungkan ke Supabase agar sekali unggah langsung tersedia di semua HP dan komputer.</div>
+        <div class="fgrid"><label class="wide">Project URL<input id="cfgUrl" placeholder="https://xxxxxxxx.supabase.co" autocomplete="off"></label><label class="wide">Kunci publik (anon public / publishable)<input id="cfgKey" placeholder="eyJhbGciOi… atau sb_publishable_…" autocomplete="off"></label></div>
+        <div id="cfgMsg"></div>
+        <div class="actions" style="border:0;padding:0;margin:0"><button class="btn primary" data-act="cfgtest">Uji & sambungkan</button></div></div>`;
+      return;
+    }
+    let h = '';
+    const st = SB.state === 'online' ? `<span class="spill ok">Tersambung</span>` : SB.state === 'connecting' ? `<span class="spill run">Menghubungkan…</span>` : `<span class="spill err">Tidak terhubung</span>`;
+    h += `<div class="qitem"><div class="qh"><b>Server online</b>${st}<span>${esc(SB.conf.url.replace(/^https:\/\//, ''))}</span></div>`;
+    if (SB.state === 'offline') h += `<div class="qmsg warn">Server tidak bisa dihubungi (${esc(sbErrText(SB.err))}). Brosur online memakai salinan terakhir di perangkat ini. Jika lama tidak dibuka, proyek Supabase gratis bisa berhenti sementara; aktifkan lagi lewat dashboard Supabase.</div>`;
+    if (SB.preview) h += `<div class="qmsg warn">Sambungan ini baru berlaku di browser ini. Agar semua perangkat tersambung, unduh <b>config.js</b> dan taruh di folder utama repository (timpa yang lama), lalu Commit dan Push. <button class="btn" data-act="cfgdl">Unduh config.js</button> <button class="btn ghost" data-act="cfgclear">Putuskan</button></div>`;
+    if (!SB.user) {
+      h += `<div style="font-size:13.5px;color:var(--muted)">Semua orang bisa mencari dan membaca. Masuk sebagai admin untuk mengunggah, mengubah, atau menghapus brosur.</div>
+        <div class="fgrid"><label>Email admin<input id="lgEmail" type="email" autocomplete="username"></label><label>Password<input id="lgPass" type="password" autocomplete="current-password"></label></div><div id="lgMsg"></div>
+        <div class="actions" style="border:0;padding:0;margin:0"><button class="btn primary" data-act="login">Masuk</button></div>`;
+    } else {
+      h += `<div class="qh" style="font-size:13px"><span>Masuk sebagai <b>${esc(SB.user.email || '')}</b> ${SB.admin ? '· admin' : ''}</span><button class="btn ghost" data-act="logout">Keluar</button></div>`;
+      if (!SB.admin) h += `<div class="qmsg warn">Akun ini bukan admin, jadi tidak bisa mengubah data. Tambahkan akun ini ke daftar admin di Supabase.</div>`;
+    }
+    h += `</div>`;
+    if (SB.admin) {
+      const remote = pdfDocs().filter(d => d.remote);
+      const s = SB.stats;
+      h += `<div class="qitem"><div class="qh"><b>Penyimpanan & indeks</b><button class="btn ghost" data-act="sync">Sinkronkan sekarang</button></div>
+        ${s ? meter('File PDF', s.pdf_bytes, FREE.pdf) + meter('Database', s.db_bytes, FREE.db) : '<div class="crumb">Memuat statistik…</div>'}
+        <div style="font-size:13px;color:var(--muted)">Indeks pencarian: <b>${remote.length}</b> brosur online${s ? ' dari ' + s.docs + ' di server' : ''} · ${pdfDocs().filter(d => d.official).length} bawaan website · sinkron terakhir ${SB.lastSync ? new Date(SB.lastSync).toLocaleTimeString('id-ID') : '—'}. Paket gratis Supabase: 1 GB file, 500 MB database, 5 GB transfer per bulan. Tidak ada biaya otomatis.</div></div>`;
+      if (SB.localOnly.length) h += `<div class="qitem"><div class="qh"><b>${SB.localOnly.length} brosur hanya tersimpan di browser ini</b></div><div style="font-size:13px;color:var(--muted)">${SB.localOnly.map(r => esc(r.title || r.file)).join(', ')}</div><div><button class="btn primary" data-act="migrate">Unggah ke server</button></div></div>`;
+      if (SB.logs) h += `<details class="pv"><summary>Riwayat upload (${SB.logs.length} terakhir)</summary><div style="font-family:var(--f-ui);font-size:12.5px">${SB.logs.length ? SB.logs.map(l => `<p style="margin:4px 0"><b>${esc(new Date(l.dibuat).toLocaleString('id-ID'))}</b> · ${esc(l.aksi)} · <span style="color:${l.status === 'berhasil' ? 'var(--ok)' : 'var(--danger)'}">${esc(l.status)}</span> · ${esc(l.nama_file || l.doc_id || '')}${l.oleh ? ' · ' + esc(l.oleh) : ''}${l.pesan ? '<br><span style="color:var(--muted)">' + esc(l.pesan) + '</span>' : ''}</p>`).join('') : 'Belum ada riwayat.'}</div></details>`;
+    }
+    el.innerHTML = h;
+  }
+  function renderManage() {
+    renderServerBox();
+    const up = $('#upBox'); if (up) up.hidden = !!(SB.conf && !SB.admin);
+    const ar = $('#autoRow'); if (ar) { ar.hidden = !SB.conf; const cb = $('#autoUp'); if (cb) cb.checked = autoUpload(); }
+    renderPdfList();
   }
 
   /* ---------------- year selects ---------------- */
@@ -1302,7 +1585,10 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
       <div class="stat"><b>${LIB.pdfState === 'loading' ? '…' : fmtN(pdfs.length)}</b><span>brosur PDF${pd.length ? ' ' + shortDate({ date: pd[0] }) + ' – ' + shortDate({ date: pd[pd.length - 1] }) : ''}</span></div>
       <div class="stat"><b>${LIB.refsReady ? fmtN(LIB.qTotal) : '…'}</b><span>rujukan ayat · ${LIB.refsReady ? fmtN(LIB.hTotal) : '…'} rujukan hadits</span></div>
     </div>`;
-    if (CAP.local) {
+    if (CAP.local && SB.conf) {
+      if (SB.state === 'offline') h += `<div class="note warn">Server brosur online tidak bisa dihubungi. Arsip CHM dan brosur bawaan tetap bisa dicari; brosur online memakai salinan terakhir di perangkat ini. Jika website lama tidak dibuka, proyek Supabase gratis bisa berhenti sementara dan perlu diaktifkan lagi dari dashboard Supabase.</div>`;
+      else if (SB.preview) h += `<div class="note">Server online tersambung khusus di browser ini (uji coba). Masukkan <b>config.js</b> ke repository agar semua perangkat tersambung.</div>`;
+    } else if (CAP.local) {
       const nLocal = pdfDocs().filter(d => !d.official).length;
       h += `<div class="note">${FILE_MODE ? 'Dibuka dari folder komputer.' : 'Versi website.'} Brosur PDF yang ditambahkan lewat tombol <b>Brosur PDF</b> hanya tersimpan di browser perangkat ini${CAP.localMem ? ' sampai halaman ditutup' : ''}. Agar muncul di semua HP dan komputer, brosur itu perlu dimasukkan ke repository GitHub (lihat README, bagian upload mingguan).${nLocal ? ' Saat ini ada <b>' + nLocal + ' brosur tambahan</b> yang baru tersimpan di browser ini.' : ''} Ringkasan AI hanya tersedia di versi Claude.</div>`;
     }
@@ -1362,7 +1648,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     page = Math.max(1, +page || 1);
     const R = $('#reader');
     R.innerHTML = `<div class="dhead"><div class="row"><div style="flex:1;min-width:0"><div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span>${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div><h2>${esc(d.title)}</h2></div><button class="btn ghost" data-act="close" aria-label="Tutup">✕ Tutup</button></div>
-      <div class="actions"><button class="btn" data-act="pvprev">‹ Sebelumnya</button><span class="pvnum" id="pvnum">Halaman ${page}</span><button class="btn" data-act="pvnext">Berikutnya ›</button><button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="${firstBlockOfPage(d, page)}">Lihat teks</button><a class="btn ghost" href="${esc(pdfUrl(d))}" download="${esc(d.file)}">Unduh PDF</a></div></div>
+      <div class="actions"><button class="btn" data-act="pvprev">‹ Sebelumnya</button><span class="pvnum" id="pvnum">Halaman ${page}</span><button class="btn" data-act="pvnext">Berikutnya ›</button><button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="${firstBlockOfPage(d, page)}">Lihat teks</button><a class="btn ghost" href="${esc(d.storagePath && SB.conf ? sbPublicUrl(d.storagePath, d.file) : pdfUrl(d))}" download="${esc(d.file)}" target="_blank" rel="noopener">Unduh PDF</a></div></div>
       <div class="dbody" id="pvbody"><div class="pvwrap"><div class="pvmsg" id="pvmsg">Memuat PDF…</div><canvas id="pvcanvas"></canvas></div></div>`;
     showDrawer(R);
     try {
@@ -1655,10 +1941,28 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
         if (chars < 200) { q.state = 'bad'; q.msg = 'PDF ini hampir tidak memiliki teks (kemungkinan hasil scan gambar), sehingga tidak bisa diindeks.'; }
       } catch (e) { q.state = 'bad'; q.msg = 'PDF tidak bisa dibaca: ' + (e && e.message ? e.message : e); }
       renderQueue();
+      if (q.state === 'ready' && SB.c) await serverPrepare(q);
     }
+  }
+  const QLABEL = { reading: ['run', 'Sedang membaca PDF'], ready: ['wait', 'Menunggu upload'], uploading: ['run', 'Sedang mengunggah'], indexing: ['run', 'Sedang mengindeks'], done: ['ok', 'Berhasil'], error: ['err', 'Gagal'], dup: ['wait', 'Sudah ada'], conflict: ['wait', 'Perlu dicek'], bad: ['err', 'Gagal'] };
+  function serverCard(q) {
+    const [cls, label] = QLABEL[q.state] || ['wait', q.state];
+    const head = `<div class="qh"><b>${esc(q.meta && q.meta.title ? q.meta.title : q.file.name)}</b><span class="spill ${cls}">${label}</span><span>${esc(q.file.name)}${q.pages ? ' · ' + q.pages + ' halaman' : ''}</span></div>`;
+    if (q.state === 'reading' || q.state === 'uploading' || q.state === 'indexing') return `<div class="qitem">${head}</div>`;
+    if (q.state === 'done') return `<div class="qitem">${head}<div class="qmsg ok">Tersimpan di server. Sudah bisa dicari dan dibuka dari semua HP dan komputer.</div><div><button class="btn ghost" data-act="qdrop" data-k="${q.k}">Tutup</button></div></div>`;
+    if (q.state === 'bad' || q.state === 'dup') return `<div class="qitem">${head}<div class="qmsg ${q.state === 'bad' ? 'err' : 'warn'}">${esc(q.msg)}</div><div><button class="btn" data-act="qdrop" data-k="${q.k}">Tutup</button></div></div>`;
+    if (q.state === 'error') return `<div class="qitem">${head}<div class="qmsg err">${esc(q.msg)}</div><div class="actions" style="border:0;padding:0;margin:0"><button class="btn primary" data-act="qretry" data-k="${q.k}">Coba lagi</button><button class="btn ghost" data-act="qdrop" data-k="${q.k}">Batal</button></div></div>`;
+    const m = q.meta;
+    return `<div class="qitem" data-k="${q.k}">${head}
+      ${q.state === 'conflict' ? `<div class="qmsg warn">${esc(q.msg)}</div>` : (q.msg ? `<div class="qmsg err">${esc(q.msg)}</div>` : '')}
+      ${!m.date ? '<div class="qmsg warn">Tanggal Ahad tidak terbaca otomatis. Isi tanggalnya.</div>' : ''}
+      <div class="fgrid"><label class="wide">Judul brosur<input data-f="title" value="${esc(m.title || '')}"></label><label>Tanggal Ahad<input type="date" data-f="date" value="${esc(m.date || '')}"></label><label>No. Brosur<input data-f="no" value="${esc(m.no || '')}" placeholder="2278/2318/IA"></label><label class="wide">Keterangan tanggal (Masehi / Hijriah)<input data-f="ahad" value="${esc(m.ahad || '')}"></label></div>
+      <details class="pv"><summary>Pratinjau teks hasil ekstraksi</summary><div>${q.blocks.slice(0, 14).map(b => `<p${b[0] === 'a' ? ' class="ar" dir="rtl"' : ''}><small style="color:var(--faint)">hal. ${b[2]}</small> ${esc(trunc(b[1], 300))}</p>`).join('')}</div></details>
+      <div class="actions" style="border:0;padding:0;margin:0">${q.state === 'conflict' ? `<button class="btn primary" data-act="qforce" data-k="${q.k}">Simpan sebagai dokumen terpisah</button>` : `<button class="btn primary" data-act="qup" data-k="${q.k}"${SB.admin ? '' : ' disabled'}>Unggah ke server</button>`}<button class="btn ghost" data-act="qdrop" data-k="${q.k}">Batal</button></div></div>`;
   }
   function renderQueue() {
     const el = $('#queue');
+    if (SB.c) { el.innerHTML = QUEUE.length > 1 && QUEUE.some(q => q.state === 'ready') && SB.admin ? `<div class="actions" style="border:0;margin:10px 0 0;padding:0"><button class="btn primary" data-act="qall">Unggah semua (${QUEUE.filter(q => q.state === 'ready').length})</button></div>` + QUEUE.map(serverCard).join('') : QUEUE.map(serverCard).join(''); return; }
     el.innerHTML = QUEUE.map(q => {
       if (q.state === 'reading') return `<div class="qitem"><div class="qh"><b>${esc(q.file.name)}</b><span>Membaca teks per halaman…</span></div></div>`;
       if (q.state === 'bad') return `<div class="qitem"><div class="qh"><b>${esc(q.file.name)}</b></div><div class="qmsg err">${esc(q.msg)}</div><div><button class="btn" data-act="qdrop" data-k="${q.k}">Tutup</button></div></div>`;
@@ -1741,14 +2045,14 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     $('#pdfCountH').textContent = 'Brosur PDF di pustaka (' + list.length + ')';
     const row = d => {
       if (d._edit) return `<div class="prow" data-id="${esc(d.id)}"><div><div class="fgrid"><label class="wide">Judul<input data-e="title" value="${esc(d.title)}"></label><label>Tanggal Ahad<input type="date" data-e="date" value="${esc(d.date || '')}"></label><label>No. Brosur<input data-e="no" value="${esc(d.no || '')}"></label><label class="wide">Keterangan tanggal<input data-e="ahad" value="${esc(d.ahad || '')}"></label></div><div class="actions" style="border:0"><button class="btn primary" data-act="esave" data-id="${esc(d.id)}">Simpan perubahan</button><button class="btn ghost" data-act="ecancel" data-id="${esc(d.id)}">Batal</button></div></div></div>`;
-      const canEdit = CAP.local ? !d.official : !!CAP.assets;
-      const tag = CAP.local ? (d.official ? '<span class="pill pdf">Bawaan website</span> ' : '<span class="pill" style="color:var(--warn);background:var(--warn-soft)">Baru di browser ini</span> ') : '';
+      const canEdit = SB.conf ? (SB.admin && d.remote) : CAP.local ? !d.official : !!CAP.assets;
+      const tag = CAP.local ? (d.official ? '<span class="pill pdf">Bawaan website</span> ' : d.remote ? '<span class="pill q">Online</span> ' : '<span class="pill" style="color:var(--warn);background:var(--warn-soft)">Baru di browser ini</span> ') : '';
       return `<div class="prow"><div><div class="t">${tag}${esc(d.title)}</div><div class="m">${esc(dateLabel(d))}${d.no ? ' · No. ' + esc(d.no) : ''} · ${esc(d.file)} · ${d.pages} hal.</div></div>
-        <button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="0">Baca</button>${CAP.local && !d.official ? `<button class="btn ghost" data-act="dlpdf" data-id="${esc(d.id)}">Unduh PDF</button>` : ''}${canEdit ? `<button class="btn ghost" data-act="edit" data-id="${esc(d.id)}">Ubah data</button><button class="btn ghost" data-act="del" data-id="${esc(d.id)}" style="color:var(--danger)">Hapus</button>` : ''}
-        ${d._del ? `<div class="confirm">Hapus “${esc(trunc(d.title, 40))}” dari ${CAP.local ? 'browser ini' : 'pustaka beserta file PDF-nya'}? Tidak bisa dibatalkan.<button class="btn danger" data-act="delyes" data-id="${esc(d.id)}">Ya, hapus</button><button class="btn ghost" data-act="delno" data-id="${esc(d.id)}">Batal</button></div>` : ''}</div>`;
+        <button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="0">Baca</button>${CAP.local && !d.official && !d.remote ? `<button class="btn ghost" data-act="dlpdf" data-id="${esc(d.id)}">Unduh PDF</button>` : ''}${canEdit ? `<button class="btn ghost" data-act="edit" data-id="${esc(d.id)}">Ubah data</button><button class="btn ghost" data-act="del" data-id="${esc(d.id)}" style="color:var(--danger)">Hapus</button>` : ''}
+        ${d._del ? `<div class="confirm">Hapus “${esc(trunc(d.title, 40))}” dari ${d.remote ? 'server beserta file PDF-nya (hilang di semua perangkat)' : CAP.local ? 'browser ini' : 'pustaka beserta file PDF-nya'}? Tidak bisa dibatalkan.<button class="btn danger" data-act="delyes" data-id="${esc(d.id)}">Ya, hapus</button><button class="btn ghost" data-act="delno" data-id="${esc(d.id)}">Batal</button></div>` : ''}</div>`;
     };
     let h = list.length ? list.map(row).join('') : '<div class="note">Belum ada brosur PDF.</div>';
-    if (CAP.local) {
+    if (CAP.local && !SB.conf) {
       const extra = list.filter(d => !d.official);
       h += `<div class="qitem" style="margin-top:14px"><div class="qh"><b>Supaya brosur baru muncul di semua HP dan komputer</b></div>
         <div style="font-size:13.5px;color:var(--muted)">Brosur yang ditambahkan di sini baru tersimpan di browser ini. Untuk menerbitkannya ke website: (1) unduh <b>pdf_seed.js</b> baru, (2) taruh file itu di folder <b>data</b> repository (timpa yang lama), (3) taruh file PDF-nya di folder <b>data/pdf</b> dengan nama yang sama, (4) Commit lalu Push di GitHub Desktop. Arsip lama tetap utuh.</div>
@@ -1779,6 +2083,11 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     const d = LIB.byId.get(id); const row = $(`.prow[data-id="${CSS.escape(id)}"]`); if (!d || !row) return;
     const patch = {}; $$('input[data-e]', row).forEach(i => { patch[i.dataset.e] = i.value.trim() || null; });
     if (!patch.title) { toast('Judul wajib diisi'); return; }
+    if (d.remote && SB.c) {
+      try { await serverEdit(d, patch); const nd = LIB.byId.get(id); if (nd) nd._edit = false; d._edit = false; renderPdfList(); toast('Data brosur diperbarui di server'); }
+      catch (e) { toast(sbErrText(e)); }
+      return;
+    }
     if (CAP.local) {
       try {
         if (LS.db) { const all = await LS.all(); const rec = all.find(r => r.id === id); if (rec) await LS.put(Object.assign(rec, patch)); }
@@ -1791,6 +2100,11 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   }
   async function deletePdf(id) {
     const d = LIB.byId.get(id); if (!d) return;
+    if (d.remote && SB.c) {
+      try { await serverDelete(d); renderPdfList(); setStatus(); scheduleRefresh(); toast('Brosur dihapus dari server'); }
+      catch (e) { d._del = false; renderPdfList(); toast(sbErrText(e)); }
+      return;
+    }
     if (CAP.local) {
       try { if (LS.db) await LS.del(id); if (d._url) URL.revokeObjectURL(d._url); removeDoc(id); renderPdfList(); setStatus(); scheduleRefresh(); toast('Brosur dihapus'); }
       catch (e) { d._del = false; renderPdfList(); toast('Gagal menghapus'); }
@@ -1832,7 +2146,8 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   $('#btnSup').addEventListener('click', () => runSupport());
   $('#sq').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); runSupport(); } });
   $('#paneSup').addEventListener('click', e => { const b = e.target.closest('[data-ssrc]'); if (!b) return; S.ssrc = b.dataset.ssrc; $$('[data-ssrc]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); if (S.sup) runSupport(); });
-  $('#btnManage').addEventListener('click', () => { renderPdfList(); renderQueue(); showDrawer($('#manage')); });
+  $('#btnManage').addEventListener('click', () => { renderManage(); renderQueue(); showDrawer($('#manage')); if (SB.admin) sbLoadAdminInfo(); });
+  document.addEventListener('change', e => { if (e.target && e.target.id === 'autoUp') { try { localStorage.setItem('prm-auto', e.target.checked ? '1' : '0'); } catch (x) { } } });
   $('#scrim').addEventListener('click', closeDrawers);
   document.addEventListener('keydown', e => {
     if ((e.key === 'Enter' || e.key === ' ') && e.target && e.target.getAttribute && e.target.getAttribute('role') === 'button' && e.target.dataset.act) { e.preventDefault(); e.target.click(); return; }
@@ -1855,6 +2170,38 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
       case 'pvprev': if (pv && pv.page > 1) { pv.page--; pvRender(); } break;
       case 'pvnext': if (pv && pv.page < pv.doc.numPages) { pv.page++; pvRender(); } break;
       case 'exportseed': exportSeed(); break;
+      case 'qup': { const q = QUEUE.find(x => x.k === el.dataset.k); if (q) serverUpload(q); break; }
+      case 'qretry': { const q = QUEUE.find(x => x.k === el.dataset.k); if (q) serverUpload(q); break; }
+      case 'qforce': { const q = QUEUE.find(x => x.k === el.dataset.k); if (q) { readQueueForm(q); q.forceNew = true; q.state = 'ready'; serverUpload(q); } break; }
+      case 'qall': QUEUE.filter(q => q.state === 'ready').reduce((p, q) => p.then(() => serverUpload(q)), Promise.resolve()); break;
+      case 'sync': syncServer().then(sbLoadAdminInfo); toast('Menyinkronkan…'); break;
+      case 'migrate': migrateLocal(); break;
+      case 'logout': if (SB.c) SB.c.auth.signOut(); break;
+      case 'login': {
+        const em = ($('#lgEmail') || {}).value, pw = ($('#lgPass') || {}).value; const msg = $('#lgMsg');
+        if (!em || !pw) { msg.innerHTML = '<div class="qmsg err">Isi email dan password.</div>'; break; }
+        el.disabled = true; msg.innerHTML = '<div class="crumb">Memeriksa…</div>';
+        SB.c.auth.signInWithPassword({ email: em.trim(), password: pw }).then(({ data, error }) => {
+          el.disabled = false;
+          if (error) { msg.innerHTML = '<div class="qmsg err">' + esc(sbErrText(error)) + '</div>'; return; }
+          sbSetUser(data.user).then(() => { if (SB.admin) { sbLoadAdminInfo(); toast('Masuk sebagai admin'); } });
+        });
+        break;
+      }
+      case 'cfgtest': {
+        const url = $('#cfgUrl').value, key = $('#cfgKey').value; const msg = $('#cfgMsg');
+        el.disabled = true; msg.innerHTML = '<div class="crumb">Menguji sambungan…</div>';
+        testConnect(url, key).then(err => {
+          el.disabled = false;
+          if (err) { msg.innerHTML = '<div class="qmsg err">' + esc(err) + '</div>'; return; }
+          try { localStorage.setItem('prm-supabase', JSON.stringify({ url: url.trim().replace(/\/+$/, ''), key: key.trim() })); } catch (x) { }
+          msg.innerHTML = '<div class="qmsg ok">Berhasil tersambung. Halaman dimuat ulang…</div>';
+          setTimeout(() => location.reload(), 800);
+        });
+        break;
+      }
+      case 'cfgdl': if (SB.conf) { downloadBlob(new Blob([configJs(SB.conf.url, SB.conf.key)], { type: 'text/javascript' }), 'config.js'); toast('config.js diunduh'); } break;
+      case 'cfgclear': try { localStorage.removeItem('prm-supabase'); } catch (x) { } location.reload(); break;
       case 'dlpdf': if (d && d.blob) downloadBlob(d.blob, d.file); break;
       case 'close': closeDrawers(); break;
       case 'pick': if (e.target.closest('button,a')) return; $$('#reader .blk.target').forEach(x => x.classList.remove('target')); el.classList.add('target'); break;
@@ -1879,7 +2226,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
       case 'supq': { const X = S.sup; const g = (el.dataset.k === 'A' ? X.A : X.H)[+el.dataset.i]; if (g) copy(supQuote(el.dataset.k === 'A' ? 'Q' : 'H', g)); break; }
       case 'supmore': { const k = el.dataset.k; S.sup.show[k] += k === 'chm' || k === 'pdf' ? 15 : 15; renderSupport(); break; }
       case 'qsave': saveQueue(el.dataset.k); break;
-      case 'qdrop': { const i = QUEUE.findIndex(x => x.k === el.dataset.k); if (i >= 0) QUEUE.splice(i, 1); renderQueue(); break; }
+      case 'qdrop': { const i = QUEUE.findIndex(x => x.k === el.dataset.k); if (i >= 0) { const q = QUEUE[i]; if (SB.c && q.state !== 'done') serverCancel(q); QUEUE.splice(i, 1); } renderQueue(); break; }
       case 'edit': if (d) { d._edit = true; renderPdfList(); } break;
       case 'ecancel': if (d) { d._edit = false; renderPdfList(); } break;
       case 'esave': saveEdit(id); break;
