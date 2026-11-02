@@ -1,0 +1,1898 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0C6A53"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Pustaka Referensi MTA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Literata:opsz,wght@7..72,400;7..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: satu kolom terpusat (maks 940px) di bawah bilah atas lengket; pembaca sumber & kelola PDF sebagai laci kanan (desktop) / layar penuh (HP) */
+:root {
+  --bg: #F2F5F3; --surface: #FFFFFF; --sunk: #E8EEEB; --ink: #15201C; --muted: #566661; --faint: #86958F; --line: #D6DFDB;
+  --accent: #0C6A53; --accent-2: #08513F; --accent-soft: #DCEFE8; --on-accent: #FFFFFF;
+  --chm: #8A5A0E; --chm-soft: #F4E8D3; --pdf: #2546A3; --pdf-soft: #E1E8FA;
+  --ayat: #0C6A53; --ayat-soft: #E3F2EC; --hadits: #7A3A8C; --hadits-soft: #F2E6F6;
+  --mark: #FFDF73; --mark-ink: #1C1600; --target: #FFF6D1;
+  --warn: #8F5400; --warn-soft: #FFF0D2; --danger: #B3261E; --danger-soft: #FCE6E4; --ok: #0C6A53;
+  --shadow: 0 1px 2px rgba(14, 32, 27, .06), 0 6px 22px rgba(14, 32, 27, .07);
+  --f-ui: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-read: "Literata", Georgia, "Times New Roman", serif;
+  --f-ar: "Amiri", "Traditional Arabic", "Noto Naskh Arabic", "Scheherazade New", serif;
+  --r: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1412; --surface: #151D1A; --sunk: #1B2521; --ink: #E3EBE7; --muted: #A0B0AA; --faint: #74847E; --line: #283530;
+    --accent: #43C29C; --accent-2: #63D4B0; --accent-soft: #173A30; --on-accent: #06221A;
+    --chm: #E3B567; --chm-soft: #33281A; --pdf: #94AEF7; --pdf-soft: #1C2747;
+    --ayat: #5FD0AC; --ayat-soft: #15302A; --hadits: #D7A2E8; --hadits-soft: #2E1F35;
+    --mark: #6A5612; --mark-ink: #FFF4C7; --target: #2C2A17;
+    --warn: #F0B259; --warn-soft: #33270F; --danger: #F2938C; --danger-soft: #3A1A18; --ok: #5FD0AC;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 22px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1412; --surface: #151D1A; --sunk: #1B2521; --ink: #E3EBE7; --muted: #A0B0AA; --faint: #74847E; --line: #283530;
+  --accent: #43C29C; --accent-2: #63D4B0; --accent-soft: #173A30; --on-accent: #06221A;
+  --chm: #E3B567; --chm-soft: #33281A; --pdf: #94AEF7; --pdf-soft: #1C2747;
+  --ayat: #5FD0AC; --ayat-soft: #15302A; --hadits: #D7A2E8; --hadits-soft: #2E1F35;
+  --mark: #6A5612; --mark-ink: #FFF4C7; --target: #2C2A17;
+  --warn: #F0B259; --warn-soft: #33270F; --danger: #F2938C; --danger-soft: #3A1A18; --ok: #5FD0AC;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 22px rgba(0, 0, 0, .3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { background: var(--bg); color: var(--ink); }
+body { margin: 0; font-family: var(--f-ui); font-size: 15px; line-height: 1.5; -webkit-text-size-adjust: 100%; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+mark { background: var(--mark); color: var(--mark-ink); border-radius: 3px; padding: 0 1px; }
+.wrap { max-width: 940px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* top bar */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 12px; padding-block: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; }
+.brand svg { flex: none; }
+.brand h1 { font-size: 17px; font-weight: 700; letter-spacing: -.01em; margin: 0; line-height: 1.2; }
+.brand small { display: block; color: var(--muted); font-size: 12px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand > div { min-width: 0; }
+.progress { height: 3px; background: transparent; position: relative; overflow: hidden; }
+.progress i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--accent); transition: width .3s ease; }
+
+.btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); padding: 7px 12px; border-radius: 9px; font-size: 13.5px; font-weight: 600; line-height: 1.2; text-decoration: none; color: var(--ink); white-space: nowrap; }
+.btn:hover { border-color: var(--faint); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.primary:hover { background: var(--accent-2); }
+.btn.ghost { border-color: transparent; background: transparent; color: var(--muted); padding: 6px 8px; }
+.btn.ghost:hover { color: var(--ink); background: var(--sunk); }
+.btn.danger { color: var(--danger); border-color: var(--danger-soft); background: var(--danger-soft); }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+.btn svg { width: 15px; height: 15px; flex: none; }
+
+/* tabs */
+.tabs { display: flex; gap: 4px; padding: 4px; background: var(--sunk); border-radius: 11px; margin: 18px 0 14px; width: fit-content; max-width: 100%; }
+.tabs button { border: 0; background: transparent; padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 14px; color: var(--muted); }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+
+/* search */
+.sbox { display: flex; gap: 8px; align-items: stretch; background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px; padding: 6px 6px 6px 14px; box-shadow: var(--shadow); }
+.sbox:focus-within { border-color: var(--accent); }
+.sbox svg { align-self: center; color: var(--faint); flex: none; }
+.sbox input, .sbox textarea { flex: 1; min-width: 0; border: 0; outline: none; background: transparent; font-size: 17px; padding: 8px 4px; }
+.sbox textarea { resize: none; font-size: 16px; line-height: 1.45; min-height: 52px; }
+.sbox .clear { border: 0; background: transparent; color: var(--faint); padding: 0 6px; font-size: 20px; }
+.hint { color: var(--muted); font-size: 12.5px; margin: 8px 2px 0; }
+.hint code { font-family: inherit; background: var(--sunk); padding: 1px 6px; border-radius: 5px; font-size: 12px; color: var(--ink); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 12px 0 4px; font-size: 13px; }
+.fgroup { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.fgroup > span { color: var(--muted); font-weight: 600; margin-right: 2px; }
+.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 11px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip:hover { border-color: var(--faint); }
+select.sel { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 5px 6px; font-size: 13px; }
+.tog { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-weight: 600; cursor: pointer; }
+.tog input { accent-color: var(--accent); width: 16px; height: 16px; }
+
+/* status + results header */
+.rhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 18px 2px 10px; }
+.rhead strong { font-size: 15px; }
+.rhead .sub { color: var(--muted); font-size: 13px; }
+.vchips { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 2px 12px; font-size: 12.5px; color: var(--muted); align-items: center; }
+.vchips b { color: var(--ink); font-weight: 600; background: var(--sunk); border-radius: 6px; padding: 1px 7px; }
+.note { border: 1px solid var(--line); background: var(--surface); border-radius: var(--r); padding: 10px 14px; color: var(--muted); font-size: 13.5px; margin: 10px 0; }
+.note.warn { border-color: transparent; background: var(--warn-soft); color: var(--warn); }
+
+/* result cards */
+.list { display: grid; gap: 12px; }
+.res { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px 12px; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 12.5px; color: var(--muted); }
+.meta .date { color: var(--ink); font-weight: 600; }
+.pill { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; }
+.pill.chm { color: var(--chm); background: var(--chm-soft); }
+.pill.pdf { color: var(--pdf); background: var(--pdf-soft); }
+.pill.q { color: var(--ayat); background: var(--ayat-soft); }
+.pill.h { color: var(--hadits); background: var(--hadits-soft); }
+.res h3 { margin: 6px 0 2px; font-size: 17px; line-height: 1.3; font-weight: 700; text-wrap: balance; }
+.linklike { border: 0; background: none; padding: 0; text-align: left; font: inherit; color: inherit; }
+.linklike:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.crumb { font-size: 12px; color: var(--faint); overflow-wrap: anywhere; }
+.crumb b { color: var(--muted); font-weight: 600; }
+.hitline { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.snips { display: grid; gap: 6px; margin-top: 10px; }
+.snip { display: block; width: 100%; text-align: left; border: 0; background: var(--sunk); border-radius: 9px; padding: 9px 12px; font: inherit; color: inherit; min-width: 0; }
+.snip:hover { background: var(--accent-soft); }
+.snip .loc { display: block; font-size: 11.5px; font-weight: 600; color: var(--muted); margin-bottom: 3px; overflow-wrap: anywhere; }
+.snip .txt { font-family: var(--f-read); font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+.snip.ar .txt, .ar { font-family: var(--f-ar); font-size: 21px; line-height: 2; direction: rtl; text-align: right; display: block; }
+.more { border: 0; background: none; color: var(--accent); font-weight: 600; font-size: 13px; padding: 8px 2px 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+.loadmore { display: flex; justify-content: center; margin: 16px 0 8px; }
+.locrow { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+.locrow .meta { margin-bottom: 6px; }
+.locrow .ttl { font-weight: 600; color: var(--ink); }
+
+/* home */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 18px 0 8px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; min-width: 0; }
+.stat b { display: block; font-size: 22px; font-weight: 700; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12.5px; color: var(--muted); }
+.sec { margin: 26px 0 10px; }
+.sec h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 0 0 10px; font-weight: 700; }
+.try { display: flex; flex-wrap: wrap; gap: 8px; }
+.try button { border: 1px dashed var(--faint); background: transparent; border-radius: 999px; padding: 6px 12px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.try button:hover { border-style: solid; border-color: var(--accent); color: var(--accent); }
+.years { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 6px; }
+.years button { border: 1px solid var(--line); background: var(--surface); border-radius: 9px; padding: 7px 4px; font-weight: 700; font-variant-numeric: tabular-nums; font-size: 14px; }
+.years button small { display: block; font-weight: 500; color: var(--muted); font-size: 11px; }
+.years button:hover { border-color: var(--accent); }
+.years button.pdfy { border-color: var(--pdf-soft); background: var(--pdf-soft); }
+.plist { display: grid; gap: 8px; }
+.prow { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-width: 0; flex-wrap: wrap; }
+.prow > div { flex: 1; min-width: 0; }
+.prow .t { font-weight: 700; }
+.prow .m { font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+
+/* support */
+.sup-head p { color: var(--muted); margin: 0 0 12px; font-size: 14px; max-width: 68ch; }
+.sup-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+.counts { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 6px; }
+.counts a { text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 13px; font-weight: 600; display: flex; gap: 8px; align-items: baseline; }
+.counts a b { font-size: 18px; font-variant-numeric: tabular-nums; }
+.counts a:hover { border-color: var(--accent); }
+.aibox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; margin: 14px 0; }
+.aibox h3 { margin: 0 0 4px; font-size: 15px; }
+.aibox .muted { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
+.aiout { font-family: var(--f-read); font-size: 15px; line-height: 1.65; margin-top: 10px; overflow-wrap: anywhere; }
+.aiout h4 { font-family: var(--f-ui); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 0 4px; }
+.aiout ul { margin: 4px 0; padding-left: 20px; }
+.aiout p { margin: 6px 0; }
+.cite { border: 0; background: var(--accent-soft); color: var(--accent); font: 600 12px var(--f-ui); border-radius: 5px; padding: 0 5px; margin: 0 1px; vertical-align: 1px; }
+.disclaim { font-size: 12.5px; color: var(--warn); background: var(--warn-soft); border-radius: 8px; padding: 8px 10px; margin-top: 12px; font-family: var(--f-ui); }
+.srcs { margin-top: 12px; font-size: 12.5px; color: var(--muted); font-family: var(--f-ui); }
+.srcs ol { margin: 4px 0; padding-left: 22px; }
+.srcs li { margin: 2px 0; }
+.lnk { cursor: pointer; color: var(--ink); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.lnk:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.ssec { margin: 28px 0 10px; scroll-margin-top: 90px; }
+.ssec > h2 { display: flex; align-items: baseline; gap: 8px; font-size: 18px; margin: 0 0 4px; }
+.ssec > h2 small { font-size: 13px; color: var(--muted); font-weight: 600; }
+.ssec > p { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
+.unit { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; min-width: 0; }
+.unit.q { border-left: 4px solid var(--ayat); }
+.unit.h { border-left: 4px solid var(--hadits); }
+.unit .uh { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; color: var(--muted); }
+.unit .uh strong { color: var(--ink); font-size: 15px; }
+.unit .ar { margin: 8px 0 4px; }
+.unit .tr { font-family: var(--f-read); font-size: 15px; line-height: 1.65; margin: 6px 0; overflow-wrap: anywhere; }
+.unit .cit { font-size: 12.5px; color: var(--muted); }
+.srclist { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.srcchip { border: 1px solid var(--line); background: var(--sunk); border-radius: 8px; padding: 4px 9px; font-size: 12px; font-weight: 600; color: var(--ink); text-align: left; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.srcchip:hover { border-color: var(--accent); }
+.srcchip i { font-style: normal; font-weight: 700; margin-right: 4px; }
+.srcchip i.chm { color: var(--chm); } .srcchip i.pdf { color: var(--pdf); }
+.pdfnote { font-size: 12px; color: var(--faint); font-style: italic; }
+
+/* drawer */
+.scrim { position: fixed; inset: 0; background: rgba(8, 16, 13, .42); z-index: 40; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(760px, 100%); background: var(--bg); z-index: 41; display: flex; flex-direction: column; box-shadow: -10px 0 40px rgba(0, 0, 0, .18); padding-top: env(safe-area-inset-top, 0px); }
+.dhead { background: var(--surface); border-bottom: 1px solid var(--line); padding: 12px max(16px, env(safe-area-inset-right, 0px)) 10px 18px; display: grid; gap: 4px; }
+.dhead .row { display: flex; align-items: flex-start; gap: 10px; }
+.dhead h2 { font-size: 19px; margin: 2px 0 0; flex: 1; line-height: 1.3; text-wrap: balance; min-width: 0; }
+.dhead .actions { border-top: 0; padding-top: 4px; margin-top: 2px; }
+.dbody { overflow-y: auto; flex: 1; padding: 14px max(16px, env(safe-area-inset-right, 0px)) calc(40px + env(safe-area-inset-bottom, 0px)) 18px; -webkit-overflow-scrolling: touch; }
+.doc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 20px; max-width: 70ch; margin: 0 auto; }
+.blk { position: relative; font-family: var(--f-read); font-size: 16px; line-height: 1.75; margin: 0 0 12px; padding: 2px 6px; border-radius: 8px; overflow-wrap: anywhere; }
+.blk.h { font-family: var(--f-ui); font-weight: 700; font-size: 16px; line-height: 1.4; margin-top: 18px; }
+.blk.a { font-family: var(--f-ar); font-size: 23px; line-height: 2.05; direction: rtl; text-align: right; }
+.blk.target { background: var(--target); box-shadow: 0 0 0 2px var(--mark); }
+.blk .bt { display: none; gap: 4px; margin-top: 6px; direction: ltr; font-family: var(--f-ui); }
+.blk.target .bt { display: flex; flex-wrap: wrap; }
+.pagesep { display: flex; align-items: center; gap: 10px; color: var(--faint); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin: 22px 0 12px; }
+.pagesep::after { content: ""; flex: 1; border-top: 1px dashed var(--line); }
+.idbox { font-size: 12.5px; color: var(--muted); background: var(--sunk); border-radius: 9px; padding: 9px 12px; margin: 0 auto 12px; max-width: 70ch; overflow-wrap: anywhere; }
+.idbox b { color: var(--ink); }
+
+/* manage */
+.drop { border: 2px dashed var(--line); border-radius: var(--r); padding: 22px 16px; text-align: center; background: var(--surface); }
+.drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.drop p { margin: 0 0 4px; font-weight: 600; }
+.drop small { color: var(--muted); }
+.drop input { display: none; }
+.drop label { color: var(--accent); text-decoration: underline; cursor: pointer; }
+.qitem { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; margin-top: 12px; display: grid; gap: 10px; min-width: 0; }
+.qitem .qh { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.qitem .qh b { overflow-wrap: anywhere; }
+.qitem .qh span { color: var(--muted); font-size: 12.5px; }
+.fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fgrid label { display: grid; gap: 4px; font-size: 12.5px; font-weight: 600; color: var(--muted); min-width: 0; }
+.fgrid label.wide { grid-column: 1 / -1; }
+.fgrid input { border: 1px solid var(--line); background: var(--bg); border-radius: 8px; padding: 8px 10px; font-size: 14px; color: var(--ink); min-width: 0; width: 100%; }
+.qmsg { font-size: 13px; border-radius: 8px; padding: 8px 10px; }
+.qmsg.warn { background: var(--warn-soft); color: var(--warn); }
+.qmsg.err { background: var(--danger-soft); color: var(--danger); }
+.qmsg.ok { background: var(--accent-soft); color: var(--ok); }
+details.pv summary { cursor: pointer; font-size: 13px; color: var(--muted); font-weight: 600; }
+details.pv div { font-family: var(--f-read); font-size: 13.5px; max-height: 220px; overflow: auto; background: var(--sunk); border-radius: 8px; padding: 8px 10px; margin-top: 6px; }
+.confirm { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; background: var(--danger-soft); color: var(--danger); border-radius: 9px; padding: 8px 10px; font-size: 13px; font-weight: 600; width: 100%; }
+
+.pvwrap { background: var(--sunk); border-radius: 10px; padding: 12px; text-align: center; min-height: 200px; }
+.pvwrap canvas { max-width: 100%; background: #FFFFFF; box-shadow: var(--shadow); border-radius: 4px; }
+.pvmsg { color: var(--muted); padding: 16px; font-size: 14px; }
+.pvnum { align-self: center; font-weight: 700; font-size: 13px; padding: 0 6px; font-variant-numeric: tabular-nums; }
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 9px 16px; border-radius: 10px; font-weight: 600; font-size: 13.5px; z-index: 60; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
+.empty { text-align: center; color: var(--muted); padding: 34px 10px; }
+.skel { height: 14px; background: var(--sunk); border-radius: 6px; margin: 8px 0; }
+footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + env(safe-area-inset-bottom, 0px)); }
+
+@media (max-width: 720px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fgrid { grid-template-columns: 1fr; }
+  .drawer { width: 100%; }
+  .doc { padding: 14px 12px; border-radius: 10px; }
+  .dbody { padding-left: max(10px, env(safe-area-inset-left, 0px)); padding-right: max(10px, env(safe-area-inset-right, 0px)); }
+  .brand small { white-space: normal; }
+  .sbox input { font-size: 16px; }
+  .res { padding: 12px 12px 10px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><g fill="none" stroke="var(--accent)" stroke-width="2"><rect x="7" y="7" width="16" height="16" rx="1.5"/><rect x="7" y="7" width="16" height="16" rx="1.5" transform="rotate(45 15 15)"/></g><circle cx="15" cy="15" r="3" fill="var(--accent)"/></svg>
+      <div><h1>Pustaka Referensi MTA</h1><small id="status">Memuat pustaka…</small></div>
+    </div>
+    <button class="btn" id="btnManage" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg><span>Brosur PDF</span></button>
+  </div>
+  <div class="progress"><i id="prog"></i></div>
+</header>
+
+<main class="wrap">
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tabCari" aria-selected="true">Pencarian</button>
+    <button role="tab" id="tabSup" aria-selected="false">Mode Support Ustadz</button>
+  </div>
+
+  <section id="paneCari">
+    <form class="sbox" id="fCari" autocomplete="off">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Cari kata, kalimat, ayat, hadits… contoh: tawakkal" aria-label="Kata pencarian" enterkeyhint="search">
+      <button type="button" class="clear" id="qClear" aria-label="Kosongkan" hidden>×</button>
+      <button class="btn primary" type="submit">Cari</button>
+    </form>
+    <p class="hint">Satu kolom untuk arsip CHM dan semua brosur PDF. Bisa sebagian kata, <code>"frasa persis"</code>, <code>Al-Baqarah 153</code>, <code>QS 2:153</code>, <code>HR. Muslim</code>, atau <code>-kata</code> untuk mengecualikan.</p>
+    <div class="filters" id="filters">
+      <div class="fgroup" role="group" aria-label="Sumber"><span>Sumber</span>
+        <button class="chip" data-src="all" aria-pressed="true">Semua</button>
+        <button class="chip" data-src="CHM" aria-pressed="false">Arsip CHM</button>
+        <button class="chip" data-src="PDF" aria-pressed="false">Brosur PDF</button>
+      </div>
+      <div class="fgroup"><span>Tahun</span>
+        <select class="sel" id="y0" aria-label="Dari tahun"></select><span style="font-weight:400">–</span><select class="sel" id="y1" aria-label="Sampai tahun"></select>
+      </div>
+      <div class="fgroup"><span>Urut</span>
+        <select class="sel" id="sort" aria-label="Urutan"><option value="rel">Relevansi</option><option value="new">Terbaru</option><option value="old">Terlama</option></select>
+      </div>
+      <div class="fgroup"><span>Tampilan</span>
+        <button class="chip" data-view="doc" aria-pressed="true">Per dokumen</button>
+        <button class="chip" data-view="loc" aria-pressed="false">Semua lokasi</button>
+      </div>
+      <label class="tog"><input type="checkbox" id="whole"> Kata utuh</label>
+      <label class="tog"><input type="checkbox" id="broad"> Pencarian luas</label>
+    </div>
+    <div id="out"></div>
+  </section>
+
+  <section id="paneSup" hidden>
+    <div class="sup-head">
+      <p>Tulis pertanyaan atau permintaan referensi dari ustadz. Sistem mencari di seluruh arsip CHM dan brosur PDF, lalu menyusun paket referensi: dokumen sumber, ayat Al-Qur'an, hadits, dan kutipan penjelasan, semuanya dengan identitas sumber aslinya.</p>
+    </div>
+    <form class="sbox" id="fSup" autocomplete="off">
+      <textarea id="sq" rows="2" placeholder="Contoh: Carikan referensi tentang keutamaan sabar" aria-label="Pertanyaan atau permintaan referensi"></textarea>
+    </form>
+    <div class="sup-row">
+      <button class="btn primary" id="btnSup" type="button">Susun referensi</button>
+      <div class="fgroup" role="group" aria-label="Sumber"><span style="color:var(--muted);font-weight:600;font-size:13px">Sumber</span>
+        <button class="chip" data-ssrc="all" aria-pressed="true">Semua</button>
+        <button class="chip" data-ssrc="CHM" aria-pressed="false">CHM</button>
+        <button class="chip" data-ssrc="PDF" aria-pressed="false">PDF</button>
+      </div>
+    </div>
+    <div id="sout"></div>
+  </section>
+
+  <footer class="foot" id="foot"></footer>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="reader" hidden aria-label="Pembaca sumber" role="dialog"></aside>
+<aside class="drawer" id="manage" hidden aria-label="Kelola brosur PDF" role="dialog">
+  <div class="dhead"><div class="row"><h2>Kelola Brosur PDF</h2><button class="btn ghost" data-act="close" aria-label="Tutup">✕ Tutup</button></div>
+    <div class="crumb">Setiap PDF yang disimpan langsung masuk ke indeks pencarian yang sama dengan arsip CHM. Arsip CHM tetap utuh.</div></div>
+  <div class="dbody">
+    <div class="drop" id="drop">
+      <input type="file" id="pdfin" accept="application/pdf,.pdf" multiple>
+      <p>Tarik file PDF brosur ke sini, atau <label for="pdfin">pilih file</label></p>
+      <small>Teks dibaca per halaman di perangkat ini. Tanggal, nomor, dan judul brosur terisi otomatis dan bisa dikoreksi sebelum disimpan.</small>
+    </div>
+    <div id="queue"></div>
+    <div class="sec"><h2 id="pdfCountH">Brosur PDF di pustaka</h2><div class="plist" id="pdfList"></div></div>
+  </div>
+</aside>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+/* PRM engine — normalisasi, pencarian, sitasi, ekstraksi PDF.
+   Dipakai bersama oleh halaman (browser) dan skrip build/uji (Node). */
+(function (root) {
+  'use strict';
+
+  /* ================= NORMALISASI ================= */
+  const TBL = new Uint16Array(65536);
+  (function buildTable() {
+    const isL = /\p{L}/u, isN = /\p{N}/u, isM = /\p{M}/u;
+    for (let c = 0; c < 65536; c++) {
+      if (c >= 0xD800 && c <= 0xDFFF) { TBL[c] = 32; continue; }
+      const ch = String.fromCharCode(c);
+      if (c >= 48 && c <= 57) { TBL[c] = c; continue; }
+      if (c >= 97 && c <= 122) { TBL[c] = c; continue; }
+      if (c >= 65 && c <= 90) { TBL[c] = c + 32; continue; }
+      if (isM.test(ch)) { TBL[c] = 0; continue; }
+      if (isL.test(ch)) {
+        let r = c;
+        if ((c >= 0xC0 && c <= 0x24F) || (c >= 0x1E00 && c <= 0x1EFF)) {
+          const d = ch.normalize('NFD').charCodeAt(0);
+          if (d < 128) r = d;
+        } else if ((c >= 0xFB50 && c <= 0xFDFF) || (c >= 0xFE70 && c <= 0xFEFF)) {
+          const k = ch.normalize('NFKC');
+          if (k.length >= 1) r = k.charCodeAt(0);
+        }
+        const lo = String.fromCharCode(r).toLowerCase();
+        TBL[c] = lo.length === 1 ? lo.charCodeAt(0) : r;
+        continue;
+      }
+      if (isN.test(ch)) { TBL[c] = c; continue; }
+      TBL[c] = 32;
+    }
+    const del = [0x27, 0x2019, 0x2018, 0x60, 0xB4, 0x2BC, 0x2BB, 0x2032, 0x2E, 0x200B, 0x200C, 0x200D, 0x200E, 0x200F, 0x2060, 0xFEFF, 0xAD, 0x640];
+    del.forEach(c => { TBL[c] = 0; });
+    const set = (a, b) => { TBL[a] = b; };
+    set(0xDF, 115); set(0xE6, 97); set(0xC6, 97); set(0xF8, 111); set(0xD8, 111); set(0x111, 100); set(0x110, 100); set(0x142, 108); set(0x141, 108); set(0x131, 105);
+    for (let c = 0x64B; c <= 0x65F; c++) TBL[c] = 0;
+    for (let c = 0x610; c <= 0x61A; c++) TBL[c] = 0;
+    for (let c = 0x6D6; c <= 0x6ED; c++) TBL[c] = 0;
+    TBL[0x670] = 0;
+    [0x622, 0x623, 0x625, 0x671, 0x672, 0x673].forEach(c => { TBL[c] = 0x627; });
+    TBL[0x649] = 0x64A; TBL[0x6CC] = 0x64A; TBL[0x626] = 0x64A; TBL[0x629] = 0x647; TBL[0x624] = 0x648; TBL[0x6A9] = 0x643;
+    for (let i = 0; i < 10; i++) { TBL[0x660 + i] = 48 + i; TBL[0x6F0 + i] = 48 + i; }
+    [0x60C, 0x61B, 0x61F, 0x6D4, 0x66A, 0x66B, 0x66C, 0x66D, 0xFD3E, 0xFD3F, 0xFDFA, 0xFDFB].forEach(c => { TBL[c] = 32; });
+  })();
+
+  const U16 = typeof TextDecoder !== 'undefined' ? new TextDecoder('utf-16le') : null;
+  function u16str(arr, n) {
+    if (U16) return U16.decode(arr.subarray(0, n));
+    let s = ''; for (let i = 0; i < n; i += 8192) s += String.fromCharCode.apply(null, arr.subarray(i, Math.min(n, i + 8192)));
+    return s;
+  }
+  let BUF = new Uint16Array(1 << 16);
+  /** Normalisasi kanonik. wantMap → juga kembalikan peta posisi ke teks asli. */
+  function norm(s, wantMap) {
+    const n = s.length;
+    if (BUF.length < n + 1) BUF = new Uint16Array(n + 1024);
+    const out = BUF; const map = wantMap ? new Int32Array(n + 1) : null;
+    let o = 0, prev = 32;
+    for (let i = 0; i < n; i++) {
+      const r = TBL[s.charCodeAt(i)];
+      if (r === 0) continue;
+      if (r === 32) { if (prev === 32) continue; }
+      else if (r === prev && r >= 97 && r <= 122) continue;
+      out[o] = r; if (map) map[o] = i; o++; prev = r;
+    }
+    if (o > 0 && out[o - 1] === 32) o--;
+    const str = u16str(out, o);
+    if (!wantMap) return str;
+    // akhir setiap karakter normal → posisi akhir di teks asli
+    const end = new Int32Array(o);
+    for (let k = 0; k < o; k++) end[k] = (k + 1 < o ? map[k + 1] : n);
+    return { s: str, start: map.subarray(0, o), end };
+  }
+
+  /* ================= VARIAN, STOPWORD, STEM ================= */
+  const VARIANT_GROUPS = [
+    'shalat sholat salat solat sembahyang', 'tawakal tawakul', 'sabar shabar shobar', 'ramadhan ramadlan romadlon romadhon ramadan',
+    'dzikir zikir dzikr zikr dhikr', 'doa', 'wudhu wudlu wudu', 'hadits hadis hadist hadith', 'quran alquran',
+    'taqwa takwa', 'syukur sukur', 'ikhlas ikhlash', 'shadaqah shodaqoh sadaqah sedekah sodaqoh shadaqoh shodaqah', 'zakat zakah',
+    'puasa shaum shiyam saum shiyaam', 'jumat jumuah jumah', 'qurban kurban udhiyah', 'aqiqah akikah aqiqoh', 'tauhid tawhid',
+    'syirik sirik syirk', 'bidah bidngah', 'akhlak akhlaq', 'taubat tobat taubah', 'istighfar istigfar', 'sunah sunat sunnat',
+    'rasulullah rosululloh rasullullah', 'alah aloh', 'mukmin mumin', 'nimat nikmat', 'dzalim zalim dholim zholim dhalim',
+    'dhuha dluha duha', 'ashar asar ashr', 'maghrib magrib', 'shubuh subuh shubh', 'dhuhur dzuhur zuhur dhuhr zhuhur',
+    'tarawih taraweh', 'tahajud tahajjud', 'witir witr', 'itikaf iktikaf', 'khutbah khotbah', 'ghibah gibah',
+    'tawadhu tawadlu tawadu', 'akhirat akherat', 'kiamat qiyamat qiyamah kiyamat', 'syaitan setan syetan syaithan syaiton',
+    'silaturahim silaturahmi shilaturahim', 'amanah amanat', 'miraj mikraj', 'lailatul lailatulqadar', 'qadar qadr qodar takdir taqdir',
+    'masjid mesjid', 'nabi rasul', 'jenazah janazah jinazah', 'wajib fardhu fardlu', 'haram', 'halal', 'makruh', 'mubah',
+    'thaharah taharah thoharoh', 'tayamum tayammum', 'junub janabah', 'haid haidh haidl', 'nifas', 'istinja istinjak',
+    'adzan azan', 'iqamah iqomah', 'imam', 'makmum mamum', 'musafir', 'qashar qoshor qasar', 'jamak jama',
+    'ied id', 'fitri fithri fithrah fitrah', 'adha adlha', 'umrah umroh', 'haji haj', 'ihram ihrom', 'thawaf tawaf', 'sai',
+    'riba', 'hutang utang', 'nikah nikaah', 'talak thalaq thalak talaq', 'iddah idah', 'mahar maskawin', 'walimah',
+    'jannah surga syurga sorga', 'naar neraka jahanam', 'malaikat malaekat', 'kubur qubur', 'barzakh barzah',
+    'ilmu', 'iman', 'ihsan', 'islam', 'kafir', 'munafik munafiq', 'fasik fasiq', 'murtad', 'tabaruk tabarruk', 'wasilah tawasul tawassul',
+    'syafaat syafaah', 'istiqamah istiqomah', 'zuhud', 'qanaah qonaah', 'ridha ridla ridlo ridho', 'hasad dengki', 'riya riyak',
+    'ujub', 'takabur takabbur sombong', 'tabligh tabligh', 'dakwah dawah', 'jihad', 'hijrah', 'sahabat shahabat shohabat',
+    'tabiin tabiin', 'ulama ulamak', 'fatwa', 'ijtihad', 'ijma', 'qiyas', 'mazhab madzhab', 'taqlid taklid', 'ittiba itiba'
+  ];
+  const VARMAP = new Map();
+  for (const g of VARIANT_GROUPS) {
+    const words = Array.from(new Set(g.split(/\s+/).map(w => norm(w)).filter(Boolean)));
+    if (words.length < 2) continue;
+    for (const w of words) VARMAP.set(w, words);
+  }
+  const STOP = new Set(('yang dan di ke dari untuk dengan itu ini adalah dalam pada kepada oleh atau juga akan sudah telah saya kami kita anda ' +
+    'mohon tolong carikan cari carikanlah referensi rujukan tentang mengenai perihal soal apa apakah bagaimana mengapa kenapa ' +
+    'siapa kapan dimana berapa ada tidak bukan minta berikan tunjukkan tampilkan sebutkan jelaskan terangkan ustadz ustad pak bapak ' +
+    'bu ibu tersebut seperti sebagai bagi agar supaya karena jika kalau maka lalu serta pun nya lah kah hal masalah materi bahan ' +
+    'brosur penjelasan dalil dalilnya terkait berkaitan seputar').split(/\s+/));
+  function stem(w) {
+    if (w.length < 6 || /\d/.test(w)) return null;
+    let s = w;
+    s = s.replace(/(lah|kah|nya|pun)$/, '');
+    if (/^ke.{3,}an$/.test(s)) s = s.slice(2, -2);
+    else if (/^(ber|ter|per)/.test(s) && s.length > 6) s = s.slice(3);
+    else if (/^(di|se)/.test(s) && s.length > 6) s = s.slice(2);
+    if (/(kan|an)$/.test(s) && s.length > 6) s = s.replace(/(kan|an)$/, '');
+    if (/^(peng|peny|meng|meny)/.test(s) && s.length > 7) s = s.slice(4);
+    else if (/^(pem|pen|mem|men)/.test(s) && s.length > 6) s = s.slice(3);
+    return (s !== w && s.length >= 4) ? s : null;
+  }
+
+  /* ================= SURAH ================= */
+  const SURAH = [
+    ['Al-Fatihah', "Al-Faatihah|Fatihah"], ['Al-Baqarah', 'Al-Baqoroh'], ["Ali 'Imran", "Ali Imraan|Aali Imraan|Ali Imron"], ["An-Nisa'", "An-Nisaa'"],
+    ["Al-Ma'idah", "Al-Maa-idah|Al-Maaidah"], ["Al-An'am", "Al-An'aam"], ["Al-A'raf", "Al-A'raaf"], ['Al-Anfal', 'Al-Anfaal'],
+    ['At-Taubah', "At-Tawbah|Bara'ah"], ['Yunus', 'Yuunus'], ['Hud', 'Huud'], ['Yusuf', 'Yuusuf'], ["Ar-Ra'd", "Ar-Raad|Ar-Ra'du"],
+    ['Ibrahim', 'Ibraahiim'], ['Al-Hijr', ''], ['An-Nahl', ''], ["Al-Isra'", "Al-Israa'|Bani Israil"], ['Al-Kahf', 'Al-Kahfi'],
+    ['Maryam', 'Maryam'], ['Thaha', 'Thaahaa|Taha|Thoha'], ["Al-Anbiya'", "Al-Anbiyaa'"], ['Al-Hajj', ''],
+    ["Al-Mu'minun", "Al-Mu'minuun|Al-Mukminun|Al-Mukminuun"], ['An-Nur', 'An-Nuur'], ['Al-Furqan', 'Al-Furqaan'],
+    ["Asy-Syu'ara'", "Asy-Syu'araa'|Asy-Syuara"], ['An-Naml', ''], ['Al-Qashash', 'Al-Qasas'], ["Al-'Ankabut", "Al-'Ankabuut"],
+    ['Ar-Rum', 'Ar-Ruum'], ['Luqman', 'Luqmaan|Lukman'], ['As-Sajdah', 'As-Sajadah'], ['Al-Ahzab', 'Al-Ahzaab'], ["Saba'", 'Sabaa'],
+    ['Fathir', 'Faathir|Fatir'], ['Yasin', 'Yaasiin|Ya Sin'], ['Ash-Shaffat', 'Ash-Shaaffaat|As-Saffat'], ['Shad', 'Shaad|Sad'],
+    ['Az-Zumar', ''], ["Al-Mu'min", 'Ghafir|Al-Mukmin|Ghaafir'], ['Fushshilat', 'Fushilat|Fussilat'], ['Asy-Syura', 'Asy-Syuuraa'],
+    ['Az-Zukhruf', ''], ['Ad-Dukhan', 'Ad-Dukhaan'], ['Al-Jatsiyah', 'Al-Jaatsiyah|Al-Jasiyah'], ['Al-Ahqaf', 'Al-Ahqaaf'],
+    ['Muhammad', ''], ['Al-Fath', ''], ['Al-Hujurat', 'Al-Hujuraat'], ['Qaf', 'Qaaf'], ['Adz-Dzariyat', 'Adz-Dzaariyaat|Az-Zariyat'],
+    ['Ath-Thur', 'Ath-Thuur|At-Tur'], ['An-Najm', ''], ['Al-Qamar', ''], ['Ar-Rahman', 'Ar-Rahmaan'], ["Al-Waqi'ah", "Al-Waaqi'ah"],
+    ['Al-Hadid', 'Al-Hadiid'], ['Al-Mujadilah', 'Al-Mujaadilah|Al-Mujadalah'], ['Al-Hasyr', ''], ['Al-Mumtahanah', 'Al-Mumtahinah'],
+    ['Ash-Shaff', 'As-Saff'], ["Al-Jumu'ah", "Al-Jum'ah"], ['Al-Munafiqun', 'Al-Munaafiquun'], ['At-Taghabun', 'At-Taghaabun'],
+    ['Ath-Thalaq', 'Ath-Thalaaq|At-Talaq'], ['At-Tahrim', 'At-Tahriim'], ['Al-Mulk', ''], ['Al-Qalam', 'Nun'], ['Al-Haqqah', 'Al-Haaqqah'],
+    ["Al-Ma'arij", "Al-Ma'aarij"], ['Nuh', 'Nuuh'], ['Al-Jinn', ''], ['Al-Muzzammil', 'Al-Muzammil'],
+    ['Al-Muddatstsir', 'Al-Muddatsir|Al-Muddassir|Al-Muddaththir'], ['Al-Qiyamah', 'Al-Qiyaamah'], ['Al-Insan', 'Al-Insaan|Ad-Dahr'],
+    ['Al-Mursalat', 'Al-Mursalaat'], ["An-Naba'", 'An-Naba'], ["An-Nazi'at", "An-Naazi'aat"], ["'Abasa", ''], ['At-Takwir', 'At-Takwiir'],
+    ['Al-Infithar', 'Al-Infithaar'], ['Al-Muthaffifin', 'Al-Muthaffifiin|Al-Mutaffifin'], ['Al-Insyiqaq', 'Al-Insyiqaaq'],
+    ['Al-Buruj', 'Al-Buruuj'], ['Ath-Thariq', 'Ath-Thaariq'], ["Al-A'la", "Al-A'laa"], ['Al-Ghasyiyah', 'Al-Ghaasyiyah'],
+    ['Al-Fajr', ''], ['Al-Balad', ''], ['Asy-Syams', ''], ['Al-Lail', ''], ['Adl-Dluha', 'Adh-Dhuha|Ad-Dhuha|Adl-Dluhaa|Ad-Duha'],
+    ['Alam Nasyrah', 'Asy-Syarh|Al-Insyirah|Alam Nasyroh'], ['At-Tin', 'At-Tiin'], ["Al-'Alaq", ''], ['Al-Qadr', 'Al-Qadar'],
+    ['Al-Bayyinah', ''], ['Az-Zalzalah', 'Al-Zalzalah'], ["Al-'Adiyat", "Al-'Aadiyaat"], ["Al-Qari'ah", "Al-Qaari'ah"],
+    ['At-Takatsur', 'At-Takaatsur'], ["Al-'Ashr", 'Al-Ashr|Al-Asr'], ['Al-Humazah', ''], ['Al-Fil', 'Al-Fiil'], ['Quraisy', ''],
+    ["Al-Ma'un", "Al-Maa'uun"], ['Al-Kautsar', ''], ['Al-Kafirun', 'Al-Kaafiruun'], ['An-Nashr', 'An-Nasr'],
+    ['Al-Lahab', 'Al-Masad|Tabbat'], ['Al-Ikhlash', 'Al-Ikhlas'], ['Al-Falaq', ''], ['An-Nas', 'An-Naas']
+  ];
+  const AYAT = [7, 286, 200, 176, 120, 165, 206, 75, 129, 109, 123, 111, 43, 52, 99, 128, 111, 110, 98, 135, 112, 78, 118, 64, 77, 227, 93, 88, 69, 60, 34, 30, 73, 54, 45, 83, 182, 88, 75, 85, 54, 53, 89, 59, 37, 35, 38, 29, 18, 45, 60, 49, 62, 55, 78, 96, 29, 22, 24, 13, 14, 11, 11, 18, 12, 12, 30, 52, 52, 44, 28, 28, 20, 56, 40, 31, 50, 40, 46, 42, 29, 19, 36, 25, 22, 17, 19, 26, 30, 20, 15, 21, 11, 8, 8, 19, 5, 8, 8, 11, 11, 8, 3, 9, 5, 4, 7, 3, 6, 3, 5, 4, 5, 6];
+  const ARTICLE = /^(al|an|ar|as|asy|ash|at|ath|ad|adz|adh|adl|az|ats)\s+/;
+  function skey(name) {
+    let s = norm(name).replace(/\b(surat|surah|qs|q s)\b/g, ' ').trim();
+    s = s.replace(ARTICLE, '').replace(/\s+/g, '');
+    s = s.replace(/dz/g, 'z').replace(/dh|dl/g, 'd').replace(/ts/g, 's').replace(/th/g, 't').replace(/sy|sh/g, 's')
+      .replace(/kh/g, 'h').replace(/gh/g, 'g').replace(/q/g, 'k').replace(/o/g, 'a').replace(/e/g, 'i');
+    s = s.replace(/([a-z])\1+/g, '$1');
+    if (s.length > 3) s = s.replace(/h$/, '');
+    if (s.length >= 5) s = s.replace(/([^aiu])i$/, '$1');
+    return s;
+  }
+  const SKEY = new Map();
+  SURAH.forEach(([n, al], i) => {
+    [n].concat(al ? al.split('|') : []).forEach(a => { const k = skey(a); if (k && !SKEY.has(k)) SKEY.set(k, i + 1); });
+  });
+  const SKEYS = Array.from(SKEY.keys());
+  function lev(a, b, max) {
+    if (Math.abs(a.length - b.length) > max) return max + 1;
+    let prev = new Array(b.length + 1); for (let j = 0; j <= b.length; j++) prev[j] = j;
+    for (let i = 1; i <= a.length; i++) {
+      const cur = [i]; let best = i;
+      for (let j = 1; j <= b.length; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        if (cur[j] < best) best = cur[j];
+      }
+      if (best > max) return max + 1;
+      prev = cur;
+    }
+    return prev[b.length];
+  }
+  const SCACHE = new Map();
+  function surahFromName(name, fuzzy) {
+    const k = skey(name);
+    if (!k || k.length < 2) return 0;
+    if (SKEY.has(k)) return SKEY.get(k);
+    if (!fuzzy || k.length < 4) return 0;
+    const ck = k + '|f';
+    if (SCACHE.has(ck)) return SCACHE.get(ck);
+    const max = k.length >= 8 ? 2 : 1;
+    let best = 0, bd = 9, tie = false;
+    for (const key of SKEYS) {
+      if (key.length < 4) continue;
+      const d = lev(k, key, max);
+      if (d < bd) { bd = d; best = SKEY.get(key); tie = false; } else if (d === bd && SKEY.get(key) !== best) tie = true;
+    }
+    const r = (bd <= max && !tie) ? best : 0;
+    SCACHE.set(ck, r); return r;
+  }
+  function surahLabel(s) { return SURAH[s - 1] ? SURAH[s - 1][0] : String(s); }
+
+  /* ================= SITASI (QS / HR) ================= */
+  const PERAWI = /^(bukhari|bukhariy|muslim|tirmidzi|tirmidziy|abu\s*dawud|abu\s*daud|nasai|nasaiy|nasa'i|ibnu\s*majah|ibnu\s*maajah|ahmad|malik|darimi|daruquthni|baihaqi|baihaqiy|thabarani|thabaraniy|hakim|al-hakim|ibnu\s*hibban|ibnu\s*khuzaimah|ibnu\s*abi\s*syaibah|abdurrazzaq|bazzar|abu\s*ya'la|muttafaq)/i;
+  const BRACKET = /[\[\(]([^\[\]\(\)]{2,140})[\]\)]/g;
+  const QPART = /^\s*(?:Q\s*\.?\s*S\s*[\.,]?\s*)?(?:(?:surat|surah|s\.)\s*)?([A-Za-zÀ-ɏ'’‘`´_\-\s]{2,34}?)\s*(?:\(\s*\d{1,3}\s*\))?\s*(?:ayat\s*)?[:\.,]?\s*(?:ayat\s*)?(\d{1,3})(?:\s*[-–—]\s*(\d{1,3}))?/i;
+  const QMARK = /\bQ\s*\.?\s*S\s*[\.,]?\s+(?=[A-Za-z'’‘])/i;
+  const HRX = /^\s*(H\s*\.?\s*S?\s*\.?\s*R\s*\.?|Riwayat|Diriwayatkan(\s+oleh)?|Muttafaq)\s*/i;
+  /** Kembalikan {q:[[bi,surah,a1,a2,start,end]], h:[[bi,perawi,start,end]]} */
+  function extractRefs(blocks) {
+    const q = [], h = [];
+    for (let bi = 0; bi < blocks.length; bi++) {
+      const b = blocks[bi]; if (b[0] === 'a') continue;
+      const t = b[1]; if (t.indexOf('[') < 0 && t.indexOf('(') < 0) continue;
+      BRACKET.lastIndex = 0; let m;
+      while ((m = BRACKET.exec(t))) {
+        const inner = m[1]; const st = m.index, en = m.index + m[0].length;
+        if (HRX.test(inner) || (PERAWI.test(inner.trim()) && /(juz|no\.|hal|,|\s[IVX]+\s*:)/i.test(inner))) {
+          let p = /^\s*Muttafaq/i.test(inner) ? 'Muttafaq ‘alaih' : inner.replace(HRX, '');
+          p = p.split(/[,;:]|\s+(?:juz|jilid|no\.?|nomor|hal\.?|hlm|dari|dalam|bab|kitab|\d)/i)[0].trim().replace(/\s+[IVX]+$/, '').replace(/\.$/, '');
+          h.push([bi, p.slice(0, 40) || 'Hadits', st, en]);
+          continue;
+        }
+        if (!/\d/.test(inner)) continue;
+        const parts = inner.split(/;/);
+        let off = 0;
+        for (let part of parts) {
+          const qm = QMARK.exec(part); if (qm && qm.index > 0) part = part.slice(qm.index);
+          const pm = QPART.exec(part);
+          if (pm) {
+            const s = surahFromName(pm[1], true);
+            const a1 = +pm[2], a2 = pm[3] ? +pm[3] : a1;
+            if (s && a1 >= 1 && a1 <= AYAT[s - 1] && a2 >= a1 && a2 <= AYAT[s - 1]) q.push([bi, s, a1, a2, st, en]);
+          }
+          off += part.length + 1;
+        }
+      }
+    }
+    return { q, h };
+  }
+
+  /* ================= INDEKS DOKUMEN ================= */
+  function buildIndex(blocks) {
+    const parts = new Array(blocks.length); const starts = new Int32Array(blocks.length); let pos = 0;
+    for (let i = 0; i < blocks.length; i++) { const n = norm(blocks[i][1]); parts[i] = n; starts[i] = pos; pos += n.length + 1; }
+    return { s: parts.join('\n'), starts, len: pos };
+  }
+  function blockAt(starts, p) { let lo = 0, hi = starts.length - 1; while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (starts[mid] <= p) lo = mid; else hi = mid - 1; } return lo; }
+
+  /* ================= QUERY ================= */
+  const QREF_NUM = /(?:^|[\s\[\(])(?:q\.?\s?s\.?|surat|surah)?\s*(\d{1,3})\s*:\s*(\d{1,3})(?:\s*[-–]\s*(\d{1,3}))?/i;
+  function parseQuery(raw, opts) {
+    opts = opts || {};
+    const res = { raw, groups: [], phrase: null, qref: null, excludes: [], notes: [] };
+    let q = String(raw || '').trim();
+    if (!q) return res;
+    // frasa dalam tanda kutip
+    const phrases = [];
+    q = q.replace(/["“”]([^"“”]{2,})["“”]/g, (m, p) => { phrases.push(p); return ' '; });
+    // eksklusi -kata
+    q = q.replace(/(^|\s)-([^\s-][^\s]*)/g, (m, sp, w) => { const n = norm(w); if (n) res.excludes.push(n); return ' '; });
+    // QS nomor:ayat
+    const mn = QREF_NUM.exec(q);
+    if (mn) {
+      const s = +mn[1], a1 = +mn[2], a2 = mn[3] ? +mn[3] : a1;
+      if (s >= 1 && s <= 114 && a1 >= 1 && a1 <= AYAT[s - 1]) { res.qref = { s, a1, a2: Math.max(a1, Math.min(a2, AYAT[s - 1])) }; q = q.replace(mn[0], ' '); }
+    }
+    const orig = new Map();
+    for (const w of q.split(/\s+/)) { const n = norm(w); if (n && !n.includes(' ') && !orig.has(n)) orig.set(n, w.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '')); }
+    let toks = norm(q).split(' ').filter(Boolean);
+    // QS nama ayat
+    if (!res.qref) {
+      for (let i = 0; i < toks.length && !res.qref; i++) {
+        for (let len = 3; len >= 1; len--) {
+          if (i + len > toks.length) continue;
+          const win = toks.slice(i, i + len);
+          if (/^\d+$/.test(win[win.length - 1])) continue;
+          const qual = i > 0 && /^(qs|surat|surah)$/.test(toks[i - 1]);
+          const hasArt = ARTICLE.test(win.join(' ') + ' ') && len >= 2;
+          let j = i + len; if (toks[j] === 'ayat') j++;
+          const num = toks[j] && /^\d{1,3}$/.test(toks[j]) ? +toks[j] : 0;
+          let num2 = 0, jEnd = j + (num ? 1 : 0);
+          if (num && toks[j + 1] && /^\d{1,3}$/.test(toks[j + 1]) && +toks[j + 1] > num) { num2 = +toks[j + 1]; jEnd = j + 2; }
+          if (!qual && !num && !hasArt) continue;
+          const s = surahFromName(win.join(' '), !!(qual || hasArt));
+          if (!s) continue;
+          if (num && num > AYAT[s - 1]) continue;
+          res.qref = num ? { s, a1: num, a2: num2 && num2 <= AYAT[s - 1] ? num2 : num } : { s, a1: 0, a2: 0 };
+          const from = qual ? i - 1 : i;
+          res.qrefWords = toks.slice(i, i + len);
+          toks.splice(from, jEnd - from);
+          break;
+        }
+      }
+    }
+    if (res.qref) {
+      res.qrefLabel = 'QS. ' + surahLabel(res.qref.s) + (res.qref.a1 ? ': ' + res.qref.a1 + (res.qref.a2 > res.qref.a1 ? '-' + res.qref.a2 : '') : '');
+    }
+    // stopword bila kalimat / mode support
+    if (toks.length >= 3 || opts.support) {
+      const kept = toks.filter(t => !STOP.has(t));
+      if (kept.length) toks = kept;
+    }
+    toks = toks.filter(t => t.length > 1 || /\d/.test(t));
+    const seen = new Set();
+    for (const t of toks) {
+      if (seen.has(t)) continue; seen.add(t);
+      const vars = new Set([t]);
+      if (opts.variants !== false && VARMAP.has(t)) VARMAP.get(t).forEach(v => vars.add(v));
+      const weak = new Set();
+      if (opts.stem) { const st = stem(t); if (st && !vars.has(st)) { vars.add(st); weak.add(st); if (VARMAP.has(st)) VARMAP.get(st).forEach(v => { if (!vars.has(v)) { vars.add(v); weak.add(v); } }); } }
+      res.groups.push({ label: orig.get(t) || t, key: t, variants: Array.from(vars), weak, kind: 'term' });
+    }
+    for (const p of phrases) { const n = norm(p); if (n) res.groups.push({ label: '"' + p.trim() + '"', key: n, variants: [n], kind: 'phrase', required: true }); }
+    if (res.groups.length >= 2 && !phrases.length) {
+      const terms = res.groups.filter(g => g.kind === 'term').map(g => g.key);
+      if (terms.length >= 2) res.phrase = terms.join(' ');
+    }
+    return res;
+  }
+
+  /* ================= PENCARIAN ================= */
+  function isB(c) { return c === 32 || c === 10 || c !== c; }
+  function countIn(s, v, whole, cap) {
+    let pos = 0, n = 0, w = 0; const list = [];
+    const L = v.length;
+    while ((pos = s.indexOf(v, pos)) !== -1) {
+      const b1 = pos === 0 || isB(s.charCodeAt(pos - 1));
+      const b2 = pos + L >= s.length || isB(s.charCodeAt(pos + L));
+      if (!whole || (b1 && b2)) {
+        const wt = b1 && b2 ? 1 : (b1 ? 0.85 : 0.5);
+        n++; w += wt; if (list.length < cap) list.push(pos);
+      }
+      pos += L;
+    }
+    return { n, w, list };
+  }
+  /**
+   * docs: [{id, src, title, sub, date, idx:{s,starts,len}, blocks, refs?}]
+   * Kembalikan {results:[...], stats}
+   */
+  function search(docs, pq, opts) {
+    opts = opts || {};
+    const whole = !!opts.whole;
+    const groups = pq.groups;
+    const N = docs.length || 1;
+    let avg = 0, cnt = 0; for (const d of docs) if (d.idx) { avg += d.idx.len; cnt++; }
+    avg = cnt ? avg / cnt : 1;
+    const per = [];
+    const df = new Array(groups.length).fill(0);
+    for (const d of docs) {
+      if (!d.idx) continue;
+      if (opts.filter && !opts.filter(d)) continue;
+      const s = d.idx.s;
+      let excluded = false;
+      for (const ex of pq.excludes) if (s.indexOf(ex) !== -1) { excluded = true; break; }
+      if (excluded) continue;
+      const g = new Array(groups.length); let any = false;
+      for (let gi = 0; gi < groups.length; gi++) {
+        let n = 0, w = 0, strong = 0; const pos = [];
+        for (const v of groups[gi].variants) {
+          const r = countIn(s, v, whole || v.length <= 2, 400);
+          const isWeak = groups[gi].weak && groups[gi].weak.has(v);
+          n += r.n; w += r.w * (isWeak ? 0.35 : 1); if (!isWeak) strong += r.n; for (const p of r.list) pos.push([p, v.length]);
+        }
+        if (n) any = true;
+        g[gi] = { n, w, pos, strong };
+      }
+      let refHits = null;
+      if (pq.qref) {
+        const refs = d.refs || (d.refs = extractRefs(d.blocks || []));
+        refHits = refs.q.filter(r => r[1] === pq.qref.s && (!pq.qref.a1 || (r[2] <= pq.qref.a2 && r[3] >= pq.qref.a1)));
+        if (refHits.length) any = true;
+      }
+      if (!any) continue;
+      per.push({ d, g, refHits });
+      for (let gi = 0; gi < groups.length; gi++) if (g[gi].n) df[gi]++;
+    }
+    const idf = df.map(x => Math.log(1 + (N - x + 0.5) / (x + 0.5)));
+    const k1 = 1.2, b = 0.5;
+    const results = [];
+    for (const p of per) {
+      const d = p.d; const dl = d.idx.len;
+      let score = 0, cov = 0, req = true;
+      const tf = {};
+      for (let gi = 0; gi < groups.length; gi++) {
+        const x = p.g[gi];
+        if (!x.n) { if (groups[gi].required) req = false; continue; }
+        cov += x.strong ? 1 : 0.5;
+        tf[groups[gi].label] = x.n;
+        score += idf[gi] * (x.w * (k1 + 1)) / (x.w + k1 * (1 - b + b * dl / avg));
+        const tnorm = d._tnorm || (d._tnorm = norm((d.title || '') + ' ' + (d.sub || '')));
+        for (const v of groups[gi].variants) if (tnorm.indexOf(v) !== -1) { score += 1.5 * idf[gi]; break; }
+      }
+      if (!req) continue;
+      if (pq.phrase) { const r = countIn(d.idx.s, pq.phrase, false, 50); if (r.n) { score += 2 + Math.log(1 + r.n) * 1.5; p.phraseHits = r; } }
+      if (p.refHits && p.refHits.length) { score += 6 + Math.log(1 + p.refHits.length) * 2; cov += 1; }
+      // lokasi per blok
+      const loc = new Map();
+      const add = (bi, gi, w) => { let e = loc.get(bi); if (!e) { e = { bi, gs: new Set(), w: 0, ref: false }; loc.set(bi, e); } if (gi >= 0) e.gs.add(gi); e.w += w; };
+      for (let gi = 0; gi < groups.length; gi++) for (const [pos] of p.g[gi].pos) add(blockAt(d.idx.starts, pos), gi, 1);
+      if (p.phraseHits) for (const pos of p.phraseHits.list) add(blockAt(d.idx.starts, pos), -1, 3);
+      if (p.refHits) for (const r of p.refHits) { add(r[0], -1, 4); loc.get(r[0]).ref = true; }
+      const locs = Array.from(loc.values()).sort((a, b2) => (b2.gs.size + (b2.ref ? 2 : 0)) - (a.gs.size + (a.ref ? 2 : 0)) || b2.w - a.w || a.bi - b2.bi);
+      const totalHits = p.g.reduce((s, x) => s + x.n, 0) + (p.refHits ? p.refHits.length : 0);
+      results.push({ doc: d, score, cov, tf, locs, hits: totalHits, refHits: p.refHits || [], gStrong: p.g.map(x => x.strong) });
+    }
+    const maxCov = groups.length + (pq.qref ? 1 : 0);
+    results.sort((a, b2) => (b2.cov - a.cov) || (b2.score - a.score));
+    return { results, maxCov, df, idf };
+  }
+
+  /* ================= SNIPPET ================= */
+  /** Cari rentang (asli) yang cocok untuk varian di dalam teks asli satu blok. */
+  function matchRanges(text, variantsList, whole) {
+    const nm = norm(text, true); const s = nm.s; const out = [];
+    for (const v of variantsList) {
+      if (!v) continue; let pos = 0;
+      while ((pos = s.indexOf(v, pos)) !== -1) {
+        const b1 = pos === 0 || s.charCodeAt(pos - 1) === 32, b2 = pos + v.length >= s.length || s.charCodeAt(pos + v.length) === 32;
+        if (!(whole || v.length <= 2) || (b1 && b2)) out.push([nm.start[pos], nm.end[pos + v.length - 1]]);
+        pos += v.length;
+      }
+    }
+    out.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
+    const merged = [];
+    for (const r of out) { const l = merged[merged.length - 1]; if (l && r[0] <= l[1]) l[1] = Math.max(l[1], r[1]); else merged.push(r.slice()); }
+    return merged;
+  }
+  function snippetWindow(text, ranges, width) {
+    width = width || 260;
+    if (text.length <= width + 40) return { a: 0, b: text.length };
+    const c = ranges.length ? ranges[0][0] : 0;
+    let a = Math.max(0, c - Math.floor(width * 0.35)); let b = Math.min(text.length, a + width);
+    a = Math.max(0, b - width);
+    if (a > 0) { const sp = text.lastIndexOf(' ', a + 12); if (sp > a - 30 && sp >= 0) a = sp + 1; }
+    if (b < text.length) { const sp = text.indexOf(' ', b - 12); if (sp > 0 && sp < b + 30) b = sp; }
+    return { a, b };
+  }
+
+  /* ================= PDF → BLOK ================= */
+  const ARABIC_RE = /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/g;
+  const LATIN_RE = /[A-Za-z]/g;
+  const BOILER = /(ronggowarsito|^khusus untuk para siswa|^majlis tafsir al.?qur.?an\s*(\(mta\))?\s*(pusat)?$|^\(mta\)\s*pusat$|mta\.or\.id|telp\.?\s*\(?0271|^fax)/i;
+  function classify(t) {
+    const ar = (t.match(ARABIC_RE) || []).length, la = (t.match(LATIN_RE) || []).length;
+    if (ar > 0 && ar >= la * 1.5) return 'a';
+    if (t.length <= 90 && !/[\.,;:]$/.test(t) && la > 0) {
+      const letters = t.replace(/[^A-Za-z]/g, '');
+      const up = letters.replace(/[^A-Z]/g, '').length / Math.max(1, letters.length);
+      if (up > 0.75 && letters.length >= 4) return 'h';
+      if (/^([A-Z]|[0-9]{1,2}|[IVX]{1,4}|[a-z])[\.\)]\s+\S/.test(t) && t.length <= 70 && ar === 0) return 'h';
+    }
+    return 'p';
+  }
+  /**
+   * pages: [{n, w, items:[{s, x, y, w, h, dir}]}] (koordinat PDF, y dari bawah)
+   * → blocks [[type, text, page]]
+   */
+  function pdfToBlocks(pages) {
+    const blocks = [];
+    for (const pg of pages) {
+      const items = pg.items.filter(it => it.s && it.s.replace(/\s/g, '').length);
+      if (!items.length) continue;
+      // kelompokkan per baris
+      items.sort((a, b) => b.y - a.y || a.x - b.x);
+      const lines = [];
+      for (const it of items) {
+        const h = Math.max(4, it.h || 10);
+        let ln = null;
+        for (let k = lines.length - 1; k >= Math.max(0, lines.length - 4); k--) {
+          if (Math.abs(lines[k].y - it.y) <= h * 0.45) { ln = lines[k]; break; }
+        }
+        if (!ln) { ln = { y: it.y, h, items: [] }; lines.push(ln); }
+        ln.items.push(it); ln.h = Math.max(ln.h, h);
+      }
+      const L = [];
+      for (const ln of lines) {
+        const rtl = ln.items.filter(i => i.dir === 'rtl').length > ln.items.length / 2;
+        ln.items.sort((a, b) => rtl ? b.x - a.x : a.x - b.x);
+        let txt = '', lastEnd = null;
+        for (const it of ln.items) {
+          if (lastEnd !== null) {
+            const gap = rtl ? (lastEnd - (it.x + it.w)) : (it.x - lastEnd);
+            if (gap > (it.h || 10) * 0.18 && !/\s$/.test(txt) && !/^\s/.test(it.s)) txt += ' ';
+          }
+          txt += it.s; lastEnd = rtl ? it.x : it.x + it.w;
+        }
+        txt = txt.replace(/\s+/g, ' ').trim();
+        if (!txt) continue;
+        const x0 = Math.min.apply(null, ln.items.map(i => i.x)), x1 = Math.max.apply(null, ln.items.map(i => i.x + i.w));
+        L.push({ t: txt, y: ln.y, h: ln.h, x0, x1, ar: classify(txt) === 'a' });
+      }
+      while (L.length && /^\d{1,3}$/.test(L[L.length - 1].t)) L.pop();
+      if (L.length && /^\d{1,3}$/.test(L[0].t)) L.shift();
+      if (!L.length) continue;
+      const lat = L.filter(l => !l.ar);
+      const right = lat.length ? Math.max.apply(null, lat.map(l => l.x1)) : pg.w;
+      const left = lat.length ? lat.map(l => l.x0).sort((a, b) => a - b)[Math.floor(lat.length * 0.2)] : 0;
+      const gaps = []; for (let i = 1; i < L.length; i++) gaps.push(L[i - 1].y - L[i].y);
+      const med = gaps.length ? gaps.slice().sort((a, b) => a - b)[Math.floor(gaps.length / 2)] : 12;
+      let cur = null;
+      const flush = () => { if (cur && cur.t.trim()) { const t = cur.t.replace(/\s+/g, ' ').trim(); if (!BOILER.test(t) && !/^\d{1,3}$/.test(t)) blocks.push([cur.ar ? 'a' : classify(t), t, pg.n]); } cur = null; };
+      for (let i = 0; i < L.length; i++) {
+        const l = L[i]; const prev = L[i - 1];
+        const gap = prev ? prev.y - l.y : 0;
+        const centered = !l.ar && (l.x0 - left) > 25 && Math.abs((l.x0 + l.x1) / 2 - (left + right) / 2) < 30;
+        const full = l.x1 > right - (right - left) * 0.1;
+        const headish = !l.ar && !full && (classify(l.t) === 'h' || centered) && l.t.length < 90;
+        let brk = !cur;
+        if (cur) {
+          if (cur.ar !== l.ar) brk = true;
+          else if (gap > med * (l.ar ? 2.8 : 1.55)) brk = true;
+          else if (cur.head) brk = !(!headish && !l.ar && l.t.length < 45 && cur.t.length < 80 && prev && !/[\.\:]$/.test(prev.t));
+          else if (headish) brk = true;
+          else if (!l.ar && prev && (prev.x1 < right - (right - left) * 0.12) && /[\.\:\!\?"”’\)\]]$/.test(prev.t)) brk = true;
+          else if (!l.ar && /^(\d{1,2}|[a-z]|[A-Z])[\.\)]\s/.test(l.t) && prev && /[\.\:"”\]\)]$/.test(prev.t)) brk = true;
+        }
+        if (brk) { flush(); cur = { t: l.t, ar: l.ar, head: headish }; }
+        else {
+          if (l.ar) cur.t += ' ' + l.t;
+          else if (/[-‐]$/.test(cur.t) && !/\s[-‐]$/.test(cur.t)) cur.t += l.t;
+          else cur.t += ' ' + l.t;
+        }
+      }
+      flush();
+    }
+    return blocks;
+  }
+  /** item textContent pdf.js → format pdfToBlocks */
+  function fromTextContent(items) {
+    return items.filter(i => typeof i.str === 'string').map(i => ({ s: i.str, x: i.transform[4], y: i.transform[5], w: i.width, h: Math.hypot(i.transform[2], i.transform[3]) || i.height || 10, dir: i.dir }));
+  }
+  const BULAN = { januari: 1, februari: 2, pebruari: 2, maret: 3, april: 4, mei: 5, juni: 6, juli: 7, agustus: 8, september: 9, oktober: 10, nopember: 11, november: 11, desember: 12 };
+  const BULAN_N = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+  const SMALL = new Set(['dan', 'di', 'ke', 'dari', 'yang', 'untuk', 'dengan', 'pada', 'dalam', 'atau', 'serta', 'bagi', 'oleh', 'tentang', 'kepada', 'terhadap', 'sebagai']);
+  function titleCase(t) {
+    const letters = t.replace(/[^A-Za-z]/g, ''); if (!letters) return t;
+    const up = letters.replace(/[^A-Z]/g, '').length / letters.length;
+    if (up < 0.8) return t;
+    return t.toLowerCase().split(/(\s+)/).map((w, i) => {
+      if (/^\s+$/.test(w) || (i > 0 && SMALL.has(w))) return w;
+      return w.replace(/^([("“'‘]*)(\p{L})/u, (m, a, c) => a + c.toUpperCase()).replace(/-(\p{L})/gu, (m, c) => '-' + c.toUpperCase());
+    }).join('');
+  }
+  function detectMeta(blocks, filename) {
+    const head = blocks.slice(0, 14).map(b => b[1]).join(' \n ');
+    const meta = { date: null, ahad: null, no: null, title: null };
+    const mh = /Ahad\s*,?\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})\s*\/?\s*([^\n]*?\d{4}\s*H?)?(?=\s|$)/i.exec(head);
+    if (mh) {
+      const mo = BULAN[mh[2].toLowerCase()];
+      if (mo) meta.date = mh[3] + '-' + String(mo).padStart(2, '0') + '-' + String(+mh[1]).padStart(2, '0');
+      meta.ahad = mh[0].replace(/\s+/g, ' ').trim();
+    }
+    const mn = /Brosur\s*(?:nomor|no\.?)\s*[:\s]*([0-9]{2,5}\s*\/\s*[0-9]{2,5}(?:\s*\/\s*[A-Z]{1,4})?)/i.exec(head);
+    if (mn) meta.no = mn[1].replace(/\s+/g, '');
+    if (!meta.date && filename) {
+      const mf = /(^|[^\d])(\d{2})(\d{2})(\d{2})([^\d]|$)/.exec(filename);
+      if (mf) { const y = 2000 + +mf[2], m = +mf[3], d = +mf[4]; if (m >= 1 && m <= 12 && d >= 1 && d <= 31) meta.date = y + '-' + String(m).padStart(2, '0') + '-' + String(d).padStart(2, '0'); }
+    }
+    // judul: blok pertama setelah baris nomor brosur yang bukan header
+    let idx = blocks.findIndex(b => /Brosur\s*(nomor|no)/i.test(b[1]));
+    for (let i = idx + 1; i < Math.min(blocks.length, idx + 5); i++) {
+      if (i < 0) continue; const t = blocks[i][1];
+      if (blocks[i][0] === 'a' || t.length > 120 || /^Ahad/i.test(t)) continue;
+      meta.title = titleCase(t.replace(/\s+/g, ' ').trim()); break;
+    }
+    if (!meta.title && filename) meta.title = filename.replace(/\.pdf$/i, '').replace(/^\d{6}[-_\s]*/, '').replace(/[-_]+/g, ' ').trim();
+    return meta;
+  }
+  function fmtDate(iso) {
+    if (!iso) return 'Tanpa tanggal';
+    const [y, m, d] = iso.split('-').map(Number);
+    return d + ' ' + BULAN_N[m] + ' ' + y;
+  }
+  function headingBefore(blocks, bi) {
+    for (let i = bi; i >= 0; i--) if (blocks[i][0] === 'h') return blocks[i][1];
+    return null;
+  }
+
+  const API = { norm, VARMAP, STOP, stem, SURAH, AYAT, skey, surahFromName, surahLabel, extractRefs, buildIndex, blockAt, parseQuery, search, matchRanges, snippetWindow, classify, pdfToBlocks, fromTextContent, detectMeta, titleCase, fmtDate, headingBefore, BULAN_N };
+  root.PRM = API;
+  if (typeof module !== 'undefined' && module.exports) module.exports = API;
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+(function () {
+  'use strict';
+  const BUILD = '202611012324';
+  const CHM_FILE = 'Brosur_Ahad_Pagi_1995-2023_FIX.chm';
+  const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+  const FILE_MODE = location.protocol === 'file:';
+  const IN_CLAUDE = !!(window.claude && typeof window.claude.use === 'function');
+  // Di Claude: data dibaca sebagai JSON. Di GitHub Pages / dobel-klik: data dibaca sebagai file .js (tanpa server khusus).
+  const SCRIPT_DATA = FILE_MODE || !IN_CLAUDE;
+  const P = window.PRM;
+  const $ = (s, el) => (el || document).querySelector(s);
+  const $$ = (s, el) => Array.from((el || document).querySelectorAll(s));
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmtN = n => Number(n || 0).toLocaleString('id-ID');
+  const trunc = (s, n) => (s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s);
+  const tick = () => new Promise(r => setTimeout(r, 0));
+
+  /* ---------------- state ---------------- */
+  const LIB = { docs: [], byId: new Map(), shardsTotal: 0, shardsDone: 0, chmTotal: 0, chmLoaded: 0, chmReady: false, pdfState: 'loading', refsReady: false, qTotal: 0, hTotal: 0 };
+  const CAP = { db: null, assets: null, sample: null, user: null, canEdit: false };
+  const S = { tab: 'cari', q: '', src: 'all', y0: 0, y1: 0, sort: 'rel', view: 'doc', whole: false, broad: false, shownDocs: 30, shownLocs: 60, last: null, browse: null, ssrc: 'all', sup: null };
+
+  /* ---------------- util ---------------- */
+  function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => { t.hidden = true; }, 2200); }
+  async function copy(text) {
+    try { await navigator.clipboard.writeText(text); toast('Disalin ke clipboard'); return; } catch (e) { }
+    try {
+      const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+      const ok = document.execCommand && document.execCommand('copy'); ta.remove(); toast(ok ? 'Disalin ke clipboard' : 'Salin manual: teks sudah dipilih');
+    } catch (e) { toast('Browser menolak menyalin otomatis'); }
+  }
+  function docYear(d) { return d.date ? +d.date.slice(0, 4) : (+d.bab || 0); }
+  function hijri(d) { if (!d.ahad) return ''; const i = d.ahad.indexOf('/'); return i >= 0 ? d.ahad.slice(i + 1).trim() : ''; }
+  function dateLabel(d) { return d.date ? P.fmtDate(d.date) : 'Tanpa tanggal'; }
+  function shortDate(d) { if (!d.date) return 'tanpa tgl'; const [y, m, dd] = d.date.split('-').map(Number); return dd + ' ' + P.BULAN_N[m].slice(0, 3) + ' ' + y; }
+  function pill(d) { return d.src === 'CHM' ? '<span class="pill chm">Arsip CHM</span>' : '<span class="pill pdf">Brosur PDF</span>'; }
+  function pageOf(d, bi) { const b = d.blocks && d.blocks[bi]; return b && b[2] ? b[2] : 1; }
+  function locLabel(d, bi) {
+    if (d.src === 'PDF') return 'Halaman ' + pageOf(d, bi) + ' · paragraf ' + (bi + 1);
+    const h = P.headingBefore(d.blocks, bi);
+    return (h && d.blocks[bi][1] !== h ? '§ ' + trunc(h, 72) + ' · ' : '') + 'paragraf ' + (bi + 1);
+  }
+  function crumb(d) {
+    if (d.src === 'CHM') return '<b>' + esc(CHM_FILE) + '</b> › ' + esc(d.bab) + ' › ' + esc(d.sub);
+    return '<b>' + esc(d.file) + '</b>' + (d.pages ? ' · ' + d.pages + ' halaman' : '');
+  }
+  function refText(d, bi) {
+    const p = ['Brosur Ahad Pagi MTA, “' + d.title + '”'];
+    p.push(d.ahad ? d.ahad.replace(/\s+/g, ' ') : (d.date ? 'Ahad, ' + P.fmtDate(d.date) : 'tanpa tanggal'));
+    if (d.no) p.push('No. ' + d.no);
+    if (bi != null && d.blocks) {
+      if (d.src === 'PDF') p.push('hal. ' + pageOf(d, bi));
+      else { const h = P.headingBefore(d.blocks, bi); if (h && h !== d.blocks[bi][1]) p.push('bagian “' + trunc(h, 90) + '”'); p.push('paragraf ' + (bi + 1)); }
+    }
+    p.push(d.src === 'CHM' ? 'Sumber: ' + CHM_FILE + ' › ' + d.bab + ' › ' + d.sub : 'Sumber: ' + d.file);
+    return p.join('; ') + '.';
+  }
+  function quoteText(d, bi) { return '“' + d.blocks[bi][1] + '”\n— ' + refText(d, bi); }
+  function relatedQuery(d) {
+    let t = d.title.replace(/\((ke[-–\s]*)?\d+\)|\bke[-–\s]*\d+\b|\(lanjutan\)|\(tidak lengkap\)|\(cetak ulang\)|\d+/gi, ' ').replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
+    return t || d.title;
+  }
+  function pdfUrl(d, page) {
+    const hash = page ? '#page=' + page : '';
+    if (d.asset) return '/_blob/' + d.asset + hash;
+    if (d.localPath) return encodeURI(d.localPath) + hash;
+    if (d.blob) { if (!d._url) d._url = URL.createObjectURL(d.blob); return d._url + hash; }
+    return null;
+  }
+  function hasPdf(d) { return !!(d.asset || d.localPath || d.blob); }
+  function pdfBtn(d, page, cls, label) {
+    if (d.src !== 'PDF' || !hasPdf(d)) return '';
+    if (CAP.local && (d.blob || !FILE_MODE)) return `<button class="btn ${cls}" data-act="pdfview" data-id="${esc(d.id)}" data-page="${page || 1}">${label}</button>`;
+    return `<a class="btn ${cls}" href="${esc(pdfUrl(d, page))}" target="_blank" rel="noopener">${label}</a>`;
+  }
+
+  /* ---------------- IndexedDB cache ---------------- */
+  const idb = {
+    db: null, tried: false,
+    async open() {
+      if (this.tried) return this.db; this.tried = true;
+      try {
+        this.db = await new Promise((res, rej) => {
+          const r = indexedDB.open('prm-cache', 1);
+          r.onupgradeneeded = () => r.result.createObjectStore('kv');
+          r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+          setTimeout(() => rej(new Error('timeout')), 2500);
+        });
+      } catch (e) { this.db = null; }
+      return this.db;
+    },
+    async get(k) { try { const db = await this.open(); if (!db) return null; return await new Promise(res => { const r = db.transaction('kv').objectStore('kv').get(k); r.onsuccess = () => res(r.result || null); r.onerror = () => res(null); }); } catch (e) { return null; } },
+    async set(k, v) { try { const db = await this.open(); if (!db) return; db.transaction('kv', 'readwrite').objectStore('kv').put(v, k); } catch (e) { } },
+    async prune() {
+      try {
+        const db = await this.open(); if (!db) return;
+        const st = db.transaction('kv', 'readwrite').objectStore('kv'); const r = st.getAllKeys();
+        r.onsuccess = () => (r.result || []).forEach(k => { if (typeof k === 'string' && !k.startsWith(BUILD + ':')) st.delete(k); });
+      } catch (e) { }
+    }
+  };
+
+  /* ---------------- load CHM ---------------- */
+  // Dibuka dari server/Claude: fetch JSON. Dibuka dobel-klik (file://): browser memblokir fetch, jadi pakai file .js.
+  function dataStore() { return (window.PRM_DATA = window.PRM_DATA || { shards: {} }); }
+  async function viaScript(name, pick, fresh) { await loadScript('data/' + name + '.js' + (fresh && !FILE_MODE ? '?t=' + Date.now() : '')); const v = pick(dataStore()); if (v == null) throw new Error('data kosong: ' + name); return v; }
+  async function fetchShard(y) {
+    if (!SCRIPT_DATA) {
+      try { const r = await fetch('data/chm_' + y + '.json'); if (r.ok) return await r.json(); } catch (e) { }
+    }
+    const v = await viaScript('chm_' + y, D => D.shards[y]); delete dataStore().shards[y]; return v;
+  }
+  async function fetchMeta() {
+    if (!SCRIPT_DATA) {
+      try { const r = await fetch('data/chm_docs.json'); if (r.ok) return await r.json(); } catch (e) { }
+    }
+    return viaScript('chm_docs', D => D.docs);
+  }
+  async function loadChm() {
+    let meta;
+    try { meta = await fetchMeta(); }
+    catch (e) { LIB.chmError = true; setStatus(); renderMain(); return; }
+    LIB.chmTotal = meta.length;
+    const byShard = new Map();
+    for (const m of meta) { m.blocks = null; m.idx = null; addDoc(m); if (!byShard.has(m.shard)) byShard.set(m.shard, []); byShard.get(m.shard).push(m); }
+    const years = Array.from(byShard.keys()).sort().reverse();
+    LIB.shardsTotal = years.length; setupYears(); setStatus(); renderMain();
+    if (!FILE_MODE) idb.prune();
+    let i = 0;
+    const worker = async () => {
+      while (i < years.length) {
+        const y = years[i++];
+        let data = FILE_MODE ? null : await idb.get(BUILD + ':' + y);
+        if (!data) { try { data = await fetchShard(y); if (!FILE_MODE) idb.set(BUILD + ':' + y, data); } catch (e) { LIB.shardErr = (LIB.shardErr || 0) + 1; LIB.shardsDone++; setStatus(); continue; } }
+        const docs = byShard.get(y); let n = 0;
+        for (const d of docs) { d.blocks = data[d.id] || []; d.idx = P.buildIndex(d.blocks); LIB.chmLoaded++; if (++n % 25 === 0) await tick(); }
+        LIB.shardsDone++; setStatus(); scheduleRefresh();
+      }
+    };
+    await Promise.all([worker(), worker(), worker()]);
+    LIB.chmReady = true; setStatus(); scheduleRefresh();
+    setTimeout(computeAllRefs, 300);
+  }
+  async function computeAllRefs() {
+    let q = 0, h = 0, n = 0;
+    for (const d of LIB.docs) { if (!d.blocks) continue; if (!d.refs) d.refs = P.extractRefs(d.blocks); q += d.refs.q.length; h += d.refs.h.length; if (++n % 60 === 0) await tick(); }
+    LIB.qTotal = q; LIB.hTotal = h; LIB.refsReady = true;
+    if (!S.q && S.tab === 'cari' && !S.browse) renderMain();
+  }
+  function addDoc(d) { if (LIB.byId.has(d.id)) removeDoc(d.id); LIB.byId.set(d.id, d); LIB.docs.push(d); }
+  function removeDoc(id) { const d = LIB.byId.get(id); if (!d) return; LIB.byId.delete(id); const i = LIB.docs.indexOf(d); if (i >= 0) LIB.docs.splice(i, 1); }
+  function pdfDocs() { return LIB.docs.filter(d => d.src === 'PDF').sort((a, b) => (b.date || '').localeCompare(a.date || '')); }
+
+  let refreshT = null;
+  function scheduleRefresh() {
+    clearTimeout(refreshT);
+    refreshT = setTimeout(() => {
+      if (S.tab === 'cari') { if (S.q.trim().length >= 2) runSearch(true); else renderMain(); }
+      else if (S.sup) runSupport(true);
+    }, 250);
+  }
+  function setStatus() {
+    const chm = LIB.chmTotal ? fmtN(LIB.chmLoaded) + (LIB.chmReady ? '' : '/' + fmtN(LIB.chmTotal)) + ' brosur CHM' : 'arsip CHM';
+    const pdfN = pdfDocs().length;
+    const nLocal = CAP.local ? pdfDocs().filter(d => !d.official).length : 0;
+    const pdf = LIB.pdfState === 'loading' ? 'PDF dimuat…' : LIB.pdfState === 'none' ? 'PDF tidak tersedia di tampilan ini' : fmtN(pdfN - nLocal) + ' brosur PDF' + (nLocal ? ' + ' + fmtN(nLocal) + ' tambahan di browser ini' : '');
+    let s = (LIB.chmReady ? 'Indeks siap · ' : 'Memuat indeks · ') + chm + ' + ' + pdf;
+    if (LIB.chmError) s = 'Arsip CHM gagal dimuat — muat ulang halaman';
+    $('#status').textContent = s;
+    const pr = LIB.shardsTotal ? LIB.shardsDone / LIB.shardsTotal : 0;
+    $('#prog').style.width = (LIB.chmReady ? 0 : Math.max(4, pr * 100)) + '%';
+  }
+
+  /* ---------------- PDF dari database ---------------- */
+  async function initCaps() {
+    const C = window.claude;
+    if (!C || typeof C.use !== 'function') { await initLocal(); return; }
+    const [db, assets, sample, user] = await Promise.all(['db', 'assets', 'sample', 'user'].map(n => C.use(n).catch(() => null)));
+    CAP.db = db; CAP.assets = assets; CAP.sample = sample; CAP.user = user;
+    try { CAP.canEdit = user ? !!(await user.canEdit()) : false; } catch (e) { CAP.canEdit = false; }
+    $('#btnManage').hidden = !CAP.assets;
+    if (!db) { LIB.pdfState = 'none'; setStatus(); renderMain(); return; }
+    let first = true;
+    const timer = setTimeout(() => { if (first) { LIB.pdfState = 'slow'; setStatus(); } }, 10000);
+    db.collection('pdfs').onSnapshot(async snap => {
+      for (const ch of snap.docChanges()) {
+        if (ch.type === 'removed') { removeDoc(ch.doc.id); continue; }
+        const data = ch.doc.data(); if (!data) continue;
+        let blocks = data.blocks || [];
+        if (data.parts > 0) {
+          try { const ps = await db.doc('pdfs/' + ch.doc.id).collection('parts').get(); blocks = ps.docs.map(x => x.data()).sort((a, b) => a.k - b.k).flatMap(x => x.blocks || []); } catch (e) { }
+        }
+        const d = { id: ch.doc.id, src: 'PDF', file: data.file, title: data.title || data.file, date: data.date || null, ahad: data.ahad || null, no: data.no || null, pages: data.pages || 0, size: data.size || 0, asset: data.asset || null, uploadedAt: data.uploadedAt || null, parts: data.parts || 0, blocks };
+        d.idx = P.buildIndex(blocks); d.refs = P.extractRefs(blocks);
+        addDoc(d);
+      }
+      if (!snap.metadata || !snap.metadata.fromCache) { first = false; clearTimeout(timer); }
+      LIB.pdfState = 'ready'; setStatus(); scheduleRefresh(); renderPdfList();
+    }, err => { clearTimeout(timer); LIB.pdfState = 'error'; setStatus(); });
+  }
+
+  /* ---------------- mode lokal: PDF disimpan di browser ini ---------------- */
+  const LS = {
+    db: null,
+    async open() {
+      try {
+        this.db = await new Promise((res, rej) => {
+          const r = indexedDB.open('prm-local', 1);
+          r.onupgradeneeded = () => { r.result.createObjectStore('pdfs', { keyPath: 'id' }); r.result.createObjectStore('kv'); };
+          r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+          setTimeout(() => rej(new Error('timeout')), 4000);
+        });
+      } catch (e) { this.db = null; }
+      return this.db;
+    },
+    req(store, mode, fn) { return new Promise((res, rej) => { const tx = this.db.transaction(store, mode); const r = fn(tx.objectStore(store)); tx.oncomplete = () => res(r && r.result); tx.onerror = () => rej(tx.error); tx.onabort = () => rej(tx.error || new Error('abort')); }); },
+    all() { return this.req('pdfs', 'readonly', st => st.getAll()); },
+    put(rec) { return this.req('pdfs', 'readwrite', st => st.put(rec)); },
+    del(id) { return this.req('pdfs', 'readwrite', st => st.delete(id)); },
+    kvGet(k) { return this.req('kv', 'readonly', st => st.get(k)); },
+    kvSet(k, v) { return this.req('kv', 'readwrite', st => st.put(v, k)); }
+  };
+  function localDoc(rec) {
+    const blocks = rec.blocks || [];
+    const d = { id: rec.id, src: 'PDF', file: rec.file, title: rec.title || rec.file, date: rec.date || null, ahad: rec.ahad || null, no: rec.no || null, pages: rec.pages || 0, size: rec.size || 0, uploadedAt: rec.uploadedAt || null, localPath: rec.localPath || rec.path || null, blob: rec.blob || null, blocks };
+    d.idx = P.buildIndex(blocks); d.refs = P.extractRefs(blocks); return d;
+  }
+  let SEEDS = [];
+  async function loadSeeds() { try { return await viaScript('pdf_seed', D => D.pdfs, true); } catch (e) { return []; } }
+  async function initLocal() {
+    CAP.local = true;
+    // Brosur bawaan website = isi data/pdf_seed.js (selalu dibaca ulang, jadi brosur baru di repository langsung ikut).
+    SEEDS = await loadSeeds();
+    const official = new Set();
+    for (const r of SEEDS) { const d = localDoc(r); d.official = true; addDoc(d); official.add(r.id); }
+    // Brosur tambahan = yang diunggah lewat aplikasi di browser ini.
+    let recs = [];
+    if (await LS.open()) { try { recs = await LS.all(); } catch (e) { LS.db = null; } }
+    if (!LS.db) CAP.localMem = true;
+    for (const r of recs) { if (official.has(r.id) || !r.blob) continue; addDoc(localDoc(r)); }
+    LIB.pdfState = 'ready';
+    $('#btnManage').hidden = false;
+    setStatus(); scheduleRefresh(); renderPdfList();
+  }
+
+  /* ---------------- year selects ---------------- */
+  function setupYears() {
+    const ys = new Set(LIB.docs.map(docYear).filter(Boolean)); ys.add(new Date().getFullYear());
+    const arr = Array.from(ys).sort();
+    const lo = arr[0], hi = arr[arr.length - 1];
+    const opts = []; for (let y = lo; y <= hi; y++) opts.push(y);
+    $('#y0').innerHTML = opts.map(y => `<option value="${y}">${y}</option>`).join('');
+    $('#y1').innerHTML = opts.map(y => `<option value="${y}">${y}</option>`).join('');
+    $('#y0').value = lo; $('#y1').value = hi; S.y0 = lo; S.y1 = hi; S.yLo = lo; S.yHi = hi;
+  }
+  function filterFn(src) {
+    return d => (src === 'all' || d.src === src) && (!S.y0 || docYear(d) >= S.y0 || !docYear(d)) && (!S.y1 || docYear(d) <= S.y1 || !docYear(d));
+  }
+
+  /* ---------------- search ---------------- */
+  function hlVariants(pq) { const v = []; for (const g of pq.groups) v.push(...g.variants); if (pq.phrase) v.push(pq.phrase); return v; }
+  function mergeR(r) { r.sort((a, b) => a[0] - b[0]); const m = []; for (const x of r) { const l = m[m.length - 1]; if (l && x[0] <= l[1]) l[1] = Math.max(l[1], x[1]); else m.push([x[0], x[1]]); } return m; }
+  function hl(text, ranges, a, b) {
+    let out = '', p = a;
+    for (const [s, e] of ranges) { if (e <= a || s >= b) continue; const s2 = Math.max(s, a), e2 = Math.min(e, b); if (s2 < p) continue; out += esc(text.slice(p, s2)) + '<mark>' + esc(text.slice(s2, e2)) + '</mark>'; p = e2; }
+    return out + esc(text.slice(p, b));
+  }
+  function rangesFor(d, bi, pq, refHits) {
+    const t = d.blocks[bi][1];
+    let r = P.matchRanges(t, hlVariants(pq), S.whole);
+    if (refHits) for (const x of refHits) if (x[0] === bi) r.push([x[4], x[5]]);
+    return mergeR(r);
+  }
+  function snipHTML(d, L, res, pq, width) {
+    const b = d.blocks[L.bi]; const text = b[1];
+    const ranges = rangesFor(d, L.bi, pq, res && res.refHits);
+    const w = P.snippetWindow(text, ranges, width || 280);
+    const ar = b[0] === 'a';
+    return `<button class="snip${ar ? ' ar' : ''}" data-act="open" data-id="${esc(d.id)}" data-bi="${L.bi}"><span class="loc">${esc(locLabel(d, L.bi))}</span><span class="txt"${ar ? ' dir="rtl" lang="ar"' : ''}>${w.a > 0 ? '… ' : ''}${hl(text, ranges, w.a, w.b)}${w.b < text.length ? ' …' : ''}</span></button>`;
+  }
+  function runSearch(soft) {
+    const q = S.q.trim();
+    if (q.length < 2) { S.last = null; renderMain(); return; }
+    S.browse = null;
+    const pq = P.parseQuery(q, { stem: S.broad });
+    if (!pq.groups.length && !pq.qref) { S.last = { pq, r: { results: [] }, ms: 0, empty: 'Kata yang diketik terlalu umum. Tambahkan kata yang lebih spesifik.' }; renderMain(); return; }
+    const t0 = performance.now();
+    const r = P.search(LIB.docs, pq, { whole: S.whole, filter: filterFn(S.src) });
+    if (S.sort === 'new') r.results.sort((a, b) => (b.doc.date || '').localeCompare(a.doc.date || ''));
+    if (S.sort === 'old') r.results.sort((a, b) => (a.doc.date || '9').localeCompare(b.doc.date || '9'));
+    const ms = performance.now() - t0;
+    if (!soft) { S.shownDocs = 30; S.shownLocs = 60; }
+    S.last = { pq, r, ms };
+    renderMain();
+  }
+  function renderMain() {
+    if (S.tab !== 'cari') return;
+    const out = $('#out');
+    if (S.browse) return renderBrowse(out);
+    if (!S.last) return renderHome(out);
+    const { pq, r, ms } = S.last;
+    if (S.last.empty) { out.innerHTML = `<div class="empty">${esc(S.last.empty)}</div>`; return; }
+    const res = r.results;
+    const nLoc = res.reduce((s, x) => s + x.locs.length, 0);
+    const nChm = res.filter(x => x.doc.src === 'CHM').length, nPdf = res.length - nChm;
+    let h = '';
+    if (!LIB.chmReady) h += `<div class="note">Indeks arsip masih dimuat (${LIB.shardsDone}/${LIB.shardsTotal} tahun). Hasil akan bertambah otomatis.</div>`;
+    const nTerm = pq.groups.filter(g => g.kind === 'term').length;
+    const nAll = nTerm >= 2 ? res.filter(x => x.cov >= r.maxCov).length : 0;
+    h += `<div class="rhead"><strong>${fmtN(nLoc)} lokasi di ${fmtN(res.length)} dokumen</strong><span class="sub">Arsip CHM ${fmtN(nChm)} · Brosur PDF ${fmtN(nPdf)}${nTerm >= 2 ? ' · ' + fmtN(nAll) + ' dokumen memuat semua kata (tampil lebih dulu)' : ''} · ${ms < 1 ? '<1' : Math.round(ms)} ms</span></div>`;
+    const extra = [];
+    for (const g of pq.groups) if (g.variants.length > 1) extra.push(`<b>${esc(g.label)}</b> → ${g.variants.filter(v => v !== g.key).map(esc).join(', ')}`);
+    if (pq.qref) extra.unshift(`Rujukan ayat: <b>${esc(pq.qrefLabel)}</b>`);
+    if (pq.excludes.length) extra.push('Dikecualikan: ' + pq.excludes.map(x => `<b>${esc(x)}</b>`).join(' '));
+    if (extra.length) h += `<div class="vchips">Juga dicari: ${extra.join(' · ')}</div>`;
+    if (!res.length) {
+      h += `<div class="empty">Tidak ada hasil untuk “${esc(S.q)}”.<br>${S.whole ? 'Coba matikan “Kata utuh”. ' : ''}${!S.broad ? 'Coba aktifkan “Pencarian luas”. ' : ''}${S.src !== 'all' ? 'Coba pilih sumber “Semua”.' : ''}</div>`;
+      out.innerHTML = h; return;
+    }
+    if (S.view === 'doc') {
+      h += '<div class="list">' + res.slice(0, S.shownDocs).map((x, i) => cardHTML(x, i, pq)).join('') + '</div>';
+      if (res.length > S.shownDocs) h += `<div class="loadmore"><button class="btn" data-act="moredocs">Tampilkan ${Math.min(30, res.length - S.shownDocs)} dokumen lagi (${fmtN(res.length - S.shownDocs)} tersisa)</button></div>`;
+    } else {
+      const flat = []; for (const x of res) for (const L of x.locs) flat.push([x, L]);
+      h += '<div class="list">' + flat.slice(0, S.shownLocs).map(([x, L]) => locRowHTML(x, L, pq)).join('') + '</div>';
+      if (flat.length > S.shownLocs) h += `<div class="loadmore"><button class="btn" data-act="morelocs">Tampilkan 60 lokasi lagi (${fmtN(flat.length - S.shownLocs)} tersisa)</button></div>`;
+    }
+    out.innerHTML = h;
+  }
+  function actionsHTML(d, bi, extra) {
+    let a = `<button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="${bi}">Buka sumber</button>`;
+    a += pdfBtn(d, pageOf(d, bi), 'ghost', 'PDF asli · hal. ' + pageOf(d, bi));
+    a += `<button class="btn ghost" data-act="cpq" data-id="${esc(d.id)}" data-bi="${bi}">Salin kutipan</button>`;
+    a += `<button class="btn ghost" data-act="cpr" data-id="${esc(d.id)}" data-bi="${bi}">Salin referensi</button>`;
+    a += `<button class="btn ghost" data-act="rel" data-id="${esc(d.id)}">Pembahasan terkait</button>`;
+    if (CAP.sample) a += `<button class="btn ghost" data-act="sumdoc" data-id="${esc(d.id)}" data-bi="${bi}">Buat ringkasan</button>`;
+    return `<div class="actions">${a}${extra || ''}</div>`;
+  }
+  function cardHTML(x, i, pq) {
+    const d = x.doc; const top = x.locs.slice(0, 3);
+    const tf = Object.entries(x.tf).map(([k, v]) => `${esc(k)} ×${v}`).join(' · ');
+    const hij = hijri(d);
+    return `<article class="res" data-i="${i}">
+      <div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span>${hij ? `<span>${esc(hij)}</span>` : ''}${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div>
+      <h3><button class="linklike" data-act="open" data-id="${esc(d.id)}" data-bi="${top[0] ? top[0].bi : 0}">${esc(d.title)}</button></h3>
+      <div class="crumb">${crumb(d)}</div>
+      <div class="hitline">${fmtN(x.locs.length)} lokasi${tf ? ' · ' + tf : ''}${x.refHits.length ? ' · ' + esc(pq.qrefLabel) + ' ×' + x.refHits.length : ''}</div>
+      <div class="snips" id="sn-${i}">${top.map(L => snipHTML(d, L, x, pq)).join('')}</div>
+      ${x.locs.length > 3 ? `<button class="more" data-act="alllocs" data-i="${i}">Lihat semua ${fmtN(x.locs.length)} lokasi di dokumen ini</button>` : ''}
+      ${actionsHTML(d, top[0] ? top[0].bi : 0)}
+    </article>`;
+  }
+  function locRowHTML(x, L, pq) {
+    const d = x.doc;
+    return `<div class="locrow"><div class="meta">${pill(d)}<span class="date">${esc(shortDate(d))}</span><span class="ttl">${esc(trunc(d.title, 70))}</span>${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div>${snipHTML(d, L, x, pq, 240)}</div>`;
+  }
+
+  /* ---------------- home & browse ---------------- */
+  function renderHome(out) {
+    const chm = LIB.docs.filter(d => d.src === 'CHM'); const pdfs = pdfDocs();
+    const cy = chm.map(docYear).filter(Boolean); const cy0 = cy.length ? Math.min(...cy) : '', cy1 = cy.length ? Math.max(...cy) : '';
+    const pd = pdfs.filter(d => d.date).map(d => d.date).sort();
+    let h = `<div class="stats">
+      <div class="stat"><b>${fmtN(LIB.docs.length)}</b><span>dokumen dalam satu indeks</span></div>
+      <div class="stat"><b>${fmtN(LIB.chmTotal)}</b><span>arsip CHM ${cy0 ? cy0 + '–' + cy1 : ''}</span></div>
+      <div class="stat"><b>${LIB.pdfState === 'loading' ? '…' : fmtN(pdfs.length)}</b><span>brosur PDF${pd.length ? ' ' + shortDate({ date: pd[0] }) + ' – ' + shortDate({ date: pd[pd.length - 1] }) : ''}</span></div>
+      <div class="stat"><b>${LIB.refsReady ? fmtN(LIB.qTotal) : '…'}</b><span>rujukan ayat · ${LIB.refsReady ? fmtN(LIB.hTotal) : '…'} rujukan hadits</span></div>
+    </div>`;
+    if (CAP.local) {
+      const nLocal = pdfDocs().filter(d => !d.official).length;
+      h += `<div class="note">${FILE_MODE ? 'Dibuka dari folder komputer.' : 'Versi website.'} Brosur PDF yang ditambahkan lewat tombol <b>Brosur PDF</b> hanya tersimpan di browser perangkat ini${CAP.localMem ? ' sampai halaman ditutup' : ''}. Agar muncul di semua HP dan komputer, brosur itu perlu dimasukkan ke repository GitHub (lihat README, bagian upload mingguan).${nLocal ? ' Saat ini ada <b>' + nLocal + ' brosur tambahan</b> yang baru tersimpan di browser ini.' : ''} Ringkasan AI hanya tersedia di versi Claude.</div>`;
+    }
+    if (LIB.pdfState === 'none') h += `<div class="note">Brosur PDF tersimpan di database aplikasi dan hanya bisa dimuat saat halaman dibuka di Claude. Arsip CHM tetap bisa dicari.</div>`;
+    if (LIB.pdfState === 'slow') h += `<div class="note warn">Database brosur PDF belum merespons. Hasil pencarian sementara hanya dari arsip CHM.</div>`;
+    h += `<div class="sec"><h2>Coba cari</h2><div class="try">${['tawakkal', 'keutamaan sabar', 'Al-Baqarah 183', '"laa haula walaa quwwata"', 'HR. Bukhari', 'shalat tahajjud', 'لَا حَوْلَ'].map(t => `<button data-act="try" data-q="${esc(t)}">${esc(t)}</button>`).join('')}</div></div>`;
+    h += `<div class="sec"><h2>Brosur PDF terbaru</h2>`;
+    if (pdfs.length) h += `<div class="plist">${pdfs.slice(0, 6).map(d => `<div class="prow"><div><div class="t">${esc(d.title)}</div><div class="m">${esc(dateLabel(d))}${hijri(d) ? ' · ' + esc(hijri(d)) : ''}${d.no ? ' · No. ' + esc(d.no) : ''} · ${esc(d.file)}</div></div><button class="btn" data-act="open" data-id="${esc(d.id)}" data-bi="0">Baca</button>${pdfBtn(d, 1, 'ghost', 'PDF asli')}</div>`).join('')}</div>`;
+    else h += `<div class="note">${LIB.pdfState === 'loading' ? 'Memuat daftar brosur PDF…' : 'Belum ada brosur PDF. ' + (CAP.assets ? 'Tambahkan lewat tombol “Brosur PDF” di kanan atas.' : '')}</div>`;
+    h += `</div><div class="sec"><h2>Jelajahi per tahun</h2><div class="years">${yearButtons()}</div></div>`;
+    out.innerHTML = h;
+  }
+  function yearButtons() {
+    const m = new Map();
+    for (const d of LIB.docs) { const y = docYear(d) || 0; const e = m.get(y) || { c: 0, p: 0 }; e.c++; if (d.src === 'PDF') e.p++; m.set(y, e); }
+    return Array.from(m.entries()).sort((a, b) => b[0] - a[0]).map(([y, e]) => `<button class="${e.p ? 'pdfy' : ''}" data-act="browse" data-y="${y}">${y || '—'}<small>${e.c} brosur${e.p ? ' · ' + e.p + ' PDF' : ''}</small></button>`).join('');
+  }
+  function renderBrowse(out) {
+    const y = S.browse;
+    const docs = LIB.docs.filter(d => (docYear(d) || 0) === y).sort((a, b) => (a.date || '').localeCompare(b.date || ''));
+    let h = `<div class="rhead"><strong>Tahun ${y || 'tanpa tanggal'} · ${docs.length} brosur</strong><button class="btn ghost" data-act="home">← Kembali</button></div><div class="plist">`;
+    h += docs.map(d => `<div class="prow"><div><div class="m">${pill(d)} ${esc(dateLabel(d))}${d.no ? ' · No. ' + esc(d.no) : ''}</div><div class="t">${esc(d.title)}</div><div class="m">${d.src === 'CHM' ? esc(d.bab + ' › ' + d.sub) : esc(d.file)}</div></div><button class="btn" data-act="open" data-id="${esc(d.id)}" data-bi="0">Baca</button></div>`).join('');
+    out.innerHTML = h + '</div>';
+  }
+
+  /* ---------------- reader ---------------- */
+  let readerCtx = null;
+  function openReader(id, bi, pqOverride) {
+    const d = LIB.byId.get(id);
+    if (!d) return;
+    if (!d.blocks) { toast('Dokumen ini masih dimuat, coba sebentar lagi'); return; }
+    bi = Math.max(0, Math.min(+bi || 0, d.blocks.length - 1));
+    const pq = pqOverride || (S.tab === 'sup' && S.sup ? S.sup.pq : (S.last && S.last.pq)) || null;
+    readerCtx = { d, bi };
+    const refHits = pq && pq.qref ? (d.refs || (d.refs = P.extractRefs(d.blocks))).q.filter(r => r[1] === pq.qref.s && (!pq.qref.a1 || (r[2] <= pq.qref.a2 && r[3] >= pq.qref.a1))) : null;
+    const hij = hijri(d);
+    let h = `<div class="dhead"><div class="row"><div style="flex:1;min-width:0"><div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span>${hij ? `<span>${esc(hij)}</span>` : ''}${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div><h2>${esc(d.title)}</h2></div><button class="btn ghost" data-act="close" aria-label="Tutup">✕ Tutup</button></div>
+      <div class="actions">${pdfBtn(d, pageOf(d, bi), 'primary', 'Buka PDF asli · hal. ' + pageOf(d, bi))}${d.src === 'CHM' ? `<button class="btn" data-act="cploc" data-id="${esc(d.id)}">Salin lokasi di CHM</button>` : ''}<button class="btn ghost" data-act="cpr" data-id="${esc(d.id)}">Salin referensi dokumen</button><button class="btn ghost" data-act="rel" data-id="${esc(d.id)}">Pembahasan terkait</button>${CAP.sample ? `<button class="btn ghost" data-act="sumdoc" data-id="${esc(d.id)}" data-bi="${bi}">Buat ringkasan</button>` : ''}</div></div>
+      <div class="dbody" id="rbody"><div class="idbox">${d.src === 'CHM' ? `Sumber asli: <b>${esc(CHM_FILE)}</b> › Bab <b>${esc(d.bab)}</b> › Subbab <b>${esc(d.sub)}</b><br>Lokasi file di dalam CHM: <b>${esc(d.path)}</b>` : `Sumber asli: <b>${esc(d.file)}</b> · ${d.pages || '?'} halaman${d.uploadedAt ? ' · ditambahkan ' + esc(new Date(d.uploadedAt).toLocaleDateString('id-ID')) : ''}<br>Teks di bawah hasil ekstraksi per halaman. Tulisan Arab dari PDF bisa tidak rapi; cocokkan dengan PDF asli.`}</div><div id="rsum"></div><div class="doc">`;
+    let lastPage = 0;
+    d.blocks.forEach((b, i) => {
+      if (d.src === 'PDF' && b[2] && b[2] !== lastPage) { lastPage = b[2]; h += `<div class="pagesep">Halaman ${b[2]}</div>`; }
+      let inner = esc(b[1]);
+      if (pq) { const r = rangesFor(d, i, pq, refHits); if (r.length) inner = hl(b[1], r, 0, b[1].length); }
+      const tools = `<div class="bt"><button class="btn" data-act="cpq" data-id="${esc(d.id)}" data-bi="${i}">Salin kutipan</button><button class="btn ghost" data-act="cpr" data-id="${esc(d.id)}" data-bi="${i}">Salin referensi</button><span class="crumb" style="align-self:center">${esc(locLabel(d, i))}</span></div>`;
+      h += `<div class="blk ${b[0]}${i === bi ? ' target' : ''}" id="rb-${i}" data-act="pick" data-bi="${i}"${b[0] === 'a' ? ' lang="ar"' : ''}>${inner}${tools}</div>`;
+    });
+    h += '</div></div>';
+    const R = $('#reader'); R.innerHTML = h; showDrawer(R);
+    requestAnimationFrame(() => { const t = $('#rb-' + bi); if (t && bi > 0) t.scrollIntoView({ block: 'center' }); });
+  }
+  /* ---------------- penampil PDF (mode website/komputer; HP Android tidak bisa lompat halaman lewat #page) ---------------- */
+  let pv = null;
+  function firstBlockOfPage(d, page) { const i = (d.blocks || []).findIndex(b => b[2] === page); return i < 0 ? 0 : i; }
+  async function openPdfViewer(id, page) {
+    const d = LIB.byId.get(id); if (!d) return;
+    page = Math.max(1, +page || 1);
+    const R = $('#reader');
+    R.innerHTML = `<div class="dhead"><div class="row"><div style="flex:1;min-width:0"><div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span>${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div><h2>${esc(d.title)}</h2></div><button class="btn ghost" data-act="close" aria-label="Tutup">✕ Tutup</button></div>
+      <div class="actions"><button class="btn" data-act="pvprev">‹ Sebelumnya</button><span class="pvnum" id="pvnum">Halaman ${page}</span><button class="btn" data-act="pvnext">Berikutnya ›</button><button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="${firstBlockOfPage(d, page)}">Lihat teks</button><a class="btn ghost" href="${esc(pdfUrl(d))}" download="${esc(d.file)}">Unduh PDF</a></div></div>
+      <div class="dbody" id="pvbody"><div class="pvwrap"><div class="pvmsg" id="pvmsg">Memuat PDF…</div><canvas id="pvcanvas"></canvas></div></div>`;
+    showDrawer(R);
+    try {
+      const lib = await loadPdfJs();
+      const src = d.blob ? { data: new Uint8Array(await d.blob.arrayBuffer()) } : { url: pdfUrl(d) };
+      const doc = await lib.getDocument(Object.assign(src, { isEvalSupported: false })).promise;
+      if (pv && pv.doc) { try { pv.doc.destroy(); } catch (e) { } }
+      pv = { d, doc, page: Math.min(page, doc.numPages) };
+      await pvRender();
+    } catch (e) {
+      const m = $('#pvmsg'); if (m) m.innerHTML = `PDF tidak bisa ditampilkan di sini. <a href="${esc(pdfUrl(d, page))}" target="_blank" rel="noopener">Buka file PDF</a> (halaman ${page}).`;
+    }
+  }
+  async function pvRender() {
+    if (!pv) return;
+    const pg = await pv.doc.getPage(pv.page);
+    const body = $('#pvbody'); const c = $('#pvcanvas'); if (!body || !c) return;
+    const cw = Math.max(260, Math.min(body.clientWidth - 28, 900));
+    const v1 = pg.getViewport({ scale: 1 }); const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+    const vp = pg.getViewport({ scale: (cw / v1.width) * dpr });
+    if (pv.task) { try { pv.task.cancel(); } catch (e) { } }
+    c.width = Math.floor(vp.width); c.height = Math.floor(vp.height); c.style.width = Math.floor(vp.width / dpr) + 'px'; c.style.height = Math.floor(vp.height / dpr) + 'px';
+    pv.task = pg.render({ canvasContext: c.getContext('2d'), viewport: vp });
+    try { await pv.task.promise; } catch (e) { return; }
+    $('#pvnum').textContent = 'Halaman ' + pv.page + ' dari ' + pv.doc.numPages;
+    const m = $('#pvmsg'); if (m) m.hidden = true; body.scrollTop = 0;
+  }
+  function showDrawer(el) { $('#scrim').hidden = false; el.hidden = false; document.body.style.overflow = 'hidden'; }
+  function closeDrawers() { if (pv) { try { pv.doc.destroy(); } catch (e) { } pv = null; } $('#reader').hidden = true; $('#manage').hidden = true; $('#scrim').hidden = true; document.body.style.overflow = ''; if (sumCtl) { sumCtl.abort(); sumCtl = null; } }
+
+  /* ---------------- AI ringkasan ---------------- */
+  let sumCtl = null;
+  function aiErr(e) {
+    const c = e && e.code;
+    if (c === 'not_granted' || c === 'sampling_disabled' || c === 'not_declared' || c === 'capability_disabled' || c === 'capability_removed') return 'Fitur ringkasan AI tidak diizinkan di tampilan ini.';
+    if (c === 'rate_limited') return 'Batas pemakaian Claude sedang tercapai. Coba lagi beberapa saat lagi.';
+    if (c === 'prompt_too_large') return 'Bahan terlalu panjang untuk diringkas sekaligus.';
+    if (c === 'refused') return 'Claude tidak dapat meringkas bahan ini.';
+    if (c === 'session_expired') return 'Sesi berakhir. Masuk lagi ke Claude lalu coba lagi.';
+    return 'Ringkasan gagal dibuat. Coba lagi.';
+  }
+  function renderAi(text, sources) {
+    const lines = text.replace(/\r/g, '').split('\n');
+    let h = '', inList = false;
+    const fmt = s => esc(s.replace(/\*\*/g, '')).replace(/\[(\d{1,2})\]/g, (m, n) => { const src = sources && sources[+n - 1]; return src ? `<button class="cite" data-act="open" data-id="${esc(src.id)}" data-bi="${src.bi}" title="${esc(src.label)}">${n}</button>` : m; });
+    for (let ln of lines) {
+      ln = ln.trim();
+      if (!ln) { if (inList) { h += '</ul>'; inList = false; } continue; }
+      const li = /^([-*•]|\d+\.)\s+(.*)$/.exec(ln);
+      if (li) { if (!inList) { h += '<ul>'; inList = true; } h += `<li>${fmt(li[2])}</li>`; continue; }
+      if (inList) { h += '</ul>'; inList = false; }
+      if (/^#{1,4}\s/.test(ln) || (/:$/.test(ln) && ln.length < 70) || /^\*\*[^*]+\*\*:?$/.test(ln)) h += `<h4>${fmt(ln.replace(/^#+\s*/, '').replace(/:$/, ''))}</h4>`;
+      else h += `<p>${fmt(ln)}</p>`;
+    }
+    if (inList) h += '</ul>';
+    return h;
+  }
+  async function aiRun(target, prompt, sources, btn) {
+    if (!CAP.sample) return;
+    if (sumCtl) sumCtl.abort();
+    const ctl = new AbortController(); sumCtl = ctl;
+    const out = target.querySelector('.aiout'); const msg = target.querySelector('.aimsg');
+    out.innerHTML = '<p style="color:var(--muted)">Menyusun ringkasan…</p>'; if (msg) msg.textContent = '';
+    if (btn) btn.disabled = true;
+    try {
+      const { text, truncated } = await CAP.sample(prompt, { signal: ctl.signal, onText: ({ text }) => { out.innerHTML = renderAi(text, sources); } });
+      out.innerHTML = renderAi(text, sources);
+      if (truncated && msg) msg.textContent = 'Ringkasan terpotong karena panjang.';
+    } catch (e) {
+      if (e && e.code === 'cancelled') return;
+      out.innerHTML = e && e.text ? renderAi(e.text, sources) : '';
+      if (msg) msg.textContent = aiErr(e);
+      if (e && (e.code === 'not_granted' || e.code === 'sampling_disabled')) { CAP.sample = null; }
+    } finally { if (btn) btn.disabled = false; if (sumCtl === ctl) sumCtl = null; }
+  }
+  const DISCLAIM = 'Ringkasan dibuat otomatis dari kutipan brosur yang tercantum, sebagai bahan bantu. Ini bukan fatwa dan bukan penetapan hukum. Periksa sumber asli sebelum disampaikan.';
+  function sumDoc(id, bi) {
+    const d = LIB.byId.get(id); if (!d || !d.blocks || !CAP.sample) return;
+    if ($('#reader').hidden || !readerCtx || readerCtx.d !== d) openReader(id, bi || 0);
+    const box = $('#rsum');
+    box.innerHTML = `<div class="aibox" style="max-width:70ch;margin:0 auto 12px"><h3>Ringkasan brosur</h3><div class="aimsg muted"></div><div class="aiout"></div><div class="disclaim">${esc(DISCLAIM)}</div></div>`;
+    let body = '', n = 0;
+    for (const b of d.blocks) { if (b[0] === 'a') continue; const line = (b[0] === 'h' ? '## ' : '') + b[1]; if (n + line.length > 16000) break; body += line + '\n'; n += line.length; }
+    const prompt = `Ringkas satu brosur Brosur Ahad Pagi MTA berikut dalam Bahasa Indonesia, HANYA dari isinya.\n` +
+      `Susun dengan bagian: "Pokok bahasan", "Poin utama" (bullet "- "), "Ayat Al-Qur'an yang dikutip" (bullet, sebut rujukan QS persis seperti di teks), "Hadits yang dikutip" (bullet, sebut perawi persis seperti di teks).\n` +
+      `Jangan menambah dalil, pendapat, atau kesimpulan hukum dari luar teks. Ini bukan fatwa. Maksimal 220 kata. Teks biasa, tanpa tabel.\n\n` +
+      `Identitas: ${refText(d)}\n\nIsi brosur (teks Arab dihilangkan):\n${body}`;
+    aiRun(box.firstElementChild, prompt, null, null);
+    box.scrollIntoView({ block: 'start' });
+  }
+
+  /* ---------------- Mode Support Ustadz ---------------- */
+  function unitsOf(d) {
+    if (d._units) return d._units;
+    const B = d.blocks; const refs = d.refs || (d.refs = P.extractRefs(B));
+    const by = new Map();
+    for (const r of refs.q) { if (!by.has(r[0])) by.set(r[0], { q: [], h: [] }); by.get(r[0]).q.push(r); }
+    for (const r of refs.h) { if (!by.has(r[0])) by.set(r[0], { q: [], h: [] }); by.get(r[0]).h.push(r); }
+    const units = [];
+    for (const [bi, c] of by) {
+      let j = bi - 1, steps = 0;
+      while (j >= 0 && B[j][0] === 'p' && !by.has(j) && steps < 3 && B[j][1].length < 700) { j--; steps++; }
+      let a0 = -1, a1 = -1, t0 = bi;
+      if (j >= 0 && B[j][0] === 'a') { a1 = j; a0 = j; while (a0 - 1 >= 0 && B[a0 - 1][0] === 'a' && a1 - a0 < 4) a0--; t0 = j + 1; }
+      units.push({ kind: c.q.length ? 'Q' : 'H', q: c.q, h: c.h, a0, a1, t0, t1: bi, intro: (a0 >= 0 ? a0 : t0) - 1 });
+    }
+    d._units = units; return units;
+  }
+  function unitBlocks(u) { const r = []; if (u.intro >= 0) r.push(u.intro); if (u.a0 >= 0) for (let i = u.a0; i <= u.a1; i++) r.push(i); for (let i = u.t0; i <= u.t1; i++) r.push(i); return r; }
+  function runSupport(soft) {
+    const q = (soft && S.sup ? S.sup.q : $('#sq').value).trim();
+    const out = $('#sout');
+    if (q.length < 2) { out.innerHTML = '<div class="empty">Tulis pertanyaan atau tema terlebih dahulu.</div>'; return; }
+    const pq = P.parseQuery(q, { support: true, stem: true });
+    if (!pq.groups.length && !pq.qref) { out.innerHTML = '<div class="empty">Tidak ada kata kunci yang bisa dicari. Sebutkan temanya, misalnya “keutamaan sabar”.</div>'; return; }
+    const r = P.search(LIB.docs, pq, { filter: filterFn(S.ssrc) });
+    // kata kunci utama = kata paling spesifik (idf tertinggi); dokumen wajib memuatnya
+    const termIdx = pq.groups.map((g, i) => g.kind === 'term' ? i : -1).filter(i => i >= 0);
+    let core = -1; if (termIdx.length >= 2) core = termIdx.reduce((a, b) => (r.idf[b] > r.idf[a] ? b : a));
+    const before = r.results.length;
+    if (core >= 0) r.results = r.results.filter(x => x.gStrong[core] > 0);
+    r.results.sort((a, b) => (b.score + 3 * b.cov / r.maxCov) - (a.score + 3 * a.cov / r.maxCov));
+    r.partial = before - r.results.length; r.core = core >= 0 ? pq.groups[core].label : null;
+    const top = r.results.slice(0, 120);
+    const ayat = new Map(), hadits = new Map(), expl = [];
+    for (const res of top) {
+      const d = res.doc; const units = unitsOf(d);
+      const L = new Map(res.locs.map(x => [x.bi, x]));
+      const used = new Set();
+      for (const u of units) {
+        let w = 0; const bl = unitBlocks(u);
+        for (const bi of bl) { const x = L.get(bi); if (x) w += x.gs.size + (x.ref ? 3 : 0); }
+        if (!w) continue;
+        bl.forEach(bi => used.add(bi));
+        const tr = []; for (let i = u.t0; i <= u.t1; i++) if (d.blocks[i][0] !== 'a') tr.push(d.blocks[i][1]);
+        const item = { d, u, w, score: res.score * 0.1 + w, tr: tr.join('\n'), ar: u.a0 >= 0 ? d.blocks.slice(u.a0, u.a1 + 1).map(b => b[1]).join('\n') : '' };
+        if (u.kind === 'Q') {
+          for (const c of u.q) {
+            const key = c[1] + ':' + c[2] + '-' + c[3];
+            if (!ayat.has(key)) ayat.set(key, { key, s: c[1], a1: c[2], a2: c[3], items: [], score: 0 });
+            const g = ayat.get(key); if (!g.items.some(x => x.d === d)) { g.items.push(item); g.score += item.score; }
+          }
+        } else {
+          const key = P.norm(item.tr).replace(/^dari\s+/, '').slice(0, 80);
+          if (!hadits.has(key)) hadits.set(key, { key, items: [], score: 0, perawi: u.h[0] ? u.h[0][1] : 'Hadits', cite: u.h[0] ? d.blocks[u.t1][1].slice(u.h[0][2], u.h[0][3]) : '' });
+          const g = hadits.get(key); if (!g.items.some(x => x.d === d)) { g.items.push(item); g.score += item.score; }
+        }
+      }
+      for (const x of res.locs) {
+        if (used.has(x.bi)) continue; const b = d.blocks[x.bi]; if (b[0] !== 'p' || b[1].length < 60) continue;
+        expl.push({ d, bi: x.bi, gs: x.gs.size, score: x.gs.size * 4 + res.score * 0.5 + Math.min(3, x.w * 0.3), res });
+      }
+    }
+    const A = Array.from(ayat.values()).sort((a, b) => b.items.length - a.items.length || b.score - a.score);
+    const H = Array.from(hadits.values()).sort((a, b) => b.score - a.score);
+    const seen = new Set();
+    const E = expl.sort((a, b) => b.score - a.score).filter(x => { const k = P.norm(x.d.blocks[x.bi][1]).slice(0, 100); if (seen.has(k)) return false; seen.add(k); return true; });
+    const chm = r.results.filter(x => x.doc.src === 'CHM'), pdf = r.results.filter(x => x.doc.src === 'PDF');
+    S.sup = { q, pq, r, A, H, E, chm, pdf, show: S.sup && soft ? S.sup.show : { chm: 10, pdf: 10, A: 12, H: 12, E: 15 } };
+    renderSupport();
+  }
+  function srcChips(items) {
+    const max = 6;
+    const sorted = items.slice().sort((a, b) => (a.d.src === b.d.src ? 0 : a.d.src === 'PDF' ? -1 : 1) || (b.d.date || '').localeCompare(a.d.date || ''));
+    let h = sorted.slice(0, max).map(x => `<button class="srcchip" data-act="open" data-id="${esc(x.d.id)}" data-bi="${x.u ? x.u.t1 : x.bi}" title="${esc(refText(x.d, x.u ? x.u.t1 : x.bi))}"><i class="${x.d.src === 'CHM' ? 'chm' : 'pdf'}">${x.d.src}</i>${esc(shortDate(x.d))} · ${esc(trunc(x.d.title, 42))}${x.d.src === 'PDF' ? ' · hal. ' + pageOf(x.d, x.u ? x.u.t1 : x.bi) : ''}</button>`).join('');
+    if (sorted.length > max) h += `<span class="crumb" style="align-self:center">+${sorted.length - max} sumber lain</span>`;
+    return `<div class="srclist">${h}</div>`;
+  }
+  function bestItem(items) { return items.slice().sort((a, b) => ((b.ar && b.d.src === 'CHM') ? 1 : 0) - ((a.ar && a.d.src === 'CHM') ? 1 : 0) || b.w - a.w)[0]; }
+  function ayatLabel(g) { return 'QS. ' + P.surahLabel(g.s) + ': ' + g.a1 + (g.a2 > g.a1 ? '-' + g.a2 : ''); }
+  function supQuote(kind, g) {
+    const it = bestItem(g.items); const parts = [];
+    if (it.ar && it.d.src === 'CHM') parts.push(it.ar);
+    parts.push(it.tr);
+    parts.push('— ' + (kind === 'Q' ? ayatLabel(g) + '. ' : '') + 'Dikutip dalam: ' + refText(it.d, it.u.t1));
+    return parts.join('\n');
+  }
+  function renderSupport() {
+    const X = S.sup; if (!X) return; const out = $('#sout'); const pq = X.pq;
+    const kw = pq.groups.map(g => `<b>${esc(g.label)}</b>${g.variants.length > 1 ? ' (' + g.variants.filter(v => v !== g.key).map(esc).join(', ') + ')' : ''}`);
+    if (pq.qref) kw.unshift(`<b>${esc(pq.qrefLabel)}</b>`);
+    let h = `<div class="vchips" style="margin-top:14px">Kata kunci yang dicari: ${kw.join(' · ')}</div>`;
+    if (!LIB.chmReady) h += `<div class="note">Indeks arsip masih dimuat (${LIB.shardsDone}/${LIB.shardsTotal} tahun). Paket referensi akan diperbarui otomatis.</div>`;
+    h += `<div class="counts"><a href="#s-chm"><b>${fmtN(X.chm.length)}</b> Arsip CHM</a><a href="#s-pdf"><b>${fmtN(X.pdf.length)}</b> Brosur PDF</a><a href="#s-ayat"><b>${fmtN(X.A.length)}</b> Ayat</a><a href="#s-hadits"><b>${fmtN(X.H.length)}</b> Hadits</a><a href="#s-expl"><b>${fmtN(X.E.length)}</b> Kutipan penjelasan</a></div>`;
+    if (!X.r.results.length) { out.innerHTML = h + '<div class="empty">Tidak ditemukan referensi. Coba kata lain atau pilih sumber “Semua”.</div>'; return; }
+    h += `<div class="aibox" id="supAi"><h3>Ringkasan referensi untuk disampaikan</h3><p class="muted">${CAP.sample ? 'Disusun oleh Claude hanya dari kutipan di bawah, dengan nomor sumber yang bisa diklik. Memakai kuota Claude Anda.' : 'Ringkasan AI tersedia saat halaman ini dibuka di Claude. Seluruh referensi di bawah tetap bisa dipakai tanpa AI.'}</p>
+      <div class="actions" style="border:0;padding:0;margin:0">${CAP.sample ? '<button class="btn primary" data-act="supsum">Buat ringkasan</button>' : ''}<button class="btn" data-act="supcopy">Salin semua referensi</button></div>
+      <div class="aimsg muted" style="margin-top:8px"></div><div class="aiout"></div><div id="supSrc"></div></div>`;
+    if (X.r.core) h += `<div class="vchips">Kata kunci utama <b>${esc(X.r.core)}</b> wajib ada di setiap brosur; kata lain menaikkan peringkat.${X.r.partial ? ' ' + fmtN(X.r.partial) + ' brosur yang tidak memuatnya disisihkan.' : ''}</div>`;
+    h += `<div class="note">Jika dua sumber membahas hal yang sama secara berbeda, keduanya ditampilkan lengkap dengan tanggal dan identitas dokumennya. Aplikasi tidak memilih mana yang benar; periksa sumber aslinya.</div>`;
+    // 1. CHM
+    h += `<section class="ssec" id="s-chm"><h2>1. Referensi dari Arsip CHM <small>${fmtN(X.chm.length)} brosur</small></h2><p>Diurutkan menurut kecocokan. Klik judul untuk membaca brosur utuh dengan bagian yang cocok disorot.</p><div class="list">${X.chm.slice(0, X.show.chm).map((x, i) => supDocCard(x, pq)).join('')}</div>${X.chm.length > X.show.chm ? `<div class="loadmore"><button class="btn" data-act="supmore" data-k="chm">Tampilkan lebih banyak</button></div>` : ''}</section>`;
+    // 2. PDF
+    h += `<section class="ssec" id="s-pdf"><h2>2. Referensi dari Brosur Ahad Pagi (PDF) <small>${fmtN(X.pdf.length)} brosur</small></h2>${X.pdf.length ? `<div class="list">${X.pdf.slice(0, X.show.pdf).map(x => supDocCard(x, pq)).join('')}</div>` : `<p>${LIB.pdfState === 'ready' ? 'Tidak ada brosur PDF yang cocok.' : 'Brosur PDF belum dimuat di tampilan ini.'}</p>`}${X.pdf.length > X.show.pdf ? `<div class="loadmore"><button class="btn" data-act="supmore" data-k="pdf">Tampilkan lebih banyak</button></div>` : ''}</section>`;
+    // 3. Ayat
+    h += `<section class="ssec" id="s-ayat"><h2>3. Ayat Al-Qur'an yang ditemukan <small>${fmtN(X.A.length)} rujukan</small></h2><p>Ayat yang dikutip di bagian brosur yang cocok dengan kata kunci, dikelompokkan per rujukan. Angka sumber menunjukkan berapa brosur mengutipnya.</p><div class="list">`;
+    h += X.A.slice(0, X.show.A).map((g, i) => {
+      const it = bestItem(g.items); const showAr = it.ar && it.d.src === 'CHM';
+      return `<div class="unit q"><div class="uh"><span class="pill q">Ayat</span><strong>${esc(ayatLabel(g))}</strong><span>dikutip di ${g.items.length} brosur</span></div>
+        ${showAr ? `<div class="ar" dir="rtl" lang="ar">${esc(it.ar)}</div>` : ''}<div class="tr">${hlText(it.tr, pq)}</div>${!showAr && it.d.src === 'PDF' ? '<div class="pdfnote">Teks Arab lihat di PDF asli.</div>' : ''}
+        ${srcChips(g.items)}<div class="actions"><button class="btn ghost" data-act="open" data-id="${esc(it.d.id)}" data-bi="${it.u.t1}">Buka sumber</button><button class="btn ghost" data-act="supq" data-k="A" data-i="${i}">Salin kutipan</button><button class="btn ghost" data-act="cpr" data-id="${esc(it.d.id)}" data-bi="${it.u.t1}">Salin referensi</button><button class="btn ghost" data-act="search" data-q="${esc(P.surahLabel(g.s) + ' ' + g.a1)}">Cari ayat ini</button></div></div>`;
+    }).join('') + `</div>${X.A.length > X.show.A ? `<div class="loadmore"><button class="btn" data-act="supmore" data-k="A">Tampilkan lebih banyak</button></div>` : ''}${!X.A.length ? '<p>Tidak ada ayat yang terdeteksi di bagian yang cocok.</p>' : ''}</section>`;
+    // 4. Hadits
+    h += `<section class="ssec" id="s-hadits"><h2>4. Hadits yang ditemukan <small>${fmtN(X.H.length)} hadits</small></h2><p>Hadits dengan sumber periwayatan seperti tertulis di brosur. Hadits yang sama dari beberapa brosur digabung, setiap sumber tetap tercantum.</p><div class="list">`;
+    h += X.H.slice(0, X.show.H).map((g, i) => {
+      const it = bestItem(g.items); const showAr = it.ar && it.d.src === 'CHM';
+      return `<div class="unit h"><div class="uh"><span class="pill h">Hadits</span><strong>${esc(g.perawi.match(/^(hr|hadits)/i) ? g.perawi : 'HR. ' + g.perawi)}</strong><span>${g.items.length > 1 ? 'dikutip di ' + g.items.length + ' brosur' : ''}</span></div>
+        ${showAr ? `<div class="ar" dir="rtl" lang="ar">${esc(trunc(it.ar, 900))}</div>` : ''}<div class="tr">${hlText(trunc(it.tr, 1100), pq)}</div>
+        ${srcChips(g.items)}<div class="actions"><button class="btn ghost" data-act="open" data-id="${esc(it.d.id)}" data-bi="${it.u.t1}">Buka sumber</button><button class="btn ghost" data-act="supq" data-k="H" data-i="${i}">Salin kutipan</button><button class="btn ghost" data-act="cpr" data-id="${esc(it.d.id)}" data-bi="${it.u.t1}">Salin referensi</button></div></div>`;
+    }).join('') + `</div>${X.H.length > X.show.H ? `<div class="loadmore"><button class="btn" data-act="supmore" data-k="H">Tampilkan lebih banyak</button></div>` : ''}${!X.H.length ? '<p>Tidak ada hadits yang terdeteksi di bagian yang cocok.</p>' : ''}</section>`;
+    // 5. Penjelasan
+    h += `<section class="ssec" id="s-expl"><h2>5. Kutipan penjelasan <small>${fmtN(X.E.length)} paragraf</small></h2><p>Paragraf uraian yang paling cocok, lengkap dengan dokumen dan halamannya.</p><div class="list">`;
+    h += X.E.slice(0, X.show.E).map(x => `<div class="unit"><div class="uh">${pill(x.d)}<strong style="font-size:14px">${esc(trunc(x.d.title, 80))}</strong><span>${esc(shortDate(x.d))}${x.d.no ? ' · No. ' + esc(x.d.no) : ''}</span></div><div class="cit">${esc(locLabel(x.d, x.bi))}</div><div class="tr">${hlText(x.d.blocks[x.bi][1], pq)}</div>${actionsHTML(x.d, x.bi)}</div>`).join('');
+    h += `</div>${X.E.length > X.show.E ? `<div class="loadmore"><button class="btn" data-act="supmore" data-k="E">Tampilkan lebih banyak</button></div>` : ''}</section>`;
+    out.innerHTML = h;
+  }
+  function hlText(t, pq) { const r = P.matchRanges(t, hlVariants(pq), false); return hl(t, r, 0, t.length).replace(/\n/g, '<br>'); }
+  function supDocCard(x, pq) {
+    const d = x.doc; const top = x.locs.slice(0, 2);
+    return `<article class="res"><div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span>${hijri(d) ? `<span>${esc(hijri(d))}</span>` : ''}${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div>
+      <h3><button class="linklike" data-act="open" data-id="${esc(d.id)}" data-bi="${top[0] ? top[0].bi : 0}">${esc(d.title)}</button></h3><div class="crumb">${crumb(d)}</div>
+      <div class="hitline">${fmtN(x.locs.length)} lokasi cocok</div><div class="snips">${top.map(L => snipHTML(d, L, x, pq, 230)).join('')}</div>${actionsHTML(d, top[0] ? top[0].bi : 0)}</article>`;
+  }
+  function supSources() {
+    const X = S.sup; const src = []; let txt = '';
+    const add = (d, bi, kind, text) => { src.push({ id: d.id, bi, label: refText(d, bi) }); txt += `[${src.length}] (${d.src === 'CHM' ? 'Arsip CHM' : 'Brosur PDF'} · ${dateLabel(d)}${d.no ? ' · No. ' + d.no : ''} · “${d.title}” · ${locLabel(d, bi)}) ${kind}: ${trunc(text.replace(/\s+/g, ' '), 650)}\n`; };
+    X.A.slice(0, 6).forEach(g => { const it = bestItem(g.items); add(it.d, it.u.t1, 'Ayat ' + ayatLabel(g) + ' (dikutip di ' + g.items.length + ' brosur)', it.tr); });
+    X.H.slice(0, 6).forEach(g => { const it = bestItem(g.items); add(it.d, it.u.t1, 'Hadits', it.tr); });
+    X.E.slice(0, 9).forEach(x => add(x.d, x.bi, 'Penjelasan', x.d.blocks[x.bi][1]));
+    return { src, txt };
+  }
+  function supSummary(btn) {
+    const X = S.sup; if (!X || !CAP.sample) return;
+    const { src, txt } = supSources();
+    const box = $('#supAi');
+    $('#supSrc').innerHTML = `<div class="disclaim">${esc(DISCLAIM)}</div><div class="srcs"><b>Sumber bernomor:</b><ol>${src.map(s => `<li><span class="lnk" role="button" tabindex="0" data-act="open" data-id="${esc(s.id)}" data-bi="${s.bi}">${esc(s.label)}</span></li>`).join('')}</ol></div>`;
+    const prompt = `Anda membantu seorang pengurus menyiapkan bahan referensi untuk ustadz dari arsip Brosur Ahad Pagi MTA (Majlis Tafsir Al-Qur'an).\n` +
+      `Permintaan: "${X.q}"\n\nDi bawah ini kutipan dari dokumen sumber, masing-masing bernomor [n] beserta identitasnya.\n` +
+      `Susun ringkasan referensi dalam Bahasa Indonesia yang HANYA berdasarkan kutipan ini.\n` +
+      `Aturan:\n- Jangan menambah ayat, hadits, pendapat, atau keterangan yang tidak ada di kutipan.\n- Setiap poin wajib menyebut nomor sumbernya, misalnya [2] atau [3][5].\n` +
+      `- Bagian: "Pokok penjelasan", "Ayat Al-Qur'an", "Hadits". Gunakan bullet "- ".\n- Jika ada kutipan yang berbeda atau tampak bertentangan, tulis bagian "Perbedaan antar sumber" yang menampilkan keduanya beserta tanggal brosurnya, tanpa memutuskan mana yang benar.\n` +
+      `- Ini bukan fatwa dan bukan penetapan hukum baru. Jangan menulis kesimpulan hukum sendiri.\n- Maksimal 280 kata, teks biasa tanpa tabel.\n\nKutipan:\n${txt}`;
+    aiRun(box, prompt, src, btn);
+  }
+  function supCopyAll() {
+    const X = S.sup; if (!X) return;
+    let t = `PAKET REFERENSI — ${X.q}\n(Pustaka Referensi MTA, ${new Date().toLocaleDateString('id-ID')})\n\n`;
+    if (X.A.length) { t += 'AYAT AL-QUR\'AN\n'; X.A.slice(0, 15).forEach((g, i) => { const it = bestItem(g.items); t += `${i + 1}. ${ayatLabel(g)} — ${trunc(it.tr.replace(/\s+/g, ' '), 400)}\n   Sumber: ${g.items.slice(0, 4).map(x => refText(x.d, x.u.t1)).join(' | ')}\n`; }); t += '\n'; }
+    if (X.H.length) { t += 'HADITS\n'; X.H.slice(0, 15).forEach((g, i) => { const it = bestItem(g.items); t += `${i + 1}. ${trunc(it.tr.replace(/\s+/g, ' '), 500)}\n   Sumber: ${refText(it.d, it.u.t1)}\n`; }); t += '\n'; }
+    if (X.E.length) { t += 'KUTIPAN PENJELASAN\n'; X.E.slice(0, 12).forEach((x, i) => { t += `${i + 1}. “${trunc(x.d.blocks[x.bi][1], 500)}”\n   Sumber: ${refText(x.d, x.bi)}\n`; }); t += '\n'; }
+    t += 'DOKUMEN SUMBER\n'; X.r.results.slice(0, 25).forEach((x, i) => { t += `${i + 1}. [${x.doc.src}] ${refText(x.doc)}\n`; });
+    t += '\nCatatan: kumpulan kutipan dari brosur, bukan fatwa. Periksa sumber asli.';
+    copy(t);
+  }
+
+  /* ---------------- kelola PDF ---------------- */
+  let pdfjsP = null;
+  function loadScript(src) { return new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = () => rej(new Error('Gagal memuat ' + src)); document.head.appendChild(s); }); }
+  function loadPdfJs() {
+    if (window.pdfjsLib && window.pdfjsWorker) return Promise.resolve(window.pdfjsLib);
+    if (!pdfjsP) pdfjsP = (async () => {
+      let base = PDFJS;
+      if (CAP.local) { try { await loadScript('data/lib/pdf.worker.min.js'); base = 'data/lib/'; } catch (e) { await loadScript(PDFJS + 'pdf.worker.min.js'); } }
+      else await loadScript(PDFJS + 'pdf.worker.min.js');
+      await loadScript(base + 'pdf.min.js');
+      const lib = window.pdfjsLib || window['pdfjs-dist/build/pdf'];
+      lib.GlobalWorkerOptions.workerSrc = base + 'pdf.worker.min.js';
+      return lib;
+    })().catch(e => { pdfjsP = null; throw e; });
+    return pdfjsP;
+  }
+  const QUEUE = [];
+  function slug(s) { return s.toLowerCase().replace(/\.pdf$/, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'brosur'; }
+  function makeId(meta, file) { return 'p' + (meta.date || '00000000').replace(/-/g, '') + '-' + (meta.no ? meta.no.split('/')[0].replace(/\D/g, '') || slug(file) : slug(file)); }
+  async function ingest(files) {
+    const list = Array.from(files).filter(f => /\.pdf$/i.test(f.name) || f.type === 'application/pdf');
+    if (!list.length) { toast('Pilih file PDF'); return; }
+    for (const f of list) {
+      const q = { k: Math.random().toString(36).slice(2), file: f, state: 'reading', msg: 'Membaca PDF…' }; QUEUE.push(q); renderQueue();
+      try {
+        const lib = await loadPdfJs();
+        const pdf = await lib.getDocument({ data: new Uint8Array(await f.arrayBuffer()), disableFontFace: true, isEvalSupported: false }).promise;
+        const pages = [];
+        for (let n = 1; n <= pdf.numPages; n++) { const pg = await pdf.getPage(n); const vp = pg.getViewport({ scale: 1 }); const tc = await pg.getTextContent(); pages.push({ n, w: vp.width, items: P.fromTextContent(tc.items) }); }
+        const blocks = P.pdfToBlocks(pages);
+        const meta = P.detectMeta(blocks, f.name);
+        const refs = P.extractRefs(blocks);
+        const chars = blocks.reduce((s, b) => s + (b[0] !== 'a' ? b[1].length : 0), 0);
+        Object.assign(q, { state: 'ready', pages: pdf.numPages, blocks, meta, refs, chars, msg: '' });
+        if (chars < 200) { q.state = 'bad'; q.msg = 'PDF ini hampir tidak memiliki teks (kemungkinan hasil scan gambar), sehingga tidak bisa diindeks.'; }
+      } catch (e) { q.state = 'bad'; q.msg = 'PDF tidak bisa dibaca: ' + (e && e.message ? e.message : e); }
+      renderQueue();
+    }
+  }
+  function renderQueue() {
+    const el = $('#queue');
+    el.innerHTML = QUEUE.map(q => {
+      if (q.state === 'reading') return `<div class="qitem"><div class="qh"><b>${esc(q.file.name)}</b><span>Membaca teks per halaman…</span></div></div>`;
+      if (q.state === 'bad') return `<div class="qitem"><div class="qh"><b>${esc(q.file.name)}</b></div><div class="qmsg err">${esc(q.msg)}</div><div><button class="btn" data-act="qdrop" data-k="${q.k}">Tutup</button></div></div>`;
+      if (q.state === 'saved') return `<div class="qitem"><div class="qh"><b>${esc(q.meta.title)}</b></div><div class="qmsg ok">${CAP.local ? 'Tersimpan di browser ini dan sudah bisa dicari di perangkat ini. Untuk semua pengguna: unduh pdf_seed.js di bawah, lalu masukkan ke repository bersama file PDF-nya.' : 'Tersimpan. Brosur ini sudah masuk indeks dan bisa dicari semua pengguna.'}</div></div>`;
+      const m = q.meta; const id = makeId(m, q.file.name); const ex = LIB.byId.get(id);
+      if (ex && ex.official && CAP.local) return `<div class="qitem"><div class="qh"><b>${esc(q.file.name)}</b></div><div class="qmsg warn">Brosur ini (“${esc(ex.title)}”) sudah ada di website. Tidak perlu ditambahkan lagi.</div><div><button class="btn" data-act="qdrop" data-k="${q.k}">Tutup</button></div></div>`;
+      const dupNo = !ex && m.no ? pdfDocs().find(d => d.no === m.no) : null;
+      const saving = q.state === 'saving';
+      return `<div class="qitem" data-k="${q.k}"><div class="qh"><b>${esc(q.file.name)}</b><span>${q.pages} halaman · ${fmtN(q.chars)} karakter · ${q.refs.q.length} rujukan ayat · ${q.refs.h.length} rujukan hadits</span></div>
+        ${ex ? `<div class="qmsg warn">Brosur dengan tanggal dan nomor yang sama sudah ada (“${esc(ex.title)}”). Menyimpan akan menggantikannya.</div>` : ''}${dupNo ? `<div class="qmsg warn">Nomor brosur ${esc(m.no)} sudah dipakai “${esc(dupNo.title)}”. Periksa kembali sebelum menyimpan.</div>` : ''}
+        ${!m.date ? '<div class="qmsg warn">Tanggal Ahad tidak terbaca otomatis. Isi tanggalnya.</div>' : ''}
+        <div class="fgrid"><label class="wide">Judul brosur<input data-f="title" value="${esc(m.title || '')}"></label><label>Tanggal Ahad<input type="date" data-f="date" value="${esc(m.date || '')}"></label><label>No. Brosur<input data-f="no" value="${esc(m.no || '')}" placeholder="2278/2318/IA"></label><label class="wide">Keterangan tanggal (Masehi / Hijriah)<input data-f="ahad" value="${esc(m.ahad || '')}"></label></div>
+        <details class="pv"><summary>Pratinjau teks hasil ekstraksi</summary><div>${q.blocks.slice(0, 14).map(b => `<p${b[0] === 'a' ? ' class="ar" dir="rtl"' : ''}><small style="color:var(--faint)">hal. ${b[2]}</small> ${esc(trunc(b[1], 300))}</p>`).join('')}</div></details>
+        ${q.msg ? `<div class="qmsg err">${esc(q.msg)}</div>` : ''}
+        <div class="actions" style="border:0;padding:0;margin:0"><button class="btn primary" data-act="qsave" data-k="${q.k}"${saving ? ' disabled' : ''}>${saving ? 'Menyimpan…' : 'Simpan ke pustaka'}</button><button class="btn ghost" data-act="qdrop" data-k="${q.k}"${saving ? ' disabled' : ''}>Batal</button></div></div>`;
+    }).join('');
+  }
+  function readQueueForm(q) {
+    const box = $(`.qitem[data-k="${q.k}"]`); if (!box) return;
+    $$('input[data-f]', box).forEach(inp => { q.meta[inp.dataset.f] = inp.value.trim() || null; });
+  }
+  async function writePdf(id, doc) {
+    const db = CAP.db; const enc = new TextEncoder();
+    const size = enc.encode(JSON.stringify(doc)).length;
+    const prev = LIB.byId.get(id);
+    if (size <= 230000) { await db.doc('pdfs/' + id).set(Object.assign({}, doc, { parts: 0 })); }
+    else {
+      const chunks = []; let cur = [], cs = 0;
+      for (const b of doc.blocks) { const s = enc.encode(JSON.stringify(b)).length + 1; if (cs + s > 200000 && cur.length) { chunks.push(cur); cur = []; cs = 0; } cur.push(b); cs += s; }
+      if (cur.length) chunks.push(cur);
+      for (let k = 0; k < chunks.length; k++) await db.doc('pdfs/' + id + '/parts/' + k).set({ k, blocks: chunks[k] });
+      await db.doc('pdfs/' + id).set(Object.assign({}, doc, { blocks: [], parts: chunks.length }));
+    }
+    if (prev && prev.parts > 0 && size <= 230000) for (let k = 0; k < prev.parts; k++) { try { await db.doc('pdfs/' + id + '/parts/' + k).delete(); } catch (e) { } }
+    return prev;
+  }
+  async function saveQueue(k) {
+    const q = QUEUE.find(x => x.k === k); if (!q || q.state !== 'ready') return;
+    readQueueForm(q);
+    if (!q.meta.title) { q.msg = 'Judul wajib diisi.'; renderQueue(); return; }
+    if (q.meta.date && !/^\d{4}-\d{2}-\d{2}$/.test(q.meta.date)) { q.msg = 'Format tanggal tidak valid.'; renderQueue(); return; }
+    if (CAP.local) return saveLocal(q);
+    if (!CAP.db || !CAP.assets) { q.msg = 'Penyimpanan tidak tersedia. Buka halaman ini di Claude sebagai pemilik atau editor.'; renderQueue(); return; }
+    q.state = 'saving'; q.msg = ''; renderQueue();
+    const id = makeId(q.meta, q.file.name);
+    try {
+      const up = await CAP.assets.upload(q.file, { type: 'application/pdf' });
+      const doc = { src: 'PDF', file: q.file.name, title: q.meta.title, date: q.meta.date || null, ahad: q.meta.ahad || null, no: q.meta.no || null, pages: q.pages, size: q.file.size, asset: up.id, uploadedAt: new Date().toISOString(), v: 1, blocks: q.blocks };
+      const prev = await writePdf(id, doc);
+      if (prev && prev.asset && prev.asset !== up.id) { try { await CAP.assets.delete(prev.asset); } catch (e) { } }
+      q.state = 'saved'; renderQueue(); toast('Brosur tersimpan dan langsung bisa dicari');
+      setTimeout(() => { const i = QUEUE.indexOf(q); if (i >= 0) QUEUE.splice(i, 1); renderQueue(); }, 5000);
+    } catch (e) {
+      q.state = 'ready';
+      const c = e && e.code;
+      q.msg = c === 'invalid_argument' ? 'Anda tidak punya izin mengubah pustaka, atau data tidak valid.' : c === 'quota_exceeded' || c === 'quota_or_state' ? 'Kapasitas penyimpanan penuh. Hapus brosur lama yang tidak dipakai.' : c === 'too_large' ? 'File PDF lebih dari 20 MB.' : 'Gagal menyimpan: ' + (e && (e.message || e.code) || e);
+      renderQueue();
+    }
+  }
+  async function saveLocal(q) {
+    const id = makeId(q.meta, q.file.name);
+    const ex = LIB.byId.get(id);
+    if (ex && ex.official) { q.msg = 'Brosur ini sudah ada di website (bawaan repository). Tidak perlu ditambahkan lagi.'; renderQueue(); return; }
+    q.state = 'saving'; q.msg = ''; renderQueue();
+    const rec = { id, src: 'PDF', file: q.file.name, title: q.meta.title, date: q.meta.date || null, ahad: q.meta.ahad || null, no: q.meta.no || null, pages: q.pages, size: q.file.size, uploadedAt: new Date().toISOString(), v: 1, blocks: q.blocks, blob: q.file };
+    try {
+      if (LS.db) await LS.put(rec);
+      const old = LIB.byId.get(id); if (old && old._url) URL.revokeObjectURL(old._url);
+      addDoc(localDoc(rec));
+      q.state = 'saved'; renderQueue(); renderPdfList(); setStatus(); scheduleRefresh(); renderMain();
+      toast('Tersimpan di browser ini dan langsung bisa dicari di perangkat ini');
+      setTimeout(() => { const i = QUEUE.indexOf(q); if (i >= 0) QUEUE.splice(i, 1); renderQueue(); }, 5000);
+    } catch (e) {
+      q.state = 'ready'; q.msg = 'Gagal menyimpan di browser: ' + (e && e.message ? e.message : e) + '. Pastikan ruang disk cukup.'; renderQueue();
+    }
+  }
+  function renderPdfList() {
+    const el = $('#pdfList'); if (!el) return;
+    const list = pdfDocs();
+    $('#pdfCountH').textContent = 'Brosur PDF di pustaka (' + list.length + ')';
+    const row = d => {
+      if (d._edit) return `<div class="prow" data-id="${esc(d.id)}"><div><div class="fgrid"><label class="wide">Judul<input data-e="title" value="${esc(d.title)}"></label><label>Tanggal Ahad<input type="date" data-e="date" value="${esc(d.date || '')}"></label><label>No. Brosur<input data-e="no" value="${esc(d.no || '')}"></label><label class="wide">Keterangan tanggal<input data-e="ahad" value="${esc(d.ahad || '')}"></label></div><div class="actions" style="border:0"><button class="btn primary" data-act="esave" data-id="${esc(d.id)}">Simpan perubahan</button><button class="btn ghost" data-act="ecancel" data-id="${esc(d.id)}">Batal</button></div></div></div>`;
+      const canEdit = CAP.local ? !d.official : !!CAP.assets;
+      const tag = CAP.local ? (d.official ? '<span class="pill pdf">Bawaan website</span> ' : '<span class="pill" style="color:var(--warn);background:var(--warn-soft)">Baru di browser ini</span> ') : '';
+      return `<div class="prow"><div><div class="t">${tag}${esc(d.title)}</div><div class="m">${esc(dateLabel(d))}${d.no ? ' · No. ' + esc(d.no) : ''} · ${esc(d.file)} · ${d.pages} hal.</div></div>
+        <button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="0">Baca</button>${CAP.local && !d.official ? `<button class="btn ghost" data-act="dlpdf" data-id="${esc(d.id)}">Unduh PDF</button>` : ''}${canEdit ? `<button class="btn ghost" data-act="edit" data-id="${esc(d.id)}">Ubah data</button><button class="btn ghost" data-act="del" data-id="${esc(d.id)}" style="color:var(--danger)">Hapus</button>` : ''}
+        ${d._del ? `<div class="confirm">Hapus “${esc(trunc(d.title, 40))}” dari ${CAP.local ? 'browser ini' : 'pustaka beserta file PDF-nya'}? Tidak bisa dibatalkan.<button class="btn danger" data-act="delyes" data-id="${esc(d.id)}">Ya, hapus</button><button class="btn ghost" data-act="delno" data-id="${esc(d.id)}">Batal</button></div>` : ''}</div>`;
+    };
+    let h = list.length ? list.map(row).join('') : '<div class="note">Belum ada brosur PDF.</div>';
+    if (CAP.local) {
+      const extra = list.filter(d => !d.official);
+      h += `<div class="qitem" style="margin-top:14px"><div class="qh"><b>Supaya brosur baru muncul di semua HP dan komputer</b></div>
+        <div style="font-size:13.5px;color:var(--muted)">Brosur yang ditambahkan di sini baru tersimpan di browser ini. Untuk menerbitkannya ke website: (1) unduh <b>pdf_seed.js</b> baru, (2) taruh file itu di folder <b>data</b> repository (timpa yang lama), (3) taruh file PDF-nya di folder <b>data/pdf</b> dengan nama yang sama, (4) Commit lalu Push di GitHub Desktop. Arsip lama tetap utuh.</div>
+        ${extra.length ? `<div style="font-size:13px">Brosur yang akan ditambahkan: ${extra.map(d => '<b>' + esc(d.file) + '</b>').join(', ')}</div>` : ''}
+        <div><button class="btn primary" data-act="exportseed"${extra.length ? '' : ' disabled'}>Unduh pdf_seed.js baru</button></div></div>`;
+    }
+    el.innerHTML = h;
+  }
+  function downloadBlob(blob, name) {
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+  }
+  function exportSeed() {
+    const out = SEEDS.map(r => r);
+    const have = new Set(out.map(r => r.id));
+    for (const d of pdfDocs()) {
+      if (d.official || have.has(d.id)) continue;
+      const path = 'data/pdf/' + d.file;
+      out.push({ id: d.id, src: 'PDF', file: d.file, title: d.title, date: d.date, ahad: d.ahad, no: d.no, pages: d.pages, size: d.size, uploadedAt: d.uploadedAt, v: 1, blocks: d.blocks, path, localPath: path });
+    }
+    out.sort((a, b) => (a.date || '').localeCompare(b.date || ''));
+    const js = 'window.PRM_DATA=window.PRM_DATA||{shards:{}};PRM_DATA.pdfs=' + JSON.stringify(out) + ';';
+    downloadBlob(new Blob([js], { type: 'text/javascript' }), 'pdf_seed.js');
+    toast('pdf_seed.js diunduh (' + out.length + ' brosur). Lanjutkan dengan Commit dan Push.');
+  }
+
+  async function saveEdit(id) {
+    const d = LIB.byId.get(id); const row = $(`.prow[data-id="${CSS.escape(id)}"]`); if (!d || !row) return;
+    const patch = {}; $$('input[data-e]', row).forEach(i => { patch[i.dataset.e] = i.value.trim() || null; });
+    if (!patch.title) { toast('Judul wajib diisi'); return; }
+    if (CAP.local) {
+      try {
+        if (LS.db) { const all = await LS.all(); const rec = all.find(r => r.id === id); if (rec) await LS.put(Object.assign(rec, patch)); }
+        Object.assign(d, patch); d._tnorm = null; d._edit = false; renderPdfList(); scheduleRefresh(); toast('Data brosur diperbarui');
+      } catch (e) { toast('Gagal menyimpan perubahan'); }
+      return;
+    }
+    try { await CAP.db.doc('pdfs/' + id).update(patch); d._edit = false; toast('Data brosur diperbarui'); }
+    catch (e) { toast(e && e.code === 'invalid_argument' ? 'Tidak punya izin mengubah' : 'Gagal menyimpan perubahan'); }
+  }
+  async function deletePdf(id) {
+    const d = LIB.byId.get(id); if (!d) return;
+    if (CAP.local) {
+      try { if (LS.db) await LS.del(id); if (d._url) URL.revokeObjectURL(d._url); removeDoc(id); renderPdfList(); setStatus(); scheduleRefresh(); toast('Brosur dihapus'); }
+      catch (e) { d._del = false; renderPdfList(); toast('Gagal menghapus'); }
+      return;
+    }
+    try {
+      if (d.parts > 0) for (let k = 0; k < d.parts; k++) { try { await CAP.db.doc('pdfs/' + id + '/parts/' + k).delete(); } catch (e) { } }
+      await CAP.db.doc('pdfs/' + id).delete();
+      if (d.asset && CAP.assets) { try { await CAP.assets.delete(d.asset); } catch (e) { } }
+      toast('Brosur dihapus');
+    } catch (e) { d._del = false; renderPdfList(); toast('Gagal menghapus'); }
+  }
+
+  /* ---------------- events ---------------- */
+  let searchT = null;
+  $('#q').addEventListener('input', e => {
+    S.q = e.target.value; $('#qClear').hidden = !S.q;
+    clearTimeout(searchT); searchT = setTimeout(() => runSearch(), 260);
+  });
+  $('#fCari').addEventListener('submit', e => { e.preventDefault(); clearTimeout(searchT); S.q = $('#q').value; runSearch(); $('#q').blur(); });
+  $('#qClear').addEventListener('click', () => { $('#q').value = ''; S.q = ''; $('#qClear').hidden = true; S.last = null; renderMain(); $('#q').focus(); });
+  $('#filters').addEventListener('click', e => {
+    const b = e.target.closest('button.chip'); if (!b) return;
+    if (b.dataset.src) { S.src = b.dataset.src; $$('[data-src]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); }
+    if (b.dataset.view) { S.view = b.dataset.view; $$('[data-view]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); }
+    runSearch();
+  });
+  ['y0', 'y1'].forEach(k => $('#' + k).addEventListener('change', e => { S[k] = +e.target.value; if (S.y0 > S.y1) { const t = S.y0; S.y0 = S.y1; S.y1 = t; $('#y0').value = S.y0; $('#y1').value = S.y1; } runSearch(); }));
+  $('#sort').addEventListener('change', e => { S.sort = e.target.value; runSearch(); });
+  $('#whole').addEventListener('change', e => { S.whole = e.target.checked; runSearch(); });
+  $('#broad').addEventListener('change', e => { S.broad = e.target.checked; runSearch(); });
+  function setTab(t) {
+    S.tab = t; $('#tabCari').setAttribute('aria-selected', String(t === 'cari')); $('#tabSup').setAttribute('aria-selected', String(t === 'sup'));
+    $('#paneCari').hidden = t !== 'cari'; $('#paneSup').hidden = t !== 'sup';
+    if (t === 'cari') renderMain(); else $('#sq').focus();
+  }
+  $('#tabCari').addEventListener('click', () => setTab('cari'));
+  $('#tabSup').addEventListener('click', () => setTab('sup'));
+  $('#btnSup').addEventListener('click', () => runSupport());
+  $('#sq').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); runSupport(); } });
+  $('#paneSup').addEventListener('click', e => { const b = e.target.closest('[data-ssrc]'); if (!b) return; S.ssrc = b.dataset.ssrc; $$('[data-ssrc]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); if (S.sup) runSupport(); });
+  $('#btnManage').addEventListener('click', () => { renderPdfList(); renderQueue(); showDrawer($('#manage')); });
+  $('#scrim').addEventListener('click', closeDrawers);
+  document.addEventListener('keydown', e => {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target && e.target.getAttribute && e.target.getAttribute('role') === 'button' && e.target.dataset.act) { e.preventDefault(); e.target.click(); return; }
+    if (e.key === 'Escape' && !$('#scrim').hidden) closeDrawers();
+    if (e.key === '/' && document.activeElement && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName) && $('#scrim').hidden) { e.preventDefault(); setTab('cari'); $('#q').focus(); }
+  });
+  const drop = $('#drop');
+  ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+  drop.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files) ingest(e.dataTransfer.files); });
+  $('#pdfin').addEventListener('change', e => { ingest(e.target.files); e.target.value = ''; });
+
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-act]'); if (!el) return;
+    const a = el.dataset.act, id = el.dataset.id, bi = el.dataset.bi != null ? +el.dataset.bi : null;
+    const d = id ? LIB.byId.get(id) : null;
+    switch (a) {
+      case 'open': if (pv) { try { pv.doc.destroy(); } catch (e) { } pv = null; } openReader(id, bi || 0); break;
+      case 'pdfview': openPdfViewer(id, el.dataset.page); break;
+      case 'pvprev': if (pv && pv.page > 1) { pv.page--; pvRender(); } break;
+      case 'pvnext': if (pv && pv.page < pv.doc.numPages) { pv.page++; pvRender(); } break;
+      case 'exportseed': exportSeed(); break;
+      case 'dlpdf': if (d && d.blob) downloadBlob(d.blob, d.file); break;
+      case 'close': closeDrawers(); break;
+      case 'pick': if (e.target.closest('button,a')) return; $$('#reader .blk.target').forEach(x => x.classList.remove('target')); el.classList.add('target'); break;
+      case 'cpq': if (d && d.blocks) copy(quoteText(d, bi != null ? bi : 0)); break;
+      case 'cpr': if (d) copy(refText(d, bi)); break;
+      case 'cploc': if (d) copy(CHM_FILE + ' › ' + d.bab + ' › ' + d.sub + ' (' + d.path + ')'); break;
+      case 'rel': if (d) { closeDrawers(); setTab('cari'); $('#q').value = relatedQuery(d); S.q = $('#q').value; $('#qClear').hidden = false; runSearch(); window.scrollTo({ top: 0 }); } break;
+      case 'search': closeDrawers(); setTab('cari'); $('#q').value = el.dataset.q; S.q = el.dataset.q; $('#qClear').hidden = false; runSearch(); window.scrollTo({ top: 0 }); break;
+      case 'try': $('#q').value = el.dataset.q; S.q = el.dataset.q; $('#qClear').hidden = false; runSearch(); break;
+      case 'sumdoc': sumDoc(id, bi); break;
+      case 'alllocs': {
+        const x = S.last && S.last.r.results[+el.dataset.i]; if (!x) break;
+        $('#sn-' + el.dataset.i).innerHTML = x.locs.slice(0, 300).map(L => snipHTML(x.doc, L, x, S.last.pq, 220)).join('') + (x.locs.length > 300 ? `<div class="crumb">+${x.locs.length - 300} lokasi lain — buka sumber untuk melihat seluruhnya.</div>` : '');
+        el.remove(); break;
+      }
+      case 'moredocs': S.shownDocs += 30; renderMain(); break;
+      case 'morelocs': S.shownLocs += 60; renderMain(); break;
+      case 'browse': S.browse = +el.dataset.y; S.last = null; $('#q').value = ''; S.q = ''; renderMain(); window.scrollTo({ top: 0 }); break;
+      case 'home': S.browse = null; renderMain(); break;
+      case 'supsum': supSummary(el); break;
+      case 'supcopy': supCopyAll(); break;
+      case 'supq': { const X = S.sup; const g = (el.dataset.k === 'A' ? X.A : X.H)[+el.dataset.i]; if (g) copy(supQuote(el.dataset.k === 'A' ? 'Q' : 'H', g)); break; }
+      case 'supmore': { const k = el.dataset.k; S.sup.show[k] += k === 'chm' || k === 'pdf' ? 15 : 15; renderSupport(); break; }
+      case 'qsave': saveQueue(el.dataset.k); break;
+      case 'qdrop': { const i = QUEUE.findIndex(x => x.k === el.dataset.k); if (i >= 0) QUEUE.splice(i, 1); renderQueue(); break; }
+      case 'edit': if (d) { d._edit = true; renderPdfList(); } break;
+      case 'ecancel': if (d) { d._edit = false; renderPdfList(); } break;
+      case 'esave': saveEdit(id); break;
+      case 'del': if (d) { d._del = true; renderPdfList(); } break;
+      case 'delno': if (d) { d._del = false; renderPdfList(); } break;
+      case 'delyes': deletePdf(id); break;
+    }
+  });
+
+  $('#foot').innerHTML = `Pustaka Referensi MTA · arsip <b>${esc(CHM_FILE)}</b> ditambah brosur PDF mingguan, digabung dalam satu indeks pencarian. Setiap hasil menunjuk ke dokumen, bab/subbab atau halaman sumber aslinya. Ringkasan AI hanya alat bantu, bukan fatwa.`;
+  setStatus(); renderMain();
+  loadChm();
+  initCaps();
+})();
+</script>
+</body></html>
