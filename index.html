@@ -9,7 +9,7 @@
   --bg: #F2F5F3; --surface: #FFFFFF; --sunk: #E8EEEB; --ink: #15201C; --muted: #566661; --faint: #86958F; --line: #D6DFDB;
   --accent: #0C6A53; --accent-2: #08513F; --accent-soft: #DCEFE8; --on-accent: #FFFFFF;
   --chm: #8A5A0E; --chm-soft: #F4E8D3; --pdf: #2546A3; --pdf-soft: #E1E8FA;
-  --ayat: #0C6A53; --ayat-soft: #E3F2EC; --hadits: #7A3A8C; --hadits-soft: #F2E6F6;
+  --ayat: #0C6A53; --ayat-soft: #E3F2EC; --qred: #C62828; --hadits: #7A3A8C; --hadits-soft: #F2E6F6;
   --mark: #FFDF73; --mark-ink: #1C1600; --target: #FFF6D1;
   --warn: #8F5400; --warn-soft: #FFF0D2; --danger: #B3261E; --danger-soft: #FCE6E4; --ok: #0C6A53;
   --shadow: 0 1px 2px rgba(14, 32, 27, .06), 0 6px 22px rgba(14, 32, 27, .07);
@@ -23,7 +23,7 @@
     --bg: #0E1412; --surface: #151D1A; --sunk: #1B2521; --ink: #E3EBE7; --muted: #A0B0AA; --faint: #74847E; --line: #283530;
     --accent: #43C29C; --accent-2: #63D4B0; --accent-soft: #173A30; --on-accent: #06221A;
     --chm: #E3B567; --chm-soft: #33281A; --pdf: #94AEF7; --pdf-soft: #1C2747;
-    --ayat: #5FD0AC; --ayat-soft: #15302A; --hadits: #D7A2E8; --hadits-soft: #2E1F35;
+    --ayat: #5FD0AC; --ayat-soft: #15302A; --qred: #FF8A80; --hadits: #D7A2E8; --hadits-soft: #2E1F35;
     --mark: #6A5612; --mark-ink: #FFF4C7; --target: #2C2A17;
     --warn: #F0B259; --warn-soft: #33270F; --danger: #F2938C; --danger-soft: #3A1A18; --ok: #5FD0AC;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 22px rgba(0, 0, 0, .3);
@@ -34,7 +34,7 @@
   --bg: #0E1412; --surface: #151D1A; --sunk: #1B2521; --ink: #E3EBE7; --muted: #A0B0AA; --faint: #74847E; --line: #283530;
   --accent: #43C29C; --accent-2: #63D4B0; --accent-soft: #173A30; --on-accent: #06221A;
   --chm: #E3B567; --chm-soft: #33281A; --pdf: #94AEF7; --pdf-soft: #1C2747;
-  --ayat: #5FD0AC; --ayat-soft: #15302A; --hadits: #D7A2E8; --hadits-soft: #2E1F35;
+  --ayat: #5FD0AC; --ayat-soft: #15302A; --qred: #FF8A80; --hadits: #D7A2E8; --hadits-soft: #2E1F35;
   --mark: #6A5612; --mark-ink: #FFF4C7; --target: #2C2A17;
   --warn: #F0B259; --warn-soft: #33270F; --danger: #F2938C; --danger-soft: #3A1A18; --ok: #5FD0AC;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 22px rgba(0, 0, 0, .3);
@@ -252,6 +252,29 @@ details.pv div { font-family: var(--f-read); font-size: 13.5px; max-height: 220p
 .skel { height: 14px; background: var(--sunk); border-radius: 6px; margin: 8px 0; }
 footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + env(safe-area-inset-bottom, 0px)); }
 
+/* pustaka kitab */
+.pill.t { color: var(--chm); background: var(--chm-soft); }
+.kres .ar { margin: 8px 0 4px; overflow-wrap: anywhere; }
+.kres .tr { font-family: var(--f-read); font-size: 15px; line-height: 1.65; margin: 6px 0; overflow-wrap: anywhere; }
+.kres .cit { font-size: 12.5px; color: var(--muted); margin-top: 4px; overflow-wrap: anywhere; }
+.kres h3 { font-size: 16px; margin: 6px 0 2px; line-height: 1.35; }
+.kres.quran { border-left: 4px solid var(--ayat); } .kres.hadis { border-left: 4px solid var(--hadits); } .kres.tafsir { border-left: 4px solid var(--chm); }
+.krel { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 8px; font-size: 12.5px; color: var(--muted); }
+.qimg { background: #FFFFFF; border: 1px solid var(--line); border-radius: 9px; padding: 6px 8px; margin: 8px 0; text-align: right; overflow: hidden; }
+.qimg img { max-width: 100%; height: auto; display: inline-block; vertical-align: middle; }
+.qimg.big img { width: 100%; }
+.qred { color: var(--qred); }
+.dj { color: var(--ok); background: var(--accent-soft); border-radius: 999px; padding: 1px 8px; font-weight: 700; }
+.ksec { margin: 4px 0 18px; }
+.ksh { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 12px 2px 8px; flex-wrap: wrap; }
+.ksh h2 { font-size: 18px; margin: 0; } .ksh h2 small { font-size: 13px; color: var(--muted); font-weight: 600; }
+.brhead { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 14px; }
+.kcounts { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 2px 0 12px; }
+.kcounts button { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.kcounts button b { color: var(--ink); } .kcounts button:disabled { opacity: .5; } .kcounts .sub { color: var(--faint); font-size: 12px; }
+.klab { font-family: var(--f-ui); font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); margin: 14px 0 4px; }
+select.sel.kpick { max-width: 210px; }
+.tlbadge { display: inline-block; margin: 6px 0 0; font-size: 12px; font-weight: 700; color: var(--ayat); background: var(--ayat-soft); border-radius: 999px; padding: 2px 10px; }
 @media (max-width: 720px) {
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fgrid { grid-template-columns: 1fr; }
@@ -285,16 +308,23 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   <section id="paneCari">
     <form class="sbox" id="fCari" autocomplete="off">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Cari kata, kalimat, ayat, hadits… contoh: tawakkal" aria-label="Kata pencarian" enterkeyhint="search">
+      <input id="q" type="search" placeholder="Cari kata, kalimat, ayat, hadits, teks Arab… contoh: tawakkal" aria-label="Kata pencarian" enterkeyhint="search">
       <button type="button" class="clear" id="qClear" aria-label="Kosongkan" hidden>×</button>
       <button class="btn primary" type="submit">Cari</button>
     </form>
-    <p class="hint">Satu kolom untuk arsip CHM dan semua brosur PDF. Bisa sebagian kata, <code>"frasa persis"</code>, <code>Al-Baqarah 153</code>, <code>QS 2:153</code>, <code>HR. Muslim</code>, atau <code>-kata</code> untuk mengecualikan.</p>
+    <p class="hint">Satu kolom untuk Al-Qur'an, tafsir, kitab hadis, arsip CHM dan semua brosur PDF. Bisa sebagian kata, <code>"frasa persis"</code>, <code>Al-Baqarah 153</code>, <code>QS 2:153</code>, <code>Bukhari 52</code>, teks Arab dengan/tanpa harakat, ayat dalam huruf Latin (<code>bismillahirrahmanirrahim</code>), <code>HR. Muslim</code>, atau <code>-kata</code> untuk mengecualikan.</p>
     <div class="filters" id="filters">
       <div class="fgroup" role="group" aria-label="Sumber"><span>Sumber</span>
         <button class="chip" data-src="all" aria-pressed="true">Semua</button>
-        <button class="chip" data-src="CHM" aria-pressed="false">Arsip CHM</button>
-        <button class="chip" data-src="PDF" aria-pressed="false">Brosur PDF</button>
+        <button class="chip" data-src="k:quran" aria-pressed="false">Al-Qur'an</button>
+        <button class="chip" data-src="k:hadis" aria-pressed="false">Hadis</button>
+        <button class="chip" data-src="k:tafsir" aria-pressed="false">Tafsir</button>
+        <button class="chip" data-src="CHM" aria-pressed="false" title="Brosur dan referensi lama (arsip CHM)">Arsip CHM</button>
+        <button class="chip" data-src="PDF" aria-pressed="false" title="PDF dan dokumen lainnya">Brosur PDF</button>
+        <select class="sel kpick" id="ksrc" aria-label="Kitab tertentu"><option value="">Kitab tertentu…</option>
+          <optgroup label="Per file sumber"><option value="k:bulughul">Bulughul Maram</option><option value="k:kitab9">Kitab 9 Imam</option><option value="k:bukhari">Shahih Bukhari</option><option value="k:muslim">Shahih Muslim</option><option value="k:abudaud">Sunan Abu Dawud</option><option value="k:ibnumajah">Sunan Ibnu Majah</option><option value="k:tirmidzi">Sunan Tirmidzi</option><option value="k:nasai">Sunan An-Nasa'i</option><option value="k:darimi">Sunan Ad-Darimi</option><option value="k:riyadh">Riyadhus Shalihin</option><option value="k:ibnukatsir">Tafsir Ibnu Katsir</option><option value="k:jalalain">Tafsir Jalalain</option><option value="k:qtema">Indeks tema Al-Qur'an</option></optgroup>
+          <optgroup label="Per imam (gabungan semua file)"><option value="c:bukhari">Riwayat Bukhari</option><option value="c:muslim">Riwayat Muslim</option><option value="c:abudaud">Riwayat Abu Dawud</option><option value="c:tirmidzi">Riwayat Tirmidzi</option><option value="c:nasai">Riwayat An-Nasa'i</option><option value="c:ibnumajah">Riwayat Ibnu Majah</option><option value="c:darimi">Riwayat Ad-Darimi</option><option value="c:ahmad">Musnad Ahmad</option><option value="c:malik">Muwaththa' Malik</option></optgroup>
+        </select>
       </div>
       <div class="fgroup"><span>Tahun</span>
         <select class="sel" id="y0" aria-label="Dari tahun"></select><span style="font-weight:400">–</span><select class="sel" id="y1" aria-label="Sampai tahun"></select>
@@ -942,6 +972,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
 })(typeof window !== 'undefined' ? window : globalThis);
 
 </script>
+<script src="data/lib/kitab.js"></script>
 <script>
 (function () {
   'use strict';
@@ -963,7 +994,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   /* ---------------- state ---------------- */
   const LIB = { docs: [], byId: new Map(), shardsTotal: 0, shardsDone: 0, chmTotal: 0, chmLoaded: 0, chmReady: false, pdfState: 'loading', refsReady: false, qTotal: 0, hTotal: 0 };
   const CAP = { db: null, assets: null, sample: null, user: null, canEdit: false };
-  const S = { tab: 'cari', q: '', src: 'all', y0: 0, y1: 0, sort: 'rel', view: 'doc', whole: false, broad: false, shownDocs: 30, shownLocs: 60, last: null, browse: null, ssrc: 'all', sup: null };
+  const S = { kShown: 20, kb: null, tab: 'cari', q: '', src: 'all', y0: 0, y1: 0, sort: 'rel', view: 'doc', whole: false, broad: false, shownDocs: 30, shownLocs: 60, last: null, browse: null, ssrc: 'all', sup: null };
 
   /* ---------------- util ---------------- */
   function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => { t.hidden = true; }, 2200); }
@@ -1111,7 +1142,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     const nLocal = CAP.local && !SB.conf ? pdfDocs().filter(d => !d.official).length : 0;
     let pdf = LIB.pdfState === 'loading' ? 'PDF dimuat…' : LIB.pdfState === 'none' ? 'PDF tidak tersedia di tampilan ini' : fmtN(pdfN - nLocal) + ' brosur PDF' + (nLocal ? ' + ' + fmtN(nLocal) + ' tambahan di browser ini' : '');
     if (SB.conf) pdf += SB.state === 'online' ? ' · server tersambung' : SB.state === 'connecting' ? ' · menghubungkan server…' : ' · server tidak terhubung';
-    let s = (LIB.chmReady ? 'Indeks siap · ' : 'Memuat indeks · ') + chm + ' + ' + pdf;
+    let s = (LIB.chmReady ? 'Indeks siap · ' : 'Memuat indeks · ') + chm + ' + ' + (KST.meta ? fmtN(KST.meta.N) + ' ayat, tafsir & hadis + ' : KST.err ? '(kitab tidak termuat) + ' : '') + pdf;
     if (LIB.chmError) s = 'Arsip CHM gagal dimuat — muat ulang halaman';
     $('#status').textContent = s;
     const pr = LIB.shardsTotal ? LIB.shardsDone / LIB.shardsTotal : 0;
@@ -1500,25 +1531,40 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   function runSearch(soft) {
     const q = S.q.trim();
     if (q.length < 2) { S.last = null; renderMain(); return; }
-    S.browse = null;
+    S.browse = null; S.kb = null;
     const pq = P.parseQuery(q, { stem: S.broad });
     if (!pq.groups.length && !pq.qref) { S.last = { pq, r: { results: [] }, ms: 0, empty: 'Kata yang diketik terlalu umum. Tambahkan kata yang lebih spesifik.' }; renderMain(); return; }
+    const mode = srcMode();
     const t0 = performance.now();
-    const r = P.search(LIB.docs, pq, { whole: S.whole, filter: filterFn(S.src) });
+    const r = mode === 'kitab' ? { results: [], maxCov: 0 } : P.search(LIB.docs, pq, { whole: S.whole, filter: filterFn(S.src) });
     if (S.sort === 'new') r.results.sort((a, b) => (b.doc.date || '').localeCompare(a.doc.date || ''));
     if (S.sort === 'old') r.results.sort((a, b) => (a.doc.date || '9').localeCompare(b.doc.date || '9'));
     const ms = performance.now() - t0;
-    if (!soft) { S.shownDocs = 30; S.shownLocs = 60; }
-    S.last = { pq, r, ms };
+    if (!soft) { S.shownDocs = 30; S.shownLocs = 60; S.kShown = 20; }
+    const kkey = JSON.stringify([q, S.src, S.whole, S.broad]);
+    const keep = soft && S.last && S.last.kkey === kkey;
+    const prev = keep ? S.last : null;
+    S.last = { pq, r, ms, seq: keep ? prev.seq : ++KST.seq, kkey, k: keep ? prev.k : null, kerr: keep ? prev.kerr : null };
     renderMain();
+    if (mode !== 'brosur' && !keep) kSearchFor(pq, S.last.seq);
   }
   function renderMain() {
     if (S.tab !== 'cari') return;
     const out = $('#out');
+    if (S.kb) { renderKBrowse(out); return; }
     if (S.browse) return renderBrowse(out);
     if (!S.last) return renderHome(out);
-    const { pq, r, ms } = S.last;
+    const { pq } = S.last;
     if (S.last.empty) { out.innerHTML = `<div class="empty">${esc(S.last.empty)}</div>`; return; }
+    const mode = srcMode();
+    let h = '';
+    if (mode === 'all') h += kSummaryHTML();
+    if (mode !== 'brosur') h += kitabHTML(mode, pq);
+    if (mode !== 'kitab') h += (mode === 'all' ? '<div class="ksh brhead"><h2>Brosur & dokumen <small>Arsip CHM + PDF</small></h2></div>' : '') + brosurHTML();
+    out.innerHTML = h;
+  }
+  function brosurHTML() {
+    const { pq, r, ms } = S.last;
     const res = r.results;
     const nLoc = res.reduce((s, x) => s + x.locs.length, 0);
     const nChm = res.filter(x => x.doc.src === 'CHM').length, nPdf = res.length - nChm;
@@ -1534,7 +1580,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     if (extra.length) h += `<div class="vchips">Juga dicari: ${extra.join(' · ')}</div>`;
     if (!res.length) {
       h += `<div class="empty">Tidak ada hasil untuk “${esc(S.q)}”.<br>${S.whole ? 'Coba matikan “Kata utuh”. ' : ''}${!S.broad ? 'Coba aktifkan “Pencarian luas”. ' : ''}${S.src !== 'all' ? 'Coba pilih sumber “Semua”.' : ''}</div>`;
-      out.innerHTML = h; return;
+      return h;
     }
     if (S.view === 'doc') {
       h += '<div class="list">' + res.slice(0, S.shownDocs).map((x, i) => cardHTML(x, i, pq)).join('') + '</div>';
@@ -1544,7 +1590,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
       h += '<div class="list">' + flat.slice(0, S.shownLocs).map(([x, L]) => locRowHTML(x, L, pq)).join('') + '</div>';
       if (flat.length > S.shownLocs) h += `<div class="loadmore"><button class="btn" data-act="morelocs">Tampilkan 60 lokasi lagi (${fmtN(flat.length - S.shownLocs)} tersisa)</button></div>`;
     }
-    out.innerHTML = h;
+    return h;
   }
   function actionsHTML(d, bi, extra) {
     let a = `<button class="btn ghost" data-act="open" data-id="${esc(d.id)}" data-bi="${bi}">Buka sumber</button>`;
@@ -1580,7 +1626,7 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     const cy = chm.map(docYear).filter(Boolean); const cy0 = cy.length ? Math.min(...cy) : '', cy1 = cy.length ? Math.max(...cy) : '';
     const pd = pdfs.filter(d => d.date).map(d => d.date).sort();
     let h = `<div class="stats">
-      <div class="stat"><b>${fmtN(LIB.docs.length)}</b><span>dokumen dalam satu indeks</span></div>
+      <div class="stat"><b>${fmtN(LIB.docs.length + (KST.meta ? KST.meta.N : 0))}</b><span>brosur, ayat, tafsir & hadis dalam satu pencarian</span></div>
       <div class="stat"><b>${fmtN(LIB.chmTotal)}</b><span>arsip CHM ${cy0 ? cy0 + '–' + cy1 : ''}</span></div>
       <div class="stat"><b>${LIB.pdfState === 'loading' ? '…' : fmtN(pdfs.length)}</b><span>brosur PDF${pd.length ? ' ' + shortDate({ date: pd[0] }) + ' – ' + shortDate({ date: pd[pd.length - 1] }) : ''}</span></div>
       <div class="stat"><b>${LIB.refsReady ? fmtN(LIB.qTotal) : '…'}</b><span>rujukan ayat · ${LIB.refsReady ? fmtN(LIB.hTotal) : '…'} rujukan hadits</span></div>
@@ -1594,11 +1640,12 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     }
     if (LIB.pdfState === 'none') h += `<div class="note">Brosur PDF tersimpan di database aplikasi dan hanya bisa dimuat saat halaman dibuka di Claude. Arsip CHM tetap bisa dicari.</div>`;
     if (LIB.pdfState === 'slow') h += `<div class="note warn">Database brosur PDF belum merespons. Hasil pencarian sementara hanya dari arsip CHM.</div>`;
-    h += `<div class="sec"><h2>Coba cari</h2><div class="try">${['tawakkal', 'keutamaan sabar', 'Al-Baqarah 183', '"laa haula walaa quwwata"', 'HR. Bukhari', 'shalat tahajjud', 'لَا حَوْلَ'].map(t => `<button data-act="try" data-q="${esc(t)}">${esc(t)}</button>`).join('')}</div></div>`;
+    h += `<div class="sec"><h2>Coba cari</h2><div class="try">${['tawakkal', 'keutamaan sabar', 'Al-Baqarah 183', '"laa haula walaa quwwata"', 'Bukhari 52', 'bismillahirrahmanirrahim', 'إنما الأعمال بالنيات', 'shalat tahajjud', 'لَا حَوْلَ'].map(t => `<button data-act="try" data-q="${esc(t)}">${esc(t)}</button>`).join('')}</div></div>`;
     h += `<div class="sec"><h2>Brosur PDF terbaru</h2>`;
     if (pdfs.length) h += `<div class="plist">${pdfs.slice(0, 6).map(d => `<div class="prow"><div><div class="t">${esc(d.title)}</div><div class="m">${esc(dateLabel(d))}${hijri(d) ? ' · ' + esc(hijri(d)) : ''}${d.no ? ' · No. ' + esc(d.no) : ''} · ${esc(d.file)}</div></div><button class="btn" data-act="open" data-id="${esc(d.id)}" data-bi="0">Baca</button>${pdfBtn(d, 1, 'ghost', 'PDF asli')}</div>`).join('')}</div>`;
     else h += `<div class="note">${LIB.pdfState === 'loading' ? 'Memuat daftar brosur PDF…' : 'Belum ada brosur PDF. ' + (CAP.assets ? 'Tambahkan lewat tombol “Brosur PDF” di kanan atas.' : '')}</div>`;
     h += `</div><div class="sec"><h2>Jelajahi per tahun</h2><div class="years">${yearButtons()}</div></div>`;
+    h += kHomeHTML();
     out.innerHTML = h;
   }
   function yearButtons() {
@@ -1807,8 +1854,13 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     const seen = new Set();
     const E = expl.sort((a, b) => b.score - a.score).filter(x => { const k = P.norm(x.d.blocks[x.bi][1]).slice(0, 100); if (seen.has(k)) return false; seen.add(k); return true; });
     const chm = r.results.filter(x => x.doc.src === 'CHM'), pdf = r.results.filter(x => x.doc.src === 'PDF');
-    S.sup = { q, pq, r, A, H, E, chm, pdf, show: S.sup && soft ? S.sup.show : { chm: 10, pdf: 10, A: 12, H: 12, E: 15 } };
+    const prevK = soft && S.sup && S.sup.q === q ? S.sup.k : null;
+    S.sup = { q, pq, r, A, H, E, chm, pdf, k: prevK, show: S.sup && soft ? S.sup.show : { chm: 10, pdf: 10, A: 12, H: 12, E: 15 } };
     renderSupport();
+    if (S.ssrc === 'all' && !prevK) {
+      const X = S.sup; pq._support = true;
+      kRun(pq, 'all').then(async kr => { if (S.sup !== X || kr.error) return; X.k = kr; const ids = [].concat(kByCat(kr, 'quran').slice(0, 4), kByCat(kr, 'hadis').slice(0, 6), kByCat(kr, 'tafsir').slice(0, 2)).map(x => x.i); await kEnsure(ids); if (S.sup === X) renderSupport(); }).catch(() => { });
+    }
   }
   function srcChips(items) {
     const max = 6;
@@ -1839,6 +1891,14 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
       <div class="aimsg muted" style="margin-top:8px"></div><div class="aiout"></div><div id="supSrc"></div></div>`;
     if (X.r.core) h += `<div class="vchips">Kata kunci utama <b>${esc(X.r.core)}</b> wajib ada di setiap brosur; kata lain menaikkan peringkat.${X.r.partial ? ' ' + fmtN(X.r.partial) + ' brosur yang tidak memuatnya disisihkan.' : ''}</div>`;
     h += `<div class="note">Jika dua sumber membahas hal yang sama secara berbeda, keduanya ditampilkan lengkap dengan tanggal dan identitas dokumennya. Aplikasi tidak memilih mana yang benar; periksa sumber aslinya.</div>`;
+    if (S.ssrc === 'all') {
+      const kr = X.k;
+      if (!kr) h += `<section class="ssec"><h2>Al-Qur'an, tafsir & kitab hadis</h2><p>Mencari di mushaf, tafsir dan kitab hadis…</p></section>`;
+      else {
+        const kq = kByCat(kr, 'quran'), kh = kByCat(kr, 'hadis'), kt = kByCat(kr, 'tafsir');
+        h += `<section class="ssec" id="s-kitab"><h2>Al-Qur'an, tafsir & kitab hadis <small>${fmtN(kq.length)} ayat · ${fmtN(kh.length)} hadis · ${fmtN(kt.length)} tafsir</small></h2><p>Langsung dari mushaf Al-Qur'an Digital, kitab tafsir dan kitab hadis. Klik “Buka detail” untuk teks lengkap dan identitas sumbernya.</p><div class="list">${kq.slice(0, 4).map(x => kCardHTML(x, pq)).join('')}${kh.slice(0, 6).map(x => kCardHTML(x, pq)).join('')}${kt.slice(0, 2).map(x => kCardHTML(x, pq)).join('')}</div>${kq.length + kh.length + kt.length > 12 ? `<div class="loadmore"><button class="btn" data-act="supk">Lihat semua hasil kitab di Pencarian</button></div>` : ''}</section>`;
+      }
+    }
     // 1. CHM
     h += `<section class="ssec" id="s-chm"><h2>1. Referensi dari Arsip CHM <small>${fmtN(X.chm.length)} brosur</small></h2><p>Diurutkan menurut kecocokan. Klik judul untuk membaca brosur utuh dengan bagian yang cocok disorot.</p><div class="list">${X.chm.slice(0, X.show.chm).map((x, i) => supDocCard(x, pq)).join('')}</div>${X.chm.length > X.show.chm ? `<div class="loadmore"><button class="btn" data-act="supmore" data-k="chm">Tampilkan lebih banyak</button></div>` : ''}</section>`;
     // 2. PDF
@@ -1899,6 +1959,11 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     if (X.A.length) { t += 'AYAT AL-QUR\'AN\n'; X.A.slice(0, 15).forEach((g, i) => { const it = bestItem(g.items); t += `${i + 1}. ${ayatLabel(g)} — ${trunc(it.tr.replace(/\s+/g, ' '), 400)}\n   Sumber: ${g.items.slice(0, 4).map(x => refText(x.d, x.u.t1)).join(' | ')}\n`; }); t += '\n'; }
     if (X.H.length) { t += 'HADITS\n'; X.H.slice(0, 15).forEach((g, i) => { const it = bestItem(g.items); t += `${i + 1}. ${trunc(it.tr.replace(/\s+/g, ' '), 500)}\n   Sumber: ${refText(it.d, it.u.t1)}\n`; }); t += '\n'; }
     if (X.E.length) { t += 'KUTIPAN PENJELASAN\n'; X.E.slice(0, 12).forEach((x, i) => { t += `${i + 1}. “${trunc(x.d.blocks[x.bi][1], 500)}”\n   Sumber: ${refText(x.d, x.bi)}\n`; }); t += '\n'; }
+    if (X.k) {
+      const kq = kByCat(X.k, 'quran').slice(0, 8).map(x => KST.recs.get(x.i)).filter(Boolean), kh = kByCat(X.k, 'hadis').slice(0, 10).map(x => KST.recs.get(x.i)).filter(Boolean);
+      if (kq.length) { t += 'AYAT (MUSHAF AL-QUR\'AN DIGITAL)\n'; kq.forEach((r, i) => { t += `${i + 1}. QS. ${r.surah} (${r.s}): ${r.a} — ${trunc(r.tr.replace(/\s+/g, ' '), 400)}\n   Sumber: ${KB.ref(r)}\n`; }); t += '\n'; }
+      if (kh.length) { t += 'HADIS (KITAB HADIS)\n'; kh.forEach((r, i) => { t += `${i + 1}. ${trunc((r.tr || '').replace(/\s+/g, ' '), 500)}\n   Sumber: ${KB.ref(r)}\n`; }); t += '\n'; }
+    }
     t += 'DOKUMEN SUMBER\n'; X.r.results.slice(0, 25).forEach((x, i) => { t += `${i + 1}. [${x.doc.src}] ${refText(x.doc)}\n`; });
     t += '\nCatatan: kumpulan kutipan dari brosur, bukan fatwa. Periksa sumber asli.';
     copy(t);
@@ -2118,6 +2183,271 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     } catch (e) { d._del = false; renderPdfList(); toast('Gagal menghapus'); }
   }
 
+  /* ================= PUSTAKA KITAB (Al-Qur'an, tafsir, hadis) =================
+     Data: data/kitab/ (indeks bertahap). Mesin: data/lib/kitab.js (window.PRMK). */
+  const KB = window.PRMK || null;
+  const KST = { meta: null, err: null, cache: new Map(), recs: new Map(), seq: 0 };
+  const KCAT = { quran: "Al-Qur'an", tafsir: 'Tafsir', hadis: 'Hadis' };
+  const KFILTER_LABEL = {
+    'k:quran': "Al-Qur'an", 'k:hadis': 'Hadis (semua kitab)', 'k:tafsir': 'Tafsir', 'k:bulughul': 'Bulughul Maram', 'k:kitab9': 'Kitab 9 Imam', 'k:bukhari': 'Shahih Bukhari',
+    'k:muslim': 'Shahih Muslim', 'k:abudaud': 'Sunan Abu Dawud', 'k:ibnumajah': 'Sunan Ibnu Majah', 'k:tirmidzi': 'Sunan Tirmidzi', 'k:nasai': "Sunan An-Nasa'i", 'k:darimi': 'Sunan Ad-Darimi',
+    'k:riyadh': 'Riyadhus Shalihin', 'k:ibnukatsir': 'Tafsir Ibnu Katsir', 'k:jalalain': 'Tafsir Jalalain', 'k:qtema': "Indeks tema Al-Qur'an",
+    'c:bukhari': 'Riwayat Bukhari (semua file)', 'c:muslim': 'Riwayat Muslim (semua file)', 'c:abudaud': 'Riwayat Abu Dawud (semua file)', 'c:tirmidzi': 'Riwayat Tirmidzi (semua file)',
+    'c:nasai': "Riwayat An-Nasa'i (semua file)", 'c:ibnumajah': 'Riwayat Ibnu Majah (semua file)', 'c:darimi': 'Riwayat Ad-Darimi (semua file)', 'c:ahmad': 'Musnad Ahmad (Kitab 9 Imam)', 'c:malik': "Muwaththa' Malik (Kitab 9 Imam)"
+  };
+  function srcMode() { return S.src === 'all' ? 'all' : (S.src === 'CHM' || S.src === 'PDF') ? 'brosur' : 'kitab'; }
+  function kitabInit() {
+    if (!KB) { KST.err = 'Modul kitab tidak termuat.'; return Promise.resolve(null); }
+    return KB.init('data/kitab/', { cacheBust: !FILE_MODE }).then(m => { KST.meta = m; setStatus(); if (!S.q && S.tab === 'cari' && !S.browse && !S.kb) renderMain(); return m; })
+      .catch(e => { KST.err = 'Data Al-Qur\'an & hadis belum bisa dimuat (' + e.message + ').'; setStatus(); renderMain(); return null; });
+  }
+  function kAllow(src) {
+    const M = KST.meta; if (!M) return () => false;
+    if (src === 'all') return null;
+    if (src.startsWith('k:')) {
+      const c = src.slice(2);
+      if (KCAT[c]) { const rs = M.sources.filter(s => s.cat === c).map(s => [s.start, s.start + s.count]); return i => rs.some(r => i >= r[0] && i < r[1]); }
+      const s = M.src[c]; if (s) return i => i >= s.start && i < s.start + s.count;
+    }
+    return null;
+  }
+  function kOpts(src) { const o = { whole: S.whole, allow: kAllow(src) }; if (src.startsWith('c:')) o.coll = src.slice(2); return o; }
+  async function kRun(pq, src, seqKey) {
+    const key = JSON.stringify([pq.raw, src, S.whole, S.broad, !!pq._support]);
+    if (KST.cache.has(key)) return KST.cache.get(key);
+    await kitabInit(); if (!KST.meta) return { error: KST.err || 'tidak tersedia', results: [] };
+    const r = await KB.search(pq, kOpts(src));
+    KST.cache.set(key, r); if (KST.cache.size > 30) KST.cache.delete(KST.cache.keys().next().value);
+    return r;
+  }
+  async function kEnsure(ids) {
+    const miss = ids.filter(i => !KST.recs.has(i));
+    if (!miss.length) return;
+    const m = await KB.get(miss); for (const [i, r] of m) KST.recs.set(i, r);
+    if (KST.recs.size > 3000) { let n = KST.recs.size - 2000; for (const k of KST.recs.keys()) { if (n-- <= 0) break; KST.recs.delete(k); } }
+  }
+  function kSearchFor(pq, seq) {
+    if (!pq || (!pq.groups.length && !pq.qref)) return;
+    S.last.k = null; S.last.kerr = null;
+    kRun(pq, S.src).then(async r => {
+      if (!S.last || S.last.seq !== seq) return;
+      if (r.error) { S.last.kerr = r.error; renderMain(); return; }
+      S.last.k = r; await kEnsure(kVisibleIds()); if (S.last && S.last.seq === seq) renderMain();
+    }).catch(e => { if (S.last && S.last.seq === seq) { S.last.kerr = 'Pencarian kitab gagal: ' + e.message; renderMain(); } });
+  }
+  function kByCat(r, cat) { return r.results.filter(x => KB.srcOf(x.i).cat === cat); }
+  function kVisibleIds() {
+    const r = S.last && S.last.k; if (!r) return [];
+    if (srcMode() === 'all') return [].concat(kByCat(r, 'quran').slice(0, 3), kByCat(r, 'hadis').slice(0, 5), kByCat(r, 'tafsir').slice(0, 3)).map(x => x.i);
+    return r.results.slice(0, S.kShown || 20).map(x => x.i);
+  }
+  function kPill(cat) { return cat === 'quran' ? '<span class="pill q">AL-QUR\'AN</span>' : cat === 'hadis' ? '<span class="pill h">HADIS</span>' : '<span class="pill t">TAFSIR</span>'; }
+  function kHl(text, pq, max, isAr) {
+    if (!text) return '';
+    const ranges = pq ? P.matchRanges(text, hlVariants(pq), S.whole) : [];
+    let a = 0, b = text.length;
+    if (max && text.length > max) { const w = P.snippetWindow(text, ranges, max); a = w.a; b = w.b; }
+    return (a > 0 ? '… ' : '') + hl(text, ranges, a, b).replace(/\n/g, '<br>') + (b < text.length ? ' …' : '');
+  }
+  function kHas(text, pq) { return !!(text && pq && P.matchRanges(text, hlVariants(pq), S.whole).length); }
+  function surahName(r) { return r.surah || P.surahLabel(r.s); }
+  function kTitle(r) {
+    if (r.src === 'jalalain') return 'Tafsir Jalalain · QS. ' + P.surahLabel(r.s) + ' (' + r.s + '): ' + r.a;
+    return KB.title(r);
+  }
+  function kSrcLine(r) {
+    const M = KST.meta; const s = M.src[r.src];
+    return `<div class="crumb">Sumber: <b>${esc(s.name)}</b> › ${esc(s.file)} › ${esc(r.path)}</div>`;
+  }
+  function kArabicImg(r, cls) { return r.img ? `<div class="qimg ${cls || ''}"><img src="data/kitab/qimg/${esc(r.img.replace(/^img\//, ''))}" alt="Teks Arab QS ${r.s}:${r.a} (gambar asli Al-Qur'an Digital 2.1)" loading="lazy"></div>` : ''; }
+  function kJalAr(r, pq) {
+    if (r.arSeg && r.arSeg.length) return r.arSeg.map(sg => sg[0] ? `<span class="qred">${esc(sg[1])}</span>` : esc(sg[1])).join(' ');
+    return kHl(r.ar, pq);
+  }
+  function kRelLine(r, x) {
+    let h = '';
+    const dups = (x && x.dups && x.dups.length) ? x.dups : null;
+    if (r.dup && r.dup.length) h += `<div class="krel">Teks identik juga ada di: ${r.dup.slice(0, 4).map(d => `<button class="srcchip" data-act="kopen" data-i="${d[0]}">${esc(d[1])}</button>`).join('')}${r.dup.length > 4 ? `<span class="crumb">+${r.dup.length - 4}</span>` : ''}</div>`;
+    if (r.sim && r.sim.length) h += `<div class="krel">Matan serupa: ${r.sim.slice(0, 3).map(d => `<button class="srcchip" data-act="kopen" data-i="${d[0]}" title="kemiripan teks matan ±${d[1]}%">${esc(d[2])} · ${d[1]}%</button>`).join('')}${r.sim.length > 3 ? `<button class="more" data-act="kopen" data-i="${r.i}">+${r.sim.length - 3} lainnya</button>` : ''}</div>`;
+    return h;
+  }
+  function kActions(r) {
+    let a = `<button class="btn ghost" data-act="kopen" data-i="${r.i}">Buka detail</button>`;
+    if (r.src === 'quran') {
+      if (r.jal != null) a += `<button class="btn ghost" data-act="kopen" data-i="${r.jal}">Tafsir Jalalain</button>`;
+      if (r.ik != null) a += `<button class="btn ghost" data-act="kopen" data-i="${r.ik}">Tafsir Ibnu Katsir</button>`;
+    }
+    if ((r.src === 'jalalain' || (r.src === 'ibnukatsir' && r.s && r.a1)) && KST.meta) a += `<button class="btn ghost" data-act="kayat" data-s="${r.s}" data-a="${r.a || r.a1}">Lihat ayat</button>`;
+    a += `<button class="btn ghost" data-act="kcpq" data-i="${r.i}">Salin kutipan</button><button class="btn ghost" data-act="kcpr" data-i="${r.i}">Salin referensi</button>`;
+    return `<div class="actions">${a}</div>`;
+  }
+  function kCardHTML(x, pq) {
+    const r = KST.recs.get(x.i);
+    if (!r) return `<article class="res kres"><div class="skel" style="width:40%"></div><div class="skel"></div><div class="skel" style="width:80%"></div></article>`;
+    const M = KST.meta; const s = M.src[r.src]; const cat = s.cat;
+    let h = `<article class="res kres ${cat}">`;
+    if (r.src === 'quran') {
+      h += `<div class="meta">${kPill(cat)}<span class="date">QS. ${esc(surahName(r))} (${r.s}): ${r.a}</span>${r.juz ? `<span>Juz ${r.juz}</span>` : ''}${(r.topik || []).length ? `<span>${esc(r.topik.join(' · '))}</span>` : ''}${x.tafsirOf != null ? '' : ''}</div>`;
+      h += kArabicImg(r);
+      const arQ = pq && pq.groups.some(g => /[؀-ۿ]/.test(g.key));
+      if (x.tl && r.arT) {
+        const rg = KB.tlRange(r.arT, x.tl.part || (pq && pq.raw) || '');
+        const arH = rg ? esc(r.arT.slice(0, rg[0])) + '<mark>' + esc(r.arT.slice(rg[0], rg[1])) + '</mark>' + esc(r.arT.slice(rg[1])) : esc(r.arT);
+        h += `<div class="tlbadge">${x.tl.part ? 'Cocok sebagian kata (“' + esc(x.tl.part) + '”)' : /[\u0600-\u06FF]/.test((pq && pq.raw) || '') ? 'Cocok dengan susunan huruf Arab' : 'Cocok dengan tulisan Latin / transliterasi'} · kecocokan huruf ${x.tl.pct}%${x.tl.err ? ' (selisih ' + x.tl.err + ' huruf)' : ''}</div>`;
+        h += `<div class="ar kar" dir="rtl" lang="ar">${arH}</div><div class="crumb">Teks Arab: ${esc(r.arTname || 'Tafsir Ibnu Katsir')} (${esc(r.arTsrc || '')}). Gambar di atas adalah teks asli Al-Qur'an Digital 2.1.</div>`;
+      } else if (arQ && r.arT && kHas(r.arT, pq)) h += `<div class="ar kar" dir="rtl" lang="ar">${kHl(r.arT, pq, 260)}</div><div class="crumb">Teks Arab yang dicari: ${esc(r.arTname || 'Tafsir Ibnu Katsir')} (${esc(r.arTsrc || '')}). Gambar di atas adalah teks asli Al-Qur'an Digital 2.1.</div>`;
+      h += `<div class="tr">${kHl(r.tr, pq)}</div>`;
+      if (r.catatan && kHas(r.catatan, pq)) h += `<div class="cit">Catatan kaki: ${kHl(r.catatan, pq, 240)}</div>`;
+    } else if (r.src === 'qtema') {
+      h += `<div class="meta">${kPill(cat)}<span class="date">Indeks tema</span><span>${esc(r.tema)}${r.sub ? ' › ' + esc(r.sub) : ''}</span></div><h3><button class="linklike" data-act="kopen" data-i="${r.i}">${kHl(r.label, pq)}</button></h3>`;
+      h += `<div class="srclist">${(r.refs || []).slice(0, 24).map(q => `<button class="srcchip" data-act="kayat" data-s="${q[0]}" data-a="${q[1]}">QS ${q[0]}:${q[1]}</button>`).join('')}${(r.refs || []).length > 24 ? `<span class="crumb">+${r.refs.length - 24} ayat</span>` : ''}</div>`;
+    } else if (r.src === 'jalalain') {
+      h += `<div class="meta">${kPill(cat)}<span class="date">Tafsir Jalalain</span><span>QS. ${esc(P.surahLabel(r.s))} (${r.s}): ${r.a}</span></div>`;
+      if (r.ar) h += `<div class="ar" dir="rtl" lang="ar">${r.arSeg && !kHas(r.ar, pq) ? kJalAr(r) : kHl(r.ar, pq, 300)}</div>`;
+      h += `<div class="tr">${kHl(r.tr, pq, 420)}</div>`;
+    } else if (r.src === 'ibnukatsir') {
+      h += `<div class="meta">${kPill(cat)}<span class="date">Tafsir Ibnu Katsir</span>${r.s ? `<span>QS ${r.s}${r.a1 ? ':' + r.a1 + (r.a2 > r.a1 ? '-' + r.a2 : '') : ''}</span>` : ''}</div><h3><button class="linklike" data-act="kopen" data-i="${r.i}">${esc(r.title || '')}</button></h3>`;
+      const bl = (r.blocks || []).map((b, k) => [k, b]).filter(([k, b]) => kHas(b[1], pq)).slice(0, 2);
+      const show = bl.length ? bl : (r.blocks || []).slice(0, 2).map((b, k) => [k, b]);
+      h += show.map(([k, b]) => `<button class="snip${b[0] === 'a' ? ' ar' : ''}" data-act="kopen" data-i="${r.i}" data-bi="${k}"><span class="loc">paragraf ${k + 1} dari ${(r.blocks || []).length}</span><span class="txt"${b[0] === 'a' ? ' dir="rtl" lang="ar"' : ''}>${kHl(b[1], pq, 280)}</span></button>`).join('');
+    } else {
+      const head = KB.title(r);
+      h += `<div class="meta">${kPill(cat)}<span class="date">${esc(head)}</span>${r.no ? `<span>No. ${esc(r.no)}</span>` : (r.kind === 'teks' ? '<span>Teks pengantar (tanpa nomor)</span>' : '<span>Tanpa nomor di sumber</span>')}${r.derajat ? `<span class="dj" title="Keterangan derajat sebagaimana tertulis di sumber">${esc(r.derajat.length > 60 ? r.derajat.slice(0, 58) + '…' : r.derajat)}</span>` : ''}</div>`;
+      h += `<h3><button class="linklike" data-act="kopen" data-i="${r.i}">${kHl(r.bab || r.kitab || head, pq)}</button></h3>`;
+      h += `<div class="crumb">${r.kitab ? 'Kitab: <b>' + esc(r.kitab) + '</b>' : ''}${r.kitab && r.bab ? ' · ' : ''}${r.bab ? 'Bab: <b>' + esc(r.bab) + '</b>' : ''}</div>`;
+      if (r.ar) h += `<div class="ar" dir="rtl" lang="ar">${kHl(r.ar, pq, 300)}</div>`;
+      if (r.tr) h += `<div class="tr">${kHl(r.tr, pq, 460)}</div>`;
+      if (r.rawi && r.rawi.length) h += `<div class="cit">Perawi (nama dalam tanda [ ] di sumber): ${esc(r.rawi.length > 4 ? r.rawi.slice(0, 2).join(' › ') + ' › … › ' + r.rawi.slice(-2).join(' › ') : r.rawi.join(' › '))}</div>`;
+    }
+    h += kRelLine(r, x);
+    if (x.dups && x.dups.length) h += `<div class="crumb">${fmtN(x.dups.length)} record identik lain ikut cocok dan digabung di sini; tetap bisa dibuka satu per satu dari daftar “Teks identik”.</div>`;
+    h += kSrcLine(r) + kActions(r) + '</article>';
+    return h;
+  }
+  function kitabHTML(mode, pq) {
+    const L = S.last; let h = '';
+    if (!KB) return '<div class="note warn">Modul pencarian Al-Qur\'an & hadis (data/lib/kitab.js) tidak termuat.</div>';
+    if (L.kerr) return `<div class="note warn">${esc(L.kerr)}</div>`;
+    if (!L.k) return `<div class="note">Mencari di Al-Qur'an, tafsir dan kitab hadis…</div>`;
+    const r = L.k;
+    const notes = [];
+    if (r.coll && !S.src.startsWith('c:')) notes.push(`Nama kitab <b>${esc(r.collLabel || r.coll)}</b> terdeteksi: hasil hadis disaring ke riwayat ${esc(KB.COLLN[r.coll] || r.coll)} (semua file). Untuk mencari kata itu di teks, tulis dalam tanda kutip.`);
+    if (r.tl && r.tl.n) notes.push(`Kueri juga dibaca sebagai tulisan Latin/transliterasi (kerangka huruf <b>${esc(r.tl.q)}</b>)${r.tl.part ? ', cocok pada potongan “' + esc(r.tl.part) + '”' : ''} → <b>${fmtN(r.tl.n)}</b> ayat. Persentase menunjukkan kecocokan huruf, bukan kepastian.`);
+    if (r.results.some(x => x.num)) notes.push('Nomor hadis dicocokkan dengan nomor yang tertulis di masing-masing kitab (tiap koleksi punya penomoran sendiri).');
+    if (mode === 'all') {
+      const q = kByCat(r, 'quran'), hd = kByCat(r, 'hadis'), tf = kByCat(r, 'tafsir');
+      if (!q.length && !hd.length && !tf.length) return `<div class="note">Tidak ada hasil di Al-Qur'an, tafsir dan kitab hadis.</div>`;
+      if (notes.length) h += `<div class="vchips">${notes.join(' ')}</div>`;
+      const sec = (title, list, n, src) => list.length ? `<section class="ksec"><div class="ksh"><h2>${title} <small>${fmtN(list.length)} hasil</small></h2>${list.length > n ? `<button class="btn" data-act="ksrc" data-src="${src}">Lihat semua ${fmtN(list.length)}</button>` : ''}</div><div class="list">${list.slice(0, n).map(x => kCardHTML(x, pq)).join('')}</div></section>` : '';
+      // urutkan bagian menurut kecocokan terbaik (bagian dengan hasil "semua kata cocok" didahulukan)
+      const secs = [["Al-Qur'an", q, 3, 'k:quran', 0], ['Hadis', hd, 5, 'k:hadis', 1], ['Tafsir', tf, 3, 'k:tafsir', 2]].filter(x => x[1].length);
+      const top = x => x[1][0]; const best = Math.max.apply(null, secs.map(x => top(x).cov));
+      secs.sort((a, b2) => (top(b2).cov - top(a).cov) || ((top(b2).ref ? 1 : 0) - (top(a).ref ? 1 : 0)) || (a[4] - b2[4]));
+      for (const x of secs) h += sec(x[0] + (top(x).cov < best && best >= 2 ? ' <small>· hanya sebagian kata cocok</small>' : ''), x[1], x[2], x[3]);
+      return h;
+    }
+    const lbl = KFILTER_LABEL[S.src] || S.src;
+    h += `<div class="rhead"><strong>${fmtN(r.results.length)} hasil di ${esc(lbl)}</strong><span class="sub">Al-Qur'an ${fmtN(r.counts.quran || 0)} · Tafsir ${fmtN(r.counts.tafsir || 0)} · Hadis ${fmtN(r.counts.hadis || 0)} · ${r.ms < 1 ? '<1' : Math.round(r.ms)} ms</span></div>`;
+    if (notes.length) h += `<div class="vchips">${notes.join(' ')}</div>`;
+    if (!r.results.length) return h + `<div class="empty">Tidak ada hasil untuk “${esc(S.q)}” di ${esc(lbl)}.<br>${S.whole ? 'Coba matikan “Kata utuh”. ' : ''}Coba pilih sumber “Semua”.</div>`;
+    const n = S.kShown || 20;
+    h += '<div class="list">' + r.results.slice(0, n).map(x => kCardHTML(x, pq)).join('') + '</div>';
+    if (r.results.length > n) h += `<div class="loadmore"><button class="btn" data-act="kmore">Tampilkan 20 hasil lagi (${fmtN(r.results.length - n)} tersisa)</button></div>`;
+    return h;
+  }
+  function kSummaryHTML() {
+    const L = S.last; const r = L && L.k; const nB = L && L.r ? L.r.results.length : 0;
+    if (!r) return '';
+    const c = r.counts;
+    return `<div class="kcounts">${[['k:quran', "Al-Qur'an", c.quran], ['k:hadis', 'Hadis', c.hadis], ['k:tafsir', 'Tafsir', c.tafsir]].map(([s, t, n]) => `<button data-act="ksrc" data-src="${s}"${n ? '' : ' disabled'}><b>${fmtN(n || 0)}</b> ${t}</button>`).join('')}<button data-act="ksrc" data-src="CHM"><b>${fmtN(nB)}</b> Brosur & PDF</button><span class="sub">${r.ms < 1 ? '<1' : Math.round(r.ms)} ms</span></div>`;
+  }
+  /* ---------- pembaca record kitab ---------- */
+  async function openKitab(i, bi) {
+    i = +i; await kitabInit(); if (!KST.meta) { toast('Data kitab belum tersedia'); return; }
+    await kEnsure([i]); const r = KST.recs.get(i); if (!r) { toast('Record tidak ditemukan'); return; }
+    const M = KST.meta; const s = M.src[r.src]; const pq = (S.tab === 'sup' && S.sup ? S.sup.pq : (S.last && S.last.pq)) || null;
+    const prev = i > s.start ? i - 1 : null, next = i < s.start + s.count - 1 ? i + 1 : null;
+    let h = `<div class="dhead"><div class="row"><div style="flex:1;min-width:0"><div class="meta">${kPill(s.cat)}<span class="date">${esc(s.name)}</span>${r.no ? `<span>No. ${esc(r.no)}</span>` : ''}${r.juz ? `<span>Juz ${r.juz}</span>` : ''}</div><h2>${esc(r.src === 'quran' ? 'QS. ' + surahName(r) + ' (' + r.s + '): ' + r.a : r.src === 'qtema' ? r.label : (r.bab || r.title || kTitle(r)))}</h2></div><button class="btn ghost" data-act="close" aria-label="Tutup">✕ Tutup</button></div>
+      <div class="actions">${prev != null ? `<button class="btn" data-act="kopen" data-i="${prev}">‹ Sebelumnya</button>` : ''}${next != null ? `<button class="btn" data-act="kopen" data-i="${next}">Berikutnya ›</button>` : ''}<button class="btn ghost" data-act="kcpq" data-i="${i}">Salin kutipan</button><button class="btn ghost" data-act="kcpr" data-i="${i}">Salin referensi</button>${r.src === 'quran' && r.jal != null ? `<button class="btn ghost" data-act="kopen" data-i="${r.jal}">Tafsir Jalalain</button>` : ''}${r.src === 'quran' && r.ik != null ? `<button class="btn ghost" data-act="kopen" data-i="${r.ik}">Tafsir Ibnu Katsir</button>` : ''}${(r.src === 'jalalain' || (r.src === 'ibnukatsir' && r.a1)) ? `<button class="btn ghost" data-act="kayat" data-s="${r.s}" data-a="${r.a || r.a1}">Lihat ayat</button>` : ''}</div></div>`;
+    h += `<div class="dbody" id="rbody"><div class="idbox">Sumber asli: <b>${esc(s.file)}</b> (${esc(s.name)})${r.kitab ? ' › Kitab <b>' + esc(r.kitab) + '</b>' : ''}${r.bab ? ' › Bab <b>' + esc(r.bab) + '</b>' : ''}${r.no ? ' › No. <b>' + esc(r.no) + '</b>' : ''}<br>Lokasi file di dalam CHM: <b>${esc(r.path)}</b>${r.babInherited ? '<br>Judul bab diambil dari hadis sebelumnya di halaman yang sama (sumber menulis judul bab sekali).' : ''}</div><div class="doc">`;
+    const blk = (cls, inner, extra) => `<div class="blk ${cls}"${cls === 'a' ? ' lang="ar" dir="rtl"' : ''}${extra || ''}>${inner}</div>`;
+    const lab = t => `<div class="klab">${t}</div>`;
+    if (r.src === 'quran') {
+      h += lab('Teks Arab (gambar asli Al-Qur\'an Digital 2.1)') + kArabicImg(r, 'big');
+      if (r.arT) { const rg = pq && pq.raw ? KB.tlRange(r.arT, pq.raw) : null; h += lab('Teks Arab untuk pencarian — dari ' + esc(r.arTname || 'Tafsir Ibnu Katsir') + ' (' + esc(r.arTsrc || '') + ')') + blk('a', rg && !kHas(r.arT, pq) ? esc(r.arT.slice(0, rg[0])) + '<mark>' + esc(r.arT.slice(rg[0], rg[1])) + '</mark>' + esc(r.arT.slice(rg[1])) : kHl(r.arT, pq)); if (r.arTnote) h += `<div class="crumb">${esc(r.arTnote)}</div>`; }
+      else h += `<div class="crumb">Teks Arab ayat ini tidak tersedia sebagai teks di sumber yang dilampirkan; pencarian Arab untuk ayat ini tidak bisa dilakukan. Gambar di atas tetap teks asli.</div>`;
+      if ((r.topik || []).length) h += lab('Judul / topik di sumber') + blk('p', esc(r.topik.join(' · ')));
+      h += lab('Terjemahan') + blk('p', kHl(r.tr, pq));
+      if (r.catatan) h += lab('Catatan kaki & keterangan di sumber') + blk('p', kHl(r.catatan, pq));
+    } else if (r.src === 'qtema') {
+      h += lab('Indeks tema: ' + esc(r.tema) + (r.sub ? ' › ' + esc(r.sub) : '')) + blk('p', esc(r.label));
+      h += `<div class="srclist">${(r.refs || []).map(q => `<button class="srcchip" data-act="kayat" data-s="${q[0]}" data-a="${q[1]}">QS ${q[0]}:${q[1]}</button>`).join('')}</div>`;
+    } else if (r.src === 'ibnukatsir') {
+      (r.blocks || []).forEach((b, k) => { h += `<div class="blk ${b[0]}${k === +bi ? ' target' : ''}" id="rb-${k}"${b[0] === 'a' ? ' lang="ar" dir="rtl"' : ''}>${kHl(b[1], pq)}</div>`; });
+    } else if (r.src === 'jalalain') {
+      if (r.ar) h += lab('Teks Arab (kata berwarna merah = lafaz ayat, sesuai penandaan di sumber)') + blk('a', r.arSeg && r.arSeg.length && !kHas(r.ar, pq) ? kJalAr(r) : kHl(r.ar, pq));
+      h += lab('Terjemahan tafsir') + blk('p', kHl(r.tr, pq));
+    } else {
+      if (r.babAr) h += blk('a', esc(r.babAr));
+      if (r.note) h += `<div class="crumb">${esc(r.note)}</div>`;
+      if (r.ar) h += lab('Teks Arab') + blk('a', kHl(r.ar, pq));
+      if (r.tr) h += lab(r.kind === 'teks' ? 'Teks' : 'Terjemahan') + blk('p', kHl(r.tr, pq));
+      if (r.intro) h += lab('Teks pengantar di halaman sumber') + blk('p', kHl(r.intro, pq));
+      if (r.rawi && r.rawi.length) h += lab('Perawi (nama yang ditandai [ ] di sumber, urut)') + blk('p', esc(r.rawi.join(' › ')));
+      if (r.derajat) h += lab('Keterangan derajat (sebagaimana tertulis di sumber)') + blk('p', esc(r.derajat));
+      else if (s.cat === 'hadis' && r.kind !== 'teks') h += `<div class="crumb">Sumber tidak mencantumkan keterangan derajat terpisah untuk hadis ini; aplikasi tidak menambahkannya.</div>`;
+    }
+    if (r.dup && r.dup.length) h += lab('Teks identik di record lain (sumber tetap terpisah)') + `<div class="srclist">${r.dup.map(d => `<button class="srcchip" data-act="kopen" data-i="${d[0]}">${esc(d[1])}</button>`).join('')}</div>`;
+    if (r.sim && r.sim.length) h += lab('Riwayat dengan matan serupa') + `<div class="crumb">Dihitung otomatis dari kemiripan teks Arab matan (bukan penetapan takhrij). Periksa redaksinya; perbedaan lafaz tetap dipertahankan.</div><div class="srclist">${r.sim.map(d => `<button class="srcchip" data-act="kopen" data-i="${d[0]}">${esc(d[2])} · ${d[1]}%</button>`).join('')}</div>`;
+    h += '</div></div>';
+    const R = $('#reader'); R.innerHTML = h; showDrawer(R);
+    readerCtx = null;
+    requestAnimationFrame(() => { const t = $('#rb-' + bi); if (t) t.scrollIntoView({ block: 'center' }); else { const b = $('#rbody'); if (b) b.scrollTop = 0; } });
+  }
+  function kQuote(r) {
+    const parts = [];
+    if (r.src === 'quran') { if (r.arT) parts.push(r.arT); parts.push(r.tr); }
+    else if (r.src === 'ibnukatsir') parts.push((r.blocks || []).slice(0, 3).map(b => b[1]).join('\n'));
+    else if (r.src === 'qtema') parts.push(r.label + ': ' + (r.refs || []).map(q => q[0] + ':' + q[1]).join(', '));
+    else { if (r.ar) parts.push(r.ar); if (r.tr) parts.push(r.tr); if (r.derajat) parts.push('(' + r.derajat + ')'); }
+    parts.push('— ' + KB.ref(r));
+    return parts.join('\n');
+  }
+  async function kCopy(i, quote) { await kEnsure([+i]); const r = KST.recs.get(+i); if (r) copy(quote ? kQuote(r) : KB.ref(r)); }
+  async function kOpenAyat(s, a) { await kitabInit(); const M = KST.meta; if (!M) return; openKitab(M.quranStart + M.surahOff[s - 1] + (+a) - 1); }
+  /* ---------- jelajah kitab ---------- */
+  async function renderKBrowse(out) {
+    const kb = S.kb; await kitabInit(); const M = KST.meta;
+    if (!M) { out.innerHTML = `<div class="note warn">${esc(KST.err || 'Data kitab belum tersedia')}</div>`; return; }
+    const s = M.src[kb.src]; const toc = await KB.toc(kb.src);
+    let h = `<div class="rhead"><strong>${esc(s.name)} · ${fmtN(s.count)} record</strong><button class="btn ghost" data-act="${kb.k != null ? 'kbup' : 'home'}">← Kembali</button></div><div class="crumb" style="margin:-6px 2px 10px">File sumber: ${esc(s.file)}</div>`;
+    if (kb.k == null) {
+      h += `<div class="plist">${toc.map((k, ki) => `<div class="prow"><div><div class="t">${esc(k[0])}</div><div class="m">${fmtN(k[2])} record${k[3].length > 1 ? ' · ' + fmtN(k[3].length) + ' bab' : ''}</div></div><button class="btn" data-act="kbk" data-k="${ki}">Buka</button></div>`).join('')}</div>`;
+      out.innerHTML = h; return;
+    }
+    const k = toc[kb.k];
+    h += `<h3 style="margin:4px 2px 10px">${esc(k[0])}</h3>`;
+    if (kb.b == null && k[3].length > 1) {
+      h += `<div class="plist">${k[3].map((b, bi) => `<div class="prow"><div><div class="t">${esc(b[0] || '—')}</div><div class="m">${fmtN(b[2])} record</div></div><button class="btn" data-act="kbb" data-b="${bi}">Baca</button></div>`).join('')}</div>`;
+      out.innerHTML = h; return;
+    }
+    const rng = kb.b != null ? k[3][kb.b] : [k[0], k[1], k[2]];
+    if (kb.b != null) h += `<div class="crumb" style="margin:-4px 2px 10px">Bab: <b>${esc(rng[0])}</b></div>`;
+    const n = Math.min(rng[2], kb.shown || 20); const ids = []; for (let j = 0; j < n; j++) ids.push(rng[1] + j);
+    out.innerHTML = h + '<div class="note">Memuat…</div>';
+    await kEnsure(ids);
+    if (S.kb !== kb) return;
+    h += '<div class="list">' + ids.map(i => kCardHTML({ i }, null)).join('') + '</div>';
+    if (rng[2] > n) h += `<div class="loadmore"><button class="btn" data-act="kbmore">Tampilkan 20 lagi (${fmtN(rng[2] - n)} tersisa)</button></div>`;
+    out.innerHTML = h;
+  }
+  function kHomeHTML() {
+    const M = KST.meta;
+    if (!M) return `<div class="sec"><h2>Al-Qur'an, tafsir & kitab hadis</h2><div class="note">${KST.err ? esc(KST.err) : 'Memuat daftar kitab…'}</div></div>`;
+    const order = ['quran', 'qtema', 'jalalain', 'ibnukatsir', 'bulughul', 'riyadh', 'kitab9', 'bukhari', 'muslim', 'abudaud', 'tirmidzi', 'nasai', 'ibnumajah', 'darimi'];
+    return `<div class="sec"><h2>Al-Qur'an, tafsir & kitab hadis</h2><div class="plist">${order.map(c => M.src[c]).filter(Boolean).map(s => `<div class="prow"><div><div class="m">${kPill(s.cat)} ${esc(s.file)}</div><div class="t">${esc(s.name)}</div><div class="m">${fmtN(s.count)} ${s.code === 'quran' ? 'ayat' : s.code === 'qtema' ? 'entri tema' : s.code === 'ibnukatsir' ? 'halaman tafsir' : s.code === 'jalalain' ? 'ayat bertafsir' : 'record'}</div></div><button class="btn" data-act="kbrowse" data-src="${s.code}">Jelajahi</button><button class="btn ghost" data-act="ksrc" data-src="k:${s.code}">Cari di sini</button></div>`).join('')}</div></div>`;
+  }
+
   /* ---------------- events ---------------- */
   let searchT = null;
   $('#q').addEventListener('input', e => {
@@ -2128,10 +2458,15 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
   $('#qClear').addEventListener('click', () => { $('#q').value = ''; S.q = ''; $('#qClear').hidden = true; S.last = null; renderMain(); $('#q').focus(); });
   $('#filters').addEventListener('click', e => {
     const b = e.target.closest('button.chip'); if (!b) return;
-    if (b.dataset.src) { S.src = b.dataset.src; $$('[data-src]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); }
+    if (b.dataset.src) { S.src = b.dataset.src; $$('#filters [data-src]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); $('#ksrc').value = ''; }
     if (b.dataset.view) { S.view = b.dataset.view; $$('[data-view]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); }
     runSearch();
   });
+  function setSrc(v) {
+    S.src = v; $$('#filters [data-src]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.src === v)));
+    const sel = $('#ksrc'); sel.value = Array.from(sel.options).some(o => o.value === v) ? v : '';
+  }
+  $('#ksrc').addEventListener('change', e => { setSrc(e.target.value || 'all'); runSearch(); });
   ['y0', 'y1'].forEach(k => $('#' + k).addEventListener('change', e => { S[k] = +e.target.value; if (S.y0 > S.y1) { const t = S.y0; S.y0 = S.y1; S.y1 = t; $('#y0').value = S.y0; $('#y1').value = S.y1; } runSearch(); }));
   $('#sort').addEventListener('change', e => { S.sort = e.target.value; runSearch(); });
   $('#whole').addEventListener('change', e => { S.whole = e.target.checked; runSearch(); });
@@ -2165,6 +2500,17 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     const a = el.dataset.act, id = el.dataset.id, bi = el.dataset.bi != null ? +el.dataset.bi : null;
     const d = id ? LIB.byId.get(id) : null;
     switch (a) {
+      case 'kopen': openKitab(el.dataset.i, el.dataset.bi); break;
+      case 'kcpq': kCopy(el.dataset.i, true); break;
+      case 'kcpr': kCopy(el.dataset.i, false); break;
+      case 'kayat': kOpenAyat(+el.dataset.s, +el.dataset.a); break;
+      case 'ksrc': closeDrawers(); setTab('cari'); setSrc(el.dataset.src); S.kb = null; if (S.q.trim().length >= 2) runSearch(); else { renderMain(); $('#q').focus(); } window.scrollTo({ top: 0 }); break;
+      case 'kmore': S.kShown += 20; kEnsure(kVisibleIds()).then(renderMain); renderMain(); break;
+      case 'kbrowse': S.kb = { src: el.dataset.src, k: null, b: null, shown: 20 }; S.last = null; $('#q').value = ''; S.q = ''; renderMain(); window.scrollTo({ top: 0 }); break;
+      case 'kbk': S.kb = Object.assign({}, S.kb, { k: +el.dataset.k, b: null, shown: 20 }); renderMain(); window.scrollTo({ top: 0 }); break;
+      case 'kbb': S.kb = Object.assign({}, S.kb, { b: +el.dataset.b, shown: 20 }); renderMain(); window.scrollTo({ top: 0 }); break;
+      case 'kbup': S.kb = Object.assign({}, S.kb, S.kb.b != null && S.kb.k != null ? { b: null } : { k: null, b: null }); { const kb = S.kb; KB.toc(kb.src).then(t => { if (kb.k != null && kb.b == null && t[kb.k][3].length <= 1) { S.kb = Object.assign({}, kb, { k: null }); } renderMain(); }); } break;
+      case 'kbmore': S.kb = Object.assign({}, S.kb, { shown: (S.kb.shown || 20) + 20 }); renderMain(); break;
       case 'open': if (pv) { try { pv.doc.destroy(); } catch (e) { } pv = null; } openReader(id, bi || 0); break;
       case 'pdfview': openPdfViewer(id, el.dataset.page); break;
       case 'pvprev': if (pv && pv.page > 1) { pv.page--; pvRender(); } break;
@@ -2220,8 +2566,9 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
       case 'moredocs': S.shownDocs += 30; renderMain(); break;
       case 'morelocs': S.shownLocs += 60; renderMain(); break;
       case 'browse': S.browse = +el.dataset.y; S.last = null; $('#q').value = ''; S.q = ''; renderMain(); window.scrollTo({ top: 0 }); break;
-      case 'home': S.browse = null; renderMain(); break;
+      case 'home': S.browse = null; S.kb = null; renderMain(); break;
       case 'supsum': supSummary(el); break;
+      case 'supk': { const q = S.sup ? S.sup.q : ''; setTab('cari'); setSrc('all'); $('#q').value = q; S.q = q; $('#qClear').hidden = !q; runSearch(); window.scrollTo({ top: 0 }); break; }
       case 'supcopy': supCopyAll(); break;
       case 'supq': { const X = S.sup; const g = (el.dataset.k === 'A' ? X.A : X.H)[+el.dataset.i]; if (g) copy(supQuote(el.dataset.k === 'A' ? 'Q' : 'H', g)); break; }
       case 'supmore': { const k = el.dataset.k; S.sup.show[k] += k === 'chm' || k === 'pdf' ? 15 : 15; renderSupport(); break; }
@@ -2236,10 +2583,11 @@ footer.foot { color: var(--faint); font-size: 12px; padding: 30px 0 calc(30px + 
     }
   });
 
-  $('#foot').innerHTML = `Pustaka Referensi MTA · arsip <b>${esc(CHM_FILE)}</b> ditambah brosur PDF mingguan, digabung dalam satu indeks pencarian. Setiap hasil menunjuk ke dokumen, bab/subbab atau halaman sumber aslinya. Ringkasan AI hanya alat bantu, bukan fatwa.`;
+  $('#foot').innerHTML = `Pustaka Referensi MTA · arsip <b>${esc(CHM_FILE)}</b> ditambah brosur PDF mingguan, Al-Qur'an Digital 2.1, Tafsir Jalalain, Tafsir Ibnu Katsir, Bulughul Maram, Riyadhus Shalihin, Kitab 9 Imam dan kitab-kitab hadis (file CHM), digabung dalam satu pencarian. Setiap hasil menunjuk ke file, kitab/bab atau halaman sumber aslinya. Hubungan antar riwayat dihitung dari kemiripan teks, bukan penetapan takhrij. Ringkasan AI hanya alat bantu, bukan fatwa.`;
   setStatus(); renderMain();
   loadChm();
   initCaps();
+  kitabInit();
 })();
 </script>
 </body></html>

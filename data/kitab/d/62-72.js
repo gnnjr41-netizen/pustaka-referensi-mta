@@ -1,0 +1,1 @@
+PRMK.d("br",{"brahim":[2,171,48],"brang":[2,171,49],"brangkas":[5,171,50],"brankas":[1,171,51],"brata":[1,171,52],"brengsek":[6,171,53],"brigade":[2,171,54],"brkata":[1,171,55],"broker":[5,171,56],"brotowali":[1,171,57],"brtmi":[1,171,58]});

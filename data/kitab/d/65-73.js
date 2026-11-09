@@ -1,0 +1,1 @@
+PRMK.d("es",{"es":[43,230,45],"esa":[309,230,46],"esakan":[11,230,47],"esakanlah":[19,230,48],"esakanya":[1,230,49],"esaknya":[1,230,50],"esan":[1,230,51],"eseorang":[3,230,52],"eskpedisi":[3,230,53],"esok":[186,230,54],"esoknya":[18,230,55],"estafet":[1,230,56],"estela":[2,230,57],"esunguhnya":[2,230,58]});

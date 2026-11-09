@@ -1,0 +1,1 @@
+PRMK.d("pej",{"pejabat":[58,525,87],"pejabatku":[1,525,88],"pejagal":[1,525,89],"pejagalan":[1,525,90],"pejalan":[38,525,91],"pejalaran":[1,525,92],"pejamkan":[2,525,93],"pejamkanlah":[3,525,94],"pejantan":[73,525,95],"pejantanya":[9,525,96],"pejelasan":[1,525,97],"pejlan":[1,525,98],"pejuang":[77,525,99]});

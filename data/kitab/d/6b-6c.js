@@ -1,0 +1,1 @@
+PRMK.d("kl",{"klaim":[10,365,42],"klaimnya":[1,365,43],"klalifah":[1,365,44],"klarifikasi":[7,365,45],"klasifikasi":[1,365,46],"klem":[1,365,47],"klenik":[1,365,48],"klepada":[2,365,49],"kliabab":[1,365,50],"klimaks":[1,365,51],"klise":[10,365,52],"kliusus":[1,365,53],"kloset":[1,365,54],"kloster":[1,365,55],"klsah":[1,365,56],"kltab":[1,365,57],"klub":[2,365,58]});

@@ -1,0 +1,1 @@
+PRMK.d("oe",{"oeh":[1,511,101],"oelh":[4,511,102],"oemikianlah":[1,511,103],"oengetahuan":[1,511,104]});

@@ -1,0 +1,1 @@
+PRMK.d("mep",{"mepada":[1,475,9],"meperbaiki":[1,475,10],"meperdulikanya":[2,475,11],"meperkirakanya":[1,475,12],"meperkokoh":[1,475,13],"meperlihatkan":[1,475,14],"meperlipat":[1,475,15],"mepunyai":[1,475,16]});

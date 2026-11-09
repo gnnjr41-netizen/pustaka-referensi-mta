@@ -1,9 +1,11 @@
 # Pustaka Referensi MTA
 
-Satu mesin pencarian untuk arsip **Brosur Ahad Pagi MTA**:
+Satu mesin pencarian untuk arsip **Brosur Ahad Pagi MTA**, **Al-Qur'an**, **tafsir**, dan **kitab hadis**:
 
 - Arsip CHM `Brosur_Ahad_Pagi_1995-2023_FIX.chm`: 1.354 brosur (1995–2023)
 - Brosur PDF Ahad Pagi (folder `data/pdf`)
+- Al-Qur'an Digital 2.1 (6.236 ayat + indeks tema), Tafsir Jalalain, Tafsir Ibnu Katsir
+- Bulughul Maram, Riyadhus Shalihin, Kitab 9 Imam (62.198 hadis), Shahih Bukhari, Shahih Muslim (Mukhtashar), Shahih Sunan Abu Dawud / Ibnu Majah / Tirmidzi (Al-Albani), Sunan An-Nasa'i, Sunan Ad-Darimi — total 109.989 record (folder `data/kitab`)
 
 Semua sumber dicari dari satu kolom pencarian. Setiap hasil menunjuk ke sumber aslinya: bab/subbab CHM, atau file dan halaman PDF.
 
@@ -21,6 +23,9 @@ Semua sumber dicari dari satu kolom pencarian. Setiap hasil menunjuk ke sumber a
 | `data/pdf/` | File PDF asli |
 | `data/lib/` | PDF.js 3.11.174 (membaca dan menampilkan PDF) |
 | `manifest.webmanifest`, `icons/` | Ikon saat ditambahkan ke layar utama HP |
+| `data/kitab/` | Indeks bertahap Al-Qur'an, tafsir & hadis (kamus `d/`, posting `p/`, record `r/`, daftar isi `toc/`, gambar ayat `qimg/`). Dibangun oleh `tools/build_index.js` — jangan diedit manual |
+| `data/lib/kitab.js` | Mesin pencarian kitab (memuat indeks per bagian) |
+| `tools/` | Skrip ekstraksi CHM, build indeks, dan uji (`validate_search.js`) |
 | `.nojekyll` | Supaya GitHub Pages menampilkan file apa adanya |
 | `config.js`, `supabase/` | Sambungan ke server online (lihat di bawah) |
 
@@ -52,3 +57,11 @@ Brosur yang ditambahkan hanya tersimpan di browser perangkat itu. Untuk menerbit
 - Pencarian tetap berjalan langsung di perangkat (tanpa AI). Brosur online ikut masuk indeks yang sama dengan arsip CHM.
 - Tulisan Arab dari PDF bisa tidak rapi di tampilan teks. Gunakan tombol **PDF asli** untuk melihat halaman aslinya.
 - Website GitHub Pages bisa dibuka siapa saja yang mengetahui alamatnya.
+
+## Al-Qur'an, tafsir & kitab hadis
+- Dicari dari kolom yang sama. Filter Sumber: Al-Qur'an / Hadis / Tafsir / **Kitab tertentu…** (per file atau per imam).
+- Contoh: `QS 2:183`, `bismillahirrahmanirrahim` (ayat dengan huruf Latin), `Bukhari 52`, `انما الاعمال بالنيات` (dengan/tanpa harakat), `Shahih Muslim sabar`, `kitab puasa`.
+- Indeks tidak dimuat sekaligus: hanya bagian yang diperlukan kueri yang diunduh, lalu disimpan di cache.
+- Teks Arab ayat di Al-Qur'an Digital 2.1 berupa gambar asli; teks Arab untuk pencarian ayat diambil dari Tafsir Ibnu Katsir (diberi label).
+- Derajat hadis hanya ditampilkan bila tertulis di sumber. "Matan serupa" = kemiripan teks otomatis, bukan takhrij.
+- Dokumentasi lengkap: folder `LAPORAN/` di paket ZIP (audit, ekstraksi, validasi, struktur database, panduan).

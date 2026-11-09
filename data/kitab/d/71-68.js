@@ -1,0 +1,1 @@
+PRMK.d("qh",{"qhafur":[1,554,122],"qhasyiyah":[2,554,123],"qhatan":[1,554,124],"qhoththon":[1,554,125]});

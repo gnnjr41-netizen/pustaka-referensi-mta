@@ -1,0 +1,1 @@
+PRMK.d("nw",{"nwayat":[3,509,63],"nwayatkan":[1,509,64]});

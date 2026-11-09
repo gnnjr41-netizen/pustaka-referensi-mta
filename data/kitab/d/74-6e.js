@@ -1,0 +1,1 @@
+PRMK.d("tn",{"tnaka":[1,699,97],"tnau":[1,699,98],"tnenemui":[1,699,99],"tnenjadi":[1,699,100],"tnenyangkut":[1,699,101],"tnenyimpan":[1,699,102],"tnereka":[2,699,103],"tneuhat":[1,699,104],"tngna":[1,699,105],"tngulah":[1,699,106],"tnim":[1,699,107],"tnpa":[2,699,108]});

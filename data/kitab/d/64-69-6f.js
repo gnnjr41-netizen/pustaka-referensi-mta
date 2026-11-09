@@ -1,0 +1,1 @@
+PRMK.d("dio",{"diobati":[30,210,43],"diobatinya":[2,210,44],"diobralkan":[1,210,45],"dioksida":[1,210,46],"diolah":[7,210,47],"diolesi":[19,210,48],"dioleskan":[7,210,49],"dioleskanya":[2,210,50],"diolok":[4,210,51],"diombang":[6,210,52],"dioplos":[6,210,53],"dioploskan":[2,210,54],"dioptimiskan":[4,210,55],"diotolong":[2,210,56]});

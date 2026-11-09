@@ -1,0 +1,1 @@
+PRMK.d("pei",{"peimirah":[1,525,84],"peindung":[1,525,85],"peiunjuk":[1,525,86]});

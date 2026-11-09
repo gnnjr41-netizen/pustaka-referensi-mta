@@ -1,0 +1,1 @@
+PRMK.d("kc",{"kcbaikan":[1,326,1],"kcbenaran":[1,326,2],"kcpada":[1,326,3],"kcputusan":[1,326,4]});

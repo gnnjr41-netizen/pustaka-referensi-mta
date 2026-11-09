@@ -1,0 +1,1 @@
+PRMK.d("sw",{"sw":[3,660,71],"swat":[1,660,72],"swi":[1,660,73],"swt":[2708,660,74],"swtberfirman":[1,661,0],"swtdalam":[2,661,1],"swtdan":[1,661,2],"swtmelarang":[1,661,3],"swtmeletakan":[1,661,4],"swtmemberitahukan":[1,661,5],"swtmemerintahkan":[1,661,6],"swtmenyebutkan":[1,661,7],"swtyang":[1,661,8]});

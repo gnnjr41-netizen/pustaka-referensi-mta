@@ -1,0 +1,1 @@
+PRMK.d("mec",{"mecaci":[1,407,0],"mecambuk":[2,407,1],"mecari":[5,407,2],"mecarinya":[2,407,3],"mecelanya":[1,407,4],"meceraikanmu":[1,407,5],"meceraikanya":[3,407,6],"meceritakan":[95,407,7],"meceritakany6a":[1,407,8],"meceritakanya":[23,407,9],"mecintai":[1,407,10],"mecolok":[1,407,11],"mecuci":[1,407,12],"mecurigakan":[1,407,13]});

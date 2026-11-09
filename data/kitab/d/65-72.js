@@ -1,0 +1,1 @@
+PRMK.d("er",{"era":[1,230,27],"eragama":[1,230,28],"erapa":[3,230,29],"eras":[1,230,30],"erat":[57,230,31],"eratkanlah":[1,230,32],"eratlah":[1,230,33],"eratnya":[1,230,34],"erbuatan":[1,230,35],"ercerita":[1,230,36],"erdapat":[2,230,37],"ereksi":[1,230,38],"erkata":[2,230,39],"eropa":[6,230,40],"ersabda":[1,230,41],"ersaksi":[2,230,42],"erta":[1,230,43],"erzina":[1,230,44]});

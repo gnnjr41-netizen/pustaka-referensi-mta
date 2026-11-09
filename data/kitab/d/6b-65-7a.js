@@ -1,0 +1,1 @@
+PRMK.d("kez",{"kezahiran":[1,359,41],"kezaliman":[98,359,42],"kezalimanmu":[2,359,43],"kezalimanya":[21,359,44],"kezhaliman":[205,359,45],"kezhalimanya":[10,359,46],"kezhalimin":[2,359,47],"kezhjaliman":[1,359,48],"kezholiman":[4,359,49],"kezholimanya":[2,359,50],"kezjhaliman":[2,359,51],"kezuhudan":[1,359,52],"kezuhudanya":[2,359,53]});

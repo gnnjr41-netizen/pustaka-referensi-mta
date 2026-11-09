@@ -1,0 +1,1 @@
+PRMK.d("ie",{"iebih":[25,277,0],"iebihan":[1,277,1],"ied":[238,277,2],"iedain":[3,277,3],"iedil":[1,277,4],"iedul":[137,277,5],"iehernya":[1,277,6],"iehih":[1,277,7],"ielaki":[2,277,8],"ielek":[1,277,9],"iemah":[1,277,10],"ieman":[1,277,11],"iengah":[1,277,12],"ienganya":[1,277,13],"iengkap":[1,277,14],"iepaskan":[1,277,15],"iersembunyi":[1,277,16]});

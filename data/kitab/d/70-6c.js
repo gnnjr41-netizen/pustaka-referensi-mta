@@ -1,0 +1,1 @@
+PRMK.d("pl",{"plan":[1,546,44],"planet":[5,546,45],"planetnya":[2,546,46],"plasenta":[2,546,47],"plat":[1,546,48],"plesteran":[1,546,49],"plesteranya":[3,546,50],"pleura":[1,546,51],"plin":[1,546,52],"ploret":[1,546,53],"plosok":[1,546,54],"plural":[4,546,55],"pluto":[1,546,56]});

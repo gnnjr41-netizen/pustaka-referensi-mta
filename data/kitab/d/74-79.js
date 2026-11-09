@@ -1,0 +1,1 @@
+PRMK.d("ty",{"tyangan":[1,704,87],"tyersebut":[2,704,88]});

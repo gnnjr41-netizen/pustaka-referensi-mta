@@ -1,0 +1,1 @@
+PRMK.d("jb",{"jbinalanya":[1,301,0],"jbir":[1,301,1]});

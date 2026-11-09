@@ -1,0 +1,1 @@
+PRMK.d("dt",{"dtanya":[2,221,16],"dtanyakan":[1,221,17],"dtawar":[1,221,18],"dtibanya":[1,221,19],"dtperbuat":[1,221,20],"dtrimah":[1,221,21]});

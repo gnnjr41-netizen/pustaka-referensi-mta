@@ -1,0 +1,1 @@
+PRMK.d("mc",{"mcmperhatikan":[1,406,161],"mcmpersilahkan":[2,406,162],"mcn":[1,406,163],"mcnengadahkan":[1,406,164],"mcngcualikan":[1,406,165],"mcnghalang":[1,406,166],"mcnyekutui":[1,406,167],"mcreka":[1,406,168]});

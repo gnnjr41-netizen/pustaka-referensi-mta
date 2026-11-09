@@ -1,0 +1,1 @@
+PRMK.d("meu",{"meubah":[2,481,40],"meubahnya":[1,481,41],"meujawab":[1,481,42],"meumpahkan":[1,481,43],"meutusi":[2,481,44]});

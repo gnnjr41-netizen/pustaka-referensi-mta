@@ -1,0 +1,1 @@
+PRMK.d("bem",{"bemacam":[1,137,0],"bemakna":[1,137,1],"bemalam":[1,137,2],"bemama":[5,137,3],"bemimpi":[1,137,4]});

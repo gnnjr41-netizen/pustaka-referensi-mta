@@ -1,0 +1,1 @@
+PRMK.d("fe",{"fe":[2,232,2],"featured":[297,232,3],"felaki":[1,232,4],"fempat":[1,232,5],"fenel":[2,232,6],"fenomena":[5,232,7],"fentilasi":[2,232,8],"fermentasi":[18,232,9],"fersi":[2,232,10]});

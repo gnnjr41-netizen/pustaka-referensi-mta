@@ -1,0 +1,1 @@
+PRMK.d("meh",{"mehgatakan":[1,407,74],"mehijabi":[1,407,75]});

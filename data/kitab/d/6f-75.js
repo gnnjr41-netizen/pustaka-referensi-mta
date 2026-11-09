@@ -1,0 +1,1 @@
+PRMK.d("ou",{"oumi":[1,516,59],"ouraisy":[3,516,60],"ouraisyang":[1,516,61],"ouran":[5,516,62],"outaibah":[1,516,63],"ouwata":[1,516,64]});

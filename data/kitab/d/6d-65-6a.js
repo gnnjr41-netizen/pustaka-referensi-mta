@@ -1,0 +1,1 @@
+PRMK.d("mej",{"meja":[41,407,92],"mejawab":[11,407,93],"mejelis":[2,407,94],"mejilatnya":[1,407,95],"mejinakanya":[1,407,96],"mejumpai":[1,407,97],"mejuntai":[3,407,98]});

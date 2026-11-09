@@ -1,0 +1,1 @@
+PRMK.d("bec",{"becampur":[1,132,16],"becek":[20,132,17],"becerita":[5,132,18]});

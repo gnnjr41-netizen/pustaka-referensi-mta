@@ -1,0 +1,1 @@
+PRMK.d("kp",{"kpemimpinan":[2,366,0],"kpqada":[1,366,1]});

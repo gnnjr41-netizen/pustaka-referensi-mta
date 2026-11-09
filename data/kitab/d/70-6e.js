@@ -1,0 +1,1 @@
+PRMK.d("pn",{"pngkalnya":[1,546,57]});

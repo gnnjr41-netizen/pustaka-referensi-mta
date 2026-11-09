@@ -1,0 +1,1 @@
+PRMK.d("diy",{"diya":[17,219,0],"diyah":[18,219,1],"diyahnya":[1,219,2],"diyahtnya":[2,219,3],"diyakini":[41,219,4],"diyakininya":[7,219,5],"diyakinkan":[1,219,6],"diyangan":[1,219,7],"diyar":[4,219,8],"diyari":[3,219,9],"diyat":[969,219,10],"diyatmu":[1,219,11],"diyatnya":[167,219,12],"diyatu":[1,219,13],"diyaul":[3,219,14],"diybaj":[2,219,15]});

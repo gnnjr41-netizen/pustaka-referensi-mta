@@ -1,0 +1,1 @@
+PRMK.d("pew",{"pewalian":[2,545,74],"pewangi":[3,545,75],"pewaris":[80,545,76],"pewarisan":[21,545,77],"pewarisanya":[2,545,78],"pewarisku":[1,545,79],"pewarismu":[14,545,80],"pewarisnya":[40,545,81],"pewarna":[34,545,82],"pewarnan":[3,545,83],"pewarta":[1,545,84]});

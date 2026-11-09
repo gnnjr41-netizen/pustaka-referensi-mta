@@ -1,0 +1,1 @@
+PRMK.d("bep",{"bependapat":[2,138,86],"bepergian":[733,138,87],"bepergianlah":[2,138,88],"bepergianya":[2,138,89],"bepredikat":[2,138,90],"bepuasa":[5,138,91]});

@@ -1,0 +1,1 @@
+PRMK.d("km",{"km":[5,365,59],"kmai":[11,365,60],"kmbalikanlah":[1,365,61],"kmenyertai":[1,365,62],"kmeudian":[1,365,63],"kmi":[2,365,64]});

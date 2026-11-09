@@ -1,0 +1,1 @@
+PRMK.d("bed",{"beda":[136,132,19],"bedadalam":[1,132,20],"bedah":[3,132,21],"bedahanya":[1,132,22],"bedahkan":[1,132,23],"bedak":[4,132,24],"bedakan":[30,132,25],"bedakanlah":[1,132,26],"bedalah":[2,132,27],"bedanya":[39,132,28],"bediri":[13,132,29],"bedirilah":[2,132,30],"bedoa":[7,132,31],"bedoalah":[2,132,32],"bedua":[3,132,33],"bedusta":[7,132,34]});
