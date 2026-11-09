@@ -1,1 +1,1 @@
-PRMK.d("dr",{"drai":[1,221,4],"dri":[14,221,5],"driwayatkan":[2,221,6],"drtetapkan":[1,221,7]});
+PRMK.d("dr",{"drai":[1,222,4],"dri":[14,222,5],"driwayatkan":[2,222,6],"drtetapkan":[1,222,7]});

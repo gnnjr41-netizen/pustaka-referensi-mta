@@ -1,1 +1,1 @@
-PRMK.d("om",{"oman":[17,514,21],"ombak":[37,514,22],"ombaknya":[11,514,23],"omelan":[2,514,24],"omelanya":[1,514,25],"omng":[1,514,26],"omong":[8,514,27],"omongan":[10,514,28],"omonganmu":[2,514,29],"omongkan":[1,514,30],"ompong":[4,514,31]});
+PRMK.d("om",{"oman":[17,515,21],"ombak":[37,515,22],"ombaknya":[11,515,23],"omelan":[2,515,24],"omelanya":[1,515,25],"omng":[1,515,26],"omong":[8,515,27],"omongan":[10,515,28],"omonganmu":[2,515,29],"omongkan":[1,515,30],"ompong":[4,515,31]});

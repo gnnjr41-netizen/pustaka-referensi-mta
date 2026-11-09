@@ -1,0 +1,1 @@
+PRMQ.put("w","ro",{"robahlah":"robah","ronganya":"ronga","rohnya":"roh","robohnya":"roboh","rotinya":"roti","rotilah":"roti","robohkanlah":"roboh","rontoklah":"rontok","rohku":"roh","robohlah":"roboh","rohmu":"roh"});

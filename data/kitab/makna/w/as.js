@@ -1,0 +1,1 @@
+PRMQ.put("w","as",{"aswadi":"aswad","asalnya":"asal","aslinya":"asli","asalkan":"asal","asyjai":"asyja","asuhanmu":"asuhan","aslami":"aslam","asari":"ashar","asadi":"asad","asapnya":"asap","asalku":"asal","asarnya":"ashar","asalmu":"asal","asalah":"asa","asingkanlah":"asing","aswadnya":"aswad","asamu":"asa"});

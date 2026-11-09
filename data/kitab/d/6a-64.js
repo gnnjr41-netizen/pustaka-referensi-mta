@@ -1,1 +1,1 @@
-PRMK.d("jd",{"jdikan":[2,301,3]});
+PRMK.d("jd",{"jdikan":[2,302,3]});

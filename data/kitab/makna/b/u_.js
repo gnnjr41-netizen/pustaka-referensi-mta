@@ -1,0 +1,1 @@
+PRMQ.put("b","u_",{"u jadi":{"J":"4t"},"u hubungan":{"J":"1pv"},"u al":{"J":"2gj"},"u wini":{"J":"2gj"},"u aftuni":{"J":"2gm"},"u turut":{"J":"2la,9k"},"u asal":{"J":"2la"},"u pakai":{"J":"2rj"},"u bentuk":{"J":"2uu,14b"},"u adailahi":{"J":"39x"},"u fungsi":{"J":"39x"}});

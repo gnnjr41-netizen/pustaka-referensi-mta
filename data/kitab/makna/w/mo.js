@@ -1,0 +1,1 @@
+PRMQ.put("w","mo",{"mohonkanlah":"mohon","moyangmu":"moyang","moyangnya":"moyang","mohonlah":"mohon","mohonkan":"mohon","motifnya":"motif","moyangku":"moyang","modalnya":"modal","modalmu":"modal","motongnya":"motong"});

@@ -1,0 +1,1 @@
+PRMQ.put("b","uf",{"ufuk tingi":{"R":"3p2","J":"3p2"},"ufuk terang":{"R":"4hq","J":"4hq"},"ufi sumber":{"C":"5f,4k3"},"ufuk barat":{"J":"qa,3tl"},"ufin ufan":{"J":"1kz,du,1ix"},"ufan ufi":{"J":"1kz"},"ufi ufa":{"J":"1kz"},"ufa lafal":{"J":"1kz"},"ufrigh rupa":{"J":"1q3"},"ufan makna":{"J":"1yt"},"ufan rupa":{"J":"3hq"},"ufuk belah":{"J":"4hq"}});

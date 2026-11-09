@@ -1,1 +1,1 @@
-PRMK.d("mg",{"mgucapkan":[2,481,145]});
+PRMK.d("mg",{"mgucapkan":[2,482,147]});

@@ -1,1 +1,1 @@
-PRMK.d("eh",{"eh":[2,226,32],"ehbuanglah":[1,226,33]});
+PRMK.d("eh",{"eh":[2,227,36],"ehbuanglah":[1,227,37]});

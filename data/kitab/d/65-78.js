@@ -1,1 +1,1 @@
-PRMK.d("ex",{"expedisi":[1,230,72]});
+PRMK.d("ex",{"expedisi":[1,231,72]});

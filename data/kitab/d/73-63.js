@@ -1,1 +1,1 @@
-PRMK.d("sc",{"scara":[1,598,80],"scmpit":[1,598,81],"scorang":[1,598,82],"scorpio":[2,598,83],"scorpion":[1,598,84],"scsuatu":[1,598,85],"sctclah":[1,598,86]});
+PRMK.d("sc",{"scara":[1,599,80],"scmpit":[1,599,81],"scorang":[1,599,82],"scorpio":[2,599,83],"scorpion":[1,599,84],"scsuatu":[1,599,85],"sctclah":[1,599,86]});

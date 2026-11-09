@@ -1,0 +1,1 @@
+PRMQ.put("u","ie",{"ied":{"R":"im","C":"4se","K":"2a,7l,49,2p,b,3e,6,3m,3h,4,1f,a,8,s:2,37:2,6c,17,g,2d,20,u:2,1v,h:2,k,j,k:2"},"ieman":{"K":"b7"},"iebihan":{"K":"13l"},"iebih":{"K":"1dl"},"ielaki":{"K":"1ex"},"iemah":{"K":"1f7"}});

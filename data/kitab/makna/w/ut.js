@@ -1,0 +1,1 @@
+PRMQ.put("w","ut",{"utuslah":"utus","utusan":"utus","utamakanlah":"utama","utangnya":"hutang","utangmu":"hutang","utuskan":"utus","utamakan":"utama","utangku":"hutang","utamanya":"utama","utamaku":"utama","utaridi":"utarid","utarakan":"utara","utaranya":"utara","utarakanlah":"utara","utusanmu":"utus","utusanku":"utus"});

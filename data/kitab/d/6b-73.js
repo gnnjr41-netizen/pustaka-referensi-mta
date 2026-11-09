@@ -1,1 +1,1 @@
-PRMK.d("ks",{"ksatria":[3,366,38],"ksmi":[1,366,39],"kstaria":[1,366,40]});
+PRMK.d("ks",{"ksatria":[3,367,38],"ksmi":[1,367,39],"kstaria":[1,367,40]});

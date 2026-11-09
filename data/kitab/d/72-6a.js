@@ -1,1 +1,1 @@
-PRMK.d("rj",{"rjenceritakan":[1,571,36]});
+PRMK.d("rj",{"rjenceritakan":[1,572,44]});

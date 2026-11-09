@@ -1,0 +1,1 @@
+PRMQ.put("b","st",{"statis rendah":{"J":"1v"},"status penduduk":{"J":"5m"},"status budak":{"J":"ed"},"status mukatab":{"J":"zy"},"status mashdar":{"J":"1qh"},"status fasik":{"J":"25n"},"status samak":{"J":"271"},"status belum":{"J":"31a"},"stabil bumi":{"J":"4dq"},"stabil tidak":{"J":"4fj"}});

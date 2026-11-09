@@ -1,0 +1,1 @@
+PRMQ.put("u","er",{"erat":{"C":"20v","J":"8w,1,5c,3p,t,3mm,ak","K":"t,5s,1o,e:2,iy:2,2d,u,m,16,5f,2k:3,5,20,48,a,1j,1y,2a"},"ereksi":{"K":"3z"},"eragama":{"K":"gb"},"erta":{"K":"14j"},"erdapat":{"K":"1dy"}});

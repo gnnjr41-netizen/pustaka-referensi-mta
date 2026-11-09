@@ -1,1 +1,1 @@
-PRMK.d("pez",{"peziarah":[15,545,87],"pezina":[225,545,88],"pezinah":[4,545,89]});
+PRMK.d("pez",{"peziarah":[15,546,87],"pezina":[225,546,88],"pezinah":[4,546,89]});

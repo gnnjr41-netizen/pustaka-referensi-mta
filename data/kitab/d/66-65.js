@@ -1,1 +1,1 @@
-PRMK.d("fe",{"fe":[2,232,2],"featured":[297,232,3],"felaki":[1,232,4],"fempat":[1,232,5],"fenel":[2,232,6],"fenomena":[5,232,7],"fentilasi":[2,232,8],"fermentasi":[18,232,9],"fersi":[2,232,10]});
+PRMK.d("fe",{"fe":[2,233,2],"featured":[297,233,3],"fedback":[1,233,4],"felaki":[1,233,5],"fempat":[1,233,6],"fenel":[2,233,7],"fenomena":[5,233,8],"fentilasi":[2,233,9],"fermentasi":[18,233,10],"fersi":[2,233,11]});

@@ -1,0 +1,1 @@
+PRMQ.put("w","aj",{"ajaklah":"ajak","ajarkan":"ajar","ajaran":"ajar","ajakan":"ajak","ajalmu":"ajal","ajalnya":"ajal","ajakanmu":"ajak","ajarkanlah":"ajar","ajakanku":"ajak","ajari":"ajar","ajali":"ajal","ajalku":"ajal","ajukanlah":"ajukan","ajarilah":"ajar"});

@@ -1,1 +1,1 @@
-PRMK.d("vu",{"vulgar":[8,718,76]});
+PRMK.d("vu",{"vulgar":[8,719,81]});

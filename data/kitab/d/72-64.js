@@ -1,1 +1,1 @@
-PRMK.d("rd",{"rdhib":[1,569,1],"rdhiyalahuanhuna":[2,569,2],"rdjiun":[1,569,3]});
+PRMK.d("rd",{"rdhib":[1,570,1],"rdhiyalahuanhuna":[2,570,2],"rdjiun":[1,570,3]});

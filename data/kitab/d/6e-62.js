@@ -1,1 +1,1 @@
-PRMK.d("nb",{"nbaiat":[2,506,59],"nbunya":[1,506,60]});
+PRMK.d("nb",{"nbaiat":[2,507,59],"nbunya":[1,507,60]});

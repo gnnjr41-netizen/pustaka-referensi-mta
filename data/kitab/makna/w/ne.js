@@ -1,0 +1,1 @@
+PRMQ.put("w","ne",{"negerimu":"negeri","nerakalah":"nar","negeripun":"negeri","negerinya":"negeri","nenekmu":"nenek","negeriku":"negeri","neneknya":"nenek","nerakanya":"nar","neracanya":"neraca","negerinyakah":"negeri"});

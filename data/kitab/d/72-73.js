@@ -1,1 +1,1 @@
-PRMK.d("rs",{"rsa":[1,571,211],"rsdliyalahuanhu":[1,571,212],"rshalalahualaihiwasalam":[1,571,213],"rsululah":[4,571,214],"rsumpah":[1,571,215]});
+PRMK.d("rs",{"rsa":[1,572,223],"rsdliyalahuanhu":[1,572,224],"rshalalahualaihiwasalam":[1,572,225],"rsululah":[4,572,226],"rsumpah":[1,572,227]});

@@ -1,0 +1,1 @@
+PRMQ.put("w","bo",{"bolehlah":"boleh","bolehkah":"boleh","bodohlah":"bodoh","bondonglah":"bondong","bohongnya":"bohong","bolehnya":"boleh","bodohnya":"bodoh","bolehkan":"boleh","bodohkan":"bodoh","bodohi":"bodoh"});

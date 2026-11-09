@@ -1,0 +1,1 @@
+PRMQ.put("b","ij",{"ijin tiup":{"R":"lm"},"ijin orang":{"R":"3pl"},"ijin alah":{"R":"40p"},"ijtihad masing":{"C":"3d","J":"1z5"},"ijtihad meka":{"C":"3d"},"ijmak arti":{"J":"e0"},"ijmak orang":{"J":"e0"},"ijmak paling":{"J":"jq"},"ijtihad diri":{"J":"zh"},"ijaf bentuk":{"J":"19i"},"ijaz mukjizat":{"J":"4dj"}});

@@ -1,0 +1,1 @@
+PRMQ.put("w","il",{"ilaihi":"ilaih","ilalah":"ila","ilmunya":"ilmu","ilhamkan":"ilham","ilahi":"ilah","ilahan":"ilah","ilaihnya":"ilaih","ilatnya":"ilat","ilmumu":"ilmu","ilusinya":"ilusi","ilmuku":"ilmu","ilusikan":"ilusi"});

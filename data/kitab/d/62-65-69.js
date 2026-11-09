@@ -1,1 +1,1 @@
-PRMK.d("bei",{"beias":[1,132,60],"beiau":[26,132,61],"beihram":[2,132,62],"beikata":[1,132,63],"beimaksud":[1,132,64],"beirat":[1,132,65],"beirut":[2,132,66],"beistinja":[1,132,67],"beitikaf":[1,132,68],"beium":[2,132,69]});
+PRMK.d("bei",{"beias":[1,132,60],"beiau":[27,132,61],"beihram":[2,132,62],"beikata":[1,132,63],"beimaksud":[1,132,64],"beirat":[1,132,65],"beirut":[2,132,66],"beistinja":[1,132,67],"beitikaf":[1,132,68],"beium":[2,132,69]});

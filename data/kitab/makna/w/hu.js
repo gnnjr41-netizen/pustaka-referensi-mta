@@ -1,0 +1,1 @@
+PRMQ.put("w","hu",{"hujahmu":"hujah","hutangnya":"hutang","hutangmu":"hutang","hukuman":"hukum","hukumnya":"hukum","hujanilah":"hujan","hujani":"hujan","hukumlah":"hukum","hurufnya":"huruf","hujanmu":"hujan","hukumanmu":"hukum","hudan":"hud","hujahku":"hujah","hujahnya":"hujah","hubungkanlah":"hubungkan","hubunganku":"hubungan","hukumku":"hukum"});

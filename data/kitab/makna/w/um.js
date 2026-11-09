@@ -1,0 +1,1 @@
+PRMQ.put("w","um",{"umrahnya":"umrah","umatpun":"umat","umurmu":"umur","umurnya":"umur","umatnya":"umat","umatmu":"umat","umpamanya":"umpama","umumnya":"umum","umatku":"umat","umatan":"umat","umurku":"umur","umrahku":"umrah","umrahmu":"umrah","umari":"umar","umumkanlah":"umum"});

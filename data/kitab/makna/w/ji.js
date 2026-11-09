@@ -1,0 +1,1 @@
+PRMQ.put("w","ji",{"jiwanya":"jiwa","jihadnya":"jihad","jilbabnya":"jilbab","jiwamu":"jiwa","jiwapun":"jiwa","jinakanlah":"jinak","jihadmu":"jihad","jiwaku":"jiwa","jibti":"jibt","jiwalah":"jiwa","jinakan":"jinak","jinabahnya":"jinabah","jinan":"jin","jilbabku":"jilbab","jinlah":"jin","jinku":"jin","jinmu":"jin"});

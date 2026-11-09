@@ -1,1 +1,1 @@
-PRMK.d("ok",{"okelah":[4,512,8],"okey":[1,512,9],"oknum":[3,512,10],"oksigen":[3,512,11],"okulasi":[2,512,12]});
+PRMK.d("ok",{"okelah":[4,513,8],"okey":[1,513,9],"oknum":[3,513,10],"oksigen":[3,513,11],"okulasi":[2,513,12]});

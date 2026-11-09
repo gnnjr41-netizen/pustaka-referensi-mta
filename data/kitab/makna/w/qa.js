@@ -1,0 +1,1 @@
+PRMQ.put("w","qa",{"qalamnya":"qalam","qasamnya":"qasam","qasami":"qasam","qaumi":"qaum","qariban":"qarib","qauli":"qaul","qaisi":"qais","qadri":"qadar","qandili":"qandil","qaulan":"qaul","qamariyahnya":"qamariyah","qarunlah":"qarun"});

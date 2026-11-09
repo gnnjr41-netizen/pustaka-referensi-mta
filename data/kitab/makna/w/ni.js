@@ -1,0 +1,1 @@
+PRMQ.put("w","ni",{"niatnya":"niat","nikmati":"nimat","nikmatan":"nimat","nikahi":"nikah","niscayalah":"niscaya","nikahkan":"nikah","nikahkanlah":"nikah","niatku":"niat","niatmu":"niat","nikahilah":"nikah","nikahnya":"nikah","nikmatku":"nimat","niatkan":"niat","nikmatnya":"nimat"});

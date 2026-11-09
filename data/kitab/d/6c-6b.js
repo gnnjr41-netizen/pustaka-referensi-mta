@@ -1,1 +1,1 @@
-PRMK.d("lk",{"lk":[1,386,119],"lkalian":[2,386,120],"lkangit":[1,386,121],"lkatkanlah":[1,386,122],"lkhlas":[19,386,123],"lkhlash":[2,386,124],"lkrimah":[4,386,125],"lkutilah":[1,386,126]});
+PRMK.d("lk",{"lk":[1,387,124],"lkalian":[2,387,125],"lkangit":[1,387,126],"lkatkanlah":[1,387,127],"lkhlas":[19,387,128],"lkhlash":[2,387,129],"lkrimah":[4,387,130],"lkutilah":[1,387,131]});

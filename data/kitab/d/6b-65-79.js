@@ -1,1 +1,1 @@
-PRMK.d("key",{"keyahudian":[1,359,31],"keyainan":[1,359,32],"keyakian":[2,359,33],"keyakinan":[205,359,34],"keyakinanku":[9,359,35],"keyakinanmu":[3,359,36],"keyakinanya":[20,359,37],"keyaklnan":[1,359,38],"keyatiman":[6,359,39],"keyatimanya":[3,359,40]});
+PRMK.d("key",{"keyahudian":[1,360,31],"keyainan":[1,360,32],"keyakian":[2,360,33],"keyakinan":[207,360,34],"keyakinanku":[9,360,35],"keyakinanmu":[3,360,36],"keyakinanya":[20,360,37],"keyaklnan":[1,360,38],"keyaqinan":[1,360,39],"keyatiman":[6,360,40],"keyatimanya":[3,360,41]});

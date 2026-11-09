@@ -1,0 +1,1 @@
+PRMQ.put("b","if",{"ifrit golongan":{"R":"2gt","J":"2gt"},"ifadah keliling":{"J":"20v"},"iftial asal":{"J":"2j4"},"iftara hamzah":{"J":"2sd"},"if bentuk":{"J":"2uq"},"ifkan maful":{"J":"2zl"},"ifku arti":{"J":"2zl"},"iftala kata":{"J":"3qp"},"ifahu untuknya":{"J":"3x9"}});

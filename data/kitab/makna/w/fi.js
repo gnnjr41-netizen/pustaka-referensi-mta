@@ -1,0 +1,1 @@
+PRMQ.put("w","fi",{"fikirkanlah":"fikirkan","fitnahan":"fitnah","filnya":"fil","fisiknya":"fisik","firmankan":"firman","fitrahnya":"fitri","fitnahnya":"fitnah","fidyahnya":"fidyah","fidyahmu":"fidyah","firdausi":"firdaus","fiqihnya":"fiqih","fitrahmu":"fitri"});

@@ -1,1 +1,1 @@
-PRMK.d("dt",{"dtanya":[2,221,16],"dtanyakan":[1,221,17],"dtawar":[1,221,18],"dtibanya":[1,221,19],"dtperbuat":[1,221,20],"dtrimah":[1,221,21]});
+PRMK.d("dt",{"dtanya":[2,222,16],"dtanyakan":[1,222,17],"dtawar":[1,222,18],"dtibanya":[1,222,19],"dtperbuat":[1,222,20],"dtrimah":[1,222,21]});

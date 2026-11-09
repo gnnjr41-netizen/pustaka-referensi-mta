@@ -1,0 +1,1 @@
+PRMQ.put("w","un",{"untukmulah":"untukmu","untapun":"unta","untukulah":"untuku","untanya":"unta","undangan":"undang","untamu":"unta","untaku":"unta","untakah":"unta","untanyakah":"unta","undanganmu":"undang","ungkapanmu":"ungkapan","undanglah":"undang"});

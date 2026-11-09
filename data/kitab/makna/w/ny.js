@@ -1,0 +1,1 @@
+PRMQ.put("w","ny",{"nyatakan":"nyata","nyebutnya":"nyebut","nyawamu":"nyawa","nyawanya":"nyawa","nyatalah":"nyata","nyalanya":"nyala","nyalakan":"nyala","nyalakanlah":"nyala","nyatanya":"nyata","nyiakanmu":"nyiakan","nyawaku":"nyawa","nyobeknya":"nyobek","nyebutmu":"nyebut"});

@@ -1,0 +1,1 @@
+PRMQ.put("b","i_",{"i harta":{"P":"3yj,1","C":"3yj","J":"3yk"},"i akhir":{"C":"3d"},"i ayat":{"C":"3yj"},"i duduk":{"J":"1nu"},"i arti":{"J":"22k"},"i ulang":{"J":"26p"},"i mubtada":{"J":"2k2"},"i zihar":{"J":"2q8"},"i ilahun":{"J":"3eg"}});

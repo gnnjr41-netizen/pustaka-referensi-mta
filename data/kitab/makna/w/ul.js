@@ -1,0 +1,1 @@
+PRMQ.put("w","ul",{"ulangi":"ulang","ulangan":"ulang","ulangnya":"ulang","ulanglah":"ulang","ulangilah":"ulang","ulanginya":"ulang","ulamanya":"ulama","ulahnya":"ulah","ularnya":"ular","ulamalah":"ulama"});

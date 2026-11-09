@@ -1,0 +1,1 @@
+PRMQ.put("w","do",{"dongengan":"dongeng","dosanya":"dosa","dosamu":"dosa","dosaku":"dosa","doaku":"doa","doanya":"doa","dosapun":"dosa","doamu":"doa","dombanya":"domba","doakan":"doa","doakanlah":"doa","dombakan":"domba","doronganku":"dorongan","dongengnya":"dongeng"});

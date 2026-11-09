@@ -1,1 +1,1 @@
-PRMK.d("nf",{"nfelepaskan":[1,507,20],"nfsih":[1,507,21]});
+PRMK.d("nf",{"nfelepaskan":[1,508,20],"nfsih":[1,508,21]});

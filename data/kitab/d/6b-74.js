@@ -1,1 +1,1 @@
-PRMK.d("kt",{"ktab":[2,366,41],"kthaththab":[5,366,42],"ktiaisamah":[1,366,43],"ktika":[1,366,44]});
+PRMK.d("kt",{"ktab":[2,367,41],"kthaththab":[5,367,42],"ktiaisamah":[1,367,43],"ktika":[1,367,44]});

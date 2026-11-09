@@ -15,6 +15,7 @@ rep("--ayat: #0C6A53; --ayat-soft: #E3F2EC;", "--ayat: #0C6A53; --ayat-soft: #E3
 rep("--ayat: #5FD0AC; --ayat-soft: #15302A;", "--ayat: #5FD0AC; --ayat-soft: #15302A; --qred: #FF8A80;", 2)
 css = """/* pustaka kitab */
 .pill.t { color: var(--chm); background: var(--chm-soft); }
+.pill.m { color: var(--pdf); background: var(--pdf-soft); } .kres.materi { border-left: 4px solid var(--pdf); }
 .kres .ar { margin: 8px 0 4px; overflow-wrap: anywhere; }
 .kres .tr { font-family: var(--f-read); font-size: 15px; line-height: 1.65; margin: 6px 0; overflow-wrap: anywhere; }
 .kres .cit { font-size: 12.5px; color: var(--muted); margin-top: 4px; overflow-wrap: anywhere; }
@@ -54,7 +55,7 @@ new_f = """        <button class="chip" data-src="all" aria-pressed="true">Semua
         <button class="chip" data-src="CHM" aria-pressed="false" title="Brosur dan referensi lama (arsip CHM)">Arsip CHM</button>
         <button class="chip" data-src="PDF" aria-pressed="false" title="PDF dan dokumen lainnya">Brosur PDF</button>
         <select class="sel kpick" id="ksrc" aria-label="Kitab tertentu"><option value="">Kitab tertentu…</option>
-          <optgroup label="Per file sumber"><option value="k:bulughul">Bulughul Maram</option><option value="k:kitab9">Kitab 9 Imam</option><option value="k:bukhari">Shahih Bukhari</option><option value="k:muslim">Shahih Muslim</option><option value="k:abudaud">Sunan Abu Dawud</option><option value="k:ibnumajah">Sunan Ibnu Majah</option><option value="k:tirmidzi">Sunan Tirmidzi</option><option value="k:nasai">Sunan An-Nasa'i</option><option value="k:darimi">Sunan Ad-Darimi</option><option value="k:riyadh">Riyadhus Shalihin</option><option value="k:ibnukatsir">Tafsir Ibnu Katsir</option><option value="k:jalalain">Tafsir Jalalain</option><option value="k:qtema">Indeks tema Al-Qur'an</option></optgroup>
+          <optgroup label="Per file sumber"><option value="k:bulughul">Bulughul Maram</option><option value="k:kitab9">Kitab 9 Imam</option><option value="k:bukhari">Shahih Bukhari</option><option value="k:muslim">Shahih Muslim</option><option value="k:abudaud">Sunan Abu Dawud</option><option value="k:ibnumajah">Sunan Ibnu Majah</option><option value="k:tirmidzi">Sunan Tirmidzi</option><option value="k:nasai">Sunan An-Nasa'i</option><option value="k:darimi">Sunan Ad-Darimi</option><option value="k:riyadh">Riyadhus Shalihin</option><option value="k:ibnukatsir">Tafsir Ibnu Katsir</option><option value="k:jalalain">Tafsir Jalalain</option><option value="k:qtema">Indeks tema Al-Qur'an</option><option value="k:gurda">Pelatihan Gurda 2142 (materi)</option></optgroup>
           <optgroup label="Per imam (gabungan semua file)"><option value="c:bukhari">Riwayat Bukhari</option><option value="c:muslim">Riwayat Muslim</option><option value="c:abudaud">Riwayat Abu Dawud</option><option value="c:tirmidzi">Riwayat Tirmidzi</option><option value="c:nasai">Riwayat An-Nasa'i</option><option value="c:ibnumajah">Riwayat Ibnu Majah</option><option value="c:darimi">Riwayat Ad-Darimi</option><option value="c:ahmad">Musnad Ahmad</option><option value="c:malik">Muwaththa' Malik</option></optgroup>
         </select>
       </div>"""
@@ -84,11 +85,11 @@ new_rs = """  function runSearch(soft) {
     if (S.sort === 'new') r.results.sort((a, b) => (b.doc.date || '').localeCompare(a.doc.date || ''));
     if (S.sort === 'old') r.results.sort((a, b) => (a.doc.date || '9').localeCompare(b.doc.date || '9'));
     const ms = performance.now() - t0;
-    if (!soft) { S.shownDocs = 30; S.shownLocs = 60; S.kShown = 20; }
+    if (!soft) { S.shownDocs = 30; S.shownLocs = 60; S.kShown = 20; S.mkShown = 10; }
     const kkey = JSON.stringify([q, S.src, S.whole, S.broad]);
     const keep = soft && S.last && S.last.kkey === kkey;
     const prev = keep ? S.last : null;
-    S.last = { pq, r, ms, seq: keep ? prev.seq : ++KST.seq, kkey, k: keep ? prev.k : null, kerr: keep ? prev.kerr : null };
+    S.last = { pq, r, ms, seq: keep ? prev.seq : ++KST.seq, kkey, k: keep ? prev.k : null, kerr: keep ? prev.kerr : null, mk: keep ? prev.mk : null };
     renderMain();
     if (mode !== 'brosur' && !keep) kSearchFor(pq, S.last.seq);
   }
@@ -171,6 +172,7 @@ rep("""      case 'open': if (pv)""", """      case 'kopen': openKitab(el.datase
       case 'kayat': kOpenAyat(+el.dataset.s, +el.dataset.a); break;
       case 'ksrc': closeDrawers(); setTab('cari'); setSrc(el.dataset.src); S.kb = null; if (S.q.trim().length >= 2) runSearch(); else { renderMain(); $('#q').focus(); } window.scrollTo({ top: 0 }); break;
       case 'kmore': S.kShown += 20; kEnsure(kVisibleIds()).then(renderMain); renderMain(); break;
+      case 'mkmore': S.mkShown = (S.mkShown || 10) + 10; if (S.last && S.last.mk && S.last.mk.utama) mkEnsure(S.last.mk.utama.slice(0, S.mkShown)).then(renderMain); renderMain(); break;
       case 'kbrowse': S.kb = { src: el.dataset.src, k: null, b: null, shown: 20 }; S.last = null; $('#q').value = ''; S.q = ''; renderMain(); window.scrollTo({ top: 0 }); break;
       case 'kbk': S.kb = Object.assign({}, S.kb, { k: +el.dataset.k, b: null, shown: 20 }); renderMain(); window.scrollTo({ top: 0 }); break;
       case 'kbb': S.kb = Object.assign({}, S.kb, { b: +el.dataset.b, shown: 20 }); renderMain(); window.scrollTo({ top: 0 }); break;
@@ -179,33 +181,83 @@ rep("""      case 'open': if (pv)""", """      case 'kopen': openKitab(el.datase
       case 'open': if (pv)""")
 rep("""      case 'home': S.browse = null; renderMain(); break;""", """      case 'home': S.browse = null; S.kb = null; renderMain(); break;""")
 
-# ---- Mode Support Ustadz: tambah bagian kitab ----
-rep("""    S.sup = { q, pq, r, A, H, E, chm, pdf, show: S.sup && soft ? S.sup.show : { chm: 10, pdf: 10, A: 12, H: 12, E: 15 } };
-    renderSupport();""", """    const prevK = soft && S.sup && S.sup.q === q ? S.sup.k : null;
-    S.sup = { q, pq, r, A, H, E, chm, pdf, k: prevK, show: S.sup && soft ? S.sup.show : { chm: 10, pdf: 10, A: 12, H: 12, E: 15 } };
-    renderSupport();
-    if (S.ssrc === 'all' && !prevK) {
-      const X = S.sup; pq._support = true;
-      kRun(pq, 'all').then(async kr => { if (S.sup !== X || kr.error) return; X.k = kr; const ids = [].concat(kByCat(kr, 'quran').slice(0, 4), kByCat(kr, 'hadis').slice(0, 6), kByCat(kr, 'tafsir').slice(0, 2)).map(x => x.i); await kEnsure(ids); if (S.sup === X) renderSupport(); }).catch(() => { });
-    }""")
-rep("""    h += `<div class="note">Jika dua sumber membahas hal yang sama secara berbeda, keduanya ditampilkan lengkap dengan tanggal dan identitas dokumennya. Aplikasi tidak memilih mana yang benar; periksa sumber aslinya.</div>`;""",
-    """    h += `<div class="note">Jika dua sumber membahas hal yang sama secara berbeda, keduanya ditampilkan lengkap dengan tanggal dan identitas dokumennya. Aplikasi tidak memilih mana yang benar; periksa sumber aslinya.</div>`;
-    if (S.ssrc === 'all') {
-      const kr = X.k;
-      if (!kr) h += `<section class="ssec"><h2>Al-Qur'an, tafsir & kitab hadis</h2><p>Mencari di mushaf, tafsir dan kitab hadis…</p></section>`;
-      else {
-        const kq = kByCat(kr, 'quran'), kh = kByCat(kr, 'hadis'), kt = kByCat(kr, 'tafsir');
-        h += `<section class="ssec" id="s-kitab"><h2>Al-Qur'an, tafsir & kitab hadis <small>${fmtN(kq.length)} ayat · ${fmtN(kh.length)} hadis · ${fmtN(kt.length)} tafsir</small></h2><p>Langsung dari mushaf Al-Qur'an Digital, kitab tafsir dan kitab hadis. Klik “Buka detail” untuk teks lengkap dan identitas sumbernya.</p><div class="list">${kq.slice(0, 4).map(x => kCardHTML(x, pq)).join('')}${kh.slice(0, 6).map(x => kCardHTML(x, pq)).join('')}${kt.slice(0, 2).map(x => kCardHTML(x, pq)).join('')}</div>${kq.length + kh.length + kt.length > 12 ? `<div class="loadmore"><button class="btn" data-act="supk">Lihat semua hasil kitab di Pencarian</button></div>` : ''}</section>`;
-      }
-    }""")
 rep("""      case 'supsum': supSummary(el); break;""", """      case 'supsum': supSummary(el); break;
       case 'supk': { const q = S.sup ? S.sup.q : ''; setTab('cari'); setSrc('all'); $('#q').value = q; S.q = q; $('#qClear').hidden = !q; runSearch(); window.scrollTo({ top: 0 }); break; }""")
-rep("""    t += 'DOKUMEN SUMBER\\n';""", """    if (X.k) {
-      const kq = kByCat(X.k, 'quran').slice(0, 8).map(x => KST.recs.get(x.i)).filter(Boolean), kh = kByCat(X.k, 'hadis').slice(0, 10).map(x => KST.recs.get(x.i)).filter(Boolean);
-      if (kq.length) { t += 'AYAT (MUSHAF AL-QUR\\'AN DIGITAL)\\n'; kq.forEach((r, i) => { t += `${i + 1}. QS. ${r.surah} (${r.s}): ${r.a} — ${trunc(r.tr.replace(/\\s+/g, ' '), 400)}\\n   Sumber: ${KB.ref(r)}\\n`; }); t += '\\n'; }
-      if (kh.length) { t += 'HADIS (KITAB HADIS)\\n'; kh.forEach((r, i) => { t += `${i + 1}. ${trunc((r.tr || '').replace(/\\s+/g, ' '), 500)}\\n   Sumber: ${KB.ref(r)}\\n`; }); t += '\\n'; }
-    }
-    t += 'DOKUMEN SUMBER\\n';""")
+
+# ---- Mode Support Ustadz v3: paket bahan kajian (data/lib/support.js) ----
+sup = open(sys.argv[3], encoding='utf-8').read()
+a = s.index('  function renderSupport() {'); b = s.index('  function hlText(t, pq) {')
+s = s[:a] + s[b:]
+a = s.index('  function supCopyAll() {'); b = s.index('  /* ---------------- kelola PDF ---------------- */')
+s = s[:a] + s[b:]
+a = s.index('  function runSupport(soft) {'); b = s.index('  function srcChips(items) {')
+s = s[:a] + sup + '\n' + s[b:]
+rep("""<script src="data/lib/kitab.js"></script>""", """<script src="data/lib/kitab.js"></script>\n<script src="data/kamus_support.js"></script>\n<script src="data/lib/support.js"></script>\n<script src="data/lib/makna.js"></script>""")
+rep("""      <p>Tulis pertanyaan atau permintaan referensi dari ustadz. Sistem mencari di seluruh arsip CHM dan brosur PDF, lalu menyusun paket referensi: dokumen sumber, ayat Al-Qur'an, hadits, dan kutipan penjelasan, semuanya dengan identitas sumber aslinya.</p>""",
+    """      <p>Tulis permintaan bahan kajian, misalnya <i>“Carikan materi tentang tayamum”</i>. Sistem membersihkan kata pengantar, memakai kamus sinonim, lalu mencari di Al-Qur'an, tafsir, kitab hadis, materi pelatihan, arsip CHM dan brosur PDF. Hasilnya disusun menjadi <b>paket bahan kajian</b> (kerangka, dalil, kutipan, urutan penyampaian) yang <b>hanya berisi kutipan dari sumber yang ditemukan</b>. Berjalan tanpa AI — sama untuk semua pengguna.</p>""")
+rep("""      <button class="btn primary" id="btnSup" type="button">Susun referensi</button>""", """      <button class="btn primary" id="btnSup" type="button">Susun bahan kajian</button>""")
+rep("""        <button class="chip" data-ssrc="all" aria-pressed="true">Semua</button>
+        <button class="chip" data-ssrc="CHM" aria-pressed="false">CHM</button>
+        <button class="chip" data-ssrc="PDF" aria-pressed="false">PDF</button>
+      </div>""", """        <button class="chip" data-ssrc="all" aria-pressed="true">Semua</button>
+        <button class="chip" data-ssrc="kitab" aria-pressed="false">Al-Qur'an, hadis, tafsir & materi</button>
+        <button class="chip" data-ssrc="CHM" aria-pressed="false">Arsip CHM</button>
+        <button class="chip" data-ssrc="PDF" aria-pressed="false">PDF</button>
+      </div>
+      <button class="btn ghost" data-act="kamus" type="button">Kamus kata kunci</button>""")
+rep("""<aside class="drawer" id="manage" hidden""", """<aside class="drawer" id="kamus" hidden aria-label="Kamus kata kunci" role="dialog"></aside>
+<aside class="drawer" id="manage" hidden""")
+rep("""$('#reader').hidden = true; $('#manage').hidden = true;""", """$('#reader').hidden = true; $('#manage').hidden = true; $('#kamus').hidden = true;""")
+rep("""      case 'supsum': supSummary(el); break;""", """      case 'supsum': supSummary(el); break;
+      case 'supcopy2': supCopy(false); break;
+      case 'supsel': supCopy(true); break;
+      case 'supall': { const on = !$$('#sout input.pick').every(x => x.checked); $$('#sout input.pick').forEach(x => { x.checked = on; }); break; }
+      case 'supprint': supPrint(); break;
+      case 'supback': supBack(); break;
+      case 'kamus': openKamus(); break;
+      case 'kmsave': kamusSave(); break;
+      case 'kmedit': kamusEdit(el.dataset.id); break;
+      case 'kmdel': kamusDel(el.dataset.id); break;
+      case 'kmnew': kamusEdit(null); break;
+      case 'kmtest': kamusTest(); break;
+      case 'kmexport': kamusExport(); break;
+      case 'kmreset': kamusReset(); break;
+      case 'kmab': kamusAbaikan(el.dataset.op); break;""")
+rep("""      case 'supcopy': supCopyAll(); break;""", """      case 'supcopy': supCopy(false); break;""")
+css = """.sup-pack { margin-top: 14px; display: grid; gap: 14px; }
+.sup-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; }
+.sup-card h2 { font-size: 17px; margin: 0 0 8px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; } .sup-card h2 small { font-size: 12.5px; color: var(--muted); font-weight: 600; }
+.sup-id { display: grid; grid-template-columns: 150px 1fr; gap: 4px 12px; font-size: 14px; } .sup-id dt { color: var(--muted); font-weight: 600; } .sup-id dd { margin: 0; overflow-wrap: anywhere; }
+.kwchip { display: inline-block; border-radius: 8px; padding: 2px 8px; margin: 2px 4px 2px 0; font-size: 12.5px; font-weight: 600; background: var(--accent-soft); color: var(--accent); }
+.kwchip.mod { background: var(--sunk); color: var(--muted); } .kwchip.rm { background: transparent; color: var(--faint); text-decoration: line-through; font-weight: 500; }
+.sumtiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; } .sumtiles a { display: block; text-decoration: none; color: inherit; background: var(--sunk); border-radius: 10px; padding: 8px 10px; }
+.sumtiles b { font-size: 18px; display: block; font-variant-numeric: tabular-nums; } .sumtiles span { font-size: 12px; color: var(--muted); }
+.suptools { position: sticky; top: calc(64px + env(safe-area-inset-top, 0px)); z-index: 5; display: flex; flex-wrap: wrap; gap: 6px; background: var(--bg); padding: 8px 0; }
+.sref { border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; padding: 10px 12px; margin: 8px 0; background: var(--surface); }
+.sref.pend { border-left: 4px dashed var(--faint); background: var(--bg); }
+.sref .sh { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 13px; color: var(--muted); }
+.sref .sh strong { color: var(--ink); font-size: 14.5px; }
+.lvl { font-size: 11px; font-weight: 800; letter-spacing: .04em; border-radius: 999px; padding: 1px 8px; } .lvl.u { background: var(--accent); color: var(--on-accent); } .lvl.p { background: var(--sunk); color: var(--muted); border: 1px dashed var(--faint); }
+.sref .tr { font-family: var(--f-read); font-size: 15px; line-height: 1.6; margin: 6px 0; overflow-wrap: anywhere; } .sref .ar { margin: 6px 0; }
+.pickbox { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); cursor: pointer; } .pickbox input { width: 16px; height: 16px; accent-color: var(--accent); }
+.kosong { font-style: italic; color: var(--warn); background: var(--warn-soft); border-radius: 8px; padding: 8px 10px; font-size: 13.5px; }
+.urut li { margin: 0 0 12px; } .urut h3 { font-size: 15px; margin: 0 0 4px; }
+.kerangka li { margin: 0 0 8px; } .kerangka b { font-size: 15px; }
+.subh { font-size: 12.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); margin: 14px 0 4px; }
+.kmrow { display: grid; grid-template-columns: 1fr auto; gap: 6px; align-items: start; border-bottom: 1px solid var(--line); padding: 8px 0; font-size: 13.5px; }
+.kmrow .m { color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
+@media (max-width: 720px) { .sumtiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } .sup-id { grid-template-columns: 1fr; } }
+.mkl { font-size: 11px; font-weight: 800; border-radius: 999px; padding: 1px 8px; letter-spacing: .02em; }
+.mkl.mt { background: var(--accent); color: var(--on-accent); } .mkl.mi { background: var(--accent-soft); color: var(--accent); } .mkl.ms { background: var(--sunk); color: var(--ink); border: 1px solid var(--line); } .mkl.ml { background: transparent; color: var(--muted); border: 1px dashed var(--faint); }
+.kres.mk.pend { border-style: dashed; } .mkth { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; } .mkth .kwchip { font-weight: 600; }
+.mkwhy { font-size: 13px; color: var(--muted); background: var(--sunk); border-radius: 8px; padding: 8px 10px; margin: 8px 0; overflow-wrap: anywhere; } .mkwhy ul { margin: 4px 0 0; padding-left: 18px; } .mkwhy li { margin: 2px 0; } .mkwhy b { color: var(--ink); }
+.mkintro { font-size: 13px; line-height: 1.6; } details.mkpend { margin: 12px 0; } details.mkpend summary { cursor: pointer; font-weight: 700; color: var(--muted); padding: 6px 0; }
+@media print {
+  body.print-sup .top, body.print-sup .tabs, body.print-sup #paneCari, body.print-sup .sup-head, body.print-sup #fSup, body.print-sup .sup-row, body.print-sup .suptools, body.print-sup .actions, body.print-sup footer, body.print-sup .pickbox, body.print-sup .scrim, body.print-sup .drawer, body.print-sup .toast { display: none !important; }
+  body.print-sup { background: #FFFFFF; color: #000000; } body.print-sup .sup-card { border-color: #999999; } body.print-sup .sref { break-inside: avoid; border-color: #999999; } body.print-sup .sup-card h2 { break-after: avoid; }
+}
+@media (max-width: 720px) {"""
+rep("@media (max-width: 720px) {\n  .stats", css + "\n  .stats")
 
 # ---- footer & boot ----
 rep("""  $('#foot').innerHTML = `Pustaka Referensi MTA · arsip <b>${esc(CHM_FILE)}</b> ditambah brosur PDF mingguan, digabung dalam satu indeks pencarian. Setiap hasil menunjuk ke dokumen, bab/subbab atau halaman sumber aslinya. Ringkasan AI hanya alat bantu, bukan fatwa.`;""",

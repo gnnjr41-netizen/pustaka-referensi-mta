@@ -1,1 +1,1 @@
-PRMK.d("bej",{"bejan":[1,132,70],"bejana":[1276,132,71],"bejanaku":[2,132,72],"bejanamu":[14,132,73],"bejananya":[36,132,74],"bejat":[6,132,75],"bejek":[1,132,76],"bejihad":[2,132,77],"bejuang":[1,132,78],"bejumpa":[4,132,79]});
+PRMK.d("bej",{"bejan":[1,132,70],"bejana":[1277,132,71],"bejanaku":[2,132,72],"bejanamu":[14,132,73],"bejananya":[36,132,74],"bejat":[6,132,75],"bejek":[1,132,76],"bejihad":[2,132,77],"bejuang":[1,132,78],"bejumpa":[4,132,79]});

@@ -1,1 +1,1 @@
-PRMK.d("kw",{"kw":[4,369,192],"kwalitas":[7,369,193],"kwalitasnya":[6,369,194]});
+PRMK.d("kw",{"kw":[4,370,193],"kwalitas":[7,370,194],"kwalitasnya":[6,370,195]});

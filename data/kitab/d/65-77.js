@@ -1,1 +1,1 @@
-PRMK.d("ew",{"ewajiban":[1,230,71]});
+PRMK.d("ew",{"ewajiban":[1,231,71]});

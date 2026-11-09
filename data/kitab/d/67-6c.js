@@ -1,1 +1,1 @@
-PRMK.d("gl",{"global":[20,238,66],"globalnya":[2,238,67],"glongan":[1,238,68]});
+PRMK.d("gl",{"global":[20,239,66],"globalnya":[2,239,67],"glongan":[1,239,68]});

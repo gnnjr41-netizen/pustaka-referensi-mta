@@ -1,1 +1,1 @@
-PRMK.d("rf",{"rfiengamalkan":[1,569,176],"rfiereka":[1,569,177]});
+PRMK.d("rf",{"rfiengamalkan":[1,570,180],"rfiereka":[1,570,181]});

@@ -1,1 +1,1 @@
-PRMK.d("rt",{"rtab":[1,571,216],"rtikafnya":[1,571,217],"rtinya":[1,571,218]});
+PRMK.d("rt",{"rtab":[1,572,228],"rtikafnya":[1,572,229],"rtinya":[1,572,230]});

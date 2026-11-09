@@ -1,0 +1,1 @@
+PRMQ.put("w","us",{"usahakan":"usaha","usirlah":"usir","usahamu":"usaha","usianya":"usia","usiaku":"usia","usahanya":"usaha","ususnya":"usus","usulkan":"usul","usahakanlah":"usaha","usulnya":"usul","usiamu":"usia","usulan":"usul","usmani":"usman","usulanku":"usul"});

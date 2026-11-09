@@ -1,0 +1,1 @@
+PRMQ.put("b","wi",{"wilayah bumi":{"R":"3am"},"wiqayah makna":{"J":"o4"},"wilayatihim sedikit":{"J":"y7"},"wilayah arti":{"J":"1on"},"wilayah negeri":{"J":"1q0"},"wirdun bentuk":{"J":"1sv"},"wizrahum arti":{"J":"1w0"},"wini bacan":{"J":"2gj"},"wilayah kerajan":{"J":"2mr"},"witir arti":{"J":"4mj"}});

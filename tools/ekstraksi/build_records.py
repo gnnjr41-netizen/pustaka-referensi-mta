@@ -20,6 +20,7 @@ SOURCES = [
     ('tirmidzi', 'shahih sunan tirmidzi.chm', 'Shahih Sunan Tirmidzi (Al-Albani)', 'hadis', 'out_tirmidzi.json'),
     ('nasai', "Sunan Nasa'i.chm", "Sunan An-Nasa'i", 'hadis', 'out_nasai.json'),
     ('darimi', 'sunan ad-darimi.chm', 'Sunan Ad-Darimi', 'hadis', 'out_darimi.json'),
+    ('gurda', 'pelatihan gurda 2142.chm', 'Pelatihan Gurda 2142 (materi)', 'materi', 'out_gurda.json'),
 ]
 COLL = {'bukhari': 'Bukhari', 'muslim': 'Muslim', 'abudaud': 'Abu Dawud', 'tirmidzi': 'Tirmidzi', 'nasai': "An-Nasa'i", 'ibnumajah': 'Ibnu Majah',
         'ahmad': 'Ahmad', 'malik': 'Malik', 'darimi': 'Ad-Darimi', 'bulughul': 'Bulughul Maram', 'riyadh': 'Riyadhus Shalihin'}

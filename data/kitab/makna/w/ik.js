@@ -1,0 +1,1 @@
+PRMQ.put("w","ik",{"ikutilah":"ikut","ikutan":"ikut","ikuti":"ikut","ikrarkan":"ikrar","ikutlah":"ikut","ikutkanlah":"ikut","ikhlasnya":"ikhlas","ikutanmu":"ikut","ikhlaslah":"ikhlas","ikhlaskanlah":"ikhlas","ikutkan":"ikut","ikrarnya":"ikrar","ikhwalnya":"ikhwal","ikhwalmu":"ikhwal","ikatanku":"ikatan"});

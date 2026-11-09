@@ -1,1 +1,1 @@
-PRMK.d("ot",{"otak":[25,516,49],"otakmu":[1,516,50],"otaknya":[36,516,51],"otaku":[8,516,52],"otoknya":[1,516,53],"otomatis":[10,516,54],"otoriter":[6,516,55],"otot":[27,516,56],"ototku":[6,516,57],"ototnya":[4,516,58]});
+PRMK.d("ot",{"otak":[26,517,49],"otakmu":[1,517,50],"otaknya":[36,517,51],"otaku":[8,517,52],"otoknya":[1,517,53],"otomatis":[11,517,54],"otoriter":[6,517,55],"otot":[27,517,56],"ototku":[6,517,57],"ototnya":[4,517,58]});

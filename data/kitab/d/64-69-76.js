@@ -1,1 +1,1 @@
-PRMK.d("div",{"divonis":[2,218,113]});
+PRMK.d("div",{"divisualkan":[1,219,114],"divonis":[2,219,115]});

@@ -1,0 +1,1 @@
+PRMQ.put("b","iq",{"iqalat malaikat":{"J":"97"},"iqamah buang":{"J":"1yz"},"iqamash shalat":{"J":"1yz"},"iqamatish shalat":{"J":"1yz,7k"},"iqamish shalat":{"J":"26j"},"iq bentuk":{"J":"2he"},"iqabi kandung":{"J":"36v"},"iqtatalata pandang":{"J":"3kc"},"iqrau jadi":{"J":"44d"},"iqtiham qirat":{"J":"4nq"},"iqtahama lafal":{"J":"4nr"},"iqamah tasyahud":{"J":"4p9"}});

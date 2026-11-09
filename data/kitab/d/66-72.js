@@ -1,1 +1,1 @@
-PRMK.d("fr",{"fre":[603,234,102],"fregmentasi":[1,234,103],"frekmentasi":[2,234,104],"frihal":[1,234,105],"friksi":[1,234,106],"friman":[3,234,107],"frman":[2,234,108],"from":[54,234,109],"frustasi":[1,234,110]});
+PRMK.d("fr",{"frame":[1,235,102],"fre":[603,235,103],"fregmentasi":[1,235,104],"frekmentasi":[2,235,105],"frihal":[1,235,106],"friksi":[1,235,107],"friman":[3,235,108],"frman":[2,235,109],"from":[54,235,110],"frustasi":[1,235,111]});

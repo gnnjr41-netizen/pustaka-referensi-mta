@@ -1,0 +1,1 @@
+PRMQ.put("w","ci",{"cintanya":"cinta","cintai":"cinta","ciptakan":"cipta","citaku":"cita","citakan":"cita","ciptanya":"cipta","cirinya":"ciri","cintaku":"cinta","cincinku":"cincin","citanya":"cita","cintailah":"cinta","cintamu":"cinta","ciptanmu":"ciptan","cincinmu":"cincin"});

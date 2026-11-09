@@ -1,0 +1,1 @@
+PRMQ.put("w","cu",{"cucunya":"cucu","cukuplah":"cukup","cukupkan":"cukup","cukupkanlah":"cukup","cukupnya":"cukup","cucuku":"cucu","curian":"curi","cukai":"cuka","cucumu":"cucu","curinya":"curi","curahkanlah":"curahkan","curigai":"curiga","cucilah":"cuci","cukurlah":"cukur","cukupkah":"cukup","cukurmu":"cukur","cukurnya":"cukur","curigailah":"curiga"});

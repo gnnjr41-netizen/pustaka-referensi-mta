@@ -1,1 +1,1 @@
-PRMK.d("nt",{"nta":[1,508,142],"ntembinasakan":[1,508,143],"ntuk":[3,508,144]});
+PRMK.d("nt",{"nta":[1,509,144],"ntembinasakan":[1,509,145],"ntuk":[3,509,146]});

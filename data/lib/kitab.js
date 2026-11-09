@@ -192,7 +192,7 @@
     const pq = Object.assign({}, pq0, { groups: pq0.groups.slice() });
     // nama koleksi → saringan
     let coll = opts.coll || null, collLabel = null;
-    const cw = K.extractColl(pq);
+    const cw = opts.noColl ? null : K.extractColl(pq);
     if (cw) { coll = coll || cw.code; collLabel = pq.groups.slice(cw.i, cw.i + cw.len).map(g => g.label).join(' '); pq.groups.splice(cw.i, cw.len); }
     const numGroups = pq.groups.filter(g => g.kind === 'term' && /^\d{1,5}$/.test(g.key));
     if (numGroups.length) pq.groups = pq.groups.filter(g => !(g.kind === 'term' && NUMWORDS.has(g.key)));
@@ -331,7 +331,7 @@
       if (g >= 0 && !opts.noCollapse) { if (seenG.has(g)) { seenG.get(g).dups.push(x.i); continue; } x.dups = []; seenG.set(g, x); }
       out.push(x);
     }
-    const counts = { quran: 0, tafsir: 0, hadis: 0 }; const bySrc = {};
+    const counts = { quran: 0, tafsir: 0, hadis: 0, materi: 0 }; const bySrc = {};
     for (const x of out) { const s = srcOf(x.i); counts[s.cat] = (counts[s.cat] || 0) + 1; bySrc[s.code] = (bySrc[s.code] || 0) + 1; }
     const ms = (typeof performance !== 'undefined' ? performance : Date).now() - t0;
     return { results: out, maxCov, counts, bySrc, coll, collLabel, ms, totalRaw: res.length, pq, tl: tl ? { q: tl.q, n: tl.hits.length, kmax: tl.kmax, ar: tl.ar, part: tl.part } : null };
@@ -456,6 +456,7 @@
     if (r.src === 'qtema') return 'Indeks tema: ' + r.tema + (r.sub ? ' › ' + r.sub : '') + ' › ' + r.label;
     if (r.src === 'jalalain') return 'Tafsir Jalalain · QS. ' + r.s + ': ' + r.a;
     if (r.src === 'ibnukatsir') return 'Tafsir Ibnu Katsir · ' + (r.title || '');
+    if (r.src === 'gurda') return 'Pelatihan Gurda 2142 · ' + (r.title || '');
     if (r.src === 'kitab9') return 'Kitab 9 Imam · ' + (r.coll === 'ahmad' ? 'Musnad Ahmad' : r.coll === 'malik' ? "Muwaththa' Malik" : r.coll === 'bukhari' ? 'Shahih Bukhari' : r.coll === 'muslim' ? 'Shahih Muslim' : 'Sunan ' + COLLN[r.coll]);
     return s.name;
   };
@@ -467,6 +468,7 @@
     else if (r.src === 'qtema') p.push('Indeks tema Al-Qur\'an: ' + r.tema + (r.sub ? ' › ' + r.sub : '') + ' › ' + r.label);
     else if (r.src === 'jalalain') p.push('Tafsir Jalalain, QS. ' + r.s + ': ' + r.a);
     else if (r.src === 'ibnukatsir') p.push('Tafsir Ibnu Katsir, ' + (r.title || ''));
+    else if (r.src === 'gurda') p.push('Pelatihan Gurda 2142 (materi), ' + (r.toc || []).slice(1).join(' › '));
     else {
       p.push(K.title(r));
       if (r.kitab) p.push(/^\d|kitab/i.test(r.kitab) ? 'Kitab ' + r.kitab.replace(/^kitab\s+/i, '') : r.kitab);

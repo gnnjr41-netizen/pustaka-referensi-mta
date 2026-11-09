@@ -1,1 +1,1 @@
-PRMK.d("peb",{"pebatasan":[1,525,10],"pebebasan":[2,525,11],"pebuatan":[3,525,12],"pebutup":[1,525,13]});
+PRMK.d("peb",{"pebatasan":[1,526,10],"pebebasan":[2,526,11],"pebruari":[2,526,12],"pebuatan":[3,526,13],"pebutup":[1,526,14]});

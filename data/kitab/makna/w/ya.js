@@ -1,0 +1,1 @@
+PRMQ.put("w","ya",{"yakinkah":"yakin","yahudipun":"yahudi","yakinlah":"yakin","yahudilah":"yahudi","yaumi":"yaum","yakini":"yakin","yakinilah":"yakin","yauman":"yaum","yalamu":"yala","yakinkan":"yakin","yatakan":"yata","yamani":"yaman","yatimku":"yatim","yarbui":"yarbu","yasari":"yasar","yatimnya":"yatim","yaqutnya":"yaqut","yaqublah":"yaqub","yasiran":"yasir"});

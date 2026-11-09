@@ -1,0 +1,1 @@
+PRMQ.put("w","ad",{"adukan":"aduk","adasnya":"adas","adilnya":"adil","adakanlah":"adakan","adabnya":"adab","aduknya":"aduk","adzabi":"adzab","adzaban":"adzab","adamlah":"adam","adami":"adam","adilmu":"adil","adnan":"adn"});

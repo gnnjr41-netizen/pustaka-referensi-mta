@@ -1,0 +1,1 @@
+PRMQ.put("w","za",{"zarahpun":"zarah","zakatnya":"zakat","zakatkanlah":"zakat","zamanku":"zaman","zakatmu":"zakat","zakatku":"zakat","zahiri":"zahir","zafarani":"zafaran","zalimnya":"dzalim","zakatan":"zakat","zaburnya":"zabur","zainablah":"zainab","zaituni":"zaitun"});

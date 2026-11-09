@@ -1,1 +1,1 @@
-PRMK.d("et",{"ethiopia":[17,230,59],"ethopia":[1,230,60],"etika":[191,230,61],"etiopia":[9,230,62],"etis":[2,230,63],"etithapia":[2,230,64],"etlah":[1,230,65],"etnas":[1,230,66],"etopia":[1,230,67]});
+PRMK.d("et",{"ethiopia":[17,231,59],"ethopia":[1,231,60],"etika":[191,231,61],"etiopia":[9,231,62],"etis":[2,231,63],"etithapia":[2,231,64],"etlah":[1,231,65],"etnas":[1,231,66],"etopia":[1,231,67]});

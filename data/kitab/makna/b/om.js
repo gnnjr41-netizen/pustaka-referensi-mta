@@ -1,0 +1,1 @@
+PRMQ.put("b","om",{"ombak atasnya":{"R":"26m","J":"26m:2"},"ombak besar":{"R":"2p8","J":"1pe,zu"},"omelan orang":{"J":"4c"},"omelan jangan":{"J":"4c"},"ombak melaju":{"J":"1h6"},"ombak ombak":{"J":"26m"},"ombak dua":{"J":"26m:2"},"ombak pertama":{"J":"26m"},"ombak juru":{"J":"313"}});

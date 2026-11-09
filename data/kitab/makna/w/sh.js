@@ -1,0 +1,1 @@
+PRMQ.put("w","sh",{"shahabatmu":"sahabat","shahabatnya":"sahabat","shibghahnya":"shibghah","shalatlah":"shalat","shalatmu":"shalat","shalatnya":"shalat","shilahnya":"shilah","shafan":"shaf","shalati":"shalat","shahihnya":"shahih"});

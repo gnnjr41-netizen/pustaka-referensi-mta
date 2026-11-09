@@ -1,0 +1,1 @@
+PRMQ.put("w","ju",{"jumlahnya":"jumlah","jumrahnya":"jumrah","juangnya":"juang","jumahi":"jumat","jumatnya":"jumat","jujurlah":"jujur","jualan":"jual","jumatlah":"jumat","jurhumi":"jurhum","jurhumlah":"jurhum"});

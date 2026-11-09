@@ -1,1 +1,1 @@
-PRMK.d("dp",{"dpergunakanya":[1,221,0],"dperintahkan":[2,221,1],"dperkuat":[2,221,2]});
+PRMK.d("dp",{"dpergunakanya":[1,222,0],"dperintahkan":[2,222,1],"dperkuat":[2,222,2]});

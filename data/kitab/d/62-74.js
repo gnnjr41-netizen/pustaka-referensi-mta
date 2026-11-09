@@ -1,1 +1,1 @@
-PRMK.d("bt",{"bterkata":[1,171,59]});
+PRMK.d("bt",{"bterkata":[1,172,61]});

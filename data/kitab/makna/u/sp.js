@@ -1,0 +1,1 @@
+PRMQ.put("u","sp",{"sperma":{"J":"8v,1fl,2a"},"spontan":{"J":"190,xx","K":"9o,9,77,2m,1j,4f,1c,6n,7o"},"spekulasi":{"K":"n:3"},"spesifikasinya":{"K":"1g,kq,dq,4a,1u"},"spesifikasi":{"K":"1h:2,9q,b6,cy,cp,8"},"spesies":{"K":"26"}});

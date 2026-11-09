@@ -1,0 +1,1 @@
+PRMQ.put("w","ib",{"ibunya":"ibu","ibumu":"ibu","ibuku":"ibu","ibadatku":"ibadat","ibadatmu":"ibadat","ibadahnya":"ibadah","ibadatnya":"ibadat","ibadahku":"ibadah","ibaratnya":"ibarat","ibrahimlah":"ibrahim","ibadahmu":"ibadah","ibnui":"ibnu","iblislah":"iblis"});

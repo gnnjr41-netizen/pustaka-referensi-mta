@@ -1,1 +1,1 @@
-PRMK.d("bew",{"bewa":[2,165,33],"bewliau":[1,165,34],"bewudhu":[1,165,35],"bewudlu":[2,165,36]});
+PRMK.d("bew",{"bewa":[2,166,33],"bewliau":[1,166,34],"bewudhu":[1,166,35],"bewudlu":[2,166,36]});

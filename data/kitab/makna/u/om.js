@@ -1,0 +1,1 @@
+PRMQ.put("u","om",{"ombak":{"R":"26m,im","J":"1h6,88,h8:6,im,bv","K":"l:2,1:4,i:2,b,8y:2,6,3,8m,5,2t,2j,d,6j,t,1e:7,p,4:2,39,y:2,3j,4v:2,n,q:2"},"omelan":{"J":"4c:2"},"omonganmu":{"K":"17"},"omongan":{"K":"1l:5,d,7t,o0"},"ompong":{"K":"6g"},"omng":{"K":"js"},"omong":{"K":"th"},"oman":{"K":"xz"}});

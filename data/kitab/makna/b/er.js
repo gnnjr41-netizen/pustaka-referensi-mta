@@ -1,0 +1,1 @@
+PRMQ.put("b","er",{"erat kuku":{"C":"20v"},"erat mulut":{"J":"8w"},"erat nyata":{"J":"8x"},"erat berat":{"J":"e9"},"erat kena":{"J":"hy"},"erat denganmu":{"J":"ir"},"erat lafal":{"J":"45d"},"erat dua":{"J":"4fx"}});

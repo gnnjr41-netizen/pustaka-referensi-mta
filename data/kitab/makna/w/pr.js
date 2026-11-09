@@ -1,0 +1,1 @@
+PRMQ.put("w","pr",{"prasangkamu":"prasangka","predikatnya":"predikat","pribadinya":"pribadi","pribadiku":"pribadi","prosesnya":"proses","prasangkanya":"prasangka","prasangkanmu":"prasangkan","pribadimu":"pribadi","prianya":"pria"});

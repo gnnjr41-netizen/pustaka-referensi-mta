@@ -1,1 +1,1 @@
-PRMK.d("meb",{"mebaca":[3,406,180],"mebalasnya":[1,406,181],"mebenci":[1,406,182],"meberikan":[2,406,183],"meberinya":[1,406,184],"meberitahukan":[3,406,185],"meberitakan":[3,406,186],"mebih":[1,406,187],"mebuatkau":[2,406,188],"mebunuh":[2,406,189]});
+PRMK.d("meb",{"mebaca":[3,408,8],"mebalasnya":[1,408,9],"mebenci":[1,408,10],"meberikan":[2,408,11],"meberinya":[1,408,12],"meberitahukan":[3,408,13],"meberitakan":[3,408,14],"mebih":[1,408,15],"mebuatkau":[2,408,16],"mebunuh":[2,408,17]});

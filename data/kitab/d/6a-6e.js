@@ -1,1 +1,1 @@
-PRMK.d("jn",{"jnenceritakan":[1,304,102],"jnm":[1,304,103]});
+PRMK.d("jn",{"jnenceritakan":[1,305,103],"jnm":[1,305,104]});

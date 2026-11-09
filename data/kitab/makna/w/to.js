@@ -1,0 +1,1 @@
+PRMQ.put("w","to",{"tongkatmu":"tongkat","tolonglah":"tolong","tolaklah":"tolak","tombakmu":"tombak","tongkatku":"tongkat","tongkatnya":"tongkat","tobatnya":"taubat","tobatmu":"taubat","tolongan":"tolong","tolakan":"tolak","tombaknya":"tombak","tobatku":"taubat","topiknya":"topik","tokohnya":"tokoh"});

@@ -1,1 +1,1 @@
-PRMK.d("cy",{"cyprus":[2,179,61]});
+PRMK.d("cy",{"cyprus":[2,180,61]});

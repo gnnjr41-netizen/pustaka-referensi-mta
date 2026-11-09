@@ -1,1 +1,1 @@
-PRMK.d("ej",{"ejakulasi":[4,226,41],"ejan":[2,226,42],"ejanya":[1,226,43],"ejek":[3,226,44],"ejekan":[68,226,45],"ejekanmu":[2,226,46],"ejekanya":[2,226,47]});
+PRMK.d("ej",{"ejakulasi":[4,227,45],"ejan":[2,227,46],"ejanya":[1,227,47],"ejek":[3,227,48],"ejekan":[68,227,49],"ejekanmu":[2,227,50],"ejekanya":[2,227,51]});

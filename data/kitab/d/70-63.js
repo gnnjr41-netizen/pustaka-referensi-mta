@@ -1,1 +1,1 @@
-PRMK.d("pc",{"pcmbayaran":[2,525,0],"pcmilik":[1,525,1],"pcperangan":[1,525,2],"pcrintah":[1,525,3],"pctunjuk":[1,525,4]});
+PRMK.d("pc",{"pcmbayaran":[2,526,0],"pcmilik":[1,526,1],"pcperangan":[1,526,2],"pcrintah":[1,526,3],"pctunjuk":[1,526,4]});

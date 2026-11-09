@@ -1,0 +1,1 @@
+PRMQ.put("w","po",{"potonglah":"potong","potongan":"potong","pohonan":"pohon","pokoknya":"pokok","posisinya":"posisi","posisiku":"posisi","pondasinya":"pondasi","porandakanlah":"porandakan","pohonlah":"pohon","pohonpun":"pohon"});

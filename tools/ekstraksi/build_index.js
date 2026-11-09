@@ -113,6 +113,7 @@ function fieldsOf(r) {
   else if (r.src === 'qtema') { t(r.tema); t(r.sub); t(r.label); b((r.refs || []).map(x => x[0] + ':' + x[1]).join(' ')); }
   else if (r.src === 'ibnukatsir') { t(r.title); t((r.toc || []).slice(2).join(' ')); for (const bl of r.blocks || []) b(bl[1]); }
   else if (r.src === 'jalalain') { t(r.title); t((r.toc || []).join(' ')); b(r.ar); b(r.tr); }
+  else if (r.src === 'gurda') { t(r.title); t((r.toc || []).slice(1).join(' ')); for (const bl of r.blocks || []) if (bl[0] === 'h') t(bl[1]); for (const bl of r.blocks || []) b(bl[1]); }
   else { t(r.kitab); t(r.bab); t(r.babAr); b(r.ar); b(r.tr); b(r.intro); }
   return { title, body };
 }
@@ -189,7 +190,7 @@ for (const r of recs) {
   lastSrc = r.src;
   if (!chunk.length) chunkStarts.push(r.i);
   const o = {};
-  for (const k of KEEP) if (r[k] !== undefined && !(k === 'toc' && !['ibnukatsir', 'jalalain', 'riyadh'].includes(r.src))) o[k] = r[k];
+  for (const k of KEEP) if (r[k] !== undefined && !(k === 'toc' && !['ibnukatsir', 'jalalain', 'riyadh', 'gurda'].includes(r.src))) o[k] = r[k];
   if (r.id) o.id = r.id;
   if (grpOf[r.i] >= 0) o.dup = rel.ident[grpOf[r.i]].filter(j => j !== r.i).map(j => [j, shortLabel(recs[j]), recs[j].src]);
   const sim = rel.similar[r.i];
@@ -218,6 +219,7 @@ for (const s of manifest.sources) {
     else if (s.code === 'qtema') { K = r.tema; Bb = r.sub || r.label; }
     else if (s.code === 'ibnukatsir') { K = (r.toc && r.toc[2]) || 'Pendahuluan'; Bb = r.title; }
     else if (s.code === 'jalalain') { K = (r.toc && r.toc[0]) || ''; Bb = (r.toc && r.toc[1]) || ''; }
+    else if (s.code === 'gurda') { K = (r.toc && r.toc.length > 2 ? r.toc[1] : r.toc && r.toc[0]) || 'Pelatihan Gurda'; Bb = r.title; }
     else if (s.code === 'kitab9') { K = COLLN[r.coll] + ' › ' + (r.kitab || ''); Bb = r.bab || ''; }
     else { K = r.kitab || '—'; Bb = r.bab || ''; }
     if (!cur || cur[0] !== K) { cur = [K, i, 0, []]; kit.push(cur); curB = null; }

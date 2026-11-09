@@ -5,7 +5,7 @@ Satu mesin pencarian untuk arsip **Brosur Ahad Pagi MTA**, **Al-Qur'an**, **tafs
 - Arsip CHM `Brosur_Ahad_Pagi_1995-2023_FIX.chm`: 1.354 brosur (1995–2023)
 - Brosur PDF Ahad Pagi (folder `data/pdf`)
 - Al-Qur'an Digital 2.1 (6.236 ayat + indeks tema), Tafsir Jalalain, Tafsir Ibnu Katsir
-- Bulughul Maram, Riyadhus Shalihin, Kitab 9 Imam (62.198 hadis), Shahih Bukhari, Shahih Muslim (Mukhtashar), Shahih Sunan Abu Dawud / Ibnu Majah / Tirmidzi (Al-Albani), Sunan An-Nasa'i, Sunan Ad-Darimi — total 109.989 record (folder `data/kitab`)
+- Bulughul Maram, Riyadhus Shalihin, Kitab 9 Imam (62.198 hadis), Shahih Bukhari, Shahih Muslim (Mukhtashar), Shahih Sunan Abu Dawud / Ibnu Majah / Tirmidzi (Al-Albani), Sunan An-Nasa'i, Sunan Ad-Darimi — **materi Pelatihan Gurda 2142** — total 110.013 record (folder `data/kitab`)
 
 Semua sumber dicari dari satu kolom pencarian. Setiap hasil menunjuk ke sumber aslinya: bab/subbab CHM, atau file dan halaman PDF.
 
@@ -25,6 +25,9 @@ Semua sumber dicari dari satu kolom pencarian. Setiap hasil menunjuk ke sumber a
 | `manifest.webmanifest`, `icons/` | Ikon saat ditambahkan ke layar utama HP |
 | `data/kitab/` | Indeks bertahap Al-Qur'an, tafsir & hadis (kamus `d/`, posting `p/`, record `r/`, daftar isi `toc/`, gambar ayat `qimg/`). Dibangun oleh `tools/build_index.js` — jangan diedit manual |
 | `data/lib/kitab.js` | Mesin pencarian kitab (memuat indeks per bagian) |
+| `data/lib/support.js` | Mesin Mode Support Ustadz (tanpa AI) |
+| `data/lib/makna.js`, `data/kitab/makna/` | Pencarian makna Al-Qur'an (tanpa AI): indeks statis dari terjemahan, catatan kaki, Tafsir Jalalain, Tafsir Ibnu Katsir, judul kelompok ayat & indeks tema. Dibangun oleh `tools/build_makna.js` |
+| `data/kamus_support.js` | Kamus kata kunci Mode Support: kata pengantar, ejaan, sinonim, istilah terkait. Bisa diedit lewat tombol **Kamus kata kunci** lalu diunduh dan ditimpa di sini |
 | `tools/` | Skrip ekstraksi CHM, build indeks, dan uji (`validate_search.js`) |
 | `.nojekyll` | Supaya GitHub Pages menampilkan file apa adanya |
 | `config.js`, `supabase/` | Sambungan ke server online (lihat di bawah) |
@@ -53,7 +56,7 @@ Brosur yang ditambahkan hanya tersimpan di browser perangkat itu. Untuk menerbit
 - **Jangan pernah** menaruh kunci `service_role` / `secret` di `config.js`.
 
 ## Catatan
-- Ringkasan AI hanya tersedia di versi Claude, tidak di website ini.
+- Mode Support Ustadz dan seluruh pencarian berjalan tanpa AI, sama persis di website, di komputer, dan di Claude.
 - Pencarian tetap berjalan langsung di perangkat (tanpa AI). Brosur online ikut masuk indeks yang sama dengan arsip CHM.
 - Tulisan Arab dari PDF bisa tidak rapi di tampilan teks. Gunakan tombol **PDF asli** untuk melihat halaman aslinya.
 - Website GitHub Pages bisa dibuka siapa saja yang mengetahui alamatnya.
@@ -65,3 +68,18 @@ Brosur yang ditambahkan hanya tersimpan di browser perangkat itu. Untuk menerbit
 - Teks Arab ayat di Al-Qur'an Digital 2.1 berupa gambar asli; teks Arab untuk pencarian ayat diambil dari Tafsir Ibnu Katsir (diberi label).
 - Derajat hadis hanya ditampilkan bila tertulis di sumber. "Matan serupa" = kemiripan teks otomatis, bukan takhrij.
 - Dokumentasi lengkap: folder `LAPORAN/` di paket ZIP (audit, ekstraksi, validasi, struktur database, panduan).
+
+## Mode Support Ustadz (penyusunan bahan kajian tanpa AI)
+- Tulis permintaan biasa, mis. *"Carikan materi tentang tayamum"* → **Susun bahan kajian**. Kata pengantar dibuang otomatis dan kata kunci diperluas dengan kamus sinonim/ejaan.
+- Hasilnya paket **A Identitas · B Kerangka · C Al-Qur'an · D Hadis · E Tafsir · F Materi/CHM/PDF · G Urutan penyampaian**. Paket **hanya berisi kutipan dari sumber yang ditemukan**, masing-masing dengan lokasi sumber dan tombol buka sumber asli.
+- **Utama** = memuat semua kata kunci inti. **Pendukung** = sebagian kata atau istilah terkait. Jumlah hasil bukan verifikasi relevansi; periksa sumber aslinya.
+- Tombol yang tersedia: Salin semua, Salin bagian terpilih, Cetak, Kembali ke pencarian.
+- Kamus dikelola admin lewat **Kamus kata kunci** (tambah/ubah/hapus, uji, unduh `kamus_support.js` → commit).
+- Uji otomatis: `node tools/validate_support.js .`
+
+## Pencarian makna Al-Qur'an (v3.1, tanpa AI)
+- Tulis maksudnya, mis. *"ayat tentang berbuat baik kepada kedua orang tua"*. Bagian **Al-Qur'an · berdasarkan makna** menampilkan ayat yang kandungannya didukung terjemahan, Tafsir Jalalain, judul kelompok ayat, atau indeks tema, walau susunan katanya berbeda (*ibu bapak*, *ibu-bapa*).
+- Label: Kecocokan makna/tema · Kecocokan terjemahan/tafsir · Kecocokan sinonim · Kecocokan kata literal. **Utama** = setiap kata kunci inti didukung sumber ayat itu. **Pendukung** = sebagian / istilah terkait / hanya Ibnu Katsir kelompok ayat.
+- Setiap kartu memuat alasan ditemukan dan sumbernya. Hasil pencocokan, bukan penafsiran.
+- Sinonim & istilah terkait memakai kamus yang sama dengan Mode Support (tombol **Kamus kata kunci**).
+- Membangun ulang indeks: `node tools/build_makna.js <folder-db> .` · Uji: `node tools/validate_makna.js .`

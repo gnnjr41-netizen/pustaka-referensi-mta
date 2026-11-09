@@ -1,1 +1,1 @@
-PRMK.d("bc",{"bcgitu":[1,131,87],"bcr":[1,131,88],"bcsangkutan":[1,131,89]});
+PRMK.d("bc",{"bcgitu":[1,131,89],"bcr":[1,131,90],"bcsangkutan":[1,131,91]});
