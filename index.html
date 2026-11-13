@@ -319,6 +319,46 @@ select.sel.kpick { max-width: 210px; }
   .res { padding: 12px 12px 10px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+/* ---- v3.2: pencarian gabungan makna + kata ---- */
+.hyb { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin: 0 0 6px; font-size: 11.5px; }
+.tier { font-weight: 800; letter-spacing: .03em; border-radius: 999px; padding: 1px 9px; }
+.tier.t-utama { background: var(--accent); color: var(--on-accent); }
+.tier.t-pendukung { background: var(--accent-soft); color: var(--accent); }
+.tier.t-terkait { background: transparent; color: var(--muted); border: 1px dashed var(--faint); }
+.hlv { border-radius: 999px; padding: 1px 8px; font-weight: 700; background: var(--sunk); color: var(--ink); cursor: help; }
+.hlv.l-rendah { color: var(--muted); font-weight: 600; }
+.hty { border-radius: 6px; padding: 1px 6px; border: 1px solid var(--line); color: var(--muted); font-weight: 600; }
+.kres.hy-terkait { border-style: dashed; }
+.hysec h3.tierh { font-size: 13px; margin: 14px 2px 6px; color: var(--muted); text-transform: none; font-weight: 700; }
+details.hyterk { margin: 10px 0; } details.hyterk summary { cursor: pointer; font-weight: 700; color: var(--muted); padding: 6px 0; }
+details.adv { flex-basis: 100%; margin: 2px 0 0; font-size: 13px; }
+details.adv summary { cursor: pointer; color: var(--muted); font-weight: 600; padding: 4px 0; }
+.advb { display: flex; flex-direction: column; gap: 8px; padding: 8px 10px; background: var(--sunk); border-radius: 10px; margin-top: 4px; }
+.advs { color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+.advs b { color: var(--ink); }
+.gemrow { display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px; color: var(--muted); }
+.hty.multi { border: 0; padding: 1px 2px; }
+.hyc h3 { font-size: 15.5px; margin: 4px 0 2px; }
+.hyc .hyar { font-size: 19px; line-height: 2; margin: 6px 0 2px; overflow-wrap: anywhere; }
+details.hyarx { margin: 6px 0 2px; } details.hyarx summary { cursor: pointer; font-size: 12.5px; color: var(--accent); font-weight: 600; }
+.hyc .tr { margin: 4px 0 6px; }
+.hyc .actions { margin-top: 8px; }
+details.hywhy { font-size: 12.5px; color: var(--muted); background: var(--sunk); border-radius: 8px; padding: 6px 10px; margin: 6px 0 4px; overflow-wrap: anywhere; }
+details.hywhy summary { cursor: pointer; color: var(--ink); font-weight: 600; line-height: 1.45; }
+details.hywhy ul { margin: 6px 0 2px; padding-left: 18px; } details.hywhy li { margin: 2px 0; }
+details.hylegend { display: inline; } details.hylegend summary { display: inline; cursor: pointer; color: var(--accent); font-weight: 600; }
+details.hylegend[open] div { margin-top: 4px; color: var(--muted); }
+.mfilt { display: none; }
+@media (max-width: 720px) {
+  .mfilt { display: inline-flex; }
+  #filters:not(.mopen) .fsec { display: none; }
+  body.hasq .hint { display: none; }
+  .hyb { font-size: 11px; gap: 4px; }
+  .hyc .actions .btn { padding: 7px 10px; font-size: 12.5px; }
+  .hyc .hyar { font-size: 18px; }
+  .hysec .ksh h2 small { display: block; margin-top: 2px; }
+  .advb { padding: 8px; }
+}
 </style>
 
 <header class="top">
@@ -358,19 +398,32 @@ select.sel.kpick { max-width: 210px; }
           <optgroup label="Per file sumber"><option value="k:bulughul">Bulughul Maram</option><option value="k:kitab9">Kitab 9 Imam</option><option value="k:bukhari">Shahih Bukhari</option><option value="k:muslim">Shahih Muslim</option><option value="k:abudaud">Sunan Abu Dawud</option><option value="k:ibnumajah">Sunan Ibnu Majah</option><option value="k:tirmidzi">Sunan Tirmidzi</option><option value="k:nasai">Sunan An-Nasa'i</option><option value="k:darimi">Sunan Ad-Darimi</option><option value="k:riyadh">Riyadhus Shalihin</option><option value="k:ibnukatsir">Tafsir Ibnu Katsir</option><option value="k:jalalain">Tafsir Jalalain</option><option value="k:qtema">Indeks tema Al-Qur'an</option><option value="k:gurda">Pelatihan Gurda 2142 (materi)</option></optgroup>
           <optgroup label="Per imam (gabungan semua file)"><option value="c:bukhari">Riwayat Bukhari</option><option value="c:muslim">Riwayat Muslim</option><option value="c:abudaud">Riwayat Abu Dawud</option><option value="c:tirmidzi">Riwayat Tirmidzi</option><option value="c:nasai">Riwayat An-Nasa'i</option><option value="c:ibnumajah">Riwayat Ibnu Majah</option><option value="c:darimi">Riwayat Ad-Darimi</option><option value="c:ahmad">Musnad Ahmad</option><option value="c:malik">Muwaththa' Malik</option></optgroup>
         </select>
+        <button type="button" class="btn ghost mfilt" data-act="mfilt" aria-expanded="false">Filter &amp; pengaturan ▾</button>
       </div>
-      <div class="fgroup"><span>Tahun</span>
+      <div class="fgroup fsec"><span>Tahun</span>
         <select class="sel" id="y0" aria-label="Dari tahun"></select><span style="font-weight:400">–</span><select class="sel" id="y1" aria-label="Sampai tahun"></select>
       </div>
-      <div class="fgroup"><span>Urut</span>
+      <div class="fgroup fsec"><span>Urut</span>
         <select class="sel" id="sort" aria-label="Urutan"><option value="rel">Relevansi</option><option value="new">Terbaru</option><option value="old">Terlama</option></select>
       </div>
-      <div class="fgroup"><span>Tampilan</span>
+      <div class="fgroup fsec"><span>Tampilan</span>
         <button class="chip" data-view="doc" aria-pressed="true">Per dokumen</button>
         <button class="chip" data-view="loc" aria-pressed="false">Semua lokasi</button>
       </div>
-      <label class="tog"><input type="checkbox" id="whole"> Kata utuh</label>
-      <label class="tog"><input type="checkbox" id="broad"> Pencarian luas</label>
+      <label class="tog fsec"><input type="checkbox" id="whole"> Kata utuh</label>
+      <label class="tog fsec"><input type="checkbox" id="broad"> Pencarian luas</label>
+      <details class="adv fsec" id="adv"><summary>Pengaturan lanjutan</summary>
+        <div class="advb">
+          <div class="fgroup" role="group" aria-label="Mode pencarian"><span>Mode pencarian</span>
+            <button class="chip" type="button" data-mode="campuran" aria-pressed="true" title="Makna + tema + kata persis digabung (disarankan)">Campuran</button>
+            <button class="chip" type="button" data-mode="makna" aria-pressed="false" title="Mengutamakan kemiripan makna dan tema">Makna</button>
+            <button class="chip" type="button" data-mode="literal" aria-pressed="false" title="Hanya kata/frasa persis — sama dengan versi 3.1">Literal</button>
+          </div>
+          <div class="advs" id="semStat">Indeks makna lokal: belum dimuat (dimuat otomatis saat pencarian pertama).</div>
+          <div class="advs"><button class="btn ghost" type="button" data-act="semload">Muat semua indeks makna sekarang</button></div>
+          <div id="gemBox"></div>
+        </div>
+      </details>
     </div>
     <div id="out"></div>
   </section>
@@ -1012,6 +1065,9 @@ select.sel.kpick { max-width: 210px; }
 <script src="data/kamus_support.js"></script>
 <script src="data/lib/support.js"></script>
 <script src="data/lib/makna.js"></script>
+<script src="data/lib/semantik.js"></script>
+<script src="data/lib/hybrid.js"></script>
+<script src="data/lib/gemini.js"></script>
 <script>
 (function () {
   'use strict';
@@ -1583,12 +1639,15 @@ select.sel.kpick { max-width: 210px; }
     const kkey = JSON.stringify([q, S.src, S.whole, S.broad]);
     const keep = soft && S.last && S.last.kkey === kkey;
     const prev = keep ? S.last : null;
-    S.last = { pq, r, ms, seq: keep ? prev.seq : ++KST.seq, kkey, k: keep ? prev.k : null, kerr: keep ? prev.kerr : null, mk: keep ? prev.mk : null };
+    S.last = { pq, r, ms, seq: keep ? prev.seq : ++KST.seq, kkey, k: keep ? prev.k : null, kerr: keep ? prev.kerr : null, mk: keep ? prev.mk : null, sem: keep ? prev.sem : null, semDone: keep ? prev.semDone : false, semErr: keep ? prev.semErr : null, hy: keep ? prev.hy : null, hyB: keep ? prev.hyB : null };
     renderMain();
     if (mode !== 'brosur' && !keep) kSearchFor(pq, S.last.seq);
+    else if (mode === 'brosur' && !keep) semStart(pq, S.last.seq);
+    else if (keep && S.last.semDone) hyBrosur();
   }
   function renderMain() {
     if (S.tab !== 'cari') return;
+    document.body.classList.toggle('hasq', !!(S.q && S.q.trim()));
     const out = $('#out');
     if (S.kb) { renderKBrowse(out); return; }
     if (S.browse) return renderBrowse(out);
@@ -1598,6 +1657,7 @@ select.sel.kpick { max-width: 210px; }
     const mode = srcMode();
     let h = '';
     if (mode === 'all') h += kSummaryHTML();
+    if (mode === 'brosur') h += hyNoteHTML();
     if (mode !== 'brosur') h += kitabHTML(mode, pq);
     if (mode !== 'kitab') h += (mode === 'all' ? '<div class="ksh brhead"><h2>Brosur & dokumen <small>Arsip CHM + PDF</small></h2></div>' : '') + brosurHTML();
     out.innerHTML = h;
@@ -1621,7 +1681,13 @@ select.sel.kpick { max-width: 210px; }
       h += `<div class="empty">Tidak ada hasil untuk “${esc(S.q)}”.<br>${S.whole ? 'Coba matikan “Kata utuh”. ' : ''}${!S.broad ? 'Coba aktifkan “Pencarian luas”. ' : ''}${S.src !== 'all' ? 'Coba pilih sumber “Semua”.' : ''}</div>`;
       return h;
     }
-    if (S.view === 'doc') {
+    const exactB = (/[\u0600-\u06FF]/.test(pq.raw || '') || pq.groups.some(g => g.kind === 'phrase')) && res.some(x => x.cov >= r.maxCov);
+    if (S.view === 'doc' && S.last.hyB && S.last.hyB.length && hyMode() !== 'literal' && S.sort === 'rel' && !exactB) {
+      const HB = S.last.hyB; const c = hyCounts(HB);
+      h += `<div class="vchips">Urutan gabungan kata persis + makna lokal: ${fmtN(c.utama)} referensi utama · ${fmtN(c.pendukung)} pendukung · ${fmtN(c.terkait)} terkait (hanya mirip makna).</div>`;
+      h += '<div class="list">' + HB.slice(0, S.shownDocs).map((e, i) => e.x ? cardHTML(e.x, i, pq, e) : semDocCardHTML(e, i, pq)).join('') + '</div>';
+      if (HB.length > S.shownDocs) h += `<div class="loadmore"><button class="btn" data-act="moredocs">Tampilkan ${Math.min(30, HB.length - S.shownDocs)} dokumen lagi (${fmtN(HB.length - S.shownDocs)} tersisa)</button></div>`;
+    } else if (S.view === 'doc') {
       h += '<div class="list">' + res.slice(0, S.shownDocs).map((x, i) => cardHTML(x, i, pq)).join('') + '</div>';
       if (res.length > S.shownDocs) h += `<div class="loadmore"><button class="btn" data-act="moredocs">Tampilkan ${Math.min(30, res.length - S.shownDocs)} dokumen lagi (${fmtN(res.length - S.shownDocs)} tersisa)</button></div>`;
     } else {
@@ -1640,18 +1706,18 @@ select.sel.kpick { max-width: 210px; }
     if (CAP.sample) a += `<button class="btn ghost" data-act="sumdoc" data-id="${esc(d.id)}" data-bi="${bi}">Buat ringkasan</button>`;
     return `<div class="actions">${a}${extra || ''}</div>`;
   }
-  function cardHTML(x, i, pq) {
+  function cardHTML(x, i, pq, hy) {
     const d = x.doc; const top = x.locs.slice(0, 3);
     const tf = Object.entries(x.tf).map(([k, v]) => `${esc(k)} ×${v}`).join(' · ');
     const hij = hijri(d);
-    return `<article class="res" data-i="${i}">
+    return `<article class="res" data-i="${i}">${hy ? hyMetaHTML(hy, 'brosur') : ''}
       <div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span>${hij ? `<span>${esc(hij)}</span>` : ''}${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div>
       <h3><button class="linklike" data-act="open" data-id="${esc(d.id)}" data-bi="${top[0] ? top[0].bi : 0}">${esc(d.title)}</button></h3>
       <div class="crumb">${crumb(d)}</div>
       <div class="hitline">${fmtN(x.locs.length)} lokasi${tf ? ' · ' + tf : ''}${x.refHits.length ? ' · ' + esc(pq.qrefLabel) + ' ×' + x.refHits.length : ''}</div>
       <div class="snips" id="sn-${i}">${top.map(L => snipHTML(d, L, x, pq)).join('')}</div>
       ${x.locs.length > 3 ? `<button class="more" data-act="alllocs" data-i="${i}">Lihat semua ${fmtN(x.locs.length)} lokasi di dokumen ini</button>` : ''}
-      ${actionsHTML(d, top[0] ? top[0].bi : 0)}
+      ${hy ? hyWhyHTML(hy) : ''}${actionsHTML(d, top[0] ? top[0].bi : 0)}
     </article>`;
   }
   function locRowHTML(x, L, pq) {
@@ -2406,13 +2472,16 @@ select.sel.kpick { max-width: 210px; }
         S.last.mk = m; const all = srcMode() === 'all';
         await mkEnsure(all ? m.utama.slice(0, 3) : m.utama.slice(0, S.mkShown || 10).concat(m.pendukung));
         if (S.last && S.last.seq === seq) renderMain();
-      }).catch(e => { if (S.last && S.last.seq === seq) { S.last.mk = { error: e.message }; renderMain(); } });
+        hyMaybe(seq);
+      }).catch(e => { if (S.last && S.last.seq === seq) { S.last.mk = { error: e.message }; renderMain(); hyMaybe(seq); } });
     }
     kRun(pq, S.src).then(async r => {
       if (!S.last || S.last.seq !== seq) return;
       if (r.error) { S.last.kerr = r.error; renderMain(); return; }
       S.last.k = r; await kEnsure(kVisibleIds()); if (S.last && S.last.seq === seq) renderMain();
+      hyMaybe(seq);
     }).catch(e => { if (S.last && S.last.seq === seq) { S.last.kerr = 'Pencarian kitab gagal: ' + e.message; renderMain(); } });
+    semStart(pq, seq);
   }
   function kByCat(r, cat) { return r.results.filter(x => KB.srcOf(x.i).cat === cat); }
   /* ---------- pencarian makna Al-Qur'an (data/lib/makna.js, tanpa AI) ---------- */
@@ -2454,10 +2523,10 @@ select.sel.kpick { max-width: 210px; }
     const kindTxt = { direct: '', syn: ' <i>(sinonim kamus)</i>', rel: ' <i>(istilah terkait — bukan bukti tema)</i>' };
     return `<div class="mkwhy"><b>Alasan ditemukan</b><ul>${(o.reasons || []).map(r => r.missing ? `<li><b>${esc(r.concept)}</b>: tidak ditemukan pada ayat ini</li>` : `<li><b>${esc(r.concept)}</b>${r.mod ? ' <span class="crumb">(kata pelengkap)</span>' : ''}: ${r.items.map(it => `${esc(it.fieldLabel)}${it.text ? ' “' + esc(it.text) + '”' + (it.range ? ' (QS ' + esc(it.range) + ')' : '') : ''} memuat “${esc(it.form)}”${kindTxt[it.kind]}`).join('; ')}</li>`).join('')}</ul></div>`;
   }
-  function mkCardHTML(o, compact) {
+  function mkCardHTML(o, compact, hy) {
     const i = mkDoc(o); const r = KST.recs.get(i);
     if (!r) return `<article class="res kres"><div class="skel" style="width:40%"></div><div class="skel"></div></article>`;
-    let h = `<article class="res kres quran mk${o.utama ? '' : ' pend'}"><div class="meta">${kPill('quran')}<span class="lvl ${o.utama ? 'u' : 'p'}">${o.utama ? 'UTAMA' : 'PENDUKUNG'}</span>${mkBadge(o)}<span class="date">QS. ${esc(surahName(r))} (${r.s}): ${r.a}</span>${r.juz ? `<span>Juz ${r.juz}</span>` : ''}</div>`;
+    let h = `<article class="res kres quran mk${o.utama ? '' : ' pend'}">${hy ? hyMetaHTML(hy, 'quran') : ''}<div class="meta">${kPill('quran')}${hy ? '' : `<span class="lvl ${o.utama ? 'u' : 'p'}">${o.utama ? 'UTAMA' : 'PENDUKUNG'}</span>`}${mkBadge(o)}<span class="date">QS. ${esc(surahName(r))} (${r.s}): ${r.a}</span>${r.juz ? `<span>Juz ${r.juz}</span>` : ''}</div>`;
     const th = mkThemes(o);
     if (th.length) h += `<div class="mkth">${th.map(it => `<span class="kwchip">${esc(it.field === 'T' ? 'Tema: ' : 'Kelompok ayat: ')}${esc(it.text)}${it.range ? ' · QS ' + esc(it.range) : ''}</span>`).join('')}</div>`;
     if (!compact) {
@@ -2472,6 +2541,7 @@ select.sel.kpick { max-width: 210px; }
       if (j && j.tr) h += `<div class="cit"><b>Tafsir Jalalain:</b> ${mkHl(j.tr, o, 420)}</div>`;
     }
     h += mkWhyHTML(o);
+    if (hy) h += hyWhyHTML(hy, true);
     if (!compact) h += kSrcLine(r) + kActions(r);
     else h += `<div class="actions"><button class="btn ghost" data-act="kopen" data-i="${r.i}">Buka detail</button></div>`;
     return h + '</article>';
@@ -2488,6 +2558,271 @@ select.sel.kpick { max-width: 210px; }
     if (full && m.utama.length > nU) h += `<div class="loadmore"><button class="btn" data-act="mkmore">Tampilkan 10 ayat utama lagi (${fmtN(Math.min(m.utama.length, m.utamaTotal) - nU)} tersisa)</button></div>`;
     if (full && m.pendukung.length) h += `<details class="mkpend"><summary>Ayat pendukung (hanya sebagian kata kunci / istilah terkait) — ${fmtN(m.pendukungTotal)} ayat${m.pendukungTotal > m.pendukung.length ? ', ' + fmtN(m.pendukung.length) + ' teratas' : ''}</summary><div class="list">${m.pendukung.map(o => mkCardHTML(o, true)).join('')}</div></details>`;
     return h;
+  }
+
+
+  /* ================= v3.2: pencarian gabungan (makna lokal + makna/tema + kata) ================= */
+  const VS = window.PRMV || null, HY = window.PRMH || null, GM = window.PRMG || null;
+  const SEM = { cache: new Map(), prog: null, err: null };
+  const HYTYPE = { makna: 'Makna', tema: 'Tema', frasa: 'Frasa', kata: 'Kata' };
+  const HYTYPE_TIP = { makna: 'Kemiripan makna dari vektor kata yang dilatih dari database ini', tema: 'Kata kunci tertulis di judul bab / judul kelompok ayat / indeks tema', frasa: 'Frasa persis', kata: 'Kata persis (BM25)' };
+  function hyMode() { return HY ? HY.mode() : 'literal'; }
+  function syncModeChips() { const m = hyMode(); $$('#filters [data-mode]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.mode === m))); }
+  function semEligible(pq) {
+    if (!VS || !HY || hyMode() === 'literal' || !pq || !pq.raw) return false;
+    if (pq.qref || /^\s*[\d:\s.,-]+$/.test(pq.raw)) return false;               // rujukan ayat / nomor → jalur lama
+    if (pq.groups.some(g => g.kind === 'term' && /^\d{1,5}$/.test(g.key))) return false;   // ada nomor (Bukhari 52, Al-Baqarah 153) → pencarian nomor V3.1
+    return true;
+  }
+  function semCats() {
+    const v = S.src; const M = KST.meta;
+    if (v === 'all') return ['quran', 'tafsir', 'hadis', 'materi', 'brosur'];
+    if (v === 'CHM' || v === 'PDF') return ['brosur'];
+    if (v === 'k:quran' || v === 'k:qtema') return ['quran', 'tafsir'];
+    if (v === 'k:tafsir' || v === 'k:jalalain' || v === 'k:ibnukatsir') return ['tafsir'];
+    if (v === 'k:materi' || v === 'k:gurda') return ['materi'];
+    if (v === 'k:hadis' || v.startsWith('c:')) return ['hadis'];
+    if (v.startsWith('k:') && M && M.src[v.slice(2)] && M.src[v.slice(2)].cat === 'hadis') return ['hadis'];
+    return ['quran', 'tafsir', 'hadis', 'materi'];
+  }
+  function semStatusHTML() {
+    if (!VS) return 'Modul makna lokal (data/lib/semantik.js) tidak termuat — pencarian berjalan seperti versi 3.1.';
+    const st = VS.status(); const M = VS.meta;
+    if (hyMode() === 'literal') return 'Mode <b>Literal</b>: hanya kata/frasa persis (sama dengan versi 3.1). Indeks makna tidak dipakai.';
+    if (st.state === 'error') return 'Indeks makna lokal belum bisa dimuat (' + esc(st.err || '') + '). Hasil memakai kata persis & makna/tema Al-Qur\'an.';
+    if (!M) return 'Indeks makna lokal: belum dimuat (dimuat otomatis saat pencarian pertama).';
+    const all = Object.keys(M.d); const tot = VS.bytesFor(all); const done = st.docShards.length;
+    return `Indeks makna lokal: <b>${done}/${all.length} bagian termuat</b> (± ${(tot / 1048576).toFixed(1)} MB)${SEM.prog ? ` · <b>memuat ${SEM.prog.k}/${SEM.prog.n}…</b>` : ''} · mode <b>${esc((HY.MODES.find(x => x[0] === hyMode()) || [])[1] || hyMode())}</b>.` +
+      ` <details class="hylegend"><summary>Rincian</summary><div>Model ${esc(M.model)} · versi ${esc(M.ver)} · ${fmtN(M.nWords)} kata · ${fmtN(M.nDocs)} potongan teks · integritas: ${esc(st.integrity)}. Kemiripan makna dihitung dari pemakaian kata di database ini sendiri — bukan bukti kebenaran dalil. Brosur online (Supabase) & paragraf Arab murni dicari secara kata persis.</div></details>`;
+  }
+  function renderSemStat() { const el = $('#semStat'); if (el) el.innerHTML = semStatusHTML(); }
+  let semRT = 0;
+  function semProgress(k, n) { SEM.prog = k < n ? { k, n } : null; const t = Date.now(); if (t - semRT > 250 || !SEM.prog) { semRT = t; renderSemStat(); if (S.last && !S.last.semDone) renderMain(); } }
+  async function semLoadAll() {
+    if (!VS) return; try { await VS.init(FILE_MODE ? 'data/kitab/vektor/' : 'data/kitab/vektor/', { cacheBust: !FILE_MODE }); await VS.load(Object.keys(VS.meta.d), semProgress); toast('Indeks makna lokal siap'); }
+    catch (e) { toast('Gagal memuat indeks makna: ' + e.message); } SEM.prog = null; renderSemStat();
+  }
+  function semStart(pq, seq) {
+    if (!S.last) return;
+    S.last.sem = null; S.last.semErr = null; S.last.semDone = false; S.last.hy = null; S.last.hyB = null;
+    if (!semEligible(pq)) { S.last.semDone = true; return; }
+    const q = S.q.trim(); const cats = semCats(); const key = JSON.stringify([q, cats]);
+    const go = async () => {
+      if (SEM.cache.has(key)) return SEM.cache.get(key);
+      await VS.init('data/kitab/vektor/', { cacheBust: !FILE_MODE });
+      const extra = await gemExpand(q);
+      const sem = await VS.search(q, { cats, onProgress: semProgress, extra: extra && extra.terms });
+      const related = sem.q.used.length ? await VS.related(sem.q.used) : [];
+      const res = { sem, related, gem: extra };
+      SEM.cache.set(key, res); if (SEM.cache.size > 20) SEM.cache.delete(SEM.cache.keys().next().value);
+      return res;
+    };
+    go().then(res => {
+      if (!S.last || S.last.seq !== seq) return;
+      S.last.sem = res; S.last.semDone = true; SEM.prog = null; renderSemStat();
+      hyMaybe(seq); hyBrosur();
+    }).catch(e => { if (!S.last || S.last.seq !== seq) return; S.last.semErr = e.message; S.last.semDone = true; SEM.prog = null; renderSemStat(); renderMain(); });
+  }
+  // gabungkan bila mesin yang diperlukan sudah selesai
+  let hyBusy = 0;
+  async function hyMaybe(seq) {
+    const L = S.last; if (!L || L.seq !== seq || !HY || !L.k || !L.semDone || !L.sem) return;
+    if (mkEligible(L.pq) && !L.mk) return; // tunggu makna Al-Qur'an
+    const my = ++hyBusy;
+    try {
+      const an = HY.analyze(S.q); const mode = hyMode(); const out = { an, mode, cats: {} };
+      const M = KST.meta; const allow0 = kAllow(S.src); const coll = S.src.startsWith('c:') ? S.src.slice(2) : null;
+      const allow = i => (!allow0 || allow0(i)) && (!coll || M.collOf(i) === coll);
+      const mk = L.mk && !L.mk.error && !L.mk.empty ? L.mk : null;
+      const cats = srcMode() === 'all' ? ['quran', 'hadis', 'tafsir', 'materi'] : ['quran', 'hadis', 'tafsir', 'materi'].filter(c => semCats().includes(c) || (c === 'quran' && S.src === 'k:quran'));
+      for (const cat of cats) {
+        if (cat === 'tafsir' && S.src === 'k:quran') continue;
+        out.cats[cat] = await HY.kitab({ cat, lit: L.k.results, mk, sem: L.sem.sem, related: L.sem.related, an, mode, allow, get: ids => KB.get(ids), limit: srcMode() === 'all' ? 30 : 80 });
+      }
+      await gemRerank(out);
+      if (my !== hyBusy || !S.last || S.last.seq !== seq) return;
+      S.last.hy = out; await hyEnsureVisible();
+      if (S.last && S.last.seq === seq) renderMain();
+    } catch (e) { if (S.last && S.last.seq === seq) { S.last.hyErr = e.message; renderMain(); } }
+  }
+  function hyVisible() {
+    const H = S.last && S.last.hy; if (!H) return [];
+    const ids = []; const all = srcMode() === 'all';
+    for (const [cat, L] of Object.entries(H.cats)) { const n = all ? (cat === 'hadis' ? 5 : 3) : ((S.hyShown || {})[cat] || 20) + 12; for (const e of L.slice(0, n)) ids.push(e.i); }
+    return ids;
+  }
+  async function hyEnsureVisible() {
+    const ids = hyVisible(); await kEnsure(ids);
+    const j = ids.map(i => KST.recs.get(i)).filter(r => r && r.src === 'quran' && r.jal != null).map(r => r.jal); if (j.length) await kEnsure(j);
+  }
+  function hyPq(pq, e) { // sorot bukti tertulis (kata kunci, sinonim kamus, istilah terkait) di kartu
+    const v = []; for (const z of e.ev || []) if (z.form) { v.push(z.form); for (const w of P.norm(z.form).split(' ')) if (w.length >= 4) v.push(w); }
+    if (!v.length) return pq;
+    return Object.assign({}, pq, { groups: pq.groups.concat([{ kind: 'term', key: '_hy', label: 'bukti', variants: Array.from(new Set(v)) }]) });
+  }
+  function hyMetaHTML(e, cat) {
+    return `<div class="hyb"><span class="tier t-${e.tier}">${esc(HY.tierLabel(e.tier, cat))}</span><span class="hlv l-${e.level}" title="${esc(HY.LEVEL_TIP)}">Kecocokan ${esc(e.level)}</span>${e.types.length ? `<span class="hty" title="${esc(e.types.map(t => (HYTYPE[t] || t) + ': ' + (HYTYPE_TIP[t] || '')).join(' · '))}">${esc(e.types.map(t => HYTYPE[t] || t).join(' · '))}</span>` : ''}${e.gem ? '<span class="hty" title="Urutan dibantu Gemini; isi tetap dari database">urutan dibantu Gemini</span>' : ''}</div>`;
+  }
+  function hyWhyShort(e) {
+    const d = (e.ev || []).filter(z => !z.mod && z.st === 'direct');
+    if (d.length) return 'Alasan: ' + d.map(z => '“' + z.label + '” tertulis di ' + z.field).join('; ');
+    const r = (e.ev || []).find(z => z.st === 'rel'); if (r) return 'Alasan: hanya istilah terkait “' + r.form + '” — periksa sendiri';
+    return 'Alasan: kemiripan makna saja — periksa sendiri';
+  }
+  function hyWhyHTML(e, skipEv, extra) {
+    const it = HY.whyItems(e);
+    if (skipEv) { const eg = it.find(x => x.k === 'e'); return eg ? `<div class="crumb">${esc(eg.t)}</div>` : ''; }
+    return `<details class="hywhy"><summary>${esc(hyWhyShort(e))}</summary><ul>${it.map(x => `<li>${esc(x.t)}</li>`).join('')}</ul>${extra || ''}</details>`;
+  }
+  /* kartu ringkas untuk hasil gabungan: muat di layar HP; isi lengkap lewat "Buka detail" */
+  function hySnip(text, pqH, max) {
+    if (!text) return '';
+    const ranges = P.matchRanges(text, hlVariants(pqH), false); let a = 0, b = text.length;
+    if (max && text.length > max) { const w = P.snippetWindow(text, ranges, max); a = w.a; b = w.b; }
+    return (a > 0 ? '… ' : '') + hl(text, ranges, a, b).replace(/\n/g, '<br>') + (b < text.length ? ' …' : '');
+  }
+  // awal matan (setelah rangkaian sanad) — hanya untuk memilih bagian cuplikan; teks tetap kutipan asli
+  const HY_SANAD = /\b(telah\s+)?(menceritakan|mengabarkan|memberitakan|mengkhabarkan|bercerita|meriwayatkan)(\s+hadits)?\s+(kepada|kpd)\s+(kami|kalian|kepadaku|aku)\b/i;
+  const HY_MARK = /(Rasulullah|Rasul|Nabi)\s+(shallallahu|shallalahu|sallallahu|Shallallahu|saw|SAW|s\.a\.w)|beliau bersabda|\bbersabda\b/;
+  function hyMatanStart(tr) {
+    const m = HY_MARK.exec(tr || ''); if (!m || m.index <= 30) return 0;
+    const head = tr.slice(0, m.index);
+    return (HY_SANAD.test(head) || /\[[^\]]+\]/.test(head) || (head.match(/\bdari\s/gi) || []).length >= 2) ? m.index : 0;
+  }
+  function hyCompactHTML(e, cat, pq) {
+    const r = KST.recs.get(e.i);
+    if (!r) return `<article class="res kres hyc"><div class="skel" style="width:40%"></div><div class="skel"></div><div class="skel" style="width:70%"></div></article>`;
+    const M = KST.meta; const s = M.src[r.src]; const pqH = hyPq(pq, e); const kc = s.cat;
+    let title = '', sub = '', ar = '', arNote = '', tr = '', extra = '', bi = e.b && e.b.b0 >= 0 ? e.b.b0 : null, chips = '';
+    if (r.src === 'quran') {
+      title = 'QS. ' + surahName(r) + ' (' + r.s + '): ' + r.a + (r.juz ? ' · Juz ' + r.juz : '');
+      ar = r.arT || ''; arNote = r.arT ? 'Teks Arab: ' + (r.arTname || 'Tafsir Ibnu Katsir') + '; teks asli berupa gambar di detail.' : 'Teks Arab: lihat gambar asli di detail.';
+      tr = String(r.tr || '').replace(/\[\d+\]/g, '');
+      if (e.o) { const th = mkThemes(e.o); if (th.length) chips = `<div class="mkth">${th.slice(0, 2).map(it => `<span class="kwchip">${esc(it.field === 'T' ? 'Tema: ' : 'Kelompok ayat: ')}${esc(it.text)}</span>`).join('')}</div>`; extra = mkWhyHTML(e.o); }
+    } else if (r.src === 'qtema') { title = 'Indeks tema Al-Qur\'an'; sub = [r.tema, r.sub, r.label].filter(Boolean).join(' › '); tr = 'Ayat: ' + (r.refs || []).slice(0, 20).map(q => 'QS ' + q[0] + ':' + q[1]).join(', ') + ((r.refs || []).length > 20 ? ' …' : ''); }
+    else if (r.src === 'jalalain') { title = 'Tafsir Jalalain · QS. ' + P.surahLabel(r.s) + ' (' + r.s + '): ' + r.a; tr = r.tr; ar = r.ar || ''; }
+    else if (r.blocks) {
+      title = KB.title(r); sub = r.src === 'ibnukatsir' ? '' : (r.toc || []).slice(-1)[0] || '';
+      const bl = r.blocks; const a0 = bi != null ? bi : Math.max(0, bl.findIndex(b => b[0] !== 'a' && kHas(b[1], pqH))); const z = e.b && e.b.b1 >= 0 ? e.b.b1 : a0 + 1;
+      tr = bl.slice(a0, z + 1).filter(b => b[0] !== 'a').map(b => b[1]).join(' '); bi = a0;
+      title += ' · paragraf ' + (a0 + 1) + ' dari ' + bl.length;
+    } else {
+      title = KB.title(r) + (r.no ? ' · No. ' + r.no : ''); sub = r.bab || r.kitab || ''; ar = r.ar || ''; tr = r.tr || '';
+      const ms = hyMatanStart(tr); if (ms > 0) tr = '… ' + tr.slice(ms);
+      if (r.derajat) title += ' · ' + (r.derajat.length > 40 ? r.derajat.slice(0, 38) + '…' : r.derajat);
+    }
+    let h = `<article class="res kres hyc ${kc}${e.tier === 'terkait' ? ' hy-terkait' : ''}">${hyMetaHTML(e, cat)}<div class="meta">${kPill(kc)}<span class="date">${esc(title)}</span></div>`;
+    if (sub) h += `<h3><button class="linklike" data-act="kopen" data-i="${r.i}"${bi != null ? ` data-bi="${bi}"` : ''}>${hySnip(sub, pqH, 0)}</button></h3>`;
+    h += chips;
+    // teks Arab selalu utuh (tidak dipotong); teks hadis yang panjang (sanad + matan) dilipat agar kartu tetap ringkas
+    if (ar) h += (ar.length > 400 && r.src !== 'quran' ? `<details class="hyarx"><summary>Teks Arab lengkap (${fmtN(ar.split(/\s+/).length)} kata) — ketuk untuk membuka</summary><div class="ar hyar" dir="rtl" lang="ar">${esc(ar)}</div></details>` : `<div class="ar hyar" dir="rtl" lang="ar">${esc(ar)}</div>`) + (arNote ? `<div class="crumb">${esc(arNote)}</div>` : '');
+    h += `<div class="tr">${hySnip(tr, pqH, 300)}</div>`;
+    h += hyWhyHTML(e, false, extra);
+    h += `<div class="crumb">Sumber: <b>${esc(s.name)}</b> › ${esc(s.file)} › ${esc(r.path)}</div>`;
+    let act = `<button class="btn ghost" data-act="kopen" data-i="${r.i}"${bi != null ? ` data-bi="${bi}"` : ''}>Buka detail</button>`;
+    if (r.src === 'quran' && r.jal != null) act += `<button class="btn ghost" data-act="kopen" data-i="${r.jal}">Tafsir</button>`;
+    if (r.src === 'jalalain' || (r.src === 'ibnukatsir' && r.s && r.a1)) act += `<button class="btn ghost" data-act="kayat" data-s="${r.s}" data-a="${r.a || r.a1}">Lihat ayat</button>`;
+    act += `<button class="btn ghost" data-act="kcpq" data-i="${r.i}">Salin kutipan</button><button class="btn ghost" data-act="kcpr" data-i="${r.i}">Salin referensi</button>`;
+    return h + `<div class="actions">${act}</div></article>`;
+  }
+  function hyCardHTML(e, cat, pq) {
+    if (e.o) { const r = KST.recs.get(e.i); if (r) return mkCardHTML(e.o, false, e); }
+    const x = e.x ? Object.assign({}, e.x) : { i: e.i, score: 0, cov: 0, tf: {} };
+    x.i = e.i; if (e.b && e.b.b0 >= 0) x.blk = [e.b.b0, e.b.b1];
+    return kCardHTML(x, hyPq(pq, e), e, cat);
+  }
+  function hyCounts(L) { const c = { utama: 0, pendukung: 0, terkait: 0 }; for (const e of L) c[e.tier]++; return c; }
+  function hyNoteHTML() {
+    const L = S.last; if (!L) return '';
+    if (hyMode() === 'literal' || !semEligible(L.pq)) return '';
+    if (L.semErr) return `<div class="note warn">Pencarian makna lokal tidak tersedia (${esc(L.semErr)}). Ditampilkan hasil kata persis & makna/tema Al-Qur'an seperti versi 3.1.</div>`;
+    if (!L.semDone || (!L.hy && L.k && (!mkEligible(L.pq) || L.mk))) return `<div class="note">Menyusun hasil gabungan makna + kata…${SEM.prog ? ' (memuat indeks makna ' + SEM.prog.k + '/' + SEM.prog.n + ')' : ''} Hasil kata persis di bawah sudah bisa dipakai.</div>`;
+    if (L.hyErr) return `<div class="note warn">Penggabungan hasil gagal (${esc(L.hyErr)}); ditampilkan hasil versi 3.1.</div>`;
+    return '';
+  }
+  function hyIntroHTML() {
+    const H = S.last.hy; const sem = S.last.sem; const used = sem && sem.sem && sem.sem.q.used || [];
+    const g = sem && sem.gem && sem.gem.terms && sem.gem.terms.length ? ` · istilah tambahan dari Gemini (opsional): ${sem.gem.terms.map(w => '<span class="kwchip mod">' + esc(w) + '</span>').join(' ')}` : '';
+    return `<div class="vchips mkintro"><span>Kata kunci: ${H.an.concepts.map(c => `<span class="kwchip${c.mod ? ' mod' : ''}">${esc(c.label)}${c.mod ? ' · pelengkap' : ''}</span>`).join(' ') || '—'}${g}</span> <details class="hylegend"><summary>Arti label</summary><div><b>Dalil utama</b> = setiap kata kunci inti (atau sinonim kamusnya) tertulis di ayat/hadis/judul bab itu. <b>Referensi pendukung</b> = hanya sebagian. <b>Terkait</b> = hanya mirip makna/istilah terkait — periksa sendiri. <b>Kecocokan tinggi/sedang/rendah</b> = kedekatan dengan pertanyaan, bukan tingkat kebenaran atau derajat dalil. Mode ${esc(H.mode)}${used.length ? '; kata yang dipakai mesin makna: ' + used.map(u => esc(u.w) + (u.via ? ' (' + esc(u.via) + ')' : '')).join(', ') : ''}.</div></details></div>`;
+  }
+  function hySectionHTML(cat, title, n, full, pq) {
+    const L = (S.last.hy.cats[cat] || []); if (!L.length) return '';
+    const c = hyCounts(L); const src = { quran: 'k:quran', hadis: 'k:hadis', tafsir: 'k:tafsir', materi: 'k:materi' }[cat];
+    if (!full) {
+      let show = L.filter(e => e.tier !== 'terkait').slice(0, n); if (!show.length) show = L.slice(0, Math.min(2, n));
+      return `<section class="ksec hysec"><div class="ksh"><h2>${title} <small>${fmtN(c.utama)} utama · ${fmtN(c.pendukung)} pendukung · ${fmtN(c.terkait)} terkait</small></h2><button class="btn" data-act="ksrc" data-src="${src}">Lihat semua</button></div><div class="list">${show.map(e => hyCompactHTML(e, cat, pq)).join('')}</div></section>`;
+    }
+    const lim = (S.hyShown || {})[cat] || 20;
+    const part = t => L.filter(e => e.tier === t);
+    const U = part('utama'), Pd = part('pendukung'), T = part('terkait');
+    let h = `<section class="ksec hysec"><div class="ksh"><h2>${title} <small>${fmtN(c.utama)} utama · ${fmtN(c.pendukung)} pendukung · ${fmtN(c.terkait)} terkait</small></h2></div>`;
+    let used = 0; const take = arr => { const k = Math.max(0, Math.min(arr.length, lim - used)); used += k; return arr.slice(0, k); };
+    const u = take(U), p = take(Pd);
+    if (u.length) h += `<h3 class="tierh">${esc(HY.tierLabel('utama', cat))} (${fmtN(U.length)})</h3><div class="list">${u.map(e => hyCompactHTML(e, cat, pq)).join('')}</div>`;
+    else h += `<div class="note">Belum ada hasil yang seluruh kata kunci intinya tertulis di sumber. Lihat referensi pendukung dan terkait.</div>`;
+    if (p.length) h += `<h3 class="tierh">Referensi pendukung (${fmtN(Pd.length)})</h3><div class="list">${p.map(e => hyCompactHTML(e, cat, pq)).join('')}</div>`;
+    if (U.length + Pd.length > lim) h += `<div class="loadmore"><button class="btn" data-act="hymore" data-cat="${cat}">Tampilkan 20 lagi</button></div>`;
+    if (T.length) h += `<details class="hyterk"><summary>Terkait — belum cukup kuat (${fmtN(T.length)}): hanya mirip makna/istilah terkait</summary><div class="list">${T.slice(0, 12).map(e => hyCompactHTML(e, cat, pq)).join('')}</div></details>`;
+    return h + '</section>';
+  }
+  /* ---- brosur CHM/PDF ---- */
+  function hyBrosur() {
+    const L = S.last; if (!HY || !L || !L.sem || !L.sem.sem || !L.r || srcMode() === 'kitab') { if (L) L.hyB = null; renderMain(); return; }
+    const M = VS.meta; const hits = [];
+    for (const h of L.sem.sem.hits) {
+      if (h.shard !== 'chm' && h.shard !== 'pdf') continue;
+      let d = null;
+      if (h.shard === 'chm') d = LIB.byId.get(M.chm[h.a]);
+      else { const f = M.pdf[h.a]; d = LIB.docs.find(x => x.src === 'PDF' && x.file === f); }
+      if (!d) continue;
+      const ff = filterFn(S.src); if (ff && !ff(d)) continue;
+      hits.push({ id: d.id, b0: h.b0, b1: h.b1, s: h.s });
+    }
+    const textOf = (id, b0, b1) => { const d = LIB.byId.get(id); if (!d || !d.blocks) return ''; const a = Math.max(0, b0), z = Math.min(d.blocks.length - 1, b1 >= 0 ? b1 : a + 2); return d.blocks.slice(a, z + 1).filter(b => b[0] !== 'a').map(b => b[1]).join(' '); };
+    try {
+      L.hyB = HY.brosur({ lit: L.r.results, semHits: hits, textOf, titleOf: id => (LIB.byId.get(id) || {}).title || '', an: HY.analyze(S.q), related: L.sem.related, mode: hyMode(), maxCov: L.r.maxCov, limit: 90 });
+    } catch (e) { L.hyB = null; L.hyErr = e.message; }
+    renderMain();
+  }
+  function semDocCardHTML(e, i, pq) {
+    const d = LIB.byId.get(e.key); if (!d) return '';
+    if (!d.blocks) return `<article class="res" data-i="${i}">${hyMetaHTML(e, 'brosur')}<div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span></div><h3>${esc(d.title)}</h3><div class="note">Teks brosur tahun ini masih dimuat…</div></article>`; // arsip tahun itu belum selesai dimuat
+    const b0 = Math.max(0, e.b.b0), b1 = e.b.b1 >= 0 ? e.b.b1 : b0;
+    const t = (d.blocks || []).slice(b0, b1 + 1).filter(b => b[0] !== 'a').map(b => b[1]).join(' ');
+    const pqH = hyPq(pq, e); const ranges = P.matchRanges(t, hlVariants(pqH), false); const w = P.snippetWindow(t, ranges, 320);
+    const hij = hijri(d);
+    return `<article class="res${e.tier === 'terkait' ? ' kres hy-terkait' : ''}" data-i="${i}">${hyMetaHTML(e, 'brosur')}
+      <div class="meta">${pill(d)}<span class="date">${esc(dateLabel(d))}</span>${hij ? `<span>${esc(hij)}</span>` : ''}${d.no ? `<span>No. ${esc(d.no)}</span>` : ''}</div>
+      <h3><button class="linklike" data-act="open" data-id="${esc(d.id)}" data-bi="${b0}">${esc(d.title)}</button></h3>
+      <div class="crumb">${crumb(d)} · ${esc(locLabel(d, b0))}</div>
+      <div class="snips"><button class="snip" data-act="open" data-id="${esc(d.id)}" data-bi="${b0}"><span class="txt">${(w.a > 0 ? '… ' : '') + hl(t, ranges, w.a, w.b) + (w.b < t.length ? ' …' : '')}</span></button></div>
+      ${hyWhyHTML(e)}${actionsHTML(d, b0)}</article>`;
+  }
+  /* ---- Gemini (opsional, nonaktif kecuali dikonfigurasi admin & disetujui pengguna) ---- */
+  function renderGemBox() {
+    const el = $('#gemBox'); if (!el) return;
+    if (!GM || !GM.configured()) { el.innerHTML = '<div class="advs">Bantuan Gemini: <b>tidak aktif</b> (belum dikonfigurasi admin). Semua pencarian berjalan lokal di perangkat.</div>'; return; }
+    el.innerHTML = `<label class="gemrow"><input type="checkbox" data-act="gemok" ${GM.consent() ? 'checked' : ''}> <span><b>Izinkan bantuan Gemini (opsional).</b> Bila dicentang, kalimat pencarian dan cuplikan pendek kandidat hasil dikirim ke server ${esc(GM.host())} untuk memperluas istilah dan membantu urutan. Gemini <b>tidak</b> membuat dalil, terjemahan, atau tafsir; semua isi tetap dari database. Kuota terbatas — bila gagal, pencarian lokal langsung dipakai.${GM.lastErr() ? ' <br>Status terakhir: ' + esc(GM.lastErr()) : ''}</span></label>`;
+  }
+  async function gemExpand(q) {
+    if (!GM || !GM.active() || hyMode() === 'literal') return null;
+    try { return await GM.expand(q); } catch (e) { return { error: e.message }; }
+  }
+  async function gemRerank(out) {
+    if (!GM || !GM.active() || out.mode === 'literal') return;
+    for (const cat of ['quran', 'hadis']) {
+      const L = out.cats[cat]; if (!L || L.length < 3) continue;
+      const top = L.filter(e => e.tier === 'utama').slice(0, 12); if (top.length < 3) continue;
+      await kEnsure(top.map(e => e.i));
+      const cands = top.map(e => { const r = KST.recs.get(e.i); return { id: String(e.i), text: r ? (r.src === 'quran' ? r.tr : (r.bab ? 'Bab ' + r.bab + '. ' : '') + (r.tr || '')).replace(/\s+/g, ' ').slice(0, 280) : '' }; });
+      try {
+        const ord = await GM.rerank(S.q, cands); if (!ord || !ord.length) continue;
+        const pos = new Map(ord.map((id, k) => [id, k]));
+        const re = top.slice().sort((a, b) => (pos.has(String(a.i)) ? pos.get(String(a.i)) : 99) - (pos.has(String(b.i)) ? pos.get(String(b.i)) : 99));
+        re.forEach(e => { e.gem = true; });
+        const rest = L.filter(e => !top.includes(e)); out.cats[cat] = re.concat(rest.filter(e => e.tier === 'utama')).concat(rest.filter(e => e.tier !== 'utama'));
+      } catch (e) { /* lokal tetap dipakai */ }
+    }
   }
 
   function kVisibleIds() {
@@ -2535,11 +2870,11 @@ select.sel.kpick { max-width: 210px; }
     a += `<button class="btn ghost" data-act="kcpq" data-i="${r.i}">Salin kutipan</button><button class="btn ghost" data-act="kcpr" data-i="${r.i}">Salin referensi</button>`;
     return `<div class="actions">${a}</div>`;
   }
-  function kCardHTML(x, pq) {
+  function kCardHTML(x, pq, hy, hcat) {
     const r = KST.recs.get(x.i);
     if (!r) return `<article class="res kres"><div class="skel" style="width:40%"></div><div class="skel"></div><div class="skel" style="width:80%"></div></article>`;
     const M = KST.meta; const s = M.src[r.src]; const cat = s.cat;
-    let h = `<article class="res kres ${cat}">`;
+    let h = `<article class="res kres ${cat}${hy && hy.tier === 'terkait' ? ' hy-terkait' : ''}">` + (hy ? hyMetaHTML(hy, hcat || cat) : '');
     if (r.src === 'quran') {
       h += `<div class="meta">${kPill(cat)}<span class="date">QS. ${esc(surahName(r))} (${r.s}): ${r.a}</span>${r.juz ? `<span>Juz ${r.juz}</span>` : ''}${(r.topik || []).length ? `<span>${esc(r.topik.join(' · '))}</span>` : ''}${x.tafsirOf != null ? '' : ''}</div>`;
       h += kArabicImg(r);
@@ -2561,7 +2896,7 @@ select.sel.kpick { max-width: 210px; }
       h += `<div class="tr">${kHl(r.tr, pq, 420)}</div>`;
     } else if (r.src === 'ibnukatsir' || r.src === 'gurda') {
       h += `<div class="meta">${kPill(cat)}<span class="date">${r.src === 'gurda' ? 'Pelatihan Gurda 2142' : 'Tafsir Ibnu Katsir'}</span>${r.s ? `<span>QS ${r.s}${r.a1 ? ':' + r.a1 + (r.a2 > r.a1 ? '-' + r.a2 : '') : ''}</span>` : ''}</div><h3><button class="linklike" data-act="kopen" data-i="${r.i}">${esc(r.title || '')}</button></h3>`;
-      const bl = (r.blocks || []).map((b, k) => [k, b]).filter(([k, b]) => kHas(b[1], pq)).slice(0, 2);
+      const bl = x.blk ? (r.blocks || []).map((b, k) => [k, b]).filter(([k, b]) => k >= x.blk[0] && k <= Math.max(x.blk[0], x.blk[1]) && b[0] !== 'a').slice(0, 2) : (r.blocks || []).map((b, k) => [k, b]).filter(([k, b]) => kHas(b[1], pq)).slice(0, 2);
       const show = bl.length ? bl : (r.blocks || []).slice(0, 2).map((b, k) => [k, b]);
       h += show.map(([k, b]) => `<button class="snip${b[0] === 'a' ? ' ar' : ''}" data-act="kopen" data-i="${r.i}" data-bi="${k}"><span class="loc">paragraf ${k + 1} dari ${(r.blocks || []).length}</span><span class="txt"${b[0] === 'a' ? ' dir="rtl" lang="ar"' : ''}>${kHl(b[1], pq, 280)}</span></button>`).join('');
     } else {
@@ -2575,6 +2910,7 @@ select.sel.kpick { max-width: 210px; }
     }
     h += kRelLine(r, x);
     if (x.dups && x.dups.length) h += `<div class="crumb">${fmtN(x.dups.length)} record identik lain ikut cocok dan digabung di sini; tetap bisa dibuka satu per satu dari daftar “Teks identik”.</div>`;
+    if (hy) h += hyWhyHTML(hy);
     h += kSrcLine(r) + kActions(r) + '</article>';
     return h;
   }
@@ -2585,17 +2921,30 @@ select.sel.kpick { max-width: 210px; }
     if (!L.k) return `<div class="note">Mencari di Al-Qur'an, tafsir dan kitab hadis…</div>`;
     const r = L.k;
     const notes = [];
+    // teks Arab / "frasa persis" yang punya kecocokan persis → tampilkan seperti V3.1 (kecocokan persis didahulukan)
+    // transliterasi Latin yang cocok dengan ayat juga diperlakukan sebagai pencarian persis (jalur V3.1)
+    const tlTop = !!(r.tl && r.tl.n && r.results[0] && r.results[0].tl);
+    const exactQ = tlTop || /[\u0600-\u06FF]/.test(pq.raw || '') || pq.groups.some(g => g.kind === 'phrase');
+    const HYR = L.hy && HY && L.hy.mode !== 'literal' && !(exactQ && (tlTop || r.results.some(x => x.cov >= r.maxCov || x.num || x.ref))) ? L.hy : null;
     if (r.coll && !S.src.startsWith('c:')) notes.push(`Nama kitab <b>${esc(r.collLabel || r.coll)}</b> terdeteksi: hasil hadis disaring ke riwayat ${esc(KB.COLLN[r.coll] || r.coll)} (semua file). Untuk mencari kata itu di teks, tulis dalam tanda kutip.`);
     if (r.tl && r.tl.n) notes.push(`Kueri juga dibaca sebagai tulisan Latin/transliterasi (kerangka huruf <b>${esc(r.tl.q)}</b>)${r.tl.part ? ', cocok pada potongan “' + esc(r.tl.part) + '”' : ''} → <b>${fmtN(r.tl.n)}</b> ayat. Persentase menunjukkan kecocokan huruf, bukan kepastian.`);
     if (r.results.some(x => x.num)) notes.push('Nomor hadis dicocokkan dengan nomor yang tertulis di masing-masing kitab (tiap koleksi punya penomoran sendiri).');
     if (mode === 'all') {
       const q = kByCat(r, 'quran'), hd = kByCat(r, 'hadis'), tf = kByCat(r, 'tafsir'), mt = kByCat(r, 'materi');
-      if (!q.length && !hd.length && !tf.length && !mt.length && !(L.mk && L.mk.utamaTotal)) return `<div class="note">Tidak ada hasil di Al-Qur'an, tafsir dan kitab hadis.</div>`;
+      if (!q.length && !hd.length && !tf.length && !mt.length && !(L.mk && L.mk.utamaTotal) && !(HYR && Object.values(HYR.cats).some(x => x.length))) return `<div class="note">Tidak ada hasil di Al-Qur'an, tafsir dan kitab hadis.</div>`;
       if (notes.length) h += `<div class="vchips">${notes.join(' ')}</div>`;
       const sec = (title, list, n, src) => list.length ? `<section class="ksec"><div class="ksh"><h2>${title} <small>${fmtN(list.length)} hasil</small></h2>${list.length > n ? `<button class="btn" data-act="ksrc" data-src="${src}">Lihat semua ${fmtN(list.length)}</button>` : ''}</div><div class="list">${list.slice(0, n).map(x => kCardHTML(x, pq)).join('')}</div></section>` : '';
       // urutkan bagian menurut kecocokan terbaik (bagian dengan hasil "semua kata cocok" didahulukan)
       const m = L.mk && !L.mk.error && !L.mk.empty ? L.mk : null;
       const tlStrong = r.tl && r.tl.n && q.length && q[0].tl && !q[0].tl.err && !q[0].tl.part;
+      if (HYR && !tlStrong) {
+        h = hyNoteHTML() + hyIntroHTML() + h;
+        const order = [['quran', "Al-Qur'an · gabungan makna & kata", 3], ['hadis', 'Hadis · gabungan makna & kata', 5], ['tafsir', 'Tafsir', 3], ['materi', 'Materi pelatihan', 3]];
+        const hint = HYR.an.hint; if (hint) order.sort((a, b2) => (b2[0] === hint) - (a[0] === hint));
+        for (const [cat, t, n] of order) h += hySectionHTML(cat, t, n, false, pq);
+        return h;
+      }
+      h = hyNoteHTML() + h;
       const useMk = m && m.utamaTotal > 0 && !tlStrong;
       if (useMk) h += `<section class="ksec"><div class="ksh"><h2>Al-Qur'an · berdasarkan makna <small>${fmtN(m.utamaTotal)} utama · ${fmtN(m.pendukungTotal)} pendukung</small></h2><button class="btn" data-act="ksrc" data-src="k:quran">Lihat semua</button></div>${mkBlockHTML(m, false)}</section>`;
       const secs = [["Al-Qur'an" + (useMk ? ' · kecocokan kata literal' : ''), useMk ? [] : q, 3, 'k:quran', 0], ['Hadis', hd, 5, 'k:hadis', 1], ['Tafsir', tf, 3, 'k:tafsir', 2], ['Materi pelatihan', mt, 3, 'k:materi', 3]].filter(x => x[1].length);
@@ -2605,6 +2954,19 @@ select.sel.kpick { max-width: 210px; }
       return h;
     }
     const lbl = KFILTER_LABEL[S.src] || S.src;
+    if (HYR) {
+      const tl1 = r.tl && r.tl.n && r.results[0] && r.results[0].tl && !r.results[0].tl.err && !r.results[0].tl.part;
+      const cats = Object.keys(HYR.cats).filter(c => (HYR.cats[c] || []).length);
+      if (!tl1 && cats.length) {
+        h += `<div class="rhead"><strong>Hasil gabungan di ${esc(lbl)}</strong><span class="sub">kata persis ${fmtN(r.results.length)} hasil · makna lokal ${fmtN(L.sem && L.sem.sem ? L.sem.sem.hits.length : 0)} potongan · ${fmtN(L.sem && L.sem.sem ? L.sem.sem.ms : 0)} ms</span></div>`;
+        if (notes.length) h += `<div class="vchips">${notes.join(' ')}</div>`;
+        h += hyIntroHTML();
+        const T = { quran: "Al-Qur'an", hadis: 'Hadis', tafsir: 'Tafsir', materi: 'Materi pelatihan' };
+        for (const c of ['quran', 'hadis', 'tafsir', 'materi']) if (cats.includes(c)) h += hySectionHTML(c, T[c], 20, true, pq);
+        return h;
+      }
+    }
+    h += hyNoteHTML();
     h += `<div class="rhead"><strong>${fmtN(r.results.length)} hasil di ${esc(lbl)}</strong><span class="sub">Al-Qur'an ${fmtN(r.counts.quran || 0)} · Tafsir ${fmtN(r.counts.tafsir || 0)} · Hadis ${fmtN(r.counts.hadis || 0)} · Materi ${fmtN(r.counts.materi || 0)} · ${r.ms < 1 ? '<1' : Math.round(r.ms)} ms</span></div>`;
     if (notes.length) h += `<div class="vchips">${notes.join(' ')}</div>`;
     const m = S.src === 'k:quran' && L.mk && !L.mk.error && !L.mk.empty ? L.mk : null;
@@ -2733,6 +3095,7 @@ select.sel.kpick { max-width: 210px; }
     const b = e.target.closest('button.chip'); if (!b) return;
     if (b.dataset.src) { S.src = b.dataset.src; $$('#filters [data-src]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); $('#ksrc').value = ''; }
     if (b.dataset.view) { S.view = b.dataset.view; $$('[data-view]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); }
+    if (b.dataset.mode) { if (HY) HY.setMode(b.dataset.mode); syncModeChips(); }
     runSearch();
   });
   function setSrc(v) {
@@ -2749,6 +3112,8 @@ select.sel.kpick { max-width: 210px; }
     $('#paneCari').hidden = t !== 'cari'; $('#paneSup').hidden = t !== 'sup';
     if (t === 'cari') renderMain(); else $('#sq').focus();
   }
+  syncModeChips(); renderGemBox(); renderSemStat();
+  $('#adv').addEventListener('toggle', () => { renderSemStat(); renderGemBox(); });
   $('#tabCari').addEventListener('click', () => setTab('cari'));
   $('#tabSup').addEventListener('click', () => setTab('sup'));
   $('#btnSup').addEventListener('click', () => runSupport());
@@ -2779,6 +3144,10 @@ select.sel.kpick { max-width: 210px; }
       case 'kayat': kOpenAyat(+el.dataset.s, +el.dataset.a); break;
       case 'ksrc': closeDrawers(); setTab('cari'); setSrc(el.dataset.src); S.kb = null; if (S.q.trim().length >= 2) runSearch(); else { renderMain(); $('#q').focus(); } window.scrollTo({ top: 0 }); break;
       case 'kmore': S.kShown += 20; kEnsure(kVisibleIds()).then(renderMain); renderMain(); break;
+      case 'semload': semLoadAll(); break;
+      case 'mfilt': { const f = $('#filters'); const o = !f.classList.contains('mopen'); f.classList.toggle('mopen', o); el.setAttribute('aria-expanded', String(o)); el.textContent = o ? 'Tutup filter ▴' : 'Filter & pengaturan ▾'; break; }
+      case 'hymore': { const c = el.dataset.cat; S.hyShown = Object.assign({}, S.hyShown || {}); S.hyShown[c] = (S.hyShown[c] || 20) + 20; hyEnsureVisible().then(renderMain); renderMain(); break; }
+      case 'gemok': if (GM) { GM.setConsent(el.checked !== false); renderGemBox(); } break;
       case 'mkmore': S.mkShown = (S.mkShown || 10) + 10; if (S.last && S.last.mk && S.last.mk.utama) mkEnsure(S.last.mk.utama.slice(0, S.mkShown)).then(renderMain); renderMain(); break;
       case 'kbrowse': S.kb = { src: el.dataset.src, k: null, b: null, shown: 20 }; S.last = null; $('#q').value = ''; S.q = ''; renderMain(); window.scrollTo({ top: 0 }); break;
       case 'kbk': S.kb = Object.assign({}, S.kb, { k: +el.dataset.k, b: null, shown: 20 }); renderMain(); window.scrollTo({ top: 0 }); break;

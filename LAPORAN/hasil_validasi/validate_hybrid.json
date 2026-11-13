@@ -1,0 +1,92 @@
+{
+ "date": "2026-11-13T07:16:26.691Z",
+ "indexVer": "202611130948",
+ "pass": 14,
+ "total": 14,
+ "tests": [
+  {
+   "no": 1,
+   "name": "Checksum indeks makna lokal",
+   "status": "LULUS",
+   "detail": "139 file dicek; semua cocok (versi 202611130948)"
+  },
+  {
+   "no": 2,
+   "name": "Ayat tentang mengikuti syariat Allah (Al-Qur'an, 8 teratas)",
+   "status": "LULUS",
+   "detail": "ditemukan 45:18, 5:48 dari 45:18, 5:48 (minimal 2)"
+  },
+  {
+   "no": 3,
+   "name": "Ayat tentang larangan mengikuti hawa nafsu (Al-Qur'an, 8 teratas)",
+   "status": "LULUS",
+   "detail": "ditemukan 38:26, 28:50, 5:49 dari 38:26, 28:50, 5:49 (minimal 3)"
+  },
+  {
+   "no": 4,
+   "name": "Ayat tentang sabar menghadapi ujian hidup (Al-Qur'an, 8 teratas)",
+   "status": "LULUS",
+   "detail": "ditemukan 2:153, 2:155, 3:186 dari 2:153, 2:155, 3:186 (minimal 3)"
+  },
+  {
+   "no": 5,
+   "name": "Ayat tentang berbakti kepada orang tua (Al-Qur'an, 8 teratas)",
+   "status": "LULUS",
+   "detail": "ditemukan 17:23, 31:14, 46:15, 2:83 dari 17:23, 31:14, 46:15, 2:83 (minimal 3)"
+  },
+  {
+   "no": 6,
+   "name": "Ayat tentang larangan berbuat curang (Al-Qur'an, 8 teratas)",
+   "status": "LULUS",
+   "detail": "ditemukan 83:1, 83:3, 55:9, 11:85 dari 83:1, 83:3, 55:9, 11:85 (minimal 3)"
+  },
+  {
+   "no": 7,
+   "name": "Dalil tentang kejujuran berdagang (Al-Qur'an, 8 teratas)",
+   "status": "LULUS",
+   "detail": "ditemukan 83:1, 6:152, 2:282 dari 83:1, 6:152, 2:282 (minimal 2)"
+  },
+  {
+   "no": 8,
+   "name": "Hadis tentang amanah (hadis, 8 teratas)",
+   "status": "LULUS",
+   "detail": "5/8 memuat kata kunci di bab/matan; contoh: Shahih Sunan Tirmidzi (Al-Albani) No.2179 | Riyadhus Shalihin No.201 | Kitab 9 Imam · Sunan Tirmidzi No.1882"
+  },
+  {
+   "no": 9,
+   "name": "Hadis tentang sabar menghadapi musibah (hadis, 8 teratas)",
+   "status": "LULUS",
+   "detail": "8/8 memuat kata kunci di bab/matan; contoh: Shahih Bukhari No.1219 | Shahih Muslim (Mukhtashar, Al-Albani) No.462 | Shahih Sunan Tirmidzi (Al-Albani) No.988"
+  },
+  {
+   "no": 10,
+   "name": "Dalil tentang kewajiban suami istri (hadis, 8 teratas)",
+   "status": "LULUS",
+   "detail": "7/8 memuat kata kunci di bab/matan; contoh: Shahih Muslim (Mukhtashar, Al-Albani) No.834 | Shahih Sunan Ibnu Majah (Al-Albani) No.1513-1878 | Kitab 9 Imam · Sunan Ibnu Majah No.1844"
+  },
+  {
+   "no": 11,
+   "name": "Kejujuran berdagang → bab \"Kejujuran dan Kejelasan dalam Jual Beli\" (hadis, 6 teratas)",
+   "status": "LULUS",
+   "detail": "Shahih Sunan Ibnu Majah (Al-Albani) No.1758-2177 | Shahih Muslim (Mukhtashar, Al-Albani) No.949 | Kitab 9 Imam · Sunan Ibnu Majah No.2130 | Kitab 9 Imam · Sunan Ibnu Majah No.2214 | Kitab 9 Imam · Sunan Ibnu Majah No.2137 | Kitab 9 Imam · Sunan Ibnu Majah No.2213"
+  },
+  {
+   "no": 12,
+   "name": "Utama (hadis/tafsir/materi) hanya bila semua kata kunci inti tertulis di sumber",
+   "status": "LULUS",
+   "detail": "tidak ada pelanggaran pada 9 kueri"
+  },
+  {
+   "no": 13,
+   "name": "Mode Literal memakai hanya hasil kata persis V3.1",
+   "status": "LULUS",
+   "detail": "tingkat diurutkan per bukti; 20 hasil semuanya berasal dari mesin kata V3.1"
+  },
+  {
+   "no": 14,
+   "name": "Kueri Arab → padanan kata Indonesia (makna lokal)",
+   "status": "LULUS",
+   "detail": "kata dipakai: kesabaran←الصبر, sabar←الصبر, benturan←الصبر, mushibati←المصيبه, musibahku←المصيبه, musibahnya←المصيبه"
+  }
+ ]
+}

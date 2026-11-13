@@ -9,6 +9,15 @@ Satu mesin pencarian untuk arsip **Brosur Ahad Pagi MTA**, **Al-Qur'an**, **tafs
 
 Semua sumber dicari dari satu kolom pencarian. Setiap hasil menunjuk ke sumber aslinya: bab/subbab CHM, atau file dan halaman PDF.
 
+## Baru di v3.2 — pencarian gabungan makna + kata (tanpa API, tanpa akun AI)
+- Tulis kalimat biasa, mis. *"hadis tentang amanah"*, *"ayat tentang larangan berbuat curang"*. Hasil Al-Qur'an, hadis, tafsir, materi, arsip CHM dan PDF disusun dari **tiga mesin lokal**: kata persis (BM25 V3.1), makna/tema Al-Qur'an (V3.1), dan **makna lokal** baru (vektor kata yang dilatih dari database ini sendiri), digabung dengan RRF.
+- Setiap kartu: **Dalil utama / Referensi pendukung / Terkait**, **Kecocokan tinggi/sedang/rendah** (bukan tingkat kebenaran dalil), jenis kecocokan (Makna · Tema · Frasa · Kata), kutipan asli, sumber, dan alasan ditemukan. *Dalil utama* hanya bila setiap kata kunci inti (atau sinonim kamusnya) tertulis di sumber.
+- **Pengaturan lanjutan** (di HP: tombol *Filter & pengaturan*): mode **Campuran** (bawaan) · **Makna** · **Literal** (= mesin v3.1, memakai kamus terbaru), status indeks, tombol muat indeks.
+- Nomor ayat/hadis, teks Arab, "frasa persis", dan transliterasi tetap memakai jalur v3.1 bila ada kecocokan persis.
+- Indeks makna (`data/kitab/vektor/`, ±28 MB, ±9 MB terunduh sekali) dimuat hanya saat pencarian kalimat. Juga berjalan saat `index.html` dibuka langsung tanpa internet.
+- Gemini: **opsional dan tidak aktif** (lihat `LAPORAN/PANDUAN_GEMINI_OPSIONAL.md`).
+- Laporan lengkap: `LAPORAN/LAPORAN_AKHIR_v3.2.md` · perbaikan final: `LAPORAN/LAPORAN_FINAL_v3.2.md`.
+
 ## Cara membuka
 - **Website:** `https://USERNAME.github.io/pustaka-referensi-mta/`
 - **Tanpa internet:** dobel-klik `index.html` di folder ini.
@@ -29,6 +38,10 @@ Semua sumber dicari dari satu kolom pencarian. Setiap hasil menunjuk ke sumber a
 | `data/lib/makna.js`, `data/kitab/makna/` | Pencarian makna Al-Qur'an (tanpa AI): indeks statis dari terjemahan, catatan kaki, Tafsir Jalalain, Tafsir Ibnu Katsir, judul kelompok ayat & indeks tema. Dibangun oleh `tools/build_makna.js` |
 | `data/kamus_support.js` | Kamus kata kunci Mode Support: kata pengantar, ejaan, sinonim, istilah terkait. Bisa diedit lewat tombol **Kamus kata kunci** lalu diunduh dan ditimpa di sini |
 | `tools/` | Skrip ekstraksi CHM, build indeks, dan uji (`validate_search.js`) |
+| `data/lib/semantik.js`, `data/kitab/vektor/` | v3.2: mesin & indeks makna lokal (vektor kata domain). Dibangun oleh `tools/semantik/build_vektor.py` — jangan diedit manual |
+| `data/lib/hybrid.js` | v3.2: penggabungan peringkat (RRF) & tingkat bukti |
+| `data/lib/gemini.js`, `supabase/functions/pustaka-gemini/` | v3.2: bantuan Gemini opsional (nonaktif bawaan) |
+| `LAPORAN/` | Laporan v3.2: audit, rancangan, pengujian, panduan update & Gemini |
 | `.nojekyll` | Supaya GitHub Pages menampilkan file apa adanya |
 | `config.js`, `supabase/` | Sambungan ke server online (lihat di bawah) |
 
@@ -83,3 +96,7 @@ Brosur yang ditambahkan hanya tersimpan di browser perangkat itu. Untuk menerbit
 - Setiap kartu memuat alasan ditemukan dan sumbernya. Hasil pencocokan, bukan penafsiran.
 - Sinonim & istilah terkait memakai kamus yang sama dengan Mode Support (tombol **Kamus kata kunci**).
 - Membangun ulang indeks: `node tools/build_makna.js <folder-db> .` · Uji: `node tools/validate_makna.js .`
+
+## Pencarian gabungan v3.2 — uji & build
+- Uji: `node tools/validate_hybrid.js .` (checksum indeks, kueri wajib, aturan tingkat bukti, mode Literal).
+- Build ulang indeks makna: lihat `LAPORAN/PANDUAN_UPDATE_GITHUB_PAGES_v3.2.md` bagian F.

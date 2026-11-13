@@ -1,0 +1,979 @@
+{
+ "tests": [
+  {
+   "no": "M1",
+   "name": "Pertanyaan: Ayat tentang kesabaran ketika mendapatkan musibah.",
+   "query": "Ayat tentang kesabaran ketika mendapatkan musibah.",
+   "status": "LULUS",
+   "detail": "konsep: sabar + mendapatkan (pelengkap) + musibah · diabaikan: Ayat, tentang, ketika · utama 16 / pendukung 1898 · ayat rujukan ditemukan sebagai Utama: 6/6 (2:155, 2:156, 11:11, 3:186, 22:35, 64:11; minimal 3) · bukti tertelusur ke teks sumber: 128/128 · utama∩pendukung: 0 · utama yang hanya didukung istilah terkait: 0 · 15 utama teratas: 3:120, 11:11, 3:146, 2:155, 3:200, 22:35, 3:186, 13:22, 64:11, 42:33, 2:214, 2:156, 34:19, 33:35, 11:10 · 79 ms"
+  },
+  {
+   "no": "M2",
+   "name": "Pertanyaan: Ayat tentang berbuat baik kepada kedua orang tua.",
+   "query": "Ayat tentang berbuat baik kepada kedua orang tua.",
+   "status": "LULUS",
+   "detail": "konsep: berbuat baik + orang tua · diabaikan: Ayat, tentang · utama 12 / pendukung 5228 · ayat rujukan ditemukan sebagai Utama: 7/7 (17:23, 31:14, 46:15, 4:36, 2:83, 6:151, 29:8; minimal 5) · bukti tertelusur ke teks sumber: 112/112 · utama∩pendukung: 0 · utama yang hanya didukung istilah terkait: 0 · 15 utama teratas: 46:15, 17:23, 6:151, 19:14, 4:36, 2:83, 12:100, 31:14, 29:8, 18:81, 46:17, 17:25 · 58 ms"
+  },
+  {
+   "no": "M3",
+   "name": "Pertanyaan: Ayat tentang menjaga keharmonisan rumah tangga.",
+   "query": "Ayat tentang menjaga keharmonisan rumah tangga.",
+   "status": "LULUS",
+   "detail": "konsep: menjaga (pelengkap) + keharmonisan + rumah tangga · diabaikan: Ayat, tentang · utama 3 / pendukung 2619 · ayat rujukan ditemukan sebagai Utama: 2/2 (30:21, 4:128; minimal 2) · bukti tertelusur ke teks sumber: 51/51 · utama∩pendukung: 0 · utama yang hanya didukung istilah terkait: 0 · 15 utama teratas: 30:21, 4:128, 4:129 · 58 ms"
+  },
+  {
+   "no": "M4",
+   "name": "Pertanyaan: Ayat tentang orang beriman yang selalu mengingat Allah.",
+   "query": "Ayat tentang orang beriman yang selalu mengingat Allah.",
+   "status": "LULUS",
+   "detail": "konsep: orang beriman + selalu (pelengkap) + dzikir · diabaikan: Ayat, tentang, yang · utama 37 / pendukung 5540 · ayat rujukan ditemukan sebagai Utama: 6/6 (13:28, 33:41, 63:9, 3:191, 8:45, 33:35; minimal 4) · bukti tertelusur ke teks sumber: 274/274 · utama∩pendukung: 0 · utama yang hanya didukung istilah terkait: 0 · 15 utama teratas: 13:28, 63:9, 57:16, 33:41, 62:9, 4:103, 26:227, 3:191, 90:17, 58:11, 3:193, 33:35, 33:43, 33:56, 8:45 · 64 ms"
+  },
+  {
+   "no": "M5",
+   "name": "Pertanyaan: Ayat tentang rezeki yang diberikan Allah.",
+   "query": "Ayat tentang rezeki yang diberikan Allah.",
+   "status": "LULUS",
+   "detail": "konsep: rezeki + diberikan (pelengkap) + Allah (pelengkap) · diabaikan: Ayat, tentang, yang · utama 155 / pendukung 3314 · ayat rujukan ditemukan sebagai Utama: 5/5 (29:60, 29:62, 30:40, 65:3, 39:52; minimal 3) · bukti tertelusur ke teks sumber: 316/316 · utama∩pendukung: 0 · utama yang hanya didukung istilah terkait: 0 · 15 utama teratas: 29:62, 30:40, 29:60, 16:71, 30:37, 39:52, 22:58, 29:17, 30:28, 20:132, 16:75, 65:3, 65:7, 3:37, 6:151 · 26 ms"
+  },
+  {
+   "no": "M6",
+   "name": "Pertanyaan: Ayat tentang larangan berbuat curang dalam perdagangan.",
+   "query": "Ayat tentang larangan berbuat curang dalam perdagangan.",
+   "status": "LULUS",
+   "detail": "konsep: larangan (pelengkap) + curang · diabaikan: Ayat, tentang, dalam · utama 18 / pendukung 2512 · ayat rujukan ditemukan sebagai Utama: 6/6 (83:1, 83:3, 11:84, 11:85, 7:85, 6:152; minimal 4) · bukti tertelusur ke teks sumber: 58/58 · utama∩pendukung: 0 · utama yang hanya didukung istilah terkait: 0 · 15 utama teratas: 83:1, 55:9, 26:183, 11:84, 11:85, 83:7, 83:3, 4:129, 7:85, 55:8, 6:152, 2:79, 4:91, 11:88, 11:86 · 23 ms"
+  },
+  {
+   "no": "M7",
+   "name": "Pertanyaan: Ayat tentang kewajiban menjaga amanah.",
+   "query": "Ayat tentang kewajiban menjaga amanah.",
+   "status": "LULUS",
+   "detail": "konsep: kewajiban (pelengkap) + menjaga amanah · diabaikan: Ayat, tentang · utama 10 / pendukung 1683 · ayat rujukan ditemukan sebagai Utama: 6/6 (4:58, 8:27, 23:8, 70:32, 2:283, 33:72; minimal 5) · bukti tertelusur ke teks sumber: 31/31 · utama∩pendukung: 0 · utama yang hanya didukung istilah terkait: 0 · 15 utama teratas: 8:27, 33:72, 4:58, 23:8, 70:32, 2:283, 20:94, 3:77, 22:38, 33:73 · 39 ms"
+  },
+  {
+   "no": "M8",
+   "name": "Frasa terjemahan persis tetap di atas",
+   "query": "diwajibkan atas kamu berpuasa",
+   "status": "LULUS",
+   "detail": "QS 2:183 di urutan 2 dari 11 utama"
+  },
+  {
+   "no": "M9",
+   "name": "Satu kata kunci (“sabar”)",
+   "query": "sabar",
+   "status": "LULUS",
+   "detail": "utama 128, bukti tertelusur 190/190, teratas: 12:18, 2:153, 42:43, 8:66, 3:125, 3:200, 8:65, 16:126"
+  },
+  {
+   "no": "M10",
+   "name": "Kata tidak dikenal → tidak ada hasil makna (aplikasi memakai pencarian literal)",
+   "query": "ayat tentang qwertyzxv",
+   "status": "LULUS",
+   "detail": "utama 0, pendukung 0"
+  },
+  {
+   "no": "M11",
+   "name": "Hanya kata pengantar → kosong",
+   "query": "tolong carikan ayat tentang",
+   "status": "LULUS",
+   "detail": "tidak ada kata kunci; tidak ada hasil dikarang"
+  },
+  {
+   "no": "M12",
+   "name": "Istilah terkait (cobaan, ujian, menimpa) tidak dijadikan bukti Utama",
+   "query": "ayat tentang musibah",
+   "status": "LULUS",
+   "detail": "utama 102; yang hanya lewat istilah terkait: 0; pendukung lewat istilah terkait: 0"
+  },
+  {
+   "no": "M13",
+   "name": "Kecepatan (indeks sudah termuat)",
+   "query": "7 pertanyaan",
+   "status": "LULUS",
+   "detail": "pertama kali: 79/58/58/64/26/23/39 ms · ulang: 27/39/15/30/15/6/6 ms (Node)"
+  }
+ ],
+ "coverage": {
+  "cov": {
+   "R": 6236,
+   "P": 3430,
+   "C": 1384,
+   "J": 6233,
+   "H": 6229,
+   "T": 1366,
+   "K": 6215,
+   "any": 6236,
+   "hOrT": 6231
+  },
+  "heads": 901,
+  "headsM": 334,
+  "tema": 122,
+  "ik": 1913,
+  "ikSkip": 165,
+  "vocab": 34458,
+  "stemmed": 11269,
+  "uniTerms": 23237,
+  "biTerms": 126775,
+  "bytes": {
+   "u": 2954436,
+   "b": 4244837,
+   "w": 238629
+  }
+ },
+ "noJal": [
+  "26:118",
+  "38:17",
+  "43:15"
+ ],
+ "examples": [
+  {
+   "q": "Ayat tentang kesabaran ketika mendapatkan musibah.",
+   "concepts": [
+    {
+     "label": "sabar",
+     "pelengkap": false,
+     "kamus": true
+    },
+    {
+     "label": "mendapatkan",
+     "pelengkap": true,
+     "kamus": false
+    },
+    {
+     "label": "musibah",
+     "pelengkap": false,
+     "kamus": true
+    }
+   ],
+   "removed": [
+    "Ayat",
+    "tentang",
+    "ketika"
+   ],
+   "utamaTotal": 16,
+   "pendukungTotal": 1898,
+   "utama": [
+    {
+     "ayat": "3:120",
+     "surah": "Ali 'Imran",
+     "label": "Kecocokan sinonim",
+     "tr": "Jika kamu memperoleh kebaikan, niscaya mereka bersedih hati, tetapi Jika kamu mendapat bencana, mereka bergembira karenanya. Jika kamu bersabar dan bertakwa, niscaya tipu daya mereka sedikitpun tidak mendatangkan kemudharatan kepadamu. Sesungguhnya Allah mengetahui segala apa yang mereka kerjakan.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Ali Imran, ayat 118-120” memuat “sabar” · “mendapatkan” (pelengkap): Terjemahan memuat “mendapatkan” · “musibah”: Terjemahan memuat “bencana” (sinonim kamus); Tafsir Jalalain memuat “bencana” (sinonim kamus); Tafsir Ibnu Katsir “Ali Imran, ayat 118-120” memuat “bencana” (sinonim kamus)"
+    },
+    {
+     "ayat": "11:11",
+     "surah": "Huud",
+     "label": "Kecocokan sinonim",
+     "tr": "kecuali orang-orang yang sabar (terhadap bencana), dan mengerjakan amal-amal saleh; mereka itu beroleh ampunan dan pahala yang besar.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Hud, ayat 9-11” memuat “sabar” · “musibah”: Keterangan dalam kurung pada terjemahan memuat “bencana” (sinonim kamus); Tafsir Jalalain memuat “bencana” (sinonim kamus); Tafsir Ibnu Katsir “Hud, ayat 9-11” memuat “bencana” (sinonim kamus); Tafsir Ibnu Katsir “Hud, ayat 9-11” memuat “musibah”"
+    },
+    {
+     "ayat": "3:146",
+     "surah": "Ali 'Imran",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan berapa banyaknya nabi yang berperang bersama-sama mereka sejumlah besar dari pengikut (nya) yang bertakwa. Mereka tidak menjadi lemah karena bencana yang menimpa mereka di jalan Allah, dan tidak lesu dan tidak (pula) menyerah (kepada musuh). Allah menyukai orang-orang yang sabar.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Ali Imran, ayat 144-148” memuat “sabar” · “mendapatkan” (pelengkap): Tafsir Jalalain memuat “mendapatkan” · “musibah”: Terjemahan memuat “bencana” (sinonim kamus); Tafsir Ibnu Katsir “Ali Imran, ayat 144-148” memuat “musibah”"
+    },
+    {
+     "ayat": "2:155",
+     "surah": "Al Baqarah",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan sungguh akan Kami berikan cobaan kepadamu, dengan sedikit ketakutan, kelaparan, kekurangan harta, jiwa dan buah-buahan. Dan berikanlah berita gembira kepada orang-orang yang sabar.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Al-Baqarah, ayat 155-157” memuat “sabar” · “musibah”: Tafsir Jalalain memuat “malapetaka” (sinonim kamus); Tafsir Ibnu Katsir “Al-Baqarah, ayat 155-157” memuat “musibah”"
+    },
+    {
+     "ayat": "3:200",
+     "surah": "Ali 'Imran",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Hai orang-orang yang beriman, bersabarlah kamu dan kuatkanlah kesabaranmu dan tetaplah bersiap siaga (di perbatasan negerimu) dan bertakwalah kepada Allah, supaya kamu beruntung.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Ali Imran, ayat 199-200” memuat “sabar” · “musibah”: Tafsir Jalalain memuat “musibah”"
+    },
+    {
+     "ayat": "22:35",
+     "surah": "Al Hajj",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "(yaitu) orang-orang yang apabila disebut nama Allah gemetarlah hati mereka, orang-orang yang sabar terhadap apa yang menimpa mereka, orang-orang yang mendirikan sembahyang dan orang-orang yang menafkahkan sebagian dari apa yang telah Kami rezkikan kepada mereka.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Al-Hajj, ayat 34-35” memuat “sabar” · “musibah”: Tafsir Jalalain memuat “musibah”; Tafsir Ibnu Katsir “Al-Hajj, ayat 34-35” memuat “musibah”"
+    },
+    {
+     "ayat": "3:186",
+     "surah": "Ali 'Imran",
+     "label": "Kecocokan sinonim",
+     "tr": "Kamu sungguh-sungguh akan diuji terhadap hartamu dan dirimu. Dan (juga) kamu sungguh-sungguh akan mendengar dari orang-orang yang diberi kitab sebelum kamu dan dari orang-orang yang mempersekutukan Allah, gangguan yang banyak yang menyakitkan hati. Jika kamu bersabar dan bertakwa, maka sesungguhnya yang demikian itu termasuk urusan yang patut diutamakan.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Ali Imran, ayat 185-186” memuat “sabar” · “musibah”: Tafsir Jalalain memuat “malapetaka” (sinonim kamus); Tafsir Ibnu Katsir “Ali Imran, ayat 185-186” memuat “musibah”"
+    },
+    {
+     "ayat": "13:22",
+     "surah": "Ar Ra'd",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan orang-orang yang sabar karena mencari keridhaan Tuhannya, mendirikan shalat, dan menafkahkan sebagian rezki yang Kami berikan kepada mereka, secara sembunyi atau terang-terangan serta menolak kejahatan dengan kebaikan; orang-orang itulah yang mendapat tempat kesudahan (yang baik),",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Ar-Ra'd, ayat 20-24” memuat “sabar” · “mendapatkan” (pelengkap): Terjemahan memuat “mendapatkan” · “musibah”: Tafsir Jalalain memuat “musibah”"
+    },
+    {
+     "ayat": "64:11",
+     "surah": "At Taghaabun",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Tidak ada suatu musibah pun yang menimpa seseorang kecuali dengan ijin Allah; dan barangsiapa yang beriman kepada Allah niscaya Dia akan memberi petunjuk kepada hatinya. Dan Allah Maha Mengetahui segala sesuatu.",
+     "alasan": "“sabar”: Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “At-Taghabun, ayat 11-13” memuat “sabar” · “musibah”: Terjemahan memuat “musibah”; Tafsir Jalalain memuat “musibah”; Tafsir Ibnu Katsir “At-Taghabun, ayat 11-13” memuat “musibah”"
+    },
+    {
+     "ayat": "42:33",
+     "surah": "Asy Syuura",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Jika Dia menghendaki, Dia akan menenangkan angin, maka jadilah kapal-kapal itu terhenti di permukaan laut. Sesungguhnya pada yang demikian itu terdapat tanda-tanda (kekuasaannya) bagi setiap orang yang banyak bersabar dan banyak bersyukur,",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Asy-Syura, ayat 32-35” memuat “sabar” · “mendapatkan” (pelengkap): Terjemahan memuat “mendapatkan” · “musibah”: Tafsir Jalalain memuat “musibah”"
+    }
+   ],
+   "pendukung": [
+    {
+     "ayat": "2:153",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Hai orang-orang yang beriman, jadikanlah sabar dan shalat sebagai penolongmu, sesungguhnya Allah beserta orang-orang yang sabar.",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Catatan kaki terjemahan memuat “sabar”; Tafsir Ibnu Katsir “Al-Baqarah, ayat 153-154” memuat “sabar”; Tafsir Ibnu Katsir “Al-Baqarah, ayat 153-154” memuat “tabah” (sinonim kamus) · “musibah”: Tafsir Ibnu Katsir “Al-Baqarah, ayat 153-154” memuat “musibah”"
+    },
+    {
+     "ayat": "12:18",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Mereka datang membawa baju gamisnya (yang berlumuran) dengan darah palsu. Ya'qub berkata: \"Sebenarnya dirimu sendirilah yang memandang baik perbuatan (yang buruk) itu; maka kesabaran yang baik itulah ",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Keterangan dalam kurung pada terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Catatan kaki terjemahan memuat “sabar”; Tafsir Ibnu Katsir “Yusuf, ayat 16-18” memuat “sabar” · “musibah”: Tafsir Ibnu Katsir “Yusuf, ayat 16-18” memuat “musibah”"
+    },
+    {
+     "ayat": "42:43",
+     "label": "Hanya istilah terkait",
+     "tr": "Tetapi orang yang bersabar dan mema'afkan, sesungguhnya (perbuatan ) yang demikian itu termasuk hal-hal yang diutamakan.",
+     "alasan": "“sabar”: Judul kelompok ayat “Bersabar dan memberi maaf lebih baik daripada mengambil pembalasan” (QS 42:39–43) memuat “sabar”; Terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Asy-Syura, ayat 40-43” memuat “sabar” · “musibah”: Tafsir Ibnu Katsir “Asy-Syura, ayat 40-43” memuat “penderitan” (istilah terkait — bukan bukti tema)"
+    },
+    {
+     "ayat": "42:30",
+     "label": "Hanya istilah terkait",
+     "tr": "Dan apa saja musibah yang menimpa kamu maka adalah disebabkan oleh perbuatan tanganmu sendiri, dan Allah memaafkan sebagian besar (dari kesalahan-kesalahanmu).",
+     "alasan": "“sabar”: Terjemahan memuat “musibah” (istilah terkait — bukan bukti tema); Tafsir Jalalain memuat “musibah” (istilah terkait — bukan bukti tema); Tafsir Ibnu Katsir “Asy-Syura, ayat 29-31” memuat “musibah” (istilah terkait — bukan bukti tema) · “musibah”: Terjemahan memuat “musibah”; Tafsir Jalalain memuat “musibah”; Tafsir Ibnu Katsir “Asy-Syura, ayat 29-31” memuat “musibah”"
+    },
+    {
+     "ayat": "8:66",
+     "label": "Kecocokan kata literal",
+     "tr": "Sekarang Allah telah meringankan kepadamu dan dia telah mengetahui bahwa padamu ada kelemahan. Maka jika ada diantaramu seratus orang yang sabar, niscaya mereka akan dapat mengalahkan dua ratus orang ",
+     "alasan": "“sabar”: Terjemahan memuat “sabar”; Keterangan dalam kurung pada terjemahan memuat “sabar”; Tafsir Jalalain memuat “sabar”; Tafsir Ibnu Katsir “Al-Anfal, ayat 64-66” memuat “sabar” · “mendapatkan” (pelengkap): Terjemahan memuat “mendapatkan” · “musibah”: tidak ditemukan pada ayat ini"
+    }
+   ]
+  },
+  {
+   "q": "Ayat tentang berbuat baik kepada kedua orang tua.",
+   "concepts": [
+    {
+     "label": "berbuat baik",
+     "pelengkap": false,
+     "kamus": true
+    },
+    {
+     "label": "orang tua",
+     "pelengkap": false,
+     "kamus": true
+    }
+   ],
+   "removed": [
+    "Ayat",
+    "tentang"
+   ],
+   "utamaTotal": 12,
+   "pendukungTotal": 5228,
+   "utama": [
+    {
+     "ayat": "46:15",
+     "surah": "Al Ahqaaf",
+     "label": "Kecocokan makna/tema",
+     "tr": "Kami perintahkan kepada manusia supaya berbuat baik kepada dua orang ibu bapaknya, ibunya mengandungnya dengan susah payah, dan melahirkannya dengan susah payah (pula). Mengandungnya sampai menyapihnya adalah tiga puluh bulan, sehingga apabila dia telah dewasa dan umurnya sampai empat puluh tahun ia berdoa: \"Ya Tuhanku, tunjukilah aku untuk mensyukuri nikmat Engkau yang telah Engkau berikan kepadaku dan kepada ibu bapakku dan supaya aku dapat berbuat amal yang saleh yang Engkau ridhai; berilah kebaikan kepadaku dengan (memberi kebaikan) kepada anak cucuku. Sesungguhnya aku bertaubat kepada Engkau dan sesungguhnya aku termasuk orang-orang yang berserah diri.\"",
+     "alasan": "“berbuat baik”: Judul kelompok ayat “KEWAJIBAN MENGHORMATI IBU BAPAK” (QS 46:15–20) memuat “menghormati ibu bapak” (sinonim kamus); Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik”; Tafsir Ibnu Katsir “Al-Ahqaf, ayat 15-16” memuat “berbakti” (sinonim kamus) · “orang tua”: Judul kelompok ayat “KEWAJIBAN MENGHORMATI IBU BAPAK” (QS 46:15–20) memuat “ibu bapak” (sinonim kamus); Terjemahan memuat “ibu bapak” (sinonim kamus); Tafsir Jalalain memuat “kedua orang tua”; Tafsir Ibnu Katsir “Al-Ahqaf, ayat 15-16” memuat “orang tua”"
+    },
+    {
+     "ayat": "17:23",
+     "surah": "Al Israa'",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan Tuhanmu telah memerintahkan supaya kamu jangan menyembah selain Dia dan hendaklah kamu berbuat baik pada ibu bapakmu dengan sebaik-baiknya. Jika salah seorang di antara keduanya atau kedua-duanya sampai berumur lanjut dalam pemeliharaanmu, maka sekali-kali janganlah kamu mengatakan kepada keduanya perkataan \"ah\" dan janganlah kamu membentak mereka dan ucapkanlah kepada mereka perkataan yang mulia.",
+     "alasan": "“berbuat baik”: Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik”; Tafsir Ibnu Katsir “Al-Isra, ayat 23-24” memuat “berbakti” (sinonim kamus); Tafsir Ibnu Katsir “Al-Isra, ayat 23-24” memuat “berbakti kepada orang tua” (sinonim kamus) · “orang tua”: Terjemahan memuat “ibu bapak” (sinonim kamus); Tafsir Jalalain memuat “ibu bapak” (sinonim kamus); Catatan kaki terjemahan memuat “orang tua”; Tafsir Ibnu Katsir “Al-Isra, ayat 23-24” memuat “orang tua”"
+    },
+    {
+     "ayat": "6:151",
+     "surah": "Al An'am",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Katakanlah: \"Marilah kubacakan apa yang diharamkan atas kamu oleh Tuhanmu yaitu: janganlah kamu mempersekutukan sesuatu dengan Dia, berbuat baiklah terhadap kedua orang ibu bapa, dan janganlah kamu membunuh anak-anak kamu karena takut kemiskinan, Kami akan memberi rezki kepadamu dan kepada mereka, dan janganlah kamu mendekati perbuatan-perbuatan yang keji, baik yang nampak di antaranya maupun yang tersembunyi, dan janganlah kamu membunuh jiwa yang diharamkan Allah (membunuhnya) melainkan dengan sesuatu (sebab) yang benar.\" Demikian itu yang diperintahkan kepadamu supaya kamu memahami(nya).",
+     "alasan": "“berbuat baik”: Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik”; Tafsir Ibnu Katsir “Al-An'am, ayat 151” memuat “berbakti” (sinonim kamus) · “orang tua”: Terjemahan memuat “ibu bapa” (sinonim kamus); Tafsir Jalalain memuat “orang tua”; Tafsir Ibnu Katsir “Al-An'am, ayat 151” memuat “orang tua”"
+    },
+    {
+     "ayat": "19:14",
+     "surah": "Maryam",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "dan seorang yang berbakti kepada kedua orang tuanya, dan bukanlah ia orang yang sombong lagi durhaka.",
+     "alasan": "“berbuat baik”: Terjemahan memuat “berbakti” (sinonim kamus); Tafsir Jalalain memuat “berbuat baik”; Tafsir Ibnu Katsir “Maryam, ayat 12-15” memuat “berbakti” (sinonim kamus) · “orang tua”: Terjemahan memuat “orang tua”; Tafsir Jalalain memuat “orang tua”; Tafsir Ibnu Katsir “Maryam, ayat 12-15” memuat “orang tua”"
+    },
+    {
+     "ayat": "4:36",
+     "surah": "An Nisaa'",
+     "label": "Kecocokan sinonim",
+     "tr": "Sembahlah Allah dan janganlah kamu mempersekutukan-Nya dengan sesuatupun. Dan berbuat baiklah kepada dua orang ibu-bapa, karib-kerabat, anak-anak yatim, orang-orang miskin, tetangga yang dekat dan tetangga yang jauh, dan teman sejawat, ibnu sabil dan hamba sahayamu. Sesungguhnya Allah tidak menyukai orang-orang yang sombong dan membangga-banggakan diri,",
+     "alasan": "“berbuat baik”: Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik”; Tafsir Ibnu Katsir “An-Nisa, ayat 36” memuat “berbakti” (sinonim kamus) · “orang tua”: Terjemahan memuat “ibu bapa” (sinonim kamus); Tafsir Jalalain memuat “ibu bapak” (sinonim kamus); Catatan kaki terjemahan memuat “ibu bapak” (sinonim kamus); Tafsir Ibnu Katsir “An-Nisa, ayat 36” memuat “orang tua”"
+    },
+    {
+     "ayat": "2:83",
+     "surah": "Al Baqarah",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan (ingatlah), ketika Kami mengambil janji dari Bani Israil (yaitu): Janganlah kamu menyembah selain Allah, dan berbuat kebaikanlah kepada ibu bapa, kaum kerabat, anak-anak yatim, dan orang-orang miskin, serta ucapkanlah kata-kata yang baik kepada manusia, dirikanlah shalat dan tunaikanlah zakat. Kemudian kamu tidak memenuhi janji itu, kecuali sebahagian kecil daripada kamu, dan kamu selalu berpaling.",
+     "alasan": "“berbuat baik”: Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik”; Tafsir Ibnu Katsir “Al-Baqarah, ayat 83” memuat “berbakti” (sinonim kamus) · “orang tua”: Terjemahan memuat “ibu bapa” (sinonim kamus); Tafsir Jalalain memuat “orang tua”; Tafsir Ibnu Katsir “Al-Baqarah, ayat 83” memuat “orang tua”"
+    },
+    {
+     "ayat": "12:100",
+     "surah": "Yusuf",
+     "label": "Kecocokan makna/tema",
+     "tr": "Dan ia menaikkan kedua ibu-bapanya ke atas singgasana. Dan mereka (semuanya) merebahkan diri seraya sujud kepada Yusuf. Dan berkata Yusuf: \"Wahai ayahku inilah ta'bir mimpiku yang dahulu itu; sesungguhnya Tuhanku telah menjadikannya suatu kenyataan. Dan sesungguhnya Tuhanku telah berbuat baik kepadaku, ketika Dia membebaskan aku dari rumah penjara dan ketika membawa kamu dari dusun padang pasir, setelah syaitan merusakkan (hubungan) antaraku dan saudara-saudaraku. Sesungguhnya Tuhanku Maha Lembut terhadap apa yang Dia kehendaki. Sesungguhnya Dialah Yang Maha Mengetahui lagi Maha Bijaksana.",
+     "alasan": "“berbuat baik”: Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik” · “orang tua”: Judul kelompok ayat “Pertemuan Yusuf a.s. dengan kedua orang tuanya” (QS 12:94–100) memuat “orang tua”; Terjemahan memuat “ibu bapa” (sinonim kamus); Tafsir Jalalain memuat “orang tua”; Tafsir Ibnu Katsir “Yusuf, ayat 99-100” memuat “orang tua”"
+    },
+    {
+     "ayat": "31:14",
+     "surah": "Luqman",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan Kami perintahkan kepada manusia (berbuat baik) kepada dua orang ibu- bapanya; ibunya telah mengandungnya dalam keadaan lemah yang bertambah- tambah, dan menyapihnya dalam dua tahun. Bersyukurlah kepadaKu dan kepada dua orang ibu bapakmu, hanya kepada-Kulah kembalimu.",
+     "alasan": "“berbuat baik”: Keterangan dalam kurung pada terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbakti” (sinonim kamus); Tafsir Ibnu Katsir “Luqman, ayat 13-15” memuat “berbakti” (sinonim kamus); Tafsir Ibnu Katsir “Luqman, ayat 13-15” memuat “berbakti kepada ibu bapak” (sinonim kamus) · “orang tua”: Terjemahan memuat “ibu bapak” (sinonim kamus); Tafsir Jalalain memuat “ibu bapak” (sinonim kamus); Tafsir Ibnu Katsir “Luqman, ayat 13-15” memuat “orang tua”"
+    },
+    {
+     "ayat": "29:8",
+     "surah": "Al 'Ankabuut",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan Kami wajibkan manusia (berbuat) kebaikan kepada dua orang ibu- bapaknya. Dan jika keduanya memaksamu untuk mempersekutukan Aku dengan sesuatu yang tidak ada pengetahuanmu tentang itu, maka janganlah kamu mengikuti keduanya. Hanya kepada-Ku-lah kembalimu, lalu Aku kabarkan kepadamu apa yang telah kamu kerjakan.",
+     "alasan": "“berbuat baik”: Tafsir Jalalain memuat “berbuat baik”; Tafsir Ibnu Katsir “Al-'Ankabut, ayat 8-9” memuat “berbakti” (sinonim kamus) · “orang tua”: Judul kelompok ayat “Ajakan mempersekutukan Tuhan harus ditentang sekalipun datangnya dari ibu bapa.” (QS 29:8–9) memuat “ibu bapa” (sinonim kamus); Terjemahan memuat “ibu bapak” (sinonim kamus); Tafsir Jalalain memuat “ibu bapak” (sinonim kamus); Tafsir Ibnu Katsir “Al-'Ankabut, ayat 8-9” memuat “orang tua”"
+    },
+    {
+     "ayat": "18:81",
+     "surah": "Al Kahfi",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan kami menghendaki, supaya Tuhan mereka mengganti bagi mereka dengan anak lain yang lebih baik kesuciannya dari anaknya itu dan lebih dalam kasih sayangnya (kepada ibu bapaknya).",
+     "alasan": "“berbuat baik”: Tafsir Jalalain memuat “berbakti” (sinonim kamus); Tafsir Ibnu Katsir “Al-kahfi, ayat 80-81” memuat “berbakti” (sinonim kamus) · “orang tua”: Keterangan dalam kurung pada terjemahan memuat “ibu bapak” (sinonim kamus); Tafsir Jalalain memuat “kedua orang tua”; Tafsir Ibnu Katsir “Al-kahfi, ayat 80-81” memuat “orang tua”"
+    }
+   ],
+   "pendukung": [
+    {
+     "ayat": "4:11",
+     "label": "Hanya istilah terkait",
+     "tr": "Allah mensyari'atkan bagimu tentang (pembagian pusaka untuk) anak-anakmu. Yaitu : bahagian seorang anak lelaki sama dengan bagahian dua orang anak perempuan; dan jika anak itu semuanya perempuan lebih",
+     "alasan": "“berbuat baik”: Tafsir Jalalain memuat “kebaikan” (istilah terkait — bukan bukti tema); Tafsir Ibnu Katsir “An-Nisa, ayat 11” memuat “kebaikan” (istilah terkait — bukan bukti tema) · “orang tua”: Terjemahan memuat “orang tua”; Tafsir Jalalain memuat “kedua orang tua”; Tafsir Ibnu Katsir “An-Nisa, ayat 11” memuat “orang tua”"
+    },
+    {
+     "ayat": "39:34",
+     "label": "Kecocokan kata literal",
+     "tr": "Mereka memperoleh apa yang mereka kehendaki pada sisi Tuhan mereka. Demikianlah balasan orang-orang yang berbuat baik,",
+     "alasan": "“berbuat baik”: Judul kelompok ayat “Orang kafir akan menemui azab neraka dan orang-orang yang berbuat kebaikan akan mendapat pahala yang berganda” (QS 39:32–37) memuat “berbuat baik”; Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik” · “orang tua”: tidak ditemukan pada ayat ini"
+    },
+    {
+     "ayat": "12:99",
+     "label": "Hanya istilah terkait",
+     "tr": "Maka tatkala mereka masuk ke (tempat) Yusuf: Yusuf merangkul ibu bapanya dan dia berkata: \"Masuklah kamu ke negeri Mesir, insya Allah dalam keadaan aman.\"",
+     "alasan": "“berbuat baik”: Tafsir Ibnu Katsir “Yusuf, ayat 99-100” memuat “kebaikan” (istilah terkait — bukan bukti tema) · “orang tua”: Judul kelompok ayat “Pertemuan Yusuf a.s. dengan kedua orang tuanya” (QS 12:94–100) memuat “orang tua”; Terjemahan memuat “ibu bapa” (sinonim kamus); Tafsir Jalalain memuat “orang tua”; Tafsir Ibnu Katsir “Yusuf, ayat 99-100” memuat “orang tua”"
+    },
+    {
+     "ayat": "33:6",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Nabi itu (hendaknya) lebih utama bagi orang-orang mukmin dari diri mereka sendiri dan isteri-isterinya adalah ibu-ibu mereka. Dan orang-orang yang mempunyai hubungan darah satu sama lain lebih berhak ",
+     "alasan": "“berbuat baik”: Terjemahan memuat “berbuat baik”; Tafsir Jalalain memuat “berbuat baik”; Catatan kaki terjemahan memuat “berbuat baik”; Tafsir Ibnu Katsir “Al-Ahzab, ayat 6” memuat “menghormati ibu bapak” (sinonim kamus) · “orang tua”: Tafsir Ibnu Katsir “Al-Ahzab, ayat 6” memuat “ayah ibu” (sinonim kamus)"
+    },
+    {
+     "ayat": "7:173",
+     "label": "Hanya istilah terkait",
+     "tr": "atau agar kamu tidak mengatakan: \"Sesungguhnya orang-orang tua kami telah mempersekutukan Tuhan sejak dahulu, sedang kami ini adalah anak-anak keturunan yang (datang) sesudah mereka. Maka apakah Engka",
+     "alasan": "“berbuat baik”: Tafsir Ibnu Katsir “Al-A'raf, ayat 172-174” memuat “kebaikan” (istilah terkait — bukan bukti tema) · “orang tua”: Terjemahan memuat “orang tua”; Tafsir Jalalain memuat “orang tua”; Catatan kaki terjemahan memuat “orang tua”; Tafsir Ibnu Katsir “Al-A'raf, ayat 172-174” memuat “orang tua”"
+    }
+   ]
+  },
+  {
+   "q": "Ayat tentang menjaga keharmonisan rumah tangga.",
+   "concepts": [
+    {
+     "label": "menjaga",
+     "pelengkap": true,
+     "kamus": false
+    },
+    {
+     "label": "keharmonisan",
+     "pelengkap": false,
+     "kamus": true
+    },
+    {
+     "label": "rumah tangga",
+     "pelengkap": false,
+     "kamus": true
+    }
+   ],
+   "removed": [
+    "Ayat",
+    "tentang"
+   ],
+   "utamaTotal": 3,
+   "pendukungTotal": 2619,
+   "utama": [
+    {
+     "ayat": "30:21",
+     "surah": "Ar Ruum",
+     "label": "Kecocokan makna/tema",
+     "tr": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.",
+     "alasan": "“keharmonisan”: Terjemahan memuat “tenteram” (sinonim kamus); Tafsir Jalalain memuat “tenteram” (sinonim kamus); Tafsir Ibnu Katsir “Ar-Rum, ayat 20-21” memuat “tenteram” (sinonim kamus) · “rumah tangga”: Indeks tema Al-Qur'an “Hukum privat › Perkawinan › Perintah nikah” memuat “perkawinan” (sinonim kamus); Tafsir Ibnu Katsir “Ar-Rum, ayat 20-21” memuat “perkawinan” (sinonim kamus)"
+    },
+    {
+     "ayat": "4:128",
+     "surah": "An Nisaa'",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan jika seorang wanita khawatir akan nusyuz atau sikap tidak acuh dari suaminya, maka tidak mengapa bagi keduanya mengadakan perdamaian yang sebenar-benarnya, dan perdamaian itu lebih baik (bagi mereka) walaupun manusia itu menurut tabiatnya kikir. Dan jika kamu bergaul dengan isterimu secara baik dan memelihara dirimu (dari nusyuz dan sikap tak acuh), maka sesungguhnya Allah adalah Maha Mengetahui apa yang kamu kerjakan.",
+     "alasan": "“menjaga” (pelengkap): Judul kelompok ayat “KEHARUSAN MENJAGA KEBENARAN DAN KEADILAN” (QS 4:105–152) memuat “menjaga” · “keharmonisan”: Tafsir Jalalain memuat “rukun” (sinonim kamus) · “rumah tangga”: Judul kelompok ayat “Keharusan memberikan hak-hak orang yang lemah dan cara menyelesaikan kesulitan rumah tangga” (QS 4:127–130) memuat “rumah tanga”; Tafsir Ibnu Katsir “An-Nisa, ayat 128-130” memuat “suami istri” (sinonim kamus)"
+    },
+    {
+     "ayat": "4:129",
+     "surah": "An Nisaa'",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan kamu sekali-kali tidak akan dapat berlaku adil di antara isteri-isteri(mu), walaupun kamu sangat ingin berbuat demikian, karena itu janganlah kamu terlalu cenderung (kepada yang kamu cintai), sehingga kamu biarkan yang lain terkatung-katung. Dan jika kamu mengadakan perbaikan dan memelihara diri (dari kecurangan), maka sesungguhnya Allah Maha Pengampun lagi Maha Penyayang.",
+     "alasan": "“menjaga” (pelengkap): Judul kelompok ayat “KEHARUSAN MENJAGA KEBENARAN DAN KEADILAN” (QS 4:105–152) memuat “menjaga” · “keharmonisan”: Tafsir Jalalain memuat “kasih sayang” (sinonim kamus) · “rumah tangga”: Judul kelompok ayat “Keharusan memberikan hak-hak orang yang lemah dan cara menyelesaikan kesulitan rumah tangga” (QS 4:127–130) memuat “rumah tanga”; Tafsir Ibnu Katsir “An-Nisa, ayat 128-130” memuat “suami istri” (sinonim kamus)"
+    }
+   ],
+   "pendukung": [
+    {
+     "ayat": "4:35",
+     "label": "Hanya istilah terkait",
+     "tr": "Dan jika kamu khawatirkan ada persengketaan antara keduanya, maka kirimlah seorang hakam dari keluarga laki-laki dan seorang hakam dari keluarga perempuan. Jika kedua orang hakam itu bermaksud mengada",
+     "alasan": "“keharmonisan”: Terjemahan memuat “perbaikan” (istilah terkait — bukan bukti tema); Tafsir Jalalain memuat “perbaikan” (istilah terkait — bukan bukti tema); Tafsir Ibnu Katsir “An-Nisa, ayat 35” memuat “persengketan” (istilah terkait — bukan bukti tema) · “rumah tangga”: Judul kelompok ayat “Beberapa peraturan hidup bersuami-isteri” (QS 4:34–35) memuat “suami isteri” (sinonim kamus); Terjemahan memuat “suami isteri” (sinonim kamus); Tafsir Jalalain memuat “suami istri” (sinonim kamus); Tafsir Ibnu Katsir “An-Nisa, ayat 35” memuat “rumah tanga”"
+    },
+    {
+     "ayat": "13:28",
+     "label": "Kecocokan kata literal",
+     "tr": "(yaitu) orang-orang yang beriman dan hati mereka manjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram.",
+     "alasan": "“keharmonisan”: Judul kelompok ayat “Ketenteraman hati orang-orang yang beriman serta pembalasan bagi mereka” (QS 13:28–29) memuat “tenteram” (sinonim kamus); Terjemahan memuat “tenteram” (sinonim kamus); Tafsir Jalalain memuat “tenteram” (sinonim kamus); Tafsir Ibnu Katsir “Ar-Ra'd, ayat 27-29” memuat “tenteram” (sinonim kamus) · “rumah tangga”: tidak ditemukan pada ayat ini"
+    },
+    {
+     "ayat": "60:10",
+     "label": "Hanya istilah terkait",
+     "tr": "Hai orang-orang yang beriman, apabila datang berhijrah kepadamu perempuan-perempuan yang beriman, maka hendaklah kamu uji (keimanan) mereka. Allah lebih mengetahui tentang keimanan mereka;maka jika ka",
+     "alasan": "“keharmonisan”: Tafsir Jalalain memuat “perdamaian” (istilah terkait — bukan bukti tema); Tafsir Ibnu Katsir “Al-Mumtahanah, ayat 10-11” memuat “perdamaian” (istilah terkait — bukan bukti tema) · “rumah tangga”: Indeks tema Al-Qur'an “Hukum privat › Perceraian › Islamnya salah seorang dari suami isteri” memuat “suami isteri” (sinonim kamus); Keterangan dalam kurung pada terjemahan memuat “perkawinan” (sinonim kamus); Tafsir Jalalain memuat “perkawinan” (sinonim kamus); Tafsir Ibnu Katsir “Al-Mumtahanah, ayat 10-11” memuat “perkawinan” (sinonim kamus); Tafsir Ibnu Katsir “Al-Mumtahanah, ayat 10-11” memuat “suami istri” (sinonim kamus)"
+    },
+    {
+     "ayat": "20:39",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Yaitu: \"Letakkanlah ia (Musa) didalam peti, kemudian lemparkanlah ia ke sungai (Nil), maka pasti sungai itu membawanya ke tepi, supaya diambil oleh (Fir'aun) musuh-Ku dan musuhnya. Dan Aku telah melim",
+     "alasan": "“keharmonisan”: Terjemahan memuat “kasih sayang” (sinonim kamus); Tafsir Jalalain memuat “kasih sayang” (sinonim kamus); Catatan kaki terjemahan memuat “kasih sayang” (sinonim kamus); Tafsir Ibnu Katsir “Thaha, ayat 36-40” memuat “kasih sayang” (sinonim kamus) · “rumah tangga”: Tafsir Ibnu Katsir “Thaha, ayat 36-40” memuat “rumah tanga”"
+    },
+    {
+     "ayat": "4:21",
+     "label": "Hanya istilah terkait",
+     "tr": "Bagaimana kamu akan mengambilnya kembali, padahal sebagian kamu telah bergaul (bercampur) dengan yang lain sebagai suami-isteri. Dan mereka (isteri-isterimu) telah mengambil dari kamu perjanjian yang ",
+     "alasan": "“keharmonisan”: Judul kelompok ayat “Cara bergaul dengan isteri” (QS 4:19–21) memuat “bergaul” (istilah terkait — bukan bukti tema); Terjemahan memuat “bergaul” (istilah terkait — bukan bukti tema); Tafsir Jalalain memuat “bergaul” (istilah terkait — bukan bukti tema); Tafsir Ibnu Katsir “An-Nisa, ayat 19-22” memuat “bergaul” (istilah terkait — bukan bukti tema) · “rumah tangga”: Terjemahan memuat “suami isteri” (sinonim kamus); Tafsir Jalalain memuat “suami istri” (sinonim kamus); Tafsir Ibnu Katsir “An-Nisa, ayat 19-22” memuat “suami istri” (sinonim kamus)"
+    }
+   ]
+  },
+  {
+   "q": "Ayat tentang orang beriman yang selalu mengingat Allah.",
+   "concepts": [
+    {
+     "label": "orang beriman",
+     "pelengkap": false,
+     "kamus": true
+    },
+    {
+     "label": "selalu",
+     "pelengkap": true,
+     "kamus": false
+    },
+    {
+     "label": "dzikir",
+     "pelengkap": false,
+     "kamus": true
+    }
+   ],
+   "removed": [
+    "Ayat",
+    "tentang",
+    "yang"
+   ],
+   "utamaTotal": 37,
+   "pendukungTotal": 5540,
+   "utama": [
+    {
+     "ayat": "13:28",
+     "surah": "Ar Ra'd",
+     "label": "Kecocokan makna/tema",
+     "tr": "(yaitu) orang-orang yang beriman dan hati mereka manjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram.",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Iman › Iman bertambah dan berkurang › Sifat-sifat orang mukmin” memuat “mukmin” (sinonim kamus); Judul kelompok ayat “Ketenteraman hati orang-orang yang beriman serta pembalasan bagi mereka” (QS 13:28–29) memuat “orang beriman”; Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Ar-Ra'd, ayat 27-29” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Ar-Ra'd, ayat 27-29” memuat “orang beriman” · “dzikir”: Terjemahan memuat “mengingat alah”; Tafsir Jalalain memuat “mengingat alah”; Tafsir Ibnu Katsir “Ar-Ra'd, ayat 27-29” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "63:9",
+     "surah": "Al Munaafiquun",
+     "label": "Kecocokan makna/tema",
+     "tr": "Hai orang-orang beriman, janganlah hartamu dan anak-anakmu melalaikan kamu dari mengingat Allah. Barangsiapa yang berbuat demikian maka mereka itulah orang-orang yang merugi.",
+     "alasan": "“orang beriman”: Judul kelompok ayat “Peringatan kepada orang-orang mukmin” (QS 63:9–11) memuat “mukmin” (sinonim kamus); Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Munafiqun, ayat 9-11” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Al-Munafiqun, ayat 9-11” memuat “orang beriman” · “dzikir”: Terjemahan memuat “mengingat alah”; Tafsir Jalalain memuat “mengingat alah”; Tafsir Ibnu Katsir “Al-Munafiqun, ayat 9-11” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "57:16",
+     "surah": "Al Hadiid",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Belumkah datang waktunya bagi orang-orang yang beriman, untuk tunduk hati mereka mengingat Allah dan kepada kebenaran yang telah turun (kepada mereka), dan janganlah mereka seperti orang-orang yang sebelumnya telah diturunkan Al Kitab kepadanya, kemudian berlalulah masa yang panjang atas mereka lalu hati mereka menjadi keras. Dan kebanyakan di antara mereka adalah orang-orang yang fasik.",
+     "alasan": "“orang beriman”: Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Hadid, ayat 16-17” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Al-Hadid, ayat 16-17” memuat “orang beriman” · “dzikir”: Terjemahan memuat “mengingat alah”; Tafsir Jalalain memuat “mengingat alah”; Tafsir Ibnu Katsir “Al-Hadid, ayat 16-17” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "33:41",
+     "surah": "Al Ahzab",
+     "label": "Kecocokan makna/tema",
+     "tr": "Hai orang-orang yang beriman, berzdikirlah (dengan menyebut nama) Allah, zikir yang sebanyak-banyaknya.",
+     "alasan": "“orang beriman”: Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Ahzab, ayat 41-44” memuat “orang beriman” · “dzikir”: Judul kelompok ayat “KEHARUSAN MENGINGAT ALLAH” (QS 33:41–44) memuat “mengingat alah”; Terjemahan memuat “dzikir”; Tafsir Jalalain memuat “dzikir”; Tafsir Ibnu Katsir “Al-Ahzab, ayat 41-44” memuat “dzikir”"
+    },
+    {
+     "ayat": "62:9",
+     "surah": "Al Jumu'ah",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Hai orang-orang beriman, apabila diseru untuk menunaikan shalat Jum'at, maka bersegeralah kamu kepada mengingat Allah dan tinggalkanlah jual beli. Yang demikian itu lebih baik bagimu jika kamu mengetahui.",
+     "alasan": "“orang beriman”: Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Jumu'ah, ayat 9-10” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Al-Jumu'ah, ayat 9-10” memuat “orang beriman” · “dzikir”: Terjemahan memuat “mengingat alah”; Tafsir Jalalain memuat “mengingat alah”; Tafsir Ibnu Katsir “Al-Jumu'ah, ayat 9-10” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "4:103",
+     "surah": "An Nisaa'",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Maka apabila kamu telah menyelesaikan shalat(mu), ingatlah Allah di waktu berdiri, di waktu duduk dan di waktu berbaring. Kemudian apabila kamu telah merasa aman, maka dirikanlah shalat itu (sebagaimana biasa). Sesungguhnya shalat itu adalah fardhu yang ditentukan waktunya atas orang-orang yang beriman.",
+     "alasan": "“orang beriman”: Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “An-Nisa, ayat 103-104” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “An-Nisa, ayat 103-104” memuat “orang beriman” · “dzikir”: Terjemahan memuat “mengingat alah”; Tafsir Jalalain memuat “mengingat alah”; Tafsir Ibnu Katsir “An-Nisa, ayat 103-104” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "26:227",
+     "surah": "Asy Syu'araa'",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "kecuali orang-orang (penyair-penyair) yang beriman dan beramal saleh dan banyak menyebut Allah dan mendapat kemenangan sesudah menderita kezaliman. Dan orang-orang yang zalim itu kelak akan mengetahui ke tempat mana mereka akan kembali.",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Iman › Iman bertambah dan berkurang › Iman adalah ucapan dan perbuatan” memuat “beriman” (sinonim kamus); Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Asy-Syu'ara', ayat 221-227” memuat “orang beriman” · “dzikir”: Tafsir Jalalain memuat “dzikir”; Tafsir Ibnu Katsir “Asy-Syu'ara', ayat 221-227” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "3:191",
+     "surah": "Ali 'Imran",
+     "label": "Kecocokan makna/tema",
+     "tr": "(yaitu) orang-orang yang mengingat Allah sambil berdiri atau duduk atau dalam keadan berbaring dan mereka memikirkan tentang penciptaan langit dan bumi (seraya berkata): \"Ya Tuhan kami, tiadalah Engkau menciptakan ini dengan sia-sia, Maha Suci Engkau, maka peliharalah kami dari siksa neraka.",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Ibadah › Do'a › Doa orang-orang beriman” memuat “orang beriman”; Tafsir Ibnu Katsir “Ali Imran, ayat 190-194” memuat “orang beriman” · “selalu” (pelengkap): Judul kelompok ayat “Faedah selalu ingat kepada Allah dan merenungkan ciptaan-Nya” (QS 3:190–195) memuat “selalu” · “dzikir”: Judul kelompok ayat “Faedah selalu ingat kepada Allah dan merenungkan ciptaan-Nya” (QS 3:190–195) memuat “mengingat alah”; Terjemahan memuat “mengingat alah”; Tafsir Jalalain memuat “mengingat alah”; Tafsir Ibnu Katsir “Ali Imran, ayat 190-194” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "90:17",
+     "surah": "Al Balad",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan dia (tidak pula) termasuk orang-orang yang beriman dan saling berpesan untuk bersabar dan saling berpesan untuk berkasih sayang.",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Iman › Iman bertambah dan berkurang › Iman adalah ucapan dan perbuatan” memuat “beriman” (sinonim kamus); Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Balad, ayat 11-20” memuat “orang beriman” · “dzikir”: Tafsir Jalalain memuat “dzikir”"
+    },
+    {
+     "ayat": "58:11",
+     "surah": "Al Mujaadilah",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Hai orang-orang beriman apabila dikatakan kepadamu: \"Berlapang-lapanglah dalam majlis\", maka lapangkanlah niscaya Allah akan memberi kelapangan untukmu. Dan apabila dikatakan: \"Berdirilah kamu\", maka berdirilah, niscaya Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat. Dan Allah Maha Mengetahui apa yang kamu kerjakan.",
+     "alasan": "“orang beriman”: Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Mujadilah, ayat 11” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Al-Mujadilah, ayat 11” memuat “orang beriman” · “dzikir”: Tafsir Jalalain memuat “dzikir”; Tafsir Ibnu Katsir “Al-Mujadilah, ayat 11” memuat “mengingat alah”"
+    }
+   ],
+   "pendukung": [
+    {
+     "ayat": "40:7",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "(Malaikat-malaikat) yang memikul 'Arsy dan malaikat yang berada di sekelilingnya bertasbih memuji Tuhannya dan mereka beriman kepada-Nya serta memintakan ampun bagi orang-orang yang beriman (seraya me",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Ibadah › Do'a › Doa malaikat untuk orang-orang beriman” memuat “orang beriman”; Judul kelompok ayat “Para malaikat bertasbih kepada Allah dan mendoakan orang-orang mukmin” (QS 40:7–9) memuat “mukmin” (sinonim kamus); Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Mu’min, ayat 7-9” memuat “mukmin” (sinonim kamus); Tafsir Ibnu Katsir “Al-Mu’min, ayat 7-9” memuat “orang beriman” · “dzikir”: Tafsir Ibnu Katsir “Al-Mu’min, ayat 7-9” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "13:29",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Orang-orang yang beriman dan beramal saleh, bagi mereka kebahagiaan dan tempat kembali yang baik.",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Iman › Keutamaan dan pahala iman › Pahala iman” memuat “beriman” (sinonim kamus); Judul kelompok ayat “Ketenteraman hati orang-orang yang beriman serta pembalasan bagi mereka” (QS 13:28–29) memuat “orang beriman”; Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Ar-Ra'd, ayat 27-29” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Ar-Ra'd, ayat 27-29” memuat “orang beriman” · “dzikir”: Tafsir Ibnu Katsir “Ar-Ra'd, ayat 27-29” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "2:62",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Sesungguhnya orang-orang mukmin, orang-orang Yahudi, orang-orang Nasrani dan orang-orang Shabiin, siapa saja diantara mereka yang benar-benar beriman kepada Allah, hari kemudian dan beramal saleh, mer",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Iman › Keutamaan dan pahala iman › Kesentosaan orang mukmin di dunia dan di akhirat” memuat “mukmin” (sinonim kamus); Judul kelompok ayat “Pahala orang yang beriman” (QS 2:62) memuat “orang beriman”; Terjemahan memuat “mukmin” (sinonim kamus); Tafsir Jalalain memuat “orang beriman”; Catatan kaki terjemahan memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Baqarah, ayat 62” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Al-Baqarah, ayat 62” memuat “orang beriman” · “dzikir”: Tafsir Ibnu Katsir “Al-Baqarah, ayat 62” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "8:2",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Sesungguhnya orang-orang yang beriman ialah mereka yang bila disebut nama Allah gemetarlah hati mereka, dan apabila dibacakan ayat-ayatNya bertambahlah iman mereka (karenanya), dan hanya kepada Tuhanl",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Iman › Iman bertambah dan berkurang › Bertambah dan berkurangnya iman” memuat “beriman” (sinonim kamus); Judul kelompok ayat “Sifat-sifat orang mukmin” (QS 8:2–4) memuat “mukmin” (sinonim kamus); Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Al-Anfal, ayat 2-4” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Al-Anfal, ayat 2-4” memuat “orang beriman” · “dzikir”: Tafsir Ibnu Katsir “Al-Anfal, ayat 2-4” memuat “mengingat alah”"
+    },
+    {
+     "ayat": "3:199",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Dan sesungguhnya diantara ahli kitab ada orang yang beriman kepada Allah dan kepada apa yang diturunkan kepada kamu dan yang diturunkan kepada mereka sedang mereka berendah hati kepada Allah dan merek",
+     "alasan": "“orang beriman”: Indeks tema Al-Qur'an “Iman › Keutamaan dan pahala iman › Pahala iman” memuat “beriman” (sinonim kamus); Judul kelompok ayat “Kesenangan sementara bagi orang-orang kafir dan kebahagiaan abadi bagi orang-orang mukmin” (QS 3:196–200) memuat “mukmin” (sinonim kamus); Terjemahan memuat “orang beriman”; Tafsir Jalalain memuat “orang beriman”; Tafsir Ibnu Katsir “Ali Imran, ayat 199-200” memuat “beriman” (sinonim kamus); Tafsir Ibnu Katsir “Ali Imran, ayat 199-200” memuat “orang beriman” · “dzikir”: Tafsir Ibnu Katsir “Ali Imran, ayat 199-200” memuat “mengingat alah”"
+    }
+   ]
+  },
+  {
+   "q": "Ayat tentang rezeki yang diberikan Allah.",
+   "concepts": [
+    {
+     "label": "rezeki",
+     "pelengkap": false,
+     "kamus": true
+    },
+    {
+     "label": "diberikan",
+     "pelengkap": true,
+     "kamus": false
+    },
+    {
+     "label": "Allah",
+     "pelengkap": true,
+     "kamus": false
+    }
+   ],
+   "removed": [
+    "Ayat",
+    "tentang",
+    "yang"
+   ],
+   "utamaTotal": 155,
+   "pendukungTotal": 3314,
+   "utama": [
+    {
+     "ayat": "29:62",
+     "surah": "Al 'Ankabuut",
+     "label": "Kecocokan makna/tema",
+     "tr": "Allah melapangkan rezki bagi siapa yang dikehendaki-Nya di antara hamba- hamba-Nya dan Dia (pula) yang menyempitkan baginya. Sesungguhnya Allah Maha Mengetahui segala sesuatu.",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “rezki”; Terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Al-'Ankabut, ayat 61-63” memuat “rezeki” · “Allah” (pelengkap): Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “alah”"
+    },
+    {
+     "ayat": "30:40",
+     "surah": "Ar Ruum",
+     "label": "Kecocokan makna/tema",
+     "tr": "Allah-lah yang menciptakan kamu, kemudian memberimu rezki, kemudian mematikanmu, kemudian menghidupkanmu (kembali). Adakah di antara yang kamu sekutukan dengan Allah itu yang dapat berbuat sesuatu dari yang demikian itu? Maha Sucilah Dia dan Maha Tinggi dari apa yang mereka persekutukan.",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “rezki”; Terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Ar-Rum, ayat 38-40” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “alah”"
+    },
+    {
+     "ayat": "29:60",
+     "surah": "Al 'Ankabuut",
+     "label": "Kecocokan makna/tema",
+     "tr": "Dan berapa banyak binatang yang tidak (dapat) membawa (mengurus) rezkinya sendiri. Allah-lah yang memberi rezki kepadanya dan kepadamu dan Dia Maha Mendengar lagi Maha Mengetahui.",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “rezki”; Terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Al-'Ankabut, ayat 56-60” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “alah”"
+    },
+    {
+     "ayat": "16:71",
+     "surah": "An Nahl",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan Allah melebihkan sebahagian kamu dari sebagian yang lain dalam hal rezki, tetapi orang-orang yang dilebihkan (rezkinya itu) tidak mau memberikan rezki mereka kepada budak-budak yang mereka miliki, agar mereka sama (merasakan) rezki itu. Maka mengapa mereka mengingkari nikmat Allah?.",
+     "alasan": "“rezeki”: Terjemahan memuat “rezki”; Keterangan dalam kurung pada terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “An-Nahl, ayat 71” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Judul kelompok ayat “BUKTI-BUKTI KEBESARAN ALLAH DALAM KEHIDUPAN ALAM SEMESTA” (QS 16:1–128) memuat “alah”"
+    },
+    {
+     "ayat": "30:37",
+     "surah": "Ar Ruum",
+     "label": "Kecocokan makna/tema",
+     "tr": "Dan apakah mereka tidak memperhatikan bahwa Sesungguhnya Allah melapangkan rezki bagi siapa yang dikehendaki-Nya dan Dia (pula) yang menyempitkan (rezki itu). Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kekuasaan Allah) bagi kaum yang beriman.",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “rezki”; Terjemahan memuat “rezki”; Keterangan dalam kurung pada terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Ar-Rum, ayat 33-37” memuat “rezeki” · “Allah” (pelengkap): Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “alah”"
+    },
+    {
+     "ayat": "39:52",
+     "surah": "Az Zumar",
+     "label": "Kecocokan makna/tema",
+     "tr": "Dan tidakkah mereka mengetahui bahwa Allah melapangkan rezki dan menyempitkannya bagi siapa yang dikehendaki-Nya? Sesungguhnya pada yang demikian itu terdapat tanda-tanda kekuasaan Allah bagi kaum yang beriman.",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah menentukan kadar rezki hamba-Nya” (QS 39:52) memuat “rezki”; Terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Az-Zumar, ayat 49-52” memuat “rezeki” · “Allah” (pelengkap): Judul kelompok ayat “Allah menentukan kadar rezki hamba-Nya” (QS 39:52) memuat “alah”"
+    },
+    {
+     "ayat": "22:58",
+     "surah": "Al Hajj",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan orang-orang yang berhijrah di jalan Allah, kemudian mereka di bunuh atau mati, benar-benar Allah akan memberikan kepada mereka rezki yang baik (surga). Dan sesungguhnya Allah adalah sebaik-baik pemberi rezki.",
+     "alasan": "“rezeki”: Terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Al-Hajj, ayat 58-60” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Judul kelompok ayat “BALASAN TERHADAP ORANG-ORANG YANG MATI DALAM BERHIJRAH DI JALAN ALLAH” (QS 22:58–62) memuat “alah”"
+    },
+    {
+     "ayat": "29:17",
+     "surah": "Al 'Ankabuut",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Sesungguhnya apa yang kamu sembah selain Allah itu adalah berhala, dan kamu membuat dusta. Sesungguhnya yang kamu sembah selain Allah itu tidak mampu memberikan rezki kepadamu; maka mintalah rezki itu di sisi Allah, dan sembahlah Dia dan bersyukurlah kepada-Nya. Hanya kepada- Nyalah kamu akan dikembalikan.",
+     "alasan": "“rezeki”: Terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Al-'Ankabut, ayat 16-18” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Terjemahan memuat “alah”"
+    },
+    {
+     "ayat": "30:28",
+     "surah": "Ar Ruum",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dia membuat perumpamaan untuk kamu dari dirimu sendiri. Apakah ada diantara hamba-sahaya yang dimiliki oleh tangan kananmu, sekutu bagimu dalam (memiliki) rezeki yang telah Kami berikan kepadamu; maka kamu sama dengan mereka dalam (hak mempergunakan) rezeki itu, kamu takut kepada mereka sebagaimana kamu takut kepada dirimu sendiri? Demikianlah Kami jelaskan ayat-ayat bagi kaum yang berakal.",
+     "alasan": "“rezeki”: Terjemahan memuat “rezeki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Ar-Rum, ayat 28-29” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Judul kelompok ayat “Suatu tamsil yang terdapat pada keadaan manusia tentang keesaan Allah” (QS 30:28–29) memuat “alah”"
+    },
+    {
+     "ayat": "20:132",
+     "surah": "Thaahaa",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan perintahkanlah kepada keluargamu mendirikan shalat dan bersabarlah kamu dalam mengerjakannya. Kami tidak meminta rezki kepadamu, Kamilah yang memberi rezki kepadamu. Dan akibat (yang baik) itu adalah bagi orang yang bertakwa.",
+     "alasan": "“rezeki”: Terjemahan memuat “rezki”; Tafsir Jalalain memuat “rezeki”; Tafsir Ibnu Katsir “Thaha, ayat 131-132” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan”"
+    }
+   ],
+   "pendukung": [
+    {
+     "ayat": "30:39",
+     "label": "Kecocokan kata literal",
+     "tr": "Dan sesuatu riba (tambahan) yang kamu berikan agar dia bertambah pada harta manusia, maka riba itu tidak menambah pada sisi Allah. Dan apa yang kamu berikan berupa zakat yang kamu maksudkan untuk menc",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “rezki”; Tafsir Ibnu Katsir “Ar-Rum, ayat 38-40” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “alah”"
+    },
+    {
+     "ayat": "30:38",
+     "label": "Kecocokan kata literal",
+     "tr": "Maka berikanlah kepada kerabat yang terdekat akan haknya, demikian (pula) kepada fakir miskin dan orang-orang yang dalam perjalanan. Itulah yang lebih baik bagi orang-orang yang mencari keridhaan Alla",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “rezki”; Tafsir Ibnu Katsir “Ar-Rum, ayat 38-40” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan” · “Allah” (pelengkap): Judul kelompok ayat “Allah mengatur pemberian rezki dan penggunaannya” (QS 30:37–40) memuat “alah”"
+    },
+    {
+     "ayat": "29:61",
+     "label": "Kecocokan kata literal",
+     "tr": "Dan sesungguhnya jika kamu tanyakan kepada mereka: \"Siapakah yang menjadikan langit dan bumi dan menundukkan matahari dan bulan?\" Tentu mereka akan menjawab: \"Allah\", maka betapakah mereka (dapat) dip",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “rezki”; Tafsir Ibnu Katsir “Al-'Ankabut, ayat 61-63” memuat “rezeki” · “Allah” (pelengkap): Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “alah”"
+    },
+    {
+     "ayat": "29:63",
+     "label": "Kecocokan kata literal",
+     "tr": "Dan sesungguhnya jika kamu menanyakan kepada mereka: \"Siapakah yang menurunkan air dari langit lalu menghidupkan dengan air itu bumi sesudah matinya?\" Tentu mereka akan menjawab: \"Allah\", Katakanlah: ",
+     "alasan": "“rezeki”: Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “rezki”; Tafsir Ibnu Katsir “Al-'Ankabut, ayat 61-63” memuat “rezeki” · “Allah” (pelengkap): Judul kelompok ayat “Allah menentukan rezki tiap-tiap makhluk” (QS 29:60–63) memuat “alah”"
+    },
+    {
+     "ayat": "20:131",
+     "label": "Kecocokan kata literal",
+     "tr": "Dan janganlah kamu tujukan kedua matamu kepada apa yang telah Kami berikan kepada golongan-golongan dari mereka, sebagai bunga kehidupan dunia untuk Kami cobai mereka dengannya. Dan karunia Tuhan kamu",
+     "alasan": "“rezeki”: Tafsir Ibnu Katsir “Thaha, ayat 131-132” memuat “rezeki” · “diberikan” (pelengkap): Terjemahan memuat “diberikan”"
+    }
+   ]
+  },
+  {
+   "q": "Ayat tentang larangan berbuat curang dalam perdagangan.",
+   "concepts": [
+    {
+     "label": "larangan",
+     "pelengkap": true,
+     "kamus": false
+    },
+    {
+     "label": "curang",
+     "pelengkap": false,
+     "kamus": true
+    }
+   ],
+   "removed": [
+    "Ayat",
+    "tentang",
+    "dalam"
+   ],
+   "utamaTotal": 18,
+   "pendukungTotal": 2512,
+   "utama": [
+    {
+     "ayat": "83:1",
+     "surah": "Al Muthaffifiin",
+     "label": "Kecocokan makna/tema",
+     "tr": "Kecelakaan besarlah bagi orang-orang yang curang",
+     "alasan": "“curang”: Judul kelompok ayat “ANCAMAN TERHADAP ORANG CURANG DALAM MENAKAR DAN MENIMBANG” (QS 83:1–6) memuat “curang”; Terjemahan memuat “curang”; Tafsir Jalalain memuat “curang”; Catatan kaki terjemahan memuat “curang”; Tafsir Ibnu Katsir “Al-Muthaffifin, ayat 1-6” memuat “curang”"
+    },
+    {
+     "ayat": "55:9",
+     "surah": "Ar Rahmaan",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan tegakkanlah timbangan itu dengan adil dan janganlah kamu mengurangi neraca itu.",
+     "alasan": "“curang”: Terjemahan memuat “mengurangi neraca” (sinonim kamus); Tafsir Jalalain memuat “curang”; Tafsir Ibnu Katsir “Ar-Rahman, ayat 1-13” memuat “mengurangi timbangan” (sinonim kamus)"
+    },
+    {
+     "ayat": "26:183",
+     "surah": "Asy Syu'araa'",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan janganlah kamu merugikan manusia pada hak-haknya dan janganlah kamu merajalela di muka bumi dengan membuat kerusakan;",
+     "alasan": "“curang”: Terjemahan memuat “merugikan manusia” (sinonim kamus); Tafsir Jalalain memuat “merugikan manusia” (sinonim kamus); Tafsir Ibnu Katsir “Asy-Syu'ara', ayat 181-184” memuat “mengurangi takaran” (sinonim kamus)"
+    },
+    {
+     "ayat": "11:84",
+     "surah": "Huud",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan kepada (penduduk) Mad-yan (Kami utus) saudara mereka, Syu'aib. Ia berkata: \"Hai kaumku, sembahlah Allah, sekali-kali tiada Tuhan bagimu selain Dia. Dan janganlah kamu kurangi takaran dan timbangan, sesungguhnya aku melihat kamu dalam keadaan yang baik (mampu) dan sesungguhnya aku khawatir terhadapmu akan azab hari yang membinasakan (kiamat).\"",
+     "alasan": "“curang”: Terjemahan memuat “mengurangi takaran” (sinonim kamus); Tafsir Jalalain memuat “mengurangi takaran” (sinonim kamus); Tafsir Ibnu Katsir “Hud, ayat 84” memuat “mengurangi takaran” (sinonim kamus)"
+    },
+    {
+     "ayat": "11:85",
+     "surah": "Huud",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan Syu'aib berkata: \"Hai kaumku, cukupkanlah takaran dan timbangan dengan adil, dan janganlah kamu merugikan manusia terhadap hak-hak mereka dan janganlah kamu membuat kejahatan di muka bumi dengan membuat kerusakan.",
+     "alasan": "“curang”: Terjemahan memuat “merugikan manusia” (sinonim kamus); Tafsir Jalalain memuat “merugikan manusia” (sinonim kamus); Tafsir Ibnu Katsir “Hud, ayat 85-86” memuat “mengurangi takaran” (sinonim kamus)"
+    },
+    {
+     "ayat": "83:7",
+     "surah": "Al Muthaffifiin",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Sekali-kali jangan curang, karena sesungguhnya kitab orang yang durhaka tersimpan dalam sijjin.",
+     "alasan": "“curang”: Terjemahan memuat “curang”; Tafsir Ibnu Katsir “Al-Muthaffifin, ayat 7-17” memuat “curang”"
+    },
+    {
+     "ayat": "83:3",
+     "surah": "Al Muthaffifiin",
+     "label": "Kecocokan makna/tema",
+     "tr": "dan apabila mereka menakar atau menimbang untuk orang lain, mereka mengurangi.",
+     "alasan": "“curang”: Judul kelompok ayat “ANCAMAN TERHADAP ORANG CURANG DALAM MENAKAR DAN MENIMBANG” (QS 83:1–6) memuat “curang”; Tafsir Jalalain memuat “mengurangi takaran” (sinonim kamus); Tafsir Ibnu Katsir “Al-Muthaffifin, ayat 1-6” memuat “curang”"
+    },
+    {
+     "ayat": "4:129",
+     "surah": "An Nisaa'",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Dan kamu sekali-kali tidak akan dapat berlaku adil di antara isteri-isteri(mu), walaupun kamu sangat ingin berbuat demikian, karena itu janganlah kamu terlalu cenderung (kepada yang kamu cintai), sehingga kamu biarkan yang lain terkatung-katung. Dan jika kamu mengadakan perbaikan dan memelihara diri (dari kecurangan), maka sesungguhnya Allah Maha Pengampun lagi Maha Penyayang.",
+     "alasan": "“curang”: Keterangan dalam kurung pada terjemahan memuat “curang”; Tafsir Jalalain memuat “curang”; Tafsir Ibnu Katsir “An-Nisa, ayat 128-130” memuat “curang”"
+    },
+    {
+     "ayat": "7:85",
+     "surah": "Al A'raaf",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan (Kami telah mengutus) kepada penduduk Mad-yan saudara mereka, Syu'aib. Ia berkata: \"Hai kaumku, sembahlah Allah, sekali-kali tidak ada Tuhan bagimu selain-Nya. Sesungguhnya telah datang kepadamu bukti yang nyata dari Tuhanmu. Maka sempurnakanlah takaran dan timbangan dan janganlah kamu kurangkan bagi manusia barang-barang takaran dan timbangannya, dan janganlah kamu membuat kerusakan di muka bumi sesudah Tuhan memperbaikinya. Yang demikian itu lebih baik bagimu jika betul-betul kamu orang-orang yang beriman.\"",
+     "alasan": "“curang”: Terjemahan memuat “kurangkan bagi manusia” (sinonim kamus); Tafsir Ibnu Katsir “Al-A'raf, ayat 85” memuat “curang”"
+    },
+    {
+     "ayat": "55:8",
+     "surah": "Ar Rahmaan",
+     "label": "Kecocokan terjemahan/tafsir",
+     "tr": "Supaya kamu jangan melampaui batas tentang neraca itu.",
+     "alasan": "“curang”: Tafsir Jalalain memuat “curang”; Tafsir Ibnu Katsir “Ar-Rahman, ayat 1-13” memuat “mengurangi timbangan” (sinonim kamus)"
+    }
+   ],
+   "pendukung": [
+    {
+     "ayat": "103:2",
+     "label": "Kecocokan kata literal",
+     "tr": "Sesungguhnya manusia itu benar-benar dalam kerugian,",
+     "alasan": "“curang”: Judul kelompok ayat “AMAT RUGILAH MANUSIA YANG TIDAK MEMANFA'ATKAN WAKTUNYA UNTUK BERBAKTI” (QS 103:1–3) memuat “merugikan manusia” (sinonim kamus); Tafsir Ibnu Katsir “Al-'Asr, ayat 1-3” memuat “merugikan manusia” (sinonim kamus)"
+    },
+    {
+     "ayat": "83:2",
+     "label": "Kecocokan kata literal",
+     "tr": "(yaitu) orang-orang yang apabila menerima takaran dari orang lain mereka minta dipenuhi,",
+     "alasan": "“curang”: Judul kelompok ayat “ANCAMAN TERHADAP ORANG CURANG DALAM MENAKAR DAN MENIMBANG” (QS 83:1–6) memuat “curang”; Tafsir Ibnu Katsir “Al-Muthaffifin, ayat 1-6” memuat “curang”"
+    },
+    {
+     "ayat": "83:4",
+     "label": "Kecocokan kata literal",
+     "tr": "Tidaklah orang-orang itu menyangka, bahwa sesungguhnya mereka akan dibangkitkan,",
+     "alasan": "“curang”: Judul kelompok ayat “ANCAMAN TERHADAP ORANG CURANG DALAM MENAKAR DAN MENIMBANG” (QS 83:1–6) memuat “curang”; Tafsir Ibnu Katsir “Al-Muthaffifin, ayat 1-6” memuat “curang”"
+    },
+    {
+     "ayat": "83:5",
+     "label": "Kecocokan kata literal",
+     "tr": "pada suatu hari yang besar,",
+     "alasan": "“curang”: Judul kelompok ayat “ANCAMAN TERHADAP ORANG CURANG DALAM MENAKAR DAN MENIMBANG” (QS 83:1–6) memuat “curang”; Tafsir Ibnu Katsir “Al-Muthaffifin, ayat 1-6” memuat “curang”"
+    },
+    {
+     "ayat": "83:6",
+     "label": "Kecocokan kata literal",
+     "tr": "(yaitu) hari (ketika) manusia berdiri menghadap Tuhan semesta alam?",
+     "alasan": "“curang”: Judul kelompok ayat “ANCAMAN TERHADAP ORANG CURANG DALAM MENAKAR DAN MENIMBANG” (QS 83:1–6) memuat “curang”; Tafsir Ibnu Katsir “Al-Muthaffifin, ayat 1-6” memuat “curang”"
+    }
+   ]
+  },
+  {
+   "q": "Ayat tentang kewajiban menjaga amanah.",
+   "concepts": [
+    {
+     "label": "kewajiban",
+     "pelengkap": true,
+     "kamus": false
+    },
+    {
+     "label": "menjaga amanah",
+     "pelengkap": false,
+     "kamus": true
+    }
+   ],
+   "removed": [
+    "Ayat",
+    "tentang"
+   ],
+   "utamaTotal": 10,
+   "pendukungTotal": 1683,
+   "utama": [
+    {
+     "ayat": "8:27",
+     "surah": "Al Anfaal",
+     "label": "Kecocokan sinonim",
+     "tr": "Hai orang-orang yang beriman, janganlah kamu mengkhianati Allah dan Rasul (Muhammad) dan (juga) janganlah kamu mengkhianati amanat-amanat yang dipercayakan kepadamu, sedang kamu mengetahui.",
+     "alasan": "“menjaga amanah”: Terjemahan memuat “mengkhianati amanat” (sinonim kamus); Tafsir Jalalain memuat “mengkhianati amanat” (sinonim kamus); Tafsir Ibnu Katsir “Al-Anfal, ayat 27-28” memuat “mengkhianati amanat” (sinonim kamus)"
+    },
+    {
+     "ayat": "33:72",
+     "surah": "Al Ahzab",
+     "label": "Kecocokan sinonim",
+     "tr": "Sesungguhnya Kami telah mengemukakan amanat kepada langit, bumi dan gunung-gunung, maka semuanya enggan untuk memikul amanat itu dan mereka khawatir akan mengkhianatinya, dan dipikullah amanat itu oleh manusia. Sesungguhnya manusia itu amat zalim dan amat bodoh,",
+     "alasan": "“menjaga amanah”: Terjemahan memuat “memikul amanat” (sinonim kamus); Tafsir Jalalain memuat “memikul amanat” (sinonim kamus); Tafsir Ibnu Katsir “Al-Ahzab, ayat 72-73” memuat “menjaga amanah”"
+    },
+    {
+     "ayat": "4:58",
+     "surah": "An Nisaa'",
+     "label": "Kecocokan sinonim",
+     "tr": "Sesungguhnya Allah menyuruh kamu menyampaikan amanat kepada yang berhak menerimanya, dan (menyuruh kamu) apabila menetapkan hukum di antara manusia supaya kamu menetapkan dengan adil. Sesungguhnya Allah memberi pengajaran yang sebaik-baiknya kepadamu. Sesungguhnya Allah adalah Maha Mendengar lagi Maha Melihat.",
+     "alasan": "“kewajiban” (pelengkap): Tafsir Jalalain memuat “kewajiban” · “menjaga amanah”: Terjemahan memuat “menyampaikan amanat kepada yang berhak” (sinonim kamus); Tafsir Ibnu Katsir “An-Nisa, ayat 58” memuat “menyampaikan amanat kepada yang berhak” (sinonim kamus)"
+    },
+    {
+     "ayat": "23:8",
+     "surah": "Al Mu'minuun",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan orang-orang yang memelihara amanat-amanat (yang dipikulnya) dan janjinya.",
+     "alasan": "“menjaga amanah”: Terjemahan memuat “memelihara amanat” (sinonim kamus); Tafsir Ibnu Katsir “Al Mu’minun, ayat 1-11” memuat “menjaga amanah”"
+    },
+    {
+     "ayat": "70:32",
+     "surah": "Al Ma'aarij",
+     "label": "Kecocokan sinonim",
+     "tr": "Dan orang-orang yang memelihara amanat-amanat (yang dipikulnya) dan janjinya.",
+     "alasan": "“menjaga amanah”: Terjemahan memuat “memelihara amanat” (sinonim kamus); Tafsir Ibnu Katsir “Al-Ma'arij, ayat 19-35” memuat “menjaga amanah”"
+    },
+    {
+     "ayat": "2:283",
+     "surah": "Al Baqarah",
+     "label": "Kecocokan sinonim",
+     "tr": "Jika kamu dalam perjalanan (dan bermu'amalah tidak secara tunai) sedang kamu tidak memperoleh seorang penulis, maka hendaklah ada barang tanggungan yang dipegang (oleh yang berpiutang). Akan tetapi jika sebagian kamu mempercayai sebagian yang lain, maka hendaklah yang dipercayai itu menunaikan amanatnya (hutangnya) dan hendaklah ia bertakwa kepada Allah Tuhannya; dan janganlah kamu (para saksi) menyembunyikan persaksian. Dan barangsiapa yang menyembunyikannya, maka sesungguhnya ia adalah orang yang berdosa hatinya; dan Allah Maha Mengetahui apa yang kamu kerjakan.",
+     "alasan": "“menjaga amanah”: Terjemahan memuat “menunaikan amanat” (sinonim kamus); Tafsir Ibnu Katsir “Al-Baqarah, ayat 283” memuat “menunaikan amanat” (sinonim kamus)"
+    },
+    {
+     "ayat": "20:94",
+     "surah": "Thaahaa",
+     "label": "Kecocokan sinonim",
+     "tr": "Harun menjawab' \"Hai putera ibuku, janganlah kamu pegang janggutku dan jangan (pula) kepalaku; sesungguhnya aku khawatir bahwa kamu akan berkata (kepadaku): \"Kamu telah memecah antara Bani Israil dan kamu tidak memelihara amanatku.\"",
+     "alasan": "“menjaga amanah”: Terjemahan memuat “memelihara amanat” (sinonim kamus); Tafsir Ibnu Katsir “Thaha, ayat 92-94” memuat “memelihara amanat” (sinonim kamus)"
+    },
+    {
+     "ayat": "3:77",
+     "surah": "Ali 'Imran",
+     "label": "Kecocokan sinonim",
+     "tr": "Sesungguhnya orang-orang yang menukar janji (nya dengan) Allah dan sumpah-sumpah mereka dengan harga yang sedikit, mereka itu tidak mendapat bahagian (pahala) di akhirat, dan Allah tidak akan berkata-kata dengan mereka dan tidak akan melihat kepada mereka pada hari kiamat dan tidak (pula) akan mensucikan mereka. Bagi mereka azab yang pedih.",
+     "alasan": "“menjaga amanah”: Tafsir Jalalain memuat “menepati amanat” (sinonim kamus)"
+    },
+    {
+     "ayat": "22:38",
+     "surah": "Al Hajj",
+     "label": "Kecocokan sinonim",
+     "tr": "Sesungguhnya Allah membela orang-orang yang telah beriman. Sesungguhnya Allah tidak menyukai tiap-tiap orang yang berkhianat lagi mengingkari nikmat.",
+     "alasan": "“menjaga amanah”: Tafsir Jalalain memuat “mengkhianati amanat” (sinonim kamus)"
+    },
+    {
+     "ayat": "33:73",
+     "surah": "Al Ahzab",
+     "label": "Kecocokan sinonim",
+     "tr": "sehingga Allah mengazab orang-orang munafik laki-laki dan perempuan dan orang-orang musyrikin laki-laki dan perempuan; dan sehingga Allah menerima taubat orang-orang mukmin laki-laki dan perempuan. Dan adalah Allah Maha Pengampun lagi Maha Penyayang.",
+     "alasan": "“menjaga amanah”: Tafsir Jalalain memuat “menunaikan amanat” (sinonim kamus); Tafsir Ibnu Katsir “Al-Ahzab, ayat 72-73” memuat “menjaga amanah”"
+    }
+   ],
+   "pendukung": [
+    {
+     "ayat": "5:67",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Hai Rasul, sampaikanlah apa yang diturunkan kepadamu dari Tuhanmu. Dan jika tidak kamu kerjakan (apa yang diperintahkan itu, berarti) kamu tidak menyampaikan amanat-Nya. Allah memelihara kamu dari (ga",
+     "alasan": "“kewajiban” (pelengkap): Judul kelompok ayat “KEWAJIBAN RASULULLAH S.A.W. MENYAMPAIKAN AGAMA” (QS 5:67–71) memuat “kewajiban” · “menjaga amanah”: Tafsir Ibnu Katsir “Al-Maidah, ayat 67” memuat “menjaga amanah”"
+    },
+    {
+     "ayat": "8:28",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Dan ketahuilah, bahwa hartamu dan anak-anakmu itu hanyalah sebagai cobaan dan sesungguhnya di sisi Allah-lah pahala yang besar.",
+     "alasan": "“menjaga amanah”: Tafsir Ibnu Katsir “Al-Anfal, ayat 27-28” memuat “mengkhianati amanat” (sinonim kamus)"
+    },
+    {
+     "ayat": "24:54",
+     "label": "Hanya tafsir kelompok ayat",
+     "tr": "Katakanlah: \"Taat kepada Allah dan taatlah kepada rasul; dan jika kamu berpaling maka sesungguhnya kewajiban rasul itu adalah apa yang dibebankan kepadanya, dan kewajiban kamu sekalian adalah semata-m",
+     "alasan": "“kewajiban” (pelengkap): Terjemahan memuat “kewajiban” · “menjaga amanah”: Tafsir Ibnu Katsir “An-Nur, ayat 53-54” memuat “menunaikan amanat” (sinonim kamus)"
+    },
+    {
+     "ayat": "24:55",
+     "label": "Hanya istilah terkait",
+     "tr": "Dan Allah telah berjanji kepada orang-orang yang beriman di antara kamu dan mengerjakan amal-amal yang saleh bahwa Dia sungguh-sungguh akan menjadikan mereka berkuasa dimuka bumi, sebagaimana Dia tela",
+     "alasan": "“menjaga amanah”: Judul kelompok ayat “Kekuasaan yang dijanjikan Allah kepada orang yang taat dan mengerjakan amal saleh” (QS 24:54–57) memuat “janji” (istilah terkait — bukan bukti tema); Terjemahan memuat “janji” (istilah terkait — bukan bukti tema); Keterangan dalam kurung pada terjemahan memuat “janji” (istilah terkait — bukan bukti tema); Tafsir Jalalain memuat “janji” (istilah terkait — bukan bukti tema); Tafsir Ibnu Katsir “An-Nur, ayat 55” memuat “janji” (istilah terkait — bukan bukti tema)"
+    },
+    {
+     "ayat": "2:177",
+     "label": "Hanya istilah terkait",
+     "tr": "Bukanlah menghadapkan wajahmu ke arah timur dan barat itu suatu kebajikan, akan tetapi sesungguhnya kebajikan itu ialah beriman kepada Allah, hari kemudian, malaikat-malaikat, kitab-kitab, nabi-nabi d",
+     "alasan": "“kewajiban” (pelengkap): Terjemahan memuat “kewajiban” · “menjaga amanah”: Terjemahan memuat “janji” (istilah terkait — bukan bukti tema); Tafsir Jalalain memuat “janji” (istilah terkait — bukan bukti tema); Tafsir Ibnu Katsir “Al-Baqarah, ayat 177” memuat “janji” (istilah terkait — bukan bukti tema)"
+    }
+   ]
+  }
+ ]
+}

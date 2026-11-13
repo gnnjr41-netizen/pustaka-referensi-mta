@@ -6,9 +6,10 @@
    - ejaan   : variasi penulisan satu kata (dianggap kata yang sama)
    - entri   : { id, kata (kata/frasa utama), tema (kelompok tema), sinonim (makna sama → referensi utama),
                  terkait (istilah terkait → referensi pendukung) }
-   Prinsip: perluas seperlunya saja. Istilah "terkait" tidak pernah menjadikan dokumen referensi utama. */
+   Prinsip: perluas seperlunya saja. Istilah "terkait" tidak pernah menjadikan dokumen referensi utama.
+   v3.2 final (13 Nov 2026): + menepati-janji, + kewajiban-suami-istri; sinonim frasa untuk birrul-walidain (menghormati orang tua) & perdagangan (pedagang, penjual/pembeli, frasa takaran-timbangan). Semua entri lama tetap. */
 window.PRM_KAMUS = {
- "versi": "2026-11-09b",
+ "versi": "2026-11-13-final",
  "abaikan": [
   "tolong",
   "mohon",
@@ -812,7 +813,15 @@ window.PRM_KAMUS = {
    "sinonim": [
     "birrul walidain",
     "berbakti kepada ibu bapak",
-    "berbakti kepada kedua orang tua"
+    "berbakti kepada kedua orang tua",
+    "menghormati orang tua",
+    "menghormati kedua orang tua",
+    "menghormati ibu bapak",
+    "memuliakan kedua orang tua",
+    "berbuat baik kepada orang tua",
+    "berbuat baik kepada kedua orang tua",
+    "berbuat baik kepada ibu bapak",
+    "berbuat baik pada ibu bapak"
    ],
    "terkait": [
     "durhaka kepada orang tua",
@@ -1132,7 +1141,21 @@ window.PRM_KAMUS = {
     "berjual beli",
     "takaran",
     "menakar",
-    "sukatan"
+    "sukatan",
+    "pedagang",
+    "para pedagang",
+    "penjual",
+    "pembeli",
+    "penjual dan pembeli",
+    "berjualan",
+    "takaran dan timbangan",
+    "menakar dan menimbang",
+    "sempurnakanlah takaran",
+    "cukupkanlah takaran",
+    "mengurangi takaran",
+    "mengurangi timbangan",
+    "timbangan dengan adil",
+    "menimbang dengan neraca yang benar"
    ],
    "terkait": [
     "timbangan",
@@ -1172,6 +1195,74 @@ window.PRM_KAMUS = {
     "amanat",
     "khianat",
     "janji"
+   ]
+  },
+  {
+   "id": "menepati-janji",
+   "kata": "menepati janji",
+   "tema": "Akhlak",
+   "sinonim": [
+    "menunaikan janji",
+    "memenuhi janji",
+    "penuhilah janji",
+    "tepatilah janji",
+    "tepatilah perjanjian",
+    "menepati perjanjian",
+    "memenuhi perjanjian",
+    "penuhilah aqad",
+    "memenuhi aqad",
+    "menepati ikrar",
+    "menepati janjinya",
+    "memenuhi janjinya"
+   ],
+   "terkait": [
+    "janji",
+    "perjanjian",
+    "aqad",
+    "ikrar",
+    "mengingkari janji",
+    "ingkar janji",
+    "menyalahi janji"
+   ]
+  },
+  {
+   "id": "kewajiban-suami-istri",
+   "kata": "kewajiban suami istri",
+   "tema": "Keluarga",
+   "sinonim": [
+    "hak dan kewajiban suami istri",
+    "hak suami istri",
+    "kewajiban suami dan istri",
+    "kewajiban suami",
+    "kewajiban suami terhadap istri",
+    "hak istri",
+    "hak istri atas suami",
+    "hak istri terhadap suami",
+    "hak suami",
+    "hak suami atas istri",
+    "kewajiban istri",
+    "taat kepada suami",
+    "melayani suami",
+    "pemimpin bagi kaum wanita",
+    "hak yang seimbang dengan kewajibannya",
+    "bergaullah dengan mereka secara patut",
+    "pergaulilah mereka dengan baik",
+    "pergaulilah kaum wanita",
+    "memberi nafkah",
+    "berikanlah nafkah",
+    "nafkah istri",
+    "nafkah kepada istri",
+    "menafkahi istri",
+    "menafkahi keluarga",
+    "memberi makan dan pakaian"
+   ],
+   "terkait": [
+    "suami",
+    "istri",
+    "nikah",
+    "pernikahan",
+    "rumah tangga",
+    "keluarga"
    ]
   }
  ]

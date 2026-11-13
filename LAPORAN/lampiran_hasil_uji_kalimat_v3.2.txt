@@ -1,0 +1,263 @@
+# Hasil uji kalimat v3.2 FINAL — 13 Nov 2026 · kamus 2026-11-13-final · indeks vektor 202611130948
+# U = Dalil utama · P = Referensi pendukung · T = Terkait · 8 teratas per bagian · ↳ = alasan yang tampil di aplikasi
+
+######## Ayat tentang mengikuti syariat Allah | konsep: mengikuti, syariat, +Allah
+ == quran {"utama":22,"pendukung":36,"terkait":2}
+   U QS 5:48                                  | Dan Kami telah turunkan kepadamu Al Quran dengan membawa kebenaran, membenarkan apa yang sebelumnya, yaitu kitab-kitab (
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “syariat”: tertulis “syariat” di Tafsir Jalalain · “Allah” (pelengkap): tertulis “alah” di terjemaha
+   U QS 4:26                                  | Allah hendak menerangkan (hukum syari'at-Nya) kepadamu, dan menunjukimu kepada jalan-jalan orang yang sebelum kamu (para
+        ↳ “mengikuti”: tertulis “mengikuti” di Tafsir Jalalain · “syariat”: tertulis “syariat” di terjemahan · “Allah” (pelengkap): tertulis “alah” di terjemaha
+   U QS 45:18                                 | Kemudian Kami jadikan kamu berada di atas suatu syariat (peraturan) dari urusan (agama itu), maka ikutilah syariat itu d
+        ↳ “mengikuti”: tertulis “ikut” di terjemahan · “syariat”: tertulis “syariat” di terjemahan · “Allah” (pelengkap): tertulis “alah” di Tafsir Jalalain
+   U QS 5:104                                 | Apabila dikatakan kepada mereka: "Marilah mengikuti apa yang diturunkan Allah dan mengikuti Rasul." Mereka menjawab: "Cu
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “syariat”: tertulis “syariat” di Tafsir Jalalain · “Allah” (pelengkap): tertulis “alah” di terjemaha
+   U QS 3:20                                  | Kemudian jika mereka mendebat kamu (tentang kebenaran Islam), maka katakanlah: "Aku menyerahkan diriku kepada Allah dan 
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “syariat”: tidak tertulis di bagian ini · “Allah” (pelengkap): tertulis “alah” di terjemahan
+   U QS 3:95                                  | Katakanlah: "Benarlah (apa yang difirmankan) Allah." Maka ikutilah agama Ibrahim yang lurus, dan bukanlah dia termasuk o
+        ↳ “mengikuti”: tertulis “ikut” di terjemahan · “syariat”: tidak tertulis di bagian ini · “Allah” (pelengkap): tertulis “alah” di terjemahan
+   U QS 57:27                                 | Kemudian Kami iringi di belakang mereka dengan rasul-rasul Kami dan Kami iringi (pula) dengan Isa putra Maryam; dan Kami
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “syariat”: tidak tertulis di bagian ini · “Allah” (pelengkap): tertulis “alah” di terjemahan
+   U QS 7:157                                 | (Yaitu) orang-orang yang mengikut Rasul, Nabi yang ummi yang (namanya) mereka dapati tertulis di dalam Taurat dan Injil 
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “syariat”: tertulis “syariat” di catatan kaki
+ == hadis {"pendukung":44,"terkait":16}
+   P Riyadhus Shalihin                        | Bab Bab 17. Kewajiban Mengikuti Hukum Allah Dan Apa-apa Yang DiucapkanOlehOrang Yang Diajak Ke Arah Itu | Bab 17. Kewaji
+   P Shahih Sunan Abu Dawud (Al-Albani) No.46 | Bab 7. Konsisten terhadap Sunnah | Dari Abu Shalt, ia berkata , "Ada seorang lelaki yang menulis surat kepada Umar bin A
+   P Shahih Bukhari No.6778                   | Bab Perintah Nabi Shallallahu ‘Alaihi Wa Sallam untuk mengikuti apa yang telah disepakati oleh ahli Ilmu | Telah menceri
+   P Riyadhus Shalihin                        | Bab Bab 7. Yakin Dan Tawakkal | Allah Ta'ala berfirman: "Setelah orang-orang yang beriman itu melihat pasukan serikat -m
+   P Riyadhus Shalihin No.182                 | Bab Bab 22. Nasihat | Pertama: Dari Abu Ruqayyah yaitu Tamin bin Aus ad-Dari radhiyallahu anhu bahwasanya Nabi shalallah
+   P Shahih Sunan Abu Dawud (Al-Albani) No.45 | Bab 2. Larangan Berdebat di dalam Al Quran dan Mengikuti Ayat-ayat | Dari Aisyah Radhiallahu 'Anha, ia berkata, "Rasulul
+   P Shahih Sunan Ibnu Majah (Al-Albani) No.6 | Bab 6. Mengikuti Sunnah Khulafaurrasyidin | Mengikuti Sunnah Khulafaurrasyidin
+   P Kitab 9 Imam · Shahih Muslim No.4817     | Bab Larangan untuk mengikuti ayat-ayat Al-Qur'an yang musytabihat | Telah menceritakan kepada kami ['Abdullah bin Maslam
+
+######## Ayat tentang larangan mengikuti hawa nafsu | konsep: +larangan, mengikuti, hawa, nafsu
+ == quran {"utama":28,"pendukung":27,"terkait":5}
+   U QS 28:50                                 | Maka jika mereka tidak menjawab (tantanganmu) ketahuilah bahwa sesung- guhnya mereka hanyalah mengikuti hawa nafsu merek
+        ↳ “larangan” (pelengkap): hanya istilah terkait “kitab” di Tafsir Jalalain — bukan bukti utama · “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa
+   U QS 20:16                                 | Maka sekali-kali janganlah kamu dipalingkan daripadanya oleh orang yang tidak beriman kepadanya dan oleh orang yang meng
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa”: tertulis “hawa” di terjemahan · “nafsu”: tertulis “nafsu” di terjemahan
+   U QS 4:27                                  | Dan Allah hendak menerima taubatmu, sedang orang-orang yang mengikuti hawa nafsunya bermaksud supaya kamu berpaling seja
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa”: tertulis “hawa” di terjemahan · “nafsu”: tertulis “nafsu” di terjemahan
+   U QS 5:77                                  | Katakanlah: "Hai Ahli Kitab, janganlah kamu berlebih-lebihan (melampaui batas) dengan cara tidak benar dalam agamamu. Da
+        ↳ “larangan” (pelengkap): hanya istilah terkait “kitab” di terjemahan — bukan bukti utama · “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa”: te
+   U QS 5:49                                  | dan hendaklah kamu memutuskan perkara di antara mereka menurut apa yang diturunkan Allah, dan janganlah kamu mengikuti h
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa”: tertulis “hawa” di terjemahan · “nafsu”: tertulis “nafsu” di terjemahan
+   U QS 38:26                                 | Hai Daud, sesungguhnya Kami menjadikan kamu khalifah (penguasa) di muka bumi, maka berilah keputusan (perkara) di antara
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa”: tertulis “hawa” di terjemahan · “nafsu”: tertulis “nafsu” di terjemahan
+   U QS 5:48                                  | Dan Kami telah turunkan kepadamu Al Quran dengan membawa kebenaran, membenarkan apa yang sebelumnya, yaitu kitab-kitab (
+        ↳ “larangan” (pelengkap): hanya istilah terkait “kitab” di terjemahan — bukan bukti utama · “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa”: te
+   U QS 47:14                                 | Maka apakah orang yang berpegang pada keterangan yang datang dari Rabbnya sama dengan orang yang (shaitan) menjadikan di
+        ↳ “mengikuti”: tertulis “mengikuti” di terjemahan · “hawa”: tertulis “hawa” di terjemahan · “nafsu”: tertulis “nafsu” di terjemahan
+ == hadis {"utama":15,"pendukung":41,"terkait":4}
+   U Riyadhus Shalihin No.105                 | Bab Bab 11. Bersungguh-sungguh | Kesebelas: Dari Ibnu Mas'ud radhiyallahu anhu katanya: "Nabi shalallahu alaihi wasalam 
+        ↳ “mengikuti”: tertulis “mengikuti” di matan · “hawa”: tertulis “hawa” di matan · “nafsu”: tertulis “nafsu” di matan
+   U Sunan Ad-Darimi No.393                   | Bab Menjauhi orang yang mengekor nafsu, bid'ah, dan permusuhan | Telah mengabarkan kepada kami Sulaiman bin harb dari Ha
+        ↳ “larangan” (pelengkap): hanya istilah terkait “kitab” di judul bab — bukan bukti utama · “mengikuti”: tertulis “mengikuti” di matan · “hawa”: tertulis
+   U Sunan Ad-Darimi No.403                   | Bab Menjauhi orang yang mengekor nafsu, bid'ah, dan permusuhan | Telah mengabarkan kepada kami Ahmad telah menceritakan 
+        ↳ “larangan” (pelengkap): hanya istilah terkait “kitab” di judul bab — bukan bukti utama · “mengikuti”: tertulis “mengikuti” di matan · “hawa”: tertulis
+   U Sunan Ad-Darimi No.310                   | Bab Menjauhi nafsu | Telah mengabarkan kepada kami Ibrahim bin Ishak dari Ibnu Al Mubarak dari Al 'Auza'i ia berkata: "I
+        ↳ “larangan” (pelengkap): hanya istilah terkait “kitab” di judul bab — bukan bukti utama · “mengikuti”: tertulis “mengikuti” di matan · “hawa”: tertulis
+   U Sunan Ad-Darimi No.400                   | Bab Menjauhi orang yang mengekor nafsu, bid'ah, dan permusuhan | Telah mengabarkan kepada kami Sa'id dari Salam bin Abu 
+        ↳ “larangan” (pelengkap): hanya istilah terkait “kitab” di judul bab — bukan bukti utama · “mengikuti”: tertulis “mengikuti” di matan · “hawa”: tertulis
+   U Kitab 9 Imam · Sunan Ibnu Majah No.4250  | Bab Tentang kematian dan persiapan menuju kepadanya | Telah mengabarkan kepada kami [Hisyam bin Abdul Malik Al Himshi] t
+        ↳ “mengikuti”: tertulis “mengikuti” di matan · “hawa”: tertulis “hawa” di matan · “nafsu”: tertulis “nafsu” di matan
+   U Kitab 9 Imam · Musnad Ahmad No.18951     | Bab Hadits Abu Barzah Al Aslami Radliyallahu ta'ala 'anhu | Telah menceritakan kepada kami [Yazid bin Harun] Telah mengk
+        ↳ “mengikuti”: tertulis “mengikuti” di matan · “hawa”: tertulis “hawa” di matan · “nafsu”: tertulis “nafsu” di matan
+   U Kitab 9 Imam · Sunan Abu Dawud No.3984   | Bab Menjauhi dan benci terhadap ahli ahwa` (pengikut hawa nafsu) | Telah menceritakan kepada kami [Ibnu As Sarh] berkata
+        ↳ “larangan” (pelengkap): tertulis “larang” di matan · “mengikuti”: tertulis “ikut” di matan · “hawa”: tertulis “hawa” di judul bab · “nafsu”: tertulis 
+
+######## Ayat tentang sabar menghadapi ujian hidup | konsep: sabar, +menghadapi, ujian
+ == quran {"utama":16,"pendukung":41,"terkait":3}
+   U QS 2:153                                 | Hai orang-orang yang beriman, jadikanlah sabar dan shalat sebagai penolongmu[99], sesungguhnya Allah beserta orang-orang
+        ↳ “sabar”: tertulis “sabar” di terjemahan · “menghadapi” (pelengkap): tertulis “menghadapi” di Tafsir Jalalain · “ujian”: tertulis “coban” di Tafsir Jal
+   U QS 2:155                                 | Dan sungguh akan Kami berikan cobaan kepadamu, dengan sedikit ketakutan, kelaparan, kekurangan harta, jiwa dan buah-buah
+        ↳ “sabar”: tertulis “sabar” di terjemahan · “menghadapi” (pelengkap): tertulis “hadap” di Tafsir Jalalain · “ujian”: tertulis “coban” di terjemahan
+   U QS 47:31                                 | Dan sesungguhnya Kami benar-benar akan menguji kamu agar Kami mengetahui orang-orang yang berjihad dan bersabar di antar
+        ↳ “sabar”: tertulis “sabar” di terjemahan · “ujian”: tertulis “menguji” di terjemahan
+   U QS 3:186                                 | Kamu sungguh-sungguh akan diuji terhadap hartamu dan dirimu. Dan (juga) kamu sungguh-sungguh akan mendengar dari orang-o
+        ↳ “sabar”: tertulis “sabar” di terjemahan · “menghadapi” (pelengkap): tertulis “hadap” di terjemahan · “ujian”: tertulis “diuji” di terjemahan
+   U QS 16:110                                | Dan sesungguhnya Tuhanmu (pelindung) bagi orang-orang yang berhijrah sesudah menderita cobaan, kemudian mereka berjihad 
+        ↳ “sabar”: tertulis “sabar” di terjemahan · “menghadapi” (pelengkap): tertulis “hadap” di Tafsir Jalalain · “ujian”: tertulis “coban” di terjemahan
+   U QS 2:214                                 | Apakah kamu mengira bahwa kamu akan masuk syurga, padahal belum datang kepadamu (cobaan) sebagaimana halnya orang-orang 
+        ↳ “sabar”: tertulis “sabar” di Tafsir Jalalain · “ujian”: tertulis “coban” di terjemahan
+   U QS 33:11                                 | Disitulah diuji orang-orang mukmin dan digoncangkan (hatinya) dengan goncangan yang sangat.
+        ↳ “sabar”: tidak tertulis di bagian ini · “ujian”: tertulis “diuji” di terjemahan
+   U QS 25:20                                 | Dan Kami tidak mengutus rasul-rasul sebelummu, melainkan mereka sungguh memakan makanan dan berjalan di pasar-pasar. Dan
+        ↳ “sabar”: tertulis “sabar” di terjemahan · “menghadapi” (pelengkap): tertulis “menghadapi” di Tafsir Jalalain · “ujian”: tertulis “coban” di terjemahan
+ == hadis {"utama":12,"pendukung":37,"terkait":11}
+   U Riyadhus Shalihin                        | Bab Bab 3. Sabar | Allah Ta'ala berfirman: "Hai sekalian orang yang beriman, bersabarlah dan cukupkanlah kesabaran itu."
+        ↳ “sabar”: tertulis “sabar” di judul bab · “ujian”: tertulis “coban” di matan
+   U Kitab 9 Imam · Sunan Tirmidzi No.2323    | Bab Sabar terhadap bencana | Telah menceritakan kepada kami [Muhammad bin 'Abdu A'la] telah menceritakan kepada kami [Ya
+        ↳ “sabar”: tertulis “sabar” di judul bab · “menghadapi” (pelengkap): tertulis “hadap” di judul bab · “ujian”: tertulis “ujian” di matan
+   U Shahih Sunan Ibnu Majah (Al-Albani) No.3 | Bab 23. Sabar Atas Cobaan | Dari Anas bin Malik RA dari Rasulullah SAW, bahwa beliau bersabd a, "Besarnya ganjaran pahal
+        ↳ “sabar”: tertulis “sabar” di judul bab · “ujian”: tertulis “coban” di judul bab
+   U Kitab 9 Imam · Sunan Tirmidzi No.2322    | Bab Sabar terhadap bencana | Telah menceritakan kepada kami [Qutaibah] telah menceritakan kepada kami [Hammad bin Zaid] 
+        ↳ “sabar”: tertulis “sabar” di judul bab · “menghadapi” (pelengkap): tertulis “hadap” di judul bab · “ujian”: tertulis “ujian” di matan
+   U Shahih Sunan Tirmidzi (Al-Albani) No.239 | Bab 56. Sabar dalam Menghadapi Musibah | Qutaibah menceritakan kepada kami, Hammad bin Zaid menceritakan kepada kami, da
+        ↳ “sabar”: tertulis “sabar” di judul bab · “menghadapi” (pelengkap): tertulis “menghadapi” di judul bab · “ujian”: tertulis “coban” di matan
+   U Kitab 9 Imam · Sunan Ibnu Majah No.4019  | Bab Sabar atas musibah | Telah menceritakan kepada kami [Muhammad bin Abdullah bin Numair] dan [Ali bin Muhammad] keduan
+        ↳ “sabar”: tertulis “sabar” di judul bab · “ujian”: tertulis “ujian” di matan
+   U Shahih Sunan Tirmidzi (Al-Albani) No.239 | Bab 56. Sabar dalam Menghadapi Musibah | Qutaibah menceritakan kepada kami, Al-Laits menceritakan kepada kami, dari Yazi
+        ↳ “sabar”: tertulis “sabar” di judul bab · “menghadapi” (pelengkap): tertulis “menghadapi” di judul bab · “ujian”: tertulis “coban” di matan
+   U Kitab 9 Imam · Sunan Abu Dawud No.3719   | Bab Larangan dari menimbulkan fitnah | Telah menceritakan kepada kami [Ibrahim Ibnul Hasan Al Misshishi] berkata, telah 
+        ↳ “sabar”: tertulis “sabar” di matan · “ujian”: tertulis “coban” di matan
+
+######## Hadis tentang amanah | konsep: amanah
+ == quran {"utama":4,"pendukung":26,"terkait":30}
+   U QS 33:72                                 | Sesungguhnya Kami telah mengemukakan amanat[1233] kepada langit, bumi dan gunung-gunung, maka semuanya enggan untuk memi
+        ↳ “amanah”: tertulis “amanah” di terjemahan
+   U QS 64:12                                 | Dan taatlah kepada Allah dan taatlah kepada Rasul-Nya, jika kamu berpaling sesungguhnya kewajiban Rasul Kami hanyalah me
+        ↳ “amanah”: tertulis “amanah” di terjemahan
+   U QS 4:58                                  | Sesungguhnya Allah menyuruh kamu menyampaikan amanat kepada yang berhak menerimanya, dan (menyuruh kamu) apabila menetap
+        ↳ “amanah”: tertulis “amanah” di terjemahan
+   U QS 5:67                                  | Hai Rasul, sampaikanlah apa yang diturunkan kepadamu dari Tuhanmu. Dan jika tidak kamu kerjakan (apa yang diperintahkan 
+        ↳ “amanah”: tertulis “amanah” di terjemahan
+   P QS 23:8                                  | Dan orang-orang yang memelihara amanat-amanat (yang dipikulnya) dan janjinya.
+   P QS 8:27                                  | Hai orang-orang yang beriman, janganlah kamu mengkhianati Allah dan Rasul (Muhammad) dan (juga) janganlah kamu mengkhian
+   P QS 70:32                                 | Dan orang-orang yang memelihara amanat-amanat (yang dipikulnya) dan janjinya.
+   P QS 7:68                                  | Aku menyampaikan amanat-amanat Tuhanku kepadamu dan aku hanyalah pemberi nasehat yang terpercaya bagimu."
+ == hadis {"utama":46,"pendukung":14}
+   U Shahih Sunan Tirmidzi (Al-Albani) No.217 | Bab 17. Diangkatnya Amanah (sehingga jarang ditemukan orang yang bersifat amanah) | Hannad menceritakan kepada kami, Abu
+        ↳ “amanah”: tertulis “amanah” di judul bab
+   U Riyadhus Shalihin No.201                 | Bab Bab 25. Perintah Menunaikan Amanat | Dari Hudzaifah bin al-Yaman radhiyallahu anhu katanya: "Rasulullah shalallahu a
+        ↳ “amanah”: tertulis “amanah” di judul bab
+   U Kitab 9 Imam · Sunan Tirmidzi No.1882    | Bab Persidangan ada amanat yang harus dilakukan | Telah menceritakan kepada kami [Ahmad bin Muhammad], telah mengabarkan
+        ↳ “amanah”: tertulis “amanah” di judul bab
+   U Kitab 9 Imam · Musnad Ahmad No.14877     | Bab Hadits seseorang dari Nabi Shallallahu 'alaihi wasallam | Telah menceritakan kepada kami [Muhammad bin Abu 'Adi] dar
+        ↳ “amanah”: tertulis “amanah” di matan
+   U Kitab 9 Imam · Sunan Tirmidzi No.2105    | Bab Amanat hilang | Telah menceritakan kepada kami [Hannad] telah menceritakan kepada kami [Abu Mu'awiyah] dari [Al A'ma
+        ↳ “amanah”: tertulis “amanah” di judul bab
+   U Kitab 9 Imam · Musnad Ahmad No.7571      | Bab Musnad Abu Hurairah Radliyallahu 'anhu | Telah menceritakan kepada kami [Yazid] telah memberitakan kepada kami [Abdu
+        ↳ “amanah”: tertulis “amanah” di matan
+   U Kitab 9 Imam · Musnad Ahmad No.8105      | Bab Musnad Abu Hurairah Radliyallahu 'anhu | Telah menceritakan kepada kami [Yunus] dan [Suraij] mereka berkata: telah m
+        ↳ “amanah”: tertulis “amanah” di matan
+   U Kitab 9 Imam · Shahih Muslim No.206      | Bab Diangkatnya amanah dan keimanan dari sebagian hati dan ditampakkannya fitnah pada hati | Telah menceritakan kepada k
+        ↳ “amanah”: tertulis “amanah” di judul bab
+
+######## Hadis tentang sabar menghadapi musibah | konsep: sabar, +menghadapi, musibah
+ == quran {"utama":1,"pendukung":52,"terkait":7}
+   U QS 3:120                                 | Jika kamu memperoleh kebaikan, niscaya mereka bersedih hati, tetapi Jika kamu mendapat bencana, mereka bergembira karena
+        ↳ “sabar”: tertulis “sabar” di terjemahan · “menghadapi” (pelengkap): tertulis “hadap” di Tafsir Jalalain · “musibah”: tertulis “bencana” di terjemahan
+   P QS 2:155                                 | Dan sungguh akan Kami berikan cobaan kepadamu, dengan sedikit ketakutan, kelaparan, kekurangan harta, jiwa dan buah-buah
+   P QS 2:153                                 | Hai orang-orang yang beriman, jadikanlah sabar dan shalat sebagai penolongmu[99], sesungguhnya Allah beserta orang-orang
+   P QS 3:200                                 | Hai orang-orang yang beriman, bersabarlah kamu dan kuatkanlah kesabaranmu dan tetaplah bersiap siaga (di perbatasan nege
+   P QS 49:6                                  | Hai orang-orang yang beriman, jika datang kepadamu orang fasik membawa suatu berita, maka periksalah dengan teliti agar 
+   P QS 2:45                                  | Jadikanlah sabar dan shalat sebagai penolongmu. Dan sesungguhnya yang demikian itu sungguh berat, kecuali bagi orang-ora
+   P QS 13:22                                 | Dan orang-orang yang sabar karena mencari keridhaan Tuhannya, mendirikan shalat, dan menafkahkan sebagian rezki yang Kam
+   P QS 16:126                                | Dan jika kamu memberikan balasan, maka balaslah dengan balasan yang sama dengan siksaan yang ditimpakan kepadamu[846]. A
+ == hadis {"utama":37,"pendukung":23}
+   U Shahih Bukhari No.1219                   | Bab Kesabaran Terletak Pada Kesempatan Awal Dalam Menghadapi Musibah | Telah menceritakan kepada kami Muhammad bin Basys
+        ↳ “sabar”: tertulis “sabar” di judul bab · “menghadapi” (pelengkap): tertulis “menghadapi” di judul bab · “musibah”: tertulis “musibah” di judul bab
+   U Shahih Muslim (Mukhtashar, Al-Albani) No | Bab 9. Sabar Menghadapi Musibah yang Pertama | Dari Anas bin Malik RA, dia berkata, "Rasulullah SAW mendatangi seorang w
+        ↳ “sabar”: tertulis “sabar” di judul bab · “menghadapi” (pelengkap): tertulis “menghadapi” di judul bab · “musibah”: tertulis “musibah” di judul bab
+   U Shahih Sunan Tirmidzi (Al-Albani) No.988 | Bab 13. Sabar Adalah Pada Awal Kejadian (Tertimpa Musibah) | Muhammad bin Basyar menceritakan kepada kami, Muhammad bin 
+        ↳ “sabar”: tertulis “sabar” di judul bab · “musibah”: tertulis “musibah” di judul bab
+   U Kitab 9 Imam · Sunan Ibnu Majah No.1585  | Bab Sabar atas musibah | Telah menceritakan kepada kami [Muhammad bin Rumh] berkata, telah memberitakan kepada kami [Al 
+        ↳ “sabar”: tertulis “sabar” di judul bab · “musibah”: tertulis “musibah” di judul bab
+   U Sunan An-Nasa'i No.1846                  | Bab Perintah mengharap-harap ganjaran dan sabar ketika musibah | Telah mengabarkan kepada kami 'Amru bin 'Ali dia berkat
+        ↳ “sabar”: tertulis “sabar” di judul bab · “musibah”: tertulis “musibah” di judul bab
+   U Kitab 9 Imam · Sunan Ibnu Majah No.1586  | Bab Sabar atas musibah | Telah menceritakan kepada kami [Hisyam bin Ammar] berkata, telah menceritakan kepada kami [Isma
+        ↳ “sabar”: tertulis “sabar” di judul bab · “musibah”: tertulis “musibah” di judul bab
+   U Kitab 9 Imam · Sunan Ibnu Majah No.1588  | Bab Sabar atas musibah | Telah menceritakan kepada kami [Al Walid bin Amru bin As Sukkain] berkata, telah menceritakan k
+        ↳ “sabar”: tertulis “sabar” di judul bab · “musibah”: tertulis “musibah” di judul bab
+   U Kitab 9 Imam · Shahih Muslim No.1534     | Bab Sabar terhadap musibah di awal kejadian | Telah menceritakan kepada kami [Muhammad bin Basysyar Al Abdi] telah mence
+        ↳ “sabar”: tertulis “sabar” di judul bab · “menghadapi” (pelengkap): tertulis “hadap” di judul bab · “musibah”: tertulis “musibah” di judul bab
+
+######## Ayat tentang berbakti kepada orang tua | konsep: berbakti kepada orang tua
+ == quran {"utama":12,"pendukung":11,"terkait":37}
+   U QS 19:14                                 | dan seorang yang berbakti kepada kedua orang tuanya, dan bukanlah ia orang yang sombong lagi durhaka.
+   U QS 4:36                                  | Sembahlah Allah dan janganlah kamu mempersekutukan-Nya dengan sesuatupun. Dan berbuat baiklah kepada dua orang ibu-bapa,
+   U QS 46:15                                 | Kami perintahkan kepada manusia supaya berbuat baik kepada dua orang ibu bapaknya, ibunya mengandungnya dengan susah pay
+   U QS 31:14                                 | Dan Kami perintahkan kepada manusia (berbuat baik) kepada dua orang ibu- bapanya; ibunya telah mengandungnya dalam keada
+   U QS 18:81                                 | Dan kami menghendaki, supaya Tuhan mereka mengganti bagi mereka dengan anak lain yang lebih baik kesuciannya dari anakny
+   U QS 17:25                                 | Tuhanmu lebih mengetahui apa yang ada dalam hatimu; jika kamu orang-orang yang baik, maka sesungguhnya Dia Maha Pengampu
+   U QS 2:83                                  | Dan (ingatlah), ketika Kami mengambil janji dari Bani Israil (yaitu): Janganlah kamu menyembah selain Allah, dan berbuat
+   U QS 17:23                                 | Dan Tuhanmu telah memerintahkan supaya kamu jangan menyembah selain Dia dan hendaklah kamu berbuat baik pada ibu bapakmu
+ == hadis {"utama":38,"pendukung":16,"terkait":6}
+   U Kitab 9 Imam · Sunan Ibnu Majah No.3651  | Bab Berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Hisyam bin 'Ammar] telah menceritakan kepada kami 
+   U Shahih Sunan Ibnu Majah (Al-Albani) No.2 | Bab 1. Berbakti Kepada Orang Tua | Dari Miqdam bin Ma'dikarib, bahwa Rasulullah SAW bersabda, "Sesungguhnya Allah mewasi
+   U Kitab 9 Imam · Sunan Ibnu Majah No.3649  | Bab Berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Abu Bakar bin Abu Syaibah] telah menceritakan kepa
+   U Kitab 9 Imam · Sunan Ibnu Majah No.3652  | Bab Berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Hisyam bin 'Ammar] telah menceritakan kepada kami 
+   U Kitab 9 Imam · Sunan Abu Dawud No.4477   | Bab Penjelasan tentang berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Ahmad bin Mani'] berkata, telah
+   U Shahih Sunan Abu Dawud (Al-Albani) No.51 | Bab 129. Berbakti kepada Orang tua | Dari bin Umar ia berkata, "Rasulullah SAW bersabda, 'Sesungguhnya sebaik-baiknya ba
+   U Kitab 9 Imam · Sunan Abu Dawud No.4476   | Bab Penjelasan tentang berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Ibrahim bin Mahdi] dan [Utsman 
+   U Kitab 9 Imam · Sunan Ibnu Majah No.3653  | Bab Berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Muhammad bin As Shabbah] telah menceritakan kepada
+
+######## Ayat tentang menghormati orang tua | konsep: berbakti kepada orang tua
+ == quran {"utama":11,"pendukung":11,"terkait":38}
+   U QS 19:14                                 | dan seorang yang berbakti kepada kedua orang tuanya, dan bukanlah ia orang yang sombong lagi durhaka.
+   U QS 4:36                                  | Sembahlah Allah dan janganlah kamu mempersekutukan-Nya dengan sesuatupun. Dan berbuat baiklah kepada dua orang ibu-bapa,
+   U QS 46:15                                 | Kami perintahkan kepada manusia supaya berbuat baik kepada dua orang ibu bapaknya, ibunya mengandungnya dengan susah pay
+   U QS 31:14                                 | Dan Kami perintahkan kepada manusia (berbuat baik) kepada dua orang ibu- bapanya; ibunya telah mengandungnya dalam keada
+   U QS 18:81                                 | Dan kami menghendaki, supaya Tuhan mereka mengganti bagi mereka dengan anak lain yang lebih baik kesuciannya dari anakny
+   U QS 2:83                                  | Dan (ingatlah), ketika Kami mengambil janji dari Bani Israil (yaitu): Janganlah kamu menyembah selain Allah, dan berbuat
+   U QS 29:8                                  | Dan Kami wajibkan manusia (berbuat) kebaikan kepada dua orang ibu- bapaknya. Dan jika keduanya memaksamu untuk mempersek
+   U QS 17:23                                 | Dan Tuhanmu telah memerintahkan supaya kamu jangan menyembah selain Dia dan hendaklah kamu berbuat baik pada ibu bapakmu
+ == hadis {"utama":15,"pendukung":16,"terkait":29}
+   U Kitab 9 Imam · Sunan Tirmidzi No.1945    | Bab Menghormati yangdewasa | Telah menceritakan kepada kami [Muhammad bin Al Mutsanna], telah menceritakan kepada kami [
+   U Kitab 9 Imam · Sunan Tirmidzi No.1843    | Bab Kasih sayang terhadap anak kecil | Telah menceritakan kepada kami [Abu Bakr Muhammad bin Aban], telah menceritakan k
+   U Kitab 9 Imam · Sunan Tirmidzi No.1842    | Bab Kasih sayang terhadap anak kecil | Telah menceritakan kepada kami [Muhammad bin Marzuq Al Bashari], telah menceritak
+   U Shahih Sunan Tirmidzi (Al-Albani) No.190 | Bab 5. Menghormati Teman Kedua Orang Tua | Ahmad bin Muhammad menceritakan kepada kami, Abduilah bin Al Mubarak mengabar
+   U Kitab 9 Imam · Sunan Ibnu Majah No.3651  | Bab Berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Hisyam bin 'Ammar] telah menceritakan kepada kami 
+   U Kitab 9 Imam · Sunan Ibnu Majah No.3652  | Bab Berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Hisyam bin 'Ammar] telah menceritakan kepada kami 
+   U Kitab 9 Imam · Sunan Abu Dawud No.4476   | Bab Penjelasan tentang berbakti kepada kedua orang tua | Telah menceritakan kepada kami [Ibrahim bin Mahdi] dan [Utsman 
+   U Kitab 9 Imam · Sunan Ibnu Majah No.3655  | Bab Berbakti kepada orang tua dan berbuat baik kepada anak wanita | Telah menceritakan kepada kami [Abu Bakar bin Abu Sy
+
+######## Dalil kewajiban menunaikan janji | konsep: +kewajiban, menepati janji
+ == quran {"utama":20,"pendukung":27,"terkait":13}
+   U QS 48:10                                 | Bahwasanya orang-orang yang berjanji setia kepada kamu sesungguhnya mereka berjanji setia kepada Allah[1396]. Tangan All
+   U QS 2:177                                 | Bukanlah menghadapkan wajahmu ke arah timur dan barat itu suatu kebajikan, akan tetapi sesungguhnya kebajikan itu ialah 
+   U QS 13:20                                 | (yaitu) orang-orang yang memenuhi janji Allah dan tidak merusak perjanjian,
+   U QS 3:76                                  | (Bukan demikian), sebenarnya siapa yang menepati janji (yang dibuat)nya[207] dan bertakwa, maka sesungguhnya Allah menyu
+   U QS 2:83                                  | Dan (ingatlah), ketika Kami mengambil janji dari Bani Israil (yaitu): Janganlah kamu menyembah selain Allah, dan berbuat
+   U QS 9:4                                   | kecuali orang-orang musyrikin yang kamu telah mengadakan perjanjian (dengan mereka) dan mereka tidak mengurangi sesuatu 
+   U QS 5:12                                  | Dan sesungguhnya Allah telah mengambil perjanjian (dari) Bani Israil dan telah Kami angkat diantara mereka 12 orang pemi
+   U QS 17:34                                 | Dan janganlah kamu mendekati harta anak yatim, kecuali dengan cara yang lebih baik (bermanfaat) sampai ia dewasa dan pen
+ == hadis {"utama":5,"pendukung":11,"terkait":44}
+   U Shahih Bukhari No.2484                   | Bab Orang yang memerintahkan untuk menepati janji | Telah menceritakan kepada kami Ibrahim bin Hamzah telah menceritakan
+   U Kitab 9 Imam · Sunan Tirmidzi No.1511    | Bab Menunaikan janji (ikrar bersama) | Telah menceritakan kepada kami [Humaid bin Mas'adah] berkata, telah menceritakan 
+   U Kitab 9 Imam · Sunan Tirmidzi No.1940    | Bab Menunaikan janji (ikrar bersama) | Telah menceritakan kepada kami [Abu Hisyam Ar Rifa'i], telah menceritakan kepada 
+   U Kitab 9 Imam · Shahih Bukhari No.2487    | Bab Orang yang memerintahkan untuk menepati janji | Telah menceritakan kepada kami [Muhammad bin 'Abdur Rahim] telah men
+   U Riyadhus Shalihin No.1584                | Bab Bab 277. Haramnya Berkhianat Dan Tidak Menepati Janji | Dari Abu Hurairah radhiyallahu anhu bahwasanya Nabi shalalla
+   P Kitab 9 Imam · Sunan Ibnu Majah No.1391  | Bab Kewajiban shalat lima waktu dan perintah menjaganya | Telah menceritakan kepada kami [Muhammad bin Basysyar] berkata
+   P Kitab 9 Imam · Muwaththa' Malik No.902   | Bab Nadzar untuk bermaksiyat kepada Allah | Telah menceritakan kepadaku dari Malik dari [Thalhah bin Abdul Malik Al Aili
+   P Shahih Sunan Ibnu Majah (Al-Albani) No.2 | Bab 38. Wasiat Seorang Pemimpin | Dari Buraidah, ia berkata, "Apabila Rasulullah SAW memerintahkan seseorang untuk berga
+
+######## Dalil tentang kewajiban suami istri | konsep: kewajiban suami istri
+ == quran {"utama":8,"pendukung":49,"terkait":3}
+   U QS 2:228                                 | Wanita-wanita yang ditalak handaklah menahan diri (menunggu) tiga kali quru'[142]. Tidak boleh mereka menyembunyikan apa
+   U QS 4:34                                  | Kaum laki-laki itu adalah pemimpin bagi kaum wanita, oleh karena Allah telah melebihkan sebahagian mereka (laki-laki) at
+   U QS 4:128                                 | Dan jika seorang wanita khawatir akan nusyuz[357] atau sikap tidak acuh dari suaminya, maka tidak mengapa bagi keduanya 
+   U QS 2:240                                 | Dan orang-orang yang akan meninggal dunia di antara kamu dan meninggalkan isteri, hendaklah berwasiat untuk isteri-ister
+   U QS 2:233                                 | Para ibu hendaklah menyusukan anak-anaknya selama dua tahun penuh, yaitu bagi yang ingin menyempurnakan penyusuan. Dan k
+   U QS 4:19                                  | Hai orang-orang yang beriman, tidak halal bagi kamu mempusakai wanita dengan jalan paksa[278] dan janganlah kamu menyusa
+   U QS 65:6                                  | Tempatkanlah mereka (para isteri) di mana kamu bertempat tinggal menurut kemampuanmu dan janganlah kamu menyusahkan mere
+   U QS 65:7                                  | Hendaklah orang yang mampu memberi nafkah menurut kemampuannya. Dan orang yang disempitkan rezkinya hendaklah memberi na
+ == hadis {"utama":14,"pendukung":46}
+   U Shahih Muslim (Mukhtashar, Al-Albani) No | Bab 23. Istri yang Enggan Melayani Suaminya | Dari Abu Hurairah RA, dia berkata, "Rasulullah SAW bersabda, 'Apabila seor
+   U Shahih Sunan Ibnu Majah (Al-Albani) No.1 | Bab 3. Hak Istri Terhadap Suami | Dari Amru bin Ahwash, bahwasanya ia menyaksikan (ikut serta dalam) haji perpisahan (ha
+   U Kitab 9 Imam · Sunan Ibnu Majah No.1844  | Bab Hak suami atas isteri | Telah menceritakan kepada kami [Abu Bakr bin Abu Syaibah] telah menceritakan kepada kami [Mu
+   U Riyadhus Shalihin                        | Bab Bab 34. Berwasiat Kepada Kaum Wanita | Bab 34. Berwasiat Kepada Kaum Wanita Allah Ta'ala berfirman: "Dan pergaulilah
+   U Kitab 9 Imam · Sunan Ad-Darimi No.2131   | Bab Hak suami atas isteri | Telah menceritakan kepada kami [Hasyim bin Al Qasim] telah menceritakan kepada kami [Syu'bah
+   U Riyadhus Shalihin                        | Bab Bab 35. Hak Suami Atas Istri (Yang Wajib Dipenuhi Oleh Istri) | Bab 35. Hak Suami Atas Istri (Yang Wajib Dipenuhi Ol
+   U Riyadhus Shalihin No.282                 | Bab Bab 35. Hak Suami Atas Istri (Yang Wajib Dipenuhi Oleh Istri) | Dari Abu Hurairah radhiyallahu anhu, katanya: "Rasul
+   U Kitab 9 Imam · Sunan Abu Dawud No.1829   | Bab Hak suami atas isteri | Telah menceritakan kepada kami [Muhammad bin 'Amr Ar Razi], telah menceritakan kepada kami [
+
+######## Dalil tentang kejujuran berdagang | konsep: kejujuran, perdagangan
+ == quran {"utama":2,"pendukung":38,"terkait":20}
+   U QS 6:152                                 | Dan janganlah kamu dekati harta anak yatim, kecuali dengan cara yang lebih bermanfaat, hingga sampai ia dewasa. Dan semp
+   U QS 2:282                                 | Hai orang-orang yang beriman, apabila kamu bermu'amalah[179] tidak secara tunai untuk waktu yang ditentukan, hendaklah k
+   P QS 83:1                                  | Kecelakaan besarlah bagi orang-orang yang curang[1561]
+   P QS 62:11                                 | Dan apabila mereka melihat perniagaan atau permainan, mereka bubar untuk menuju kepadanya dan mereka tinggalkan kamu sed
+   P QS 24:37                                 | laki-laki yang tidak dilalaikan oleh perniagaan dan tidak (pula) oleh jual beli dari mengingati Allah, dan (dari) mendir
+   P QS 35:29                                 | Sesungguhnya orang-orang yang selalu membaca kitab Allah dan mendirikan shalat dan menafkahkan sebahagian dari rezki yan
+   P QS 9:111                                 | Sesungguhnya Allah telah membeli dari orang-orang mukmin diri dan harta mereka dengan memberikan surga untuk mereka. Mer
+   P QS 9:24                                  | Katakanlah: "jika bapa-bapa, anak-anak, saudara-saudara, isteri-isteri, kaum keluargamu, harta kekayaan yang kamu usahak
+ == hadis {"utama":7,"pendukung":46,"terkait":7}
+   U Shahih Sunan Ibnu Majah (Al-Albani) No.1 | Bab 3. Himbauan untuk Berhati-hati dalam Berdagang | Dari Rifa'ah, ia berkata, "Rasulullah SAW bersabda, ' Sesungguhnya 
+   U Shahih Muslim (Mukhtashar, Al-Albani) No | Bab 35. Kejujuran dan Kejelasan dalam Jual Beli | Dari Hakim bin Hizam, dari Nabi SAW, beliau bersabda, "Penjual dan pem
+   U Kitab 9 Imam · Sunan Ibnu Majah No.2130  | Bab Dorongan untuk berusaha | Telah menceritakan kepada kami [Ahmad bin Sinan] berkata, telah menceritakan kepada kami [
+   U Kitab 9 Imam · Sunan Ibnu Majah No.2214  | Bab Hati-hati dalam takaran dan timbangan | Telah menceritakan kepada kami ['Abdurrahman bin Bisyr bin Al Hakam] dan [Mu
+   U Kitab 9 Imam · Sunan Ibnu Majah No.2137  | Bab Berhati-hati dalam dagang | Telah menceritakan kepada kami [Ya'qub bin Humaid bin Kasib] berkata, telah menceritakan
+   U Kitab 9 Imam · Sunan Ibnu Majah No.2213  | Bab Jujur dalam timbangan | Telah menceritakan kepada kami [Muhammad bin Yahya] berkata, telah menceritakan kepada kami 
+   U Kitab 9 Imam · Sunan An-Nasa'i No.4381   | Bab Prinsip-prinsip yang harus dijaga pedagang dalam bisnis | Telah mengabarkan kepada kami ['Amr bin Ali] dari [Yahya],
+   P Kitab 9 Imam · Shahih Muslim No.4720     | Bab Buruknya dusta dan baiknya kejujuran | Telah menceritakan kepada kami [Abu Bakr bin Abu Syaibah] dan [Hannad Bin As 

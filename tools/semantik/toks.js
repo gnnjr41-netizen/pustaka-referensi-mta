@@ -1,0 +1,10 @@
+'use strict';
+const fs = require('fs'), path = require('path'), vm = require('vm');
+const APP = path.resolve(process.argv[2]);
+const { P, K } = require(path.join(APP, 'tools/kitab_node.js'))(APP);
+vm.runInThisContext(fs.readFileSync(path.join(APP, 'data/kamus_support.js'), 'utf8'));
+vm.runInThisContext(fs.readFileSync(path.join(APP, 'data/lib/support.js'), 'utf8'));
+vm.runInThisContext(fs.readFileSync(path.join(APP, 'data/lib/makna.js'), 'utf8'));
+const Q = globalThis.PRMQ;
+const inp = fs.readFileSync(0, 'utf8').split('\n');
+process.stdout.write(inp.map(l => Q.toks(l).join(' ')).join('\n'));

@@ -1,0 +1,395 @@
+LULUS 1 Pencarian ayat dengan nomor surah & ayat — quran 2:183 · quran 2:183 · quran 2:183 · quran 3:102
+LULUS 2 Pencarian kalimat terjemahan Al-Qur'an — teratas: 2:183, 2:185, 2:246 dari 2396 hasil
+LULUS 3 Pencarian teks Arab dengan harakat — teratas QS 2:183 · 1307 hasil
+LULUS 4 Pencarian teks Arab tanpa harakat — teratas QS 2:183 · 1307 hasil (sama dengan versi berharakat: true)
+LULUS 3b Arab hadis: berharakat vs tanpa harakat & variasi alif/hamzah — 4368 vs 4368 hasil, teratas sama: true
+LULUS 5 Pencarian hadis berdasarkan nomor hadis — bukhari 52 → K9 Shahih Bukhari #52 ;; HR. Muslim no 8 → K9 Shahih Muslim #8 | Shahih Muslim (Mukhtashar, Al-Albani) #8 ;; abu daud 2859 → K9 Sunan Abu Dawud #2859 | Shahih Sunan Abu Dawud (Al-Albani) #2859 ;; tirmidzi 143 → K9 Sunan Tirmidzi #143 | Shahih Sunan Tirmidzi (Al-Albani) #143 ;; bulughul maram 1268 → Bulughul Maram #1268
+LULUS 6 Pencarian hadis berdasarkan nama kitab — 10/10 teratas ber-kitab/bab puasa; "Shahih Muslim sabar" → 63 hasil, semua riwayat Muslim: true
+LULUS 7 Pencarian berdasarkan nama bab — Shahih Bukhari · bab Mimpi orang-orang shalih | Sunan Ad-Darimi · bab Gamis, sumur, susu, madu dan minyak samin | Kitab 9 Imam · Muwaththa' Malik · bab Mimpi ;; Shahih Sunan Ibnu Majah (Al-Albani) · bab 21. Larangan Buang Hajat di Tengah Jalan | Shahih Sunan Ibnu Majah (Al-Albani) · bab 21. Larangan Buang Hajat di Tengah Jalan
+LULUS 8 Pencarian hadis dari Kitab 9 Imam — 282 hasil, per koleksi: {"bukhari":57,"darimi":15,"ibnumajah":22,"abudaud":12,"muslim":38,"tirmidzi":18,"nasai":13,"ahmad":98,"malik":9}
+LULUS 9 Hadis yang muncul pada beberapa koleksi — 30 teratas dari 10 koleksi: abudaud, bukhari, ibnumajah, riyadh, ibnukatsir, quran, muslim, nasai, tirmidzi, ahmad ;; Shahih Bukhari #1 identik dengan: Kitab 9 Imam › Bukhari No. 1 ;; matan serupa: Riyadhus Shalihin No. 1 74%, Kitab 9 Imam › Abu Dawud No. 1882 57%, Shahih Sunan Abu Dawud No. 2201 57%, Kitab 9 Imam › Bukhari No. 4682 52%, Kitab 9 Imam › Bukhari No. 6195 52%
+LULUS 10 Pencarian referensi lama (arsip CHM & PDF) — CHM+PDF "tawakkal": 50 dokumen (27 ms); PDF "dzikir": 4; brosur yang mengutip QS 2:183: 29 (dari 1358 dokumen lama)
+LULUS 11 Kombinasi filter dan pencarian — Bulughul 99 (semua Bulughul: true); Tirmidzi 166 (semua Tirmidzi: true); Al-Qur'an 83 (semua ayat/tema: true); sabar -shalat 436
+LULUS 12 Kecepatan pencarian (semua sumber) — pertama kali (termasuk membaca file indeks dari disk): rata-rata 45 ms, maks 239 ms; ulang (cache): rata-rata 36 ms, maks 186 ms
+LULUS T1 Transliterasi/Arab basmalah: bismillahirrahmanirrahim — urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T2 Transliterasi/Arab basmalah: bismillahir rahmanir rahim — urutan: QS 1:1 (100%), QS 27:30 (100%), QS 39:6 (teks), QS 77:21 (teks), QS 75:37 (teks), QS 23:13 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T3 Transliterasi/Arab basmalah: bismillahirrahmannirrahim — urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T4 Transliterasi/Arab basmalah: bismillah — urutan: QS 1:1 (100%), QS 27:30 (100%), QS 11:41 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T5 Transliterasi/Arab basmalah: بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ — urutan: QS 1:1 (100%), QS 27:30 (100%), QS 11:41 (teks), QS 59:22 (teks), QS 1:3 (teks), QS 41:2 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T6 Transliterasi/Arab basmalah: بسم الله الرحمن الرحيم — urutan: QS 1:1 (100%), QS 27:30 (100%), QS 11:41 (teks), QS 59:22 (teks), QS 1:3 (teks), QS 41:2 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T7 Transliterasi/Arab basmalah: bismillaahirrahmaanirrahiim — urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T8 Transliterasi/Arab basmalah: bismillahir rohmanir rohim — urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T9 Transliterasi/Arab basmalah: BISMILLAHIR-RAHMANIR-RAHIM! — urutan: QS 1:1 (100%), QS 27:30 (100%), QS 39:6 (teks), QS 77:21 (teks), QS 75:37 (teks), QS 23:13 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true
+LULUS T10 Transliterasi ayat lain — diharapkan 1:2 · hasil: QS 1:2 (100%), QS 37:182 (100%), QS 10:10 (100%), QS 6:45 (100%), QS 40:65 (100%), QS 39:75 (100%) · kerangka lhmdlhrblmn
+LULUS T11 Transliterasi ayat lain — diharapkan 1:5 · hasil: QS 1:5 (100%), QS 2:177 (teks), QS 2:156 (teks), QS 109:1 (teks), QS 24:11 (teks), QS 2:196 (teks) · kerangka knbdknstn
+LULUS T12 Transliterasi ayat lain — diharapkan 1:6 · hasil: QS 1:6 (100%) · kerangka hdnsrtlmstkm
+LULUS T13 Transliterasi ayat lain — diharapkan 2:255 · hasil: QS 2:255 (100%), QS 20:8 (91%), QS 28:70 (91%), QS 37:35 (teks), QS 4:94 (teks), QS 14:24 (teks) · kerangka lhlhlhlhlkm
+LULUS T14 Transliterasi ayat lain — diharapkan 2:255 · hasil: QS 2:255 (73%), QS 37:35 (teks), QS 4:94 (teks), QS 2:177 (teks), QS 24:34 (teks), QS 24:36 (teks) · kerangka tkrslhlhlhlhlkm
+LULUS T15 Transliterasi ayat lain — diharapkan 2:156 · hasil: QS 2:156 (100%), QS 24:11 (teks), QS 2:177 (teks), QS 4:117 (teks), QS 28:79 (teks), QS 2:197 (teks) · kerangka nlhnlhrjn
+LULUS T16 Transliterasi ayat lain — diharapkan 2:201 · hasil: QS 2:201 (100%), QS 2:196 (teks), QS 2:187 (teks), QS 105:3 (teks), QS 105:5 (teks), QS 105:4 (teks) · kerangka rbntnfdnhsnhflhrthsnhknzbnr
+LULUS T17 Transliterasi ayat lain — diharapkan 17:1 · hasil: QS 17:1 (92%) · kerangka sbhnlzsrbdhln
+LULUS T18 Transliterasi ayat lain — diharapkan 2:3 · hasil: QS 2:3 (100%), QS 29:52 (89%), QS 33:59 (teks), QS 9:110 (teks), QS 4:34 (teks), QS 34:12 (teks) · kerangka lznmnblgb
+LULUS T19 Transliterasi ayat lain — diharapkan 94:6 · hasil: QS 94:6 (100%), QS 94:5 (100%), QS 2:158 (teks), QS 2:104 (teks), QS 40:7 (teks), QS 82:10 (teks) · kerangka nmlsrsr
+LULUS T20 Transliterasi ayat lain — diharapkan 51:56 · hasil: QS 51:56 (100%), QS 2:187 (teks), QS 24:39 (teks), QS 5:104 (teks), QS 5:106 (teks), QS 2:177 (teks) · kerangka mhlktljnlnslbdn
+LULUS T21 Transliterasi ayat lain — diharapkan 2:183 · hasil: QS 2:183 (100%), QS 2:178 (86%), QS 2:196 (teks), QS 2:187 (teks), QS 10:88 (teks), QS 2:286 (teks) · kerangka hlznmnktblkmsm
+LULUS T22 Ayat tanpa teks Arab di sumber (hanya gambar) — tidak boleh dikarang — QS 112 hanya punya gambar di Al-Qur'an Digital & tidak ada teks Arabnya di Ibnu Katsir/Jalalain → tidak dicocokkan secara transliterasi (hasil teks: QS 80:1 (teks))
+LULUS T23 Kueri bahasa Indonesia tidak dibanjiri hasil transliterasi palsu — jumlah ayat hasil transliterasi: sabar: 0; puasa ramadhan: 0; keutamaan shalat berjamaah: 0; diwajibkan atas kamu berpuasa: 0; berbakti kepada orang tua: 0
+{
+ "app": "/home/claude/build/pustaka-referensi-mta",
+ "tests": [
+  {
+   "no": 1,
+   "name": "Pencarian ayat dengan nomor surah & ayat",
+   "query": "QS 2:183 | Al-Baqarah 183 | surat al baqoroh ayat 183 | Ali Imran 102",
+   "status": "LULUS",
+   "detail": "quran 2:183 · quran 2:183 · quran 2:183 · quran 3:102"
+  },
+  {
+   "no": 2,
+   "name": "Pencarian kalimat terjemahan Al-Qur'an",
+   "query": "diwajibkan atas kamu berpuasa (filter Al-Qur'an)",
+   "status": "LULUS",
+   "detail": "teratas: 2:183, 2:185, 2:246 dari 2396 hasil"
+  },
+  {
+   "no": 3,
+   "name": "Pencarian teks Arab dengan harakat",
+   "query": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ",
+   "status": "LULUS",
+   "detail": "teratas QS 2:183 · 1307 hasil"
+  },
+  {
+   "no": 4,
+   "name": "Pencarian teks Arab tanpa harakat",
+   "query": "يا أيها الذين آمنوا كتب عليكم الصيام",
+   "status": "LULUS",
+   "detail": "teratas QS 2:183 · 1307 hasil (sama dengan versi berharakat: true)"
+  },
+  {
+   "no": "3b",
+   "name": "Arab hadis: berharakat vs tanpa harakat & variasi alif/hamzah",
+   "query": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ | انما الاعمال بالنيات",
+   "status": "LULUS",
+   "detail": "4368 vs 4368 hasil, teratas sama: true"
+  },
+  {
+   "no": 5,
+   "name": "Pencarian hadis berdasarkan nomor hadis",
+   "query": "bukhari 52 | HR. Muslim no 8 | abu daud 2859 | tirmidzi 143 | bulughul maram 1268",
+   "status": "LULUS",
+   "detail": "bukhari 52 → K9 Shahih Bukhari #52 ;; HR. Muslim no 8 → K9 Shahih Muslim #8 | Shahih Muslim (Mukhtashar, Al-Albani) #8 ;; abu daud 2859 → K9 Sunan Abu Dawud #2859 | Shahih Sunan Abu Dawud (Al-Albani) #2859 ;; tirmidzi 143 → K9 Sunan Tirmidzi #143 | Shahih Sunan Tirmidzi (Al-Albani) #143 ;; bulughul maram 1268 → Bulughul Maram #1268"
+  },
+  {
+   "no": 6,
+   "name": "Pencarian hadis berdasarkan nama kitab",
+   "query": "kitab puasa | Shahih Muslim sabar",
+   "status": "LULUS",
+   "detail": "10/10 teratas ber-kitab/bab puasa; \"Shahih Muslim sabar\" → 63 hasil, semua riwayat Muslim: true"
+  },
+  {
+   "no": 7,
+   "name": "Pencarian berdasarkan nama bab",
+   "query": "Mimpi orang-orang shalih | \"Larangan Buang Hajat di Tengah Jalan\"",
+   "status": "LULUS",
+   "detail": "Shahih Bukhari · bab Mimpi orang-orang shalih | Sunan Ad-Darimi · bab Gamis, sumur, susu, madu dan minyak samin | Kitab 9 Imam · Muwaththa' Malik · bab Mimpi ;; Shahih Sunan Ibnu Majah (Al-Albani) · bab 21. Larangan Buang Hajat di Tengah Jalan | Shahih Sunan Ibnu Majah (Al-Albani) · bab 21. Larangan Buang Hajat di Tengah Jalan"
+  },
+  {
+   "no": 8,
+   "name": "Pencarian hadis dari Kitab 9 Imam",
+   "query": "niat (filter Kitab 9 Imam)",
+   "status": "LULUS",
+   "detail": "282 hasil, per koleksi: {\"bukhari\":57,\"darimi\":15,\"ibnumajah\":22,\"abudaud\":12,\"muslim\":38,\"tirmidzi\":18,\"nasai\":13,\"ahmad\":98,\"malik\":9}"
+  },
+  {
+   "no": 9,
+   "name": "Hadis yang muncul pada beberapa koleksi",
+   "query": "إنما الأعمال بالنيات",
+   "status": "LULUS",
+   "detail": "30 teratas dari 10 koleksi: abudaud, bukhari, ibnumajah, riyadh, ibnukatsir, quran, muslim, nasai, tirmidzi, ahmad ;; Shahih Bukhari #1 identik dengan: Kitab 9 Imam › Bukhari No. 1 ;; matan serupa: Riyadhus Shalihin No. 1 74%, Kitab 9 Imam › Abu Dawud No. 1882 57%, Shahih Sunan Abu Dawud No. 2201 57%, Kitab 9 Imam › Bukhari No. 4682 52%, Kitab 9 Imam › Bukhari No. 6195 52%"
+  },
+  {
+   "no": 10,
+   "name": "Pencarian referensi lama (arsip CHM & PDF)",
+   "query": "tawakkal | dzikir (PDF) | Al-Baqarah 183",
+   "status": "LULUS",
+   "detail": "CHM+PDF \"tawakkal\": 50 dokumen (27 ms); PDF \"dzikir\": 4; brosur yang mengutip QS 2:183: 29 (dari 1358 dokumen lama)"
+  },
+  {
+   "no": 11,
+   "name": "Kombinasi filter dan pencarian",
+   "query": "air+Bulughul | wudhu+riwayat Tirmidzi | sabar+Al-Qur'an | sabar -shalat+Hadis",
+   "status": "LULUS",
+   "detail": "Bulughul 99 (semua Bulughul: true); Tirmidzi 166 (semua Tirmidzi: true); Al-Qur'an 83 (semua ayat/tema: true); sabar -shalat 436"
+  },
+  {
+   "no": 12,
+   "name": "Kecepatan pencarian (semua sumber)",
+   "query": "20 kueri",
+   "status": "LULUS",
+   "detail": "pertama kali (termasuk membaca file indeks dari disk): rata-rata 45 ms, maks 239 ms; ulang (cache): rata-rata 36 ms, maks 186 ms"
+  },
+  {
+   "no": "T1",
+   "name": "Transliterasi/Arab basmalah: bismillahirrahmanirrahim",
+   "query": "bismillahirrahmanirrahim",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T2",
+   "name": "Transliterasi/Arab basmalah: bismillahir rahmanir rahim",
+   "query": "bismillahir rahmanir rahim",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%), QS 39:6 (teks), QS 77:21 (teks), QS 75:37 (teks), QS 23:13 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T3",
+   "name": "Transliterasi/Arab basmalah: bismillahirrahmannirrahim",
+   "query": "bismillahirrahmannirrahim",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T4",
+   "name": "Transliterasi/Arab basmalah: bismillah",
+   "query": "bismillah",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%), QS 11:41 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T5",
+   "name": "Transliterasi/Arab basmalah: بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ",
+   "query": "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%), QS 11:41 (teks), QS 59:22 (teks), QS 1:3 (teks), QS 41:2 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T6",
+   "name": "Transliterasi/Arab basmalah: بسم الله الرحمن الرحيم",
+   "query": "بسم الله الرحمن الرحيم",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%), QS 11:41 (teks), QS 59:22 (teks), QS 1:3 (teks), QS 41:2 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T7",
+   "name": "Transliterasi/Arab basmalah: bismillaahirrahmaanirrahiim",
+   "query": "bismillaahirrahmaanirrahiim",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T8",
+   "name": "Transliterasi/Arab basmalah: bismillahir rohmanir rohim",
+   "query": "bismillahir rohmanir rohim",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T9",
+   "name": "Transliterasi/Arab basmalah: BISMILLAHIR-RAHMANIR-RAHIM!",
+   "query": "BISMILLAHIR-RAHMANIR-RAHIM!",
+   "status": "LULUS",
+   "detail": "urutan: QS 1:1 (100%), QS 27:30 (100%), QS 39:6 (teks), QS 77:21 (teks), QS 75:37 (teks), QS 23:13 (teks) · teks Arab QS 1:1: بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ [Tafsir Jalalain (paragraf Arab seluruhnya ditandai lafaz ayat)] · gambar img/s001/a001.png · terjemahan: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang [1] . · 2:1 tidak ikut: true"
+  },
+  {
+   "no": "T10",
+   "name": "Transliterasi ayat lain",
+   "query": "alhamdulillahi rabbil alamin",
+   "status": "LULUS",
+   "detail": "diharapkan 1:2 · hasil: QS 1:2 (100%), QS 37:182 (100%), QS 10:10 (100%), QS 6:45 (100%), QS 40:65 (100%), QS 39:75 (100%) · kerangka lhmdlhrblmn"
+  },
+  {
+   "no": "T11",
+   "name": "Transliterasi ayat lain",
+   "query": "iyyaka na'budu wa iyyaka nasta'in",
+   "status": "LULUS",
+   "detail": "diharapkan 1:5 · hasil: QS 1:5 (100%), QS 2:177 (teks), QS 2:156 (teks), QS 109:1 (teks), QS 24:11 (teks), QS 2:196 (teks) · kerangka knbdknstn"
+  },
+  {
+   "no": "T12",
+   "name": "Transliterasi ayat lain",
+   "query": "ihdinash shirathal mustaqim",
+   "status": "LULUS",
+   "detail": "diharapkan 1:6 · hasil: QS 1:6 (100%) · kerangka hdnsrtlmstkm"
+  },
+  {
+   "no": "T13",
+   "name": "Transliterasi ayat lain",
+   "query": "allahu la ilaha illa huwal hayyul qayyum",
+   "status": "LULUS",
+   "detail": "diharapkan 2:255 · hasil: QS 2:255 (100%), QS 20:8 (91%), QS 28:70 (91%), QS 37:35 (teks), QS 4:94 (teks), QS 14:24 (teks) · kerangka lhlhlhlhlkm"
+  },
+  {
+   "no": "T14",
+   "name": "Transliterasi ayat lain",
+   "query": "ayat kursi allahu la ilaha illa huwal hayyul qayyum",
+   "status": "LULUS",
+   "detail": "diharapkan 2:255 · hasil: QS 2:255 (73%), QS 37:35 (teks), QS 4:94 (teks), QS 2:177 (teks), QS 24:34 (teks), QS 24:36 (teks) · kerangka tkrslhlhlhlhlkm"
+  },
+  {
+   "no": "T15",
+   "name": "Transliterasi ayat lain",
+   "query": "inna lillahi wa inna ilaihi raji'un",
+   "status": "LULUS",
+   "detail": "diharapkan 2:156 · hasil: QS 2:156 (100%), QS 24:11 (teks), QS 2:177 (teks), QS 4:117 (teks), QS 28:79 (teks), QS 2:197 (teks) · kerangka nlhnlhrjn"
+  },
+  {
+   "no": "T16",
+   "name": "Transliterasi ayat lain",
+   "query": "rabbana atina fid dunya hasanah wa fil akhirati hasanah wa qina adzaban nar",
+   "status": "LULUS",
+   "detail": "diharapkan 2:201 · hasil: QS 2:201 (100%), QS 2:196 (teks), QS 2:187 (teks), QS 105:3 (teks), QS 105:5 (teks), QS 105:4 (teks) · kerangka rbntnfdnhsnhflhrthsnhknzbnr"
+  },
+  {
+   "no": "T17",
+   "name": "Transliterasi ayat lain",
+   "query": "subhanalladzi asra bi'abdihi lailan",
+   "status": "LULUS",
+   "detail": "diharapkan 17:1 · hasil: QS 17:1 (92%) · kerangka sbhnlzsrbdhln"
+  },
+  {
+   "no": "T18",
+   "name": "Transliterasi ayat lain",
+   "query": "alladzina yu'minuna bil ghaibi",
+   "status": "LULUS",
+   "detail": "diharapkan 2:3 · hasil: QS 2:3 (100%), QS 29:52 (89%), QS 33:59 (teks), QS 9:110 (teks), QS 4:34 (teks), QS 34:12 (teks) · kerangka lznmnblgb"
+  },
+  {
+   "no": "T19",
+   "name": "Transliterasi ayat lain",
+   "query": "inna ma'al usri yusra",
+   "status": "LULUS",
+   "detail": "diharapkan 94:6 · hasil: QS 94:6 (100%), QS 94:5 (100%), QS 2:158 (teks), QS 2:104 (teks), QS 40:7 (teks), QS 82:10 (teks) · kerangka nmlsrsr"
+  },
+  {
+   "no": "T20",
+   "name": "Transliterasi ayat lain",
+   "query": "wa ma khalaqtul jinna wal insa illa liya'budun",
+   "status": "LULUS",
+   "detail": "diharapkan 51:56 · hasil: QS 51:56 (100%), QS 2:187 (teks), QS 24:39 (teks), QS 5:104 (teks), QS 5:106 (teks), QS 2:177 (teks) · kerangka mhlktljnlnslbdn"
+  },
+  {
+   "no": "T21",
+   "name": "Transliterasi ayat lain",
+   "query": "ya ayyuhalladzina amanu kutiba alaikumush shiyam",
+   "status": "LULUS",
+   "detail": "diharapkan 2:183 · hasil: QS 2:183 (100%), QS 2:178 (86%), QS 2:196 (teks), QS 2:187 (teks), QS 10:88 (teks), QS 2:286 (teks) · kerangka hlznmnktblkmsm"
+  },
+  {
+   "no": "T22",
+   "name": "Ayat tanpa teks Arab di sumber (hanya gambar) — tidak boleh dikarang",
+   "query": "qul huwallahu ahad",
+   "status": "LULUS",
+   "detail": "QS 112 hanya punya gambar di Al-Qur'an Digital & tidak ada teks Arabnya di Ibnu Katsir/Jalalain → tidak dicocokkan secara transliterasi (hasil teks: QS 80:1 (teks))"
+  },
+  {
+   "no": "T23",
+   "name": "Kueri bahasa Indonesia tidak dibanjiri hasil transliterasi palsu",
+   "query": "sabar | puasa ramadhan | …",
+   "status": "LULUS",
+   "detail": "jumlah ayat hasil transliterasi: sabar: 0; puasa ramadhan: 0; keutamaan shalat berjamaah: 0; diwajibkan atas kamu berpuasa: 0; berbakti kepada orang tua: 0"
+  }
+ ],
+ "timing": [
+  {
+   "q": "sabar",
+   "coldMs": 13,
+   "warmMs": 14
+  },
+  {
+   "q": "shalat berjamaah",
+   "coldMs": 80,
+   "warmMs": 72
+  },
+  {
+   "q": "puasa ramadhan",
+   "coldMs": 44,
+   "warmMs": 37
+  },
+  {
+   "q": "zakat fitrah",
+   "coldMs": 30,
+   "warmMs": 26
+  },
+  {
+   "q": "berbakti kepada orang tua",
+   "coldMs": 85,
+   "warmMs": 90
+  },
+  {
+   "q": "الصلاة",
+   "coldMs": 9,
+   "warmMs": 6
+  },
+  {
+   "q": "بسم الله الرحمن الرحيم",
+   "coldMs": 239,
+   "warmMs": 186
+  },
+  {
+   "q": "\"amal yang paling dicintai\"",
+   "coldMs": 115,
+   "warmMs": 70
+  },
+  {
+   "q": "riba",
+   "coldMs": 26,
+   "warmMs": 5
+  },
+  {
+   "q": "QS 112:1",
+   "coldMs": 1,
+   "warmMs": 0
+  },
+  {
+   "q": "nikah",
+   "coldMs": 10,
+   "warmMs": 6
+  },
+  {
+   "q": "menuntut ilmu",
+   "coldMs": 13,
+   "warmMs": 16
+  },
+  {
+   "q": "muslim 1",
+   "coldMs": 6,
+   "warmMs": 2
+  },
+  {
+   "q": "لا حول ولا قوة",
+   "coldMs": 103,
+   "warmMs": 83
+  },
+  {
+   "q": "akhlak mulia",
+   "coldMs": 24,
+   "warmMs": 13
+  },
+  {
+   "q": "jenazah",
+   "coldMs": 16,
+   "warmMs": 12
+  },
+  {
+   "q": "haid",
+   "coldMs": 18,
+   "warmMs": 12
+  },
+  {
+   "q": "sedekah",
+   "coldMs": 27,
+   "warmMs": 27
+  },
+  {
+   "q": "dzikir pagi",
+   "coldMs": 28,
+   "warmMs": 22
+  },
+  {
+   "q": "taubat",
+   "coldMs": 17,
+   "warmMs": 12
+  }
+ ]
+}
